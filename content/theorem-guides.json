@@ -368,7 +368,7 @@
       "fragment": "HasOneUnconditionalSchauderBasis ℝ X.Carrier ∧",
       "syntax": "The project predicate specifies an ℕ-indexed real unconditional Schauder basis and requires all finite coordinate multipliers of modulus at most one to be contractions.",
       "math": "The ambient space $X$ has a $1$-unconditional Schauder basis.",
-      "role": "This adds the ambient basis promised by the explicit witness in Corollary 4.6, p.20. It is compatible with all the preceding conditions on the same X.",
+      "role": "This adds the ambient basis promised by the explicit witness in Corollary 4.5, p.22. It is compatible with all the preceding conditions on the same X.",
       "terms": [
         "HasOneUnconditionalSchauderBasis",
         "IsOneUnconditional"

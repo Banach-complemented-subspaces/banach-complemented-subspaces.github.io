@@ -1,7 +1,7 @@
 [
   {
     "path": "asset-manifest.json",
-    "sha256": "e0f9a16f4a2d988f0d15ca2b1c731fb51518338195e72a6f6ab619b3f4cdab27",
+    "sha256": "83ee62ac47e7e7ab8ed57f440d63405a9239a1b2458f54ffc69ac31df04a425a",
     "bytes": 23284
   },
   {
@@ -36,8 +36,8 @@
   },
   {
     "path": "evidence-public/PUBLIC_COPY_SHA256.json",
-    "sha256": "747d46c5bb9d2a2f752d4ce2b0ecc970189a97d6c111dafd2e2c0e2c31b96a08",
-    "bytes": 188280
+    "sha256": "2e1450fbc0bc4718b5c2e52982f2132725dcd25e2c91a40a98b1974760526ed1",
+    "bytes": 188286
   },
   {
     "path": "evidence-public/raw/audit/additional_build_status.json",
@@ -2021,7 +2021,7 @@
   },
   {
     "path": "paper/manuscript.pdf",
-    "sha256": "fc39f52a0dd7ac2ec2d4851485234b13284ffb797930326bdce7d9ae07a4f97a",
-    "bytes": 270710
+    "sha256": "d0d31b2776d72d71ad4ac621296db72273543077744273237c2463a1a84c07cb",
+    "bytes": 607183
   }
 ]

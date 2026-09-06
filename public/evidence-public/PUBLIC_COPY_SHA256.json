@@ -75,11 +75,11 @@
     "original_path": "paper/manuscript.pdf",
     "public_path": "paper/manuscript.pdf",
     "original_sha256": "04d0d221f12ac54d2cccfe875a3e869b516704cff0f57864ea8ec25dddadbdf7",
-    "public_sha256": "fc39f52a0dd7ac2ec2d4851485234b13284ffb797930326bdce7d9ae07a4f97a",
+    "public_sha256": "d0d31b2776d72d71ad4ac621296db72273543077744273237c2463a1a84c07cb",
     "original_bytes": 560501,
-    "public_bytes": 270710,
+    "public_bytes": 607183,
     "changed": true,
-    "change_kind": "author-approved manuscript replacement"
+    "change_kind": "author-approved final manuscript replacement"
   },
   {
     "original_path": "raw/audit/additional_build_status.json",

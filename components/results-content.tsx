@@ -172,7 +172,7 @@ export function ResultsContent() {
             <Prose text={c.statement_tex} />
             <p className="note correspondence-note">
               The restriction to real scalars and the counterexample are given in §4.3
-              and Corollary 4.6 of the manuscript.
+              and Corollary 4.5 of the manuscript.
             </p>
             <h3>The counterexample in Lean</h3>
             <Prose text={c.lean_statement_tex!} />

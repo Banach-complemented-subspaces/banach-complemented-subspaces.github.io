@@ -10,7 +10,7 @@ On the author's laptop, double-click `OPEN_WEBSITE.cmd`, or visit <http://127.0.
 
 On another computer, use Node.js 22.13 or later and restore the dependencies with `pnpm install --frozen-lockfile`. Run `node scripts/build.mjs`, then `node scripts/serve.mjs`. The server binds only to the local computer. The static website is written to `dist/client/`.
 
-The nearly final manuscript has 27 pages. Its PDF is `public/paper/manuscript.pdf`; the matching LaTeX snapshot is `paper/main.tex`. The author's working manuscript is separate. The companion-link placeholder is still present in the paper and must be replaced when the final address is known.
+The author's final manuscript has 26 pages. Its PDF is `public/paper/manuscript.pdf`; the matching LaTeX snapshot is `paper/main.tex`. Both files are copied without alteration from the final versions. The paper includes the companion address `https://banach-complemented-subspaces.github.io/`. The preceding manuscript snapshot remains in Git history.
 
 ## Mathematical scope and architecture
 
@@ -54,7 +54,7 @@ For an independent check, run `python scripts/check-public-evidence.py`. The nor
 
 Use British English and direct mathematical prose. Avoid “supplied”, “asserted” and “threshold”, and computing terms such as “data”, “input”, “output” and “endpoint” in mathematical explanations. Keep quoted Lean identifiers, source excerpts and archived mathematical statements verbatim.
 
-Do not alter Lean excerpts to make them match a changed manuscript. A change to a mathematical statement requires corresponding verified source and evidence. The latest main statements are unchanged; older detailed comparison notes retain their explicitly recorded earlier-paper context.
+Do not alter Lean excerpts to make them match a changed manuscript. A change to a mathematical statement requires corresponding verified source and evidence. The final statements of Theorem A, Theorem B and Corollary C are identical to the preceding LaTeX snapshot. The final abstract removes “complete” before “Lean 4 formalisation”. The website follows that wording and the final paper's numbering for its visible corollary references. Older detailed comparison notes retain both the numbering and page references of the earlier paper identified in `content/paper.json`; they are historical records. Updating the manuscript is not a new Lean audit.
 
 The repository is [Banach-complemented-subspaces/banach-complemented-subspaces.github.io](https://github.com/Banach-complemented-subspaces/banach-complemented-subspaces.github.io). It is private with GitHub Pages disabled. The organisation is owned by the author's `ahacua` account.
 

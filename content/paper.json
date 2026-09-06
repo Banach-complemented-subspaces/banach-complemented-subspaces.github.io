@@ -1,9 +1,9 @@
 {
-  "scope": "Read-only local manuscript/Lean statement comparison. No Lean build, mathematical source modification, website initialization, upload, or online search was performed.",
+  "scope": "Current manuscript metadata and main-statement comparison, with earlier detailed comparison records retained as historical records. This manuscript update is not a new Lean build or formalisation audit.",
   "manuscript": {
     "path": "paper/manuscript.pdf",
-    "sha256": "fc39f52a0dd7ac2ec2d4851485234b13284ffb797930326bdce7d9ae07a4f97a",
-    "pdf_pages": 27,
+    "sha256": "d0d31b2776d72d71ad4ac621296db72273543077744273237c2463a1a84c07cb",
+    "pdf_pages": 26,
     "title": "A negative solution to the complemented subspace problem for Banach spaces with unconditional bases",
     "display_title": "A NEGATIVE SOLUTION TO THE COMPLEMENTED SUBSPACE PROBLEM FOR BANACH SPACES WITH UNCONDITIONAL BASES",
     "authors": [
@@ -11,22 +11,25 @@
     ],
     "date": "5 September 2026",
     "title_author_abstract_page": 1,
-    "abstract_tex": "We give a negative solution to the complemented subspace problem for Banach spaces with unconditional bases over both the real and complex fields. For every $\\rho>0$, we construct a projection $P_\\rho$ of norm less than $1+\\rho$ on a separable superreflexive space\n\\[\nX_\\rho=\\left(\\bigoplus_{j=1}^{\\infty}\\ell_{p_j}^{N_j}\\right)_2,\\qquad p_j\\downarrow2,\n\\]\nsuch that $Z_\\rho=P_\\rho(X_\\rho)$ and its dual $Z_\\rho^*$ have Schauder bases but admit no unconditional bases. Over the real field, both spaces have Gordon–Lewis local unconditional structure (GL-lust) but fail Dubinsky–Pełczyński–Rosenthal local unconditional structure (DPR-lust), disproving a conjecture of Figiel, Johnson and Tzafriri. In particular, neither is isomorphic to a Banach lattice, giving a negative solution to the separable Banach-lattice complemented subspace problem. A modification of the construction also shows that the class of separable real Banach lattices is not primary. A complete Lean 4 formalisation of the main results accompanies the paper.",
+    "abstract_tex": "We give a negative solution to the complemented subspace problem for Banach spaces with unconditional bases over both the real and complex fields. For every $\\rho>0$, we construct a projection $P_\\rho$ of norm less than $1+\\rho$ on a separable superreflexive space\n\\[\nX_\\rho=\\left(\\bigoplus_{j=1}^{\\infty}\\ell_{p_j}^{N_j}\\right)_2,\\qquad p_j\\downarrow2,\n\\]\nsuch that $Z_\\rho=P_\\rho(X_\\rho)$ and its dual $Z_\\rho^*$ have Schauder bases but admit no unconditional bases. Over the real field, both spaces have Gordon–Lewis local unconditional structure (GL-lust) but fail Dubinsky–Pełczyński–Rosenthal local unconditional structure (DPR-lust), disproving a conjecture of Figiel, Johnson and Tzafriri. In particular, neither is isomorphic to a Banach lattice, giving a negative solution to the separable Banach-lattice complemented subspace problem. A modification of the construction also shows that the class of separable real Banach lattices is not primary. A Lean 4 formalisation of the main results accompanies the paper.",
     "title_abstract_source": "paper/main.tex",
-    "abstract_note": "Title, abstract and downloadable PDF follow the nearly final manuscript of 6 September 2026. Mathematical typesetting is normalised. The abstract includes further results beyond the five Lean theorems presented on this site.",
+    "abstract_note": "Title, abstract and downloadable PDF follow the author's final manuscript. Mathematical typesetting is normalised. The abstract includes further results beyond the five Lean theorems presented on this site.",
     "page_number_convention": "All page numbers are 1-based PDF page numbers; printed page numbers agree.",
     "rendered_pages_inspected": [
       1,
+      2,
       3,
-      4,
-      6,
-      18,
       19,
       20,
-      23
+      22
     ],
     "previous_pdf_sha256": "04d0d221f12ac54d2cccfe875a3e869b516704cff0f57864ea8ec25dddadbdf7",
-    "statement_mapping_note": "The detailed statement comparison retains page references to the earlier PDF. The main theorem statements are unchanged; Theorem A starts on page 2 and Theorem B and Corollary C are on page 3 of the current PDF."
+    "statement_mapping_note": "Theorem A, Theorem B and Corollary C and their supporting references follow the final PDF: Theorem A spans pages 2–3; Theorem B and Corollary C are on page 3. Other result and definition comparison records retain both result numbering and page references from the earlier PDF identified by previous_pdf_sha256; they are historical records.",
+    "version_status": "Final manuscript provided by the author",
+    "latex_sha256": "4a957b2f1f0ccccddb45b21aa526ad28c73550b75fc49638a693c67b54f2f2e2",
+    "replaced_pdf_sha256": "fc39f52a0dd7ac2ec2d4851485234b13284ffb797930326bdce7d9ae07a4f97a",
+    "replaced_latex_sha256": "34b1f6b5d0fbf13d5dd6436b60734fc34c08a6a090a0c01378750e08a55cc375",
+    "companion_url": "https://banach-complemented-subspaces.github.io/"
   },
   "lean_project": "LEAN_PROJECT",
   "verification_scope": {
@@ -112,7 +115,7 @@
       "correspondence": "Quantifiers, block parameters, idempotence, both strict norm bounds, and all four GL/DPR range and continuous-dual clauses match. Geometry is encoded differently as described below.",
       "lean_statement_tex": "The displayed Theorem A with the ambient superreflexivity clause replaced by uniform convexity of the existing $\\ell_2(\\ell_{p_j}^{N_j})$ norm. Equivalently, for each $Q\\in\\{P,I-P\\}$ and $V\\in\\{Q(X),Q(X)^*\\}$, $\\chi_{\\mathrm{GL}}(V)\\leq\\|Q\\|$ and $\\chi_{\\mathrm{DPR}}(V)=\\infty$, with $\\|P\\|,\\|I-P\\|<1+\\rho$.",
       "caveats": [
-        "The exact Lean target says UniformConvexSpace, not a separately defined superreflexivity predicate. The manuscript also proves uniform convexity in Corollary 4.2(ii), p.18. The project does not prove the general equivalence with the finite-representability definition of superreflexivity.",
+        "The exact Lean target says UniformConvexSpace, not a separately defined superreflexivity predicate. The manuscript also proves uniform convexity in Corollary 4.2(ii), p.20. The project does not prove the general equivalence with the finite-representability definition of superreflexivity.",
         "Lean indexes blocks by 0,1,... and uses positive natural dimensions. Its antitone exponent condition means nonincreasing convergence to 2; do not restate it as strictly decreasing.",
         "The main target does not itself include basis existence or nonlattice conclusions. Separate real corollary theorems establish those conclusions."
       ]
@@ -150,7 +153,7 @@
         "realSeparableNonprimarity"
       ],
       "lean_statement_tex": "For every $\\rho>0$ there is a separable real Banach lattice $X$, isomorphic to a complete uniformly convex space, with a $1$-unconditional Schauder basis and a bounded real-linear map $P:X\\to X$ such that $P^2=P$, $\\|P\\|<1+\\rho$, $\\|I-P\\|<1+\\rho$, and neither $P(X)$ nor $(I-P)(X)$ is isomorphic to any real Banach lattice.",
-      "correspondence": "The theorem gives a counterexample over the real field. It does not define a general class-primary predicate. The real-field scope and detailed witness are stated in PDF Section 4.3 and Corollary 4.6, p.20.",
+      "correspondence": "The theorem gives a counterexample over the real field. It does not define a general class-primary predicate. The real-field scope and detailed witness are stated in PDF Section 4.3 and Corollary 4.5, p.22.",
       "caveats": [
         "Superreflexivity in this theorem is IsSuperreflexiveByRenorming: bounded linear isomorphism to a complete uniformly convex normed space."
       ]

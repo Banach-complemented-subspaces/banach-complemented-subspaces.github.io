@@ -17,7 +17,6 @@ export default function Paper() {
           <h2>Abstract</h2>
           <Prose text={p.abstract_tex} />
           <p className="note" style={{ marginTop: 20 }}>
-            The title, abstract and PDF follow the nearly final manuscript.
             The abstract describes further results beyond the five Lean
             theorems presented on this site.
           </p>
