@@ -21,13 +21,11 @@
     ],
     "previous_pdf_sha256": "04d0d221f12ac54d2cccfe875a3e869b516704cff0f57864ea8ec25dddadbdf7",
     "statement_mapping_note": "Theorem A, Theorem B and Corollary C and their supporting references follow the final PDF: Theorem A spans pages 2–3; Theorem B and Corollary C are on page 3. Other result and definition comparison records retain both result numbering and page references from the earlier PDF identified by previous_pdf_sha256; they are historical records.",
-    "version_status": "Final manuscript with two editorial corrections provided by the author",
-    "latex_sha256": "4a957b2f1f0ccccddb45b21aa526ad28c73550b75fc49638a693c67b54f2f2e2",
+    "version_status": "Final manuscript provided by the author",
+    "latex_sha256": "65003e7d70ad5b62b0d42b198c82d32cfa639b4229fb470f3fbe9bbf7038844e",
     "replaced_pdf_sha256": "d0d31b2776d72d71ad4ac621296db72273543077744273237c2463a1a84c07cb",
-    "replaced_latex_sha256": "34b1f6b5d0fbf13d5dd6436b60734fc34c08a6a090a0c01378750e08a55cc375",
-    "companion_url": "https://banach-complemented-subspaces.github.io/",
-    "latex_snapshot_note": "The retained LaTeX snapshot precedes this PDF-only update: emphasized becomes emphasised on page 2, and the Benyamini–Flinn–Lewis bibliography entry changes 143–149 to 145–149 on page 25. The main statements, title, abstract and pagination are unchanged. No revised LaTeX file accompanied this update.",
-    "latex_snapshot_pdf_sha256": "d0d31b2776d72d71ad4ac621296db72273543077744273237c2463a1a84c07cb"
+    "replaced_latex_sha256": "4a957b2f1f0ccccddb45b21aa526ad28c73550b75fc49638a693c67b54f2f2e2",
+    "companion_url": "https://banach-complemented-subspaces.github.io/"
   },
   "lean_project": "LEAN_PROJECT",
   "verification_scope": {
