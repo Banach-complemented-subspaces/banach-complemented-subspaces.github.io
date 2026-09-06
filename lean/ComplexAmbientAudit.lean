@@ -1,0 +1,7 @@
+import ComplementedSubspace.ComplexAmbientSchauder
+
+#print axioms ComplementedSubspace.complexAmbientSeparableSpace
+#print axioms ComplementedSubspace.complexAmbientUniformConvexSpace
+#print axioms ComplementedSubspace.complexAmbientScalarMultiplier_norm_le
+#print axioms ComplementedSubspace.hasSum_complexAmbientScalarVector
+#print axioms ComplementedSubspace.complexAmbient_hasOneUnconditionalSchauderBasis

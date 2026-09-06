@@ -1,0 +1,29 @@
+{
+  "label": "dependency-Cli-head",
+  "cwd": "LEAN_PROJECT\\.lake\\packages\\Cli",
+  "executable": "C:\\Program Files\\Git\\cmd\\git.exe",
+  "arguments": [
+    "rev-parse",
+    "HEAD"
+  ],
+  "windows_command_line": "\"C:\\Program Files\\Git\\cmd\\git.exe\" rev-parse HEAD",
+  "started": "2026-09-06T10:36:33.352391+00:00",
+  "environment": {
+    "PATH": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin;USER_HOME\\.codex\\tmp\\arg0\\codex-arg0rksJmG;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;USER_HOME\\AppData\\Local\\Microsoft\\WindowsApps;USER_HOME\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\;USER_HOME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\80b8e5c230e43848;USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\27d6a192e9c98618",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "stdout": "dependency-Cli-head.stdout.log",
+  "stderr": "dependency-Cli-head.stderr.log",
+  "timeout_seconds": 120,
+  "pid": 23868,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "PASS",
+  "ended": "2026-09-06T10:36:33.409632+00:00",
+  "elapsed_seconds": 0.046999999991385266
+}
+
+STDOUT (verbatim)
+ab3a82db9fea14cf0fd7f5a2de650f4b534640af
+
+STDERR (verbatim)

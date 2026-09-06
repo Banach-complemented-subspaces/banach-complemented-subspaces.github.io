@@ -1,0 +1,767 @@
+[
+  {
+    "file": "ComplementedSubspace/RealMainTheorem.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RealMainTheorem.lean",
+    "source_symbol": "realMainTheorem",
+    "line": 15,
+    "role": "target theorem",
+    "declaration_start": "theorem realMainTheorem : RealMainTheoremStatement := by",
+    "source_sha256": "C08EB5568448A4908D5F90AFD8DA3EE5FDAC8EE0E34E01824DC03AC6A3221917"
+  },
+  {
+    "file": "ComplementedSubspace/TheoremStatement.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\TheoremStatement.lean",
+    "source_symbol": "RealMainTheoremStatement",
+    "line": 55,
+    "role": "target proposition definition",
+    "declaration_start": "def RealMainTheoremStatement : Prop :=",
+    "source_sha256": "8BAE1822F09C36532811144DFAD0FAEFD1724AC184C0167745FAE48F0AF4CD97"
+  },
+  {
+    "file": "ComplementedSubspace/TheoremStatement.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\TheoremStatement.lean",
+    "source_symbol": "HasSeparatedRange",
+    "line": 42,
+    "role": "range assertion definition",
+    "declaration_start": "def HasSeparatedRange {X : Type*} [NormedAddCommGroup X] [NormedSpace ℝ X]",
+    "source_sha256": "8BAE1822F09C36532811144DFAD0FAEFD1724AC184C0167745FAE48F0AF4CD97"
+  },
+  {
+    "file": "ComplementedSubspace/TheoremStatement.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\TheoremStatement.lean",
+    "source_symbol": "HasRealBanachLatticeOrder",
+    "line": 34,
+    "role": "lattice assertion definition",
+    "declaration_start": "def HasRealBanachLatticeOrder (X : Type*) [NormedAddCommGroup X]",
+    "source_sha256": "8BAE1822F09C36532811144DFAD0FAEFD1724AC184C0167745FAE48F0AF4CD97"
+  },
+  {
+    "file": "ComplementedSubspace/Ambient.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+    "source_symbol": "BlockParameters",
+    "line": 23,
+    "role": "parameter data structure",
+    "declaration_start": "structure BlockParameters where",
+    "source_sha256": "CF65A5AA2DA2262F84695696283CDA9F3B918215CE12FD777B2E0E70C355F347"
+  },
+  {
+    "file": "ComplementedSubspace/Ambient.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+    "source_symbol": "Block",
+    "line": 39,
+    "role": "ambient block abbreviation",
+    "declaration_start": "abbrev Block (a : BlockParameters) (j : ℕ) :=",
+    "source_sha256": "CF65A5AA2DA2262F84695696283CDA9F3B918215CE12FD777B2E0E70C355F347"
+  },
+  {
+    "file": "ComplementedSubspace/Ambient.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+    "source_symbol": "Ambient",
+    "line": 43,
+    "role": "ambient sum abbreviation",
+    "declaration_start": "abbrev Ambient (a : BlockParameters) := lp (Block a) 2",
+    "source_sha256": "CF65A5AA2DA2262F84695696283CDA9F3B918215CE12FD777B2E0E70C355F347"
+  },
+  {
+    "file": "ComplementedSubspace/LocalUnconditional.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+    "source_symbol": "chiDPR",
+    "line": 130,
+    "role": "DPR constant definition",
+    "declaration_start": "def chiDPR : ℝ≥0∞ :=",
+    "source_sha256": "3CA23F64E18FCC14E9EE4A2A535ACB40305ACD9EDC2862B6101F897F7BB14857"
+  },
+  {
+    "file": "ComplementedSubspace/LocalUnconditional.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+    "source_symbol": "lambdaDPR",
+    "line": 125,
+    "role": "local DPR constant definition",
+    "declaration_start": "def lambdaDPR (V : Submodule ℝ Z) : ℝ≥0∞ :=",
+    "source_sha256": "3CA23F64E18FCC14E9EE4A2A535ACB40305ACD9EDC2862B6101F897F7BB14857"
+  },
+  {
+    "file": "ComplementedSubspace/LocalUnconditional.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+    "source_symbol": "unconditionalConstant",
+    "line": 109,
+    "role": "finite-basis infimum definition",
+    "declaration_start": "def unconditionalConstant (E : Type*) [NormedAddCommGroup E]",
+    "source_sha256": "3CA23F64E18FCC14E9EE4A2A535ACB40305ACD9EDC2862B6101F897F7BB14857"
+  },
+  {
+    "file": "ComplementedSubspace/LocalUnconditional.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+    "source_symbol": "unconditionalBasisConstant",
+    "line": 62,
+    "role": "basis constant definition",
+    "declaration_start": "def unconditionalBasisConstant {n : ℕ} (b : Module.Basis (Fin n) ℝ E) : ℝ≥0∞ :=",
+    "source_sha256": "3CA23F64E18FCC14E9EE4A2A535ACB40305ACD9EDC2862B6101F897F7BB14857"
+  },
+  {
+    "file": "ComplementedSubspace/LocalUnconditional.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+    "source_symbol": "chiGL",
+    "line": 364,
+    "role": "GL constant definition",
+    "declaration_start": "def chiGL : ℝ≥0∞ :=",
+    "source_sha256": "3CA23F64E18FCC14E9EE4A2A535ACB40305ACD9EDC2862B6101F897F7BB14857"
+  },
+  {
+    "file": "ComplementedSubspace/LocalUnconditional.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+    "source_symbol": "lambdaGL",
+    "line": 359,
+    "role": "local GL constant definition",
+    "declaration_start": "def lambdaGL (V : Submodule ℝ Z) : ℝ≥0∞ :=",
+    "source_sha256": "3CA23F64E18FCC14E9EE4A2A535ACB40305ACD9EDC2862B6101F897F7BB14857"
+  },
+  {
+    "file": "ComplementedSubspace/LocalUnconditional.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+    "source_symbol": "GLFactorization",
+    "line": 159,
+    "role": "factorization data structure",
+    "declaration_start": "structure GLFactorization (V : Submodule ℝ Z) where",
+    "source_sha256": "3CA23F64E18FCC14E9EE4A2A535ACB40305ACD9EDC2862B6101F897F7BB14857"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveParameters.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveParameters.lean",
+    "source_symbol": "recursiveFrameSelection",
+    "line": 293,
+    "role": "chosen parameter construction",
+    "declaration_start": "def recursiveFrameSelection {η : ℝ} (hη : 0 < η) :",
+    "source_sha256": "F8853A154FF22C5719C782F68031BAFE8D5C84FD8724B53DB5945FA9D35F7B5C"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveParameters.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveParameters.lean",
+    "source_symbol": "exists_recursiveFrameSelection",
+    "line": 180,
+    "role": "parameter-existence proof",
+    "declaration_start": "theorem exists_recursiveFrameSelection {η : ℝ} (hη : 0 < η)",
+    "source_sha256": "F8853A154FF22C5719C782F68031BAFE8D5C84FD8724B53DB5945FA9D35F7B5C"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveParameters.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveParameters.lean",
+    "source_symbol": "exists_nextFrameChoice",
+    "line": 108,
+    "role": "private finite-choice existence proof",
+    "declaration_start": "private theorem exists_nextFrameChoice {η : ℝ} (hη : 0 < η)",
+    "source_sha256": "F8853A154FF22C5719C782F68031BAFE8D5C84FD8724B53DB5945FA9D35F7B5C"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveParameters.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveParameters.lean",
+    "source_symbol": "toBlockParameters",
+    "line": 234,
+    "role": "parameter data projection",
+    "declaration_start": "def toBlockParameters : BlockParameters where",
+    "source_sha256": "F8853A154FF22C5719C782F68031BAFE8D5C84FD8724B53DB5945FA9D35F7B5C"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveProjection.lean",
+    "source_symbol": "exists_recursive_alternatingProjection_near_one",
+    "line": 146,
+    "role": "direct projection existence proof",
+    "declaration_start": "theorem exists_recursive_alternatingProjection_near_one {B : ℝ} (hB : 1 < B) :",
+    "source_sha256": "A6BD8D6AC7310F8083AC2E63472A330DD8CA4AE953506866B73CF465C554B516"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveProjection.lean",
+    "source_symbol": "exists_recursive_alternatingProjection_tolerance",
+    "line": 122,
+    "role": "projection quantitative existence proof",
+    "declaration_start": "theorem exists_recursive_alternatingProjection_tolerance {D : ℝ} (hD : 1 < D) :",
+    "source_sha256": "A6BD8D6AC7310F8083AC2E63472A330DD8CA4AE953506866B73CF465C554B516"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveProjection.lean",
+    "source_symbol": "complement_idempotent",
+    "line": 12,
+    "role": "direct complementary projection proof",
+    "declaration_start": "theorem complement_idempotent {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]",
+    "source_sha256": "A6BD8D6AC7310F8083AC2E63472A330DD8CA4AE953506866B73CF465C554B516"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveProjection.lean",
+    "source_symbol": "alternatingProjection",
+    "line": 60,
+    "role": "diagonal projection definition",
+    "declaration_start": "def alternatingProjection {B : ℝ} (hB : Real.exp (18 * η) ≤ B)",
+    "source_sha256": "A6BD8D6AC7310F8083AC2E63472A330DD8CA4AE953506866B73CF465C554B516"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveProjection.lean",
+    "source_symbol": "alternatingBlockProjection",
+    "line": 27,
+    "role": "alternating finite projection definition",
+    "declaration_start": "def alternatingBlockProjection (j : ℕ) :",
+    "source_sha256": "A6BD8D6AC7310F8083AC2E63472A330DD8CA4AE953506866B73CF465C554B516"
+  },
+  {
+    "file": "ComplementedSubspace/ReindexedFrameProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ReindexedFrameProjection.lean",
+    "source_symbol": "exists_recursive_complement_tolerance",
+    "line": 138,
+    "role": "complement norm proof",
+    "declaration_start": "theorem exists_recursive_complement_tolerance {D : ℝ} (hD : 1 < D) :",
+    "source_sha256": "500E79DE37D725F26F55BAE55B59A545BEE1886614FB6AD1363721DBC97FCAA3"
+  },
+  {
+    "file": "ComplementedSubspace/ReindexedFrameProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ReindexedFrameProjection.lean",
+    "source_symbol": "exists_finTensorProjection_complement_threshold",
+    "line": 82,
+    "role": "finite complement threshold proof",
+    "declaration_start": "theorem exists_finTensorProjection_complement_threshold {D : ℝ} (hD : 1 < D) :",
+    "source_sha256": "500E79DE37D725F26F55BAE55B59A545BEE1886614FB6AD1363721DBC97FCAA3"
+  },
+  {
+    "file": "ComplementedSubspace/ReindexedFrameProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ReindexedFrameProjection.lean",
+    "source_symbol": "finTensorProjection_norm_le_exp",
+    "line": 76,
+    "role": "finite projection norm proof",
+    "declaration_start": "theorem finTensorProjection_norm_le_exp {p : ℝ} [Fact (1 ≤ ENNReal.ofReal p)]",
+    "source_sha256": "500E79DE37D725F26F55BAE55B59A545BEE1886614FB6AD1363721DBC97FCAA3"
+  },
+  {
+    "file": "ComplementedSubspace/ReindexedFrameProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ReindexedFrameProjection.lean",
+    "source_symbol": "blockFrameProjection_norm_le",
+    "line": 125,
+    "role": "recursive finite projection norm proof",
+    "declaration_start": "theorem blockFrameProjection_norm_le (j : ℕ) :",
+    "source_sha256": "500E79DE37D725F26F55BAE55B59A545BEE1886614FB6AD1363721DBC97FCAA3"
+  },
+  {
+    "file": "ComplementedSubspace/TensorProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\TensorProjection.lean",
+    "source_symbol": "tensorFrameProjection_norm_le_exp",
+    "line": 159,
+    "role": "tensor projection norm proof",
+    "declaration_start": "theorem tensorFrameProjection_norm_le_exp {p : ℝ} [Fact (1 ≤ ENNReal.ofReal p)]",
+    "source_sha256": "E5F33E5A9BB60BDD5EC99CC09D719EE62C29E9F5EF3DC1DCEEC496B9F4FAA5A7"
+  },
+  {
+    "file": "ComplementedSubspace/TensorProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\TensorProjection.lean",
+    "source_symbol": "tensorFrameProjection_clm_idempotent",
+    "line": 153,
+    "role": "tensor projection identity proof",
+    "declaration_start": "theorem tensorFrameProjection_clm_idempotent (p : ℝ≥0∞) [Fact (1 ≤ p)] (n : ℕ) :",
+    "source_sha256": "E5F33E5A9BB60BDD5EC99CC09D719EE62C29E9F5EF3DC1DCEEC496B9F4FAA5A7"
+  },
+  {
+    "file": "ComplementedSubspace/LocalHilbertProjection.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalHilbertProjection.lean",
+    "source_symbol": "norm_complement_le_of_localHilbert",
+    "line": 71,
+    "role": "local Hilbert complement norm proof",
+    "declaration_start": "theorem norm_complement_le_of_localHilbert {D : ℝ} (hD : 1 ≤ D)",
+    "source_sha256": "5A19771C61D2C83BC171C19C24D36128B40A9C50B1792E00162DE9F2CF7D6425"
+  },
+  {
+    "file": "ComplementedSubspace/LocalHilbert.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalHilbert.lean",
+    "source_symbol": "exists_localHilbert_subspace_threshold",
+    "line": 204,
+    "role": "local Hilbert threshold proof",
+    "declaration_start": "theorem exists_localHilbert_subspace_threshold (k : ℕ) {D : ℝ} (hD : 1 < D) :",
+    "source_sha256": "16C8F562A11DE1E24C58690321777ECB91429A9A9073C154EE1EA653A98DA085"
+  },
+  {
+    "file": "ComplementedSubspace/ActualProjectionDPR.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ActualProjectionDPR.lean",
+    "source_symbol": "actualProjection_range_chiDPR_eq_top",
+    "line": 18,
+    "role": "direct primal range obstruction proof",
+    "declaration_start": "theorem actualProjection_range_chiDPR_eq_top : chiDPR T.range = ⊤ := by",
+    "source_sha256": "A3385B8565D37F4E49491BBD8CFDC1BFF2CB42C3AD530690CA3CA7EA0E4CBD85"
+  },
+  {
+    "file": "ComplementedSubspace/ActualProjectionDPR.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ActualProjectionDPR.lean",
+    "source_symbol": "actualProjection_complement_range_chiDPR_eq_top",
+    "line": 27,
+    "role": "direct primal complement obstruction proof",
+    "declaration_start": "theorem actualProjection_complement_range_chiDPR_eq_top :",
+    "source_sha256": "A3385B8565D37F4E49491BBD8CFDC1BFF2CB42C3AD530690CA3CA7EA0E4CBD85"
+  },
+  {
+    "file": "ComplementedSubspace/ActualProjectionDualDPR.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ActualProjectionDualDPR.lean",
+    "source_symbol": "actualProjection_range_dual_chiDPR_eq_top",
+    "line": 19,
+    "role": "direct dual range obstruction proof",
+    "declaration_start": "theorem actualProjection_range_dual_chiDPR_eq_top : chiDPR (StrongDual ℝ T.range) = ⊤ := by",
+    "source_sha256": "9F7B62844C96BF17BC6CF7BE1B3798AFF60C52A3CD533995AA285A39EC50C1F8"
+  },
+  {
+    "file": "ComplementedSubspace/ActualProjectionDualDPR.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ActualProjectionDualDPR.lean",
+    "source_symbol": "actualProjection_complement_range_dual_chiDPR_eq_top",
+    "line": 28,
+    "role": "direct dual complement obstruction proof",
+    "declaration_start": "theorem actualProjection_complement_range_dual_chiDPR_eq_top :",
+    "source_sha256": "9F7B62844C96BF17BC6CF7BE1B3798AFF60C52A3CD533995AA285A39EC50C1F8"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveDiagonalDPR.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveDiagonalDPR.lean",
+    "source_symbol": "recursiveDiagonalRange_chiDPR_eq_top",
+    "line": 16,
+    "role": "recursive primal obstruction proof",
+    "declaration_start": "theorem recursiveDiagonalRange_chiDPR_eq_top {η : ℝ}",
+    "source_sha256": "F1C6DFB5E0EA4BF97AF0C5AE66EA99E74059CCD5EF1B2584F2D144229CAFDBD5"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveDiagonalDualDPR.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveDiagonalDualDPR.lean",
+    "source_symbol": "recursiveDiagonalRange_dual_chiDPR_eq_top",
+    "line": 16,
+    "role": "recursive dual obstruction proof",
+    "declaration_start": "theorem recursiveDiagonalRange_dual_chiDPR_eq_top {η : ℝ}",
+    "source_sha256": "BA91ACF6624716006ED51206585E29CD5A3E56D9709293830D87B565EA996956"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteBlockDPRLower.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteBlockDPRLower.lean",
+    "source_symbol": "frame_block_le_chiDPR",
+    "line": 17,
+    "role": "finite block DPR lower bound proof",
+    "declaration_start": "theorem frame_block_le_chiDPR {n : ℕ} {p : ℝ}",
+    "source_sha256": "C20708A337C386FB120A3A35A3190CCEC5F5ECDDAF17AD08E16F60AA966C76F1"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteDualDPRLower.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteDualDPRLower.lean",
+    "source_symbol": "frame_product_le_chiDPR_dual",
+    "line": 20,
+    "role": "finite dual DPR lower bound proof",
+    "declaration_start": "theorem frame_product_le_chiDPR_dual {n : ℕ} {p : ℝ}",
+    "source_sha256": "6E4F469B111C39AE14B273169E93510C2DC9A67DA34EC4A5932234CCF533BFE6"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteBlockObstruction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteBlockObstruction.lean",
+    "source_symbol": "finite_basis_obstruction_with_frame_summand",
+    "line": 22,
+    "role": "finite basis contradiction proof",
+    "declaration_start": "theorem finite_basis_obstruction_with_frame_summand {m n : ℕ} {p : ℝ}",
+    "source_sha256": "A8A14D7EE79CFCEF0EEF1E8B7DD090765B2C695E6A2C34FF257985FF24841ABC"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteBlockObstruction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteBlockObstruction.lean",
+    "source_symbol": "finite_basis_obstruction_with_frame_summand_of_scale",
+    "line": 70,
+    "role": "scale-specialized finite basis contradiction proof",
+    "declaration_start": "theorem finite_basis_obstruction_with_frame_summand_of_scale {m n : ℕ} {p : ℝ}",
+    "source_sha256": "A8A14D7EE79CFCEF0EEF1E8B7DD090765B2C695E6A2C34FF257985FF24841ABC"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteProductObstruction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteProductObstruction.lean",
+    "source_symbol": "finite_basis_obstruction_of_frame_product",
+    "line": 15,
+    "role": "product finite basis contradiction proof",
+    "declaration_start": "theorem finite_basis_obstruction_of_frame_product {m n : ℕ} {p : ℝ}",
+    "source_sha256": "EFE6E44207E493B4A4F96256D8BA6B649ACB308ACF839D56DBF958BC4F209276"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteSelectedHilbertModel.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteSelectedHilbertModel.lean",
+    "source_symbol": "exists_frame_selectedHilbertFactorization",
+    "line": 78,
+    "role": "selected Hilbert factorization existence proof",
+    "declaration_start": "theorem exists_frame_selectedHilbertFactorization {m n : ℕ} {p : ℝ}",
+    "source_sha256": "BF66A07267B955E5F27E7044957B9A2F7E7271A0ACD1D783C545618A2466F9C3"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteOverlapObstruction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteOverlapObstruction.lean",
+    "source_symbol": "finite_selected_trace_obstruction",
+    "line": 126,
+    "role": "trace overlap contradiction proof",
+    "declaration_start": "theorem finite_selected_trace_obstruction (n : ℕ) (p : ℝ)",
+    "source_sha256": "5C1C86FC03E56139CBAF6F5CAFA764B07BF1C534938153AD8BB7241C19D96C07"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteOverlapObstruction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteOverlapObstruction.lean",
+    "source_symbol": "finite_selected_trace_scale_le",
+    "line": 83,
+    "role": "trace overlap upper scale proof",
+    "declaration_start": "theorem finite_selected_trace_scale_le (n : ℕ) (p : ℝ)",
+    "source_sha256": "5C1C86FC03E56139CBAF6F5CAFA764B07BF1C534938153AD8BB7241C19D96C07"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteOverlapObstruction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteOverlapObstruction.lean",
+    "source_symbol": "finite_selected_projection_overlap_le",
+    "line": 20,
+    "role": "selected projection overlap proof",
+    "declaration_start": "theorem finite_selected_projection_overlap_le (n : ℕ) (p : ℝ)",
+    "source_sha256": "5C1C86FC03E56139CBAF6F5CAFA764B07BF1C534938153AD8BB7241C19D96C07"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteOverlapConclusion.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteOverlapConclusion.lean",
+    "source_symbol": "finite_basis_overlap_scaled_bound",
+    "line": 17,
+    "role": "overlap estimate proof",
+    "declaration_start": "theorem finite_basis_overlap_scaled_bound (n : ℕ) (p : ℝ)",
+    "source_sha256": "98236AA39EC4DE97587F365A4EAA857C9CEF06F0857625189DE8885406C33A40"
+  },
+  {
+    "file": "ComplementedSubspace/ProjectionOverlapLower.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ProjectionOverlapLower.lean",
+    "source_symbol": "frame_trace_forces_projection_overlap",
+    "line": 34,
+    "role": "trace-to-overlap proof",
+    "declaration_start": "theorem frame_trace_forces_projection_overlap (n : ℕ) (p : ℝ)",
+    "source_sha256": "6E44903DEAC25BA95E259440C849E51717EC603F8535424D610A75C88A645CA2"
+  },
+  {
+    "file": "ComplementedSubspace/FrameCoefficientReindexedRange.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FrameCoefficientReindexedRange.lean",
+    "source_symbol": "frameCoefficientEvenRangeEquiv",
+    "line": 40,
+    "role": "even finite range isometry definition",
+    "declaration_start": "def frameCoefficientEvenRangeEquiv (j : ℕ) (hj : Even j) :",
+    "source_sha256": "66AA1AB2EEDA8CB80ADCE4CC9999432780B1382BE1C9217DA3608C419A3DC87D"
+  },
+  {
+    "file": "ComplementedSubspace/FrameCoefficientReindexedRange.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FrameCoefficientReindexedRange.lean",
+    "source_symbol": "frameCoefficientOddComplementRangeEquiv",
+    "line": 46,
+    "role": "odd complementary finite range isometry definition",
+    "declaration_start": "def frameCoefficientOddComplementRangeEquiv (j : ℕ) (hj : ¬ Even j) :",
+    "source_sha256": "66AA1AB2EEDA8CB80ADCE4CC9999432780B1382BE1C9217DA3608C419A3DC87D"
+  },
+  {
+    "file": "ComplementedSubspace/DiagonalFrameProduct.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\DiagonalFrameProduct.lean",
+    "source_symbol": "diagonalFrameProductEquiv",
+    "line": 19,
+    "role": "actual diagonal product isometry definition",
+    "declaration_start": "def diagonalFrameProductEquiv :",
+    "source_sha256": "AEACCF496F84A3B414561604CBBB2982C296B97AE21D46D47AEE2F4A60E808EA"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveKernelHilbert.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveKernelHilbert.lean",
+    "source_symbol": "recursiveDiagonalRange_kernel_locallyHilbert",
+    "line": 45,
+    "role": "primal kernel geometry proof",
+    "declaration_start": "theorem recursiveDiagonalRange_kernel_locallyHilbert {η : ℝ}",
+    "source_sha256": "B1EAA41D636DF5C947A4802E817F0A0F21374008D3F4C1A4D8570BD4F1293942"
+  },
+  {
+    "file": "ComplementedSubspace/LocalHilbertRecursiveKernelDual.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalHilbertRecursiveKernelDual.lean",
+    "source_symbol": "recursiveDiagonalRange_kernel_dual_subspaces",
+    "line": 59,
+    "role": "dual kernel geometry proof",
+    "declaration_start": "theorem recursiveDiagonalRange_kernel_dual_subspaces {η : ℝ}",
+    "source_sha256": "F1D73206E02676F82E59F1C0C2607A19E44717B2C35176720F0274EDF3809146"
+  },
+  {
+    "file": "ComplementedSubspace/LocalHilbertRecursiveKernelDual.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LocalHilbertRecursiveKernelDual.lean",
+    "source_symbol": "recursiveProfile_embedding_dual_subspaces",
+    "line": 20,
+    "role": "dual embedded profile geometry proof",
+    "declaration_start": "theorem recursiveProfile_embedding_dual_subspaces {η : ℝ}",
+    "source_sha256": "F1D73206E02676F82E59F1C0C2607A19E44717B2C35176720F0274EDF3809146"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveHeadHilbert.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveHeadHilbert.lean",
+    "source_symbol": "recursiveProfile_finiteHead_hasHilbertNormWithin",
+    "line": 41,
+    "role": "finite head geometry proof",
+    "declaration_start": "theorem recursiveProfile_finiteHead_hasHilbertNormWithin {η : ℝ} {θ : ℕ → ℝ}",
+    "source_sha256": "DAA62E75B85090C6CC1716CA8E24CC47710AAC7CBE9931D4F8F9C9E926DA1CD7"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveHeadHilbert.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveHeadHilbert.lean",
+    "source_symbol": "recursiveProfile_finiteHead_hilbertModel",
+    "line": 63,
+    "role": "finite head model existence proof",
+    "declaration_start": "theorem recursiveProfile_finiteHead_hilbertModel {η : ℝ} {θ : ℕ → ℝ}",
+    "source_sha256": "DAA62E75B85090C6CC1716CA8E24CC47710AAC7CBE9931D4F8F9C9E926DA1CD7"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveTailHilbert.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveTailHilbert.lean",
+    "source_symbol": "recursiveProfileTail_locallyHilbert",
+    "line": 40,
+    "role": "tail local geometry proof",
+    "declaration_start": "theorem recursiveProfileTail_locallyHilbert (j : ℕ) :",
+    "source_sha256": "028C16F70A05EFCB6DB95137D0A1D2014523880F980CC88D51C3D333C5002901"
+  },
+  {
+    "file": "ComplementedSubspace/RecursiveTailHilbert.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\RecursiveTailHilbert.lean",
+    "source_symbol": "recursiveProfileTail_approxParallelogram",
+    "line": 27,
+    "role": "tail parallelogram proof",
+    "declaration_start": "theorem recursiveProfileTail_approxParallelogram (j : ℕ) :",
+    "source_sha256": "028C16F70A05EFCB6DB95137D0A1D2014523880F980CC88D51C3D333C5002901"
+  },
+  {
+    "file": "ComplementedSubspace/ProjectionCorollaries.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ProjectionCorollaries.lean",
+    "source_symbol": "hasSeparatedRange_of_DPR_obstructions",
+    "line": 27,
+    "role": "direct range conclusions assembly proof",
+    "declaration_start": "theorem hasSeparatedRange_of_DPR_obstructions (P : X →L[ℝ] X)",
+    "source_sha256": "360A3C53AAA91561097A4D9F52003C9EA1F8A1977F5887B97B855E65F007FDB8"
+  },
+  {
+    "file": "ComplementedSubspace/ProjectionCorollaries.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\ProjectionCorollaries.lean",
+    "source_symbol": "chiGL_range_le_projection_norm_all",
+    "line": 18,
+    "role": "primal GL projection proof including zero range",
+    "declaration_start": "theorem chiGL_range_le_projection_norm_all (P : X →L[ℝ] X)",
+    "source_sha256": "360A3C53AAA91561097A4D9F52003C9EA1F8A1977F5887B97B855E65F007FDB8"
+  },
+  {
+    "file": "ComplementedSubspace/GLRetraction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\GLRetraction.lean",
+    "source_symbol": "chiGL_range_le_projection_norm",
+    "line": 196,
+    "role": "primal GL projection proof",
+    "declaration_start": "theorem chiGL_range_le_projection_norm (P : X →L[ℝ] X) [Nontrivial ↥P.range]",
+    "source_sha256": "73B7E706F0223634C3AAC87D8C9D8BD4127206FDE355D047F58490B537BB36D3"
+  },
+  {
+    "file": "ComplementedSubspace/GLRetraction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\GLRetraction.lean",
+    "source_symbol": "chiGL_le_of_retraction",
+    "line": 143,
+    "role": "GL retraction inequality proof",
+    "declaration_start": "theorem chiGL_le_of_retraction [Nontrivial Z]",
+    "source_sha256": "73B7E706F0223634C3AAC87D8C9D8BD4127206FDE355D047F58490B537BB36D3"
+  },
+  {
+    "file": "ComplementedSubspace/GLRetraction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\GLRetraction.lean",
+    "source_symbol": "GLFactorization.throughRetraction",
+    "line": 39,
+    "role": "GL factorization construction",
+    "declaration_start": "def GLFactorization.throughRetraction (J : Z →L[ℝ] X) (R : X →L[ℝ] Z)",
+    "source_sha256": "73B7E706F0223634C3AAC87D8C9D8BD4127206FDE355D047F58490B537BB36D3"
+  },
+  {
+    "file": "ComplementedSubspace/GLDualRetraction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\GLDualRetraction.lean",
+    "source_symbol": "chiGL_dual_range_le_projection_norm",
+    "line": 81,
+    "role": "dual GL projection proof",
+    "declaration_start": "theorem chiGL_dual_range_le_projection_norm (P : X →L[ℝ] X)",
+    "source_sha256": "1B86A0368A10BA5859E478280E5535063DDCBF2A0EA7FDC276FE9D16E209F83D"
+  },
+  {
+    "file": "ComplementedSubspace/GLDualRetraction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\GLDualRetraction.lean",
+    "source_symbol": "chiGL_dual_le_of_retraction",
+    "line": 54,
+    "role": "dual GL retraction inequality proof",
+    "declaration_start": "theorem chiGL_dual_le_of_retraction (J : Z →L[ℝ] X) (R : X →L[ℝ] Z)",
+    "source_sha256": "1B86A0368A10BA5859E478280E5535063DDCBF2A0EA7FDC276FE9D16E209F83D"
+  },
+  {
+    "file": "ComplementedSubspace/GLDualRetraction.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\GLDualRetraction.lean",
+    "source_symbol": "dualPullback",
+    "line": 21,
+    "role": "dual retraction map definition",
+    "declaration_start": "def dualPullback (T : X →L[ℝ] Z) : StrongDual ℝ Z →L[ℝ] StrongDual ℝ X :=",
+    "source_sha256": "1B86A0368A10BA5859E478280E5535063DDCBF2A0EA7FDC276FE9D16E209F83D"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientFiniteApproximation.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientFiniteApproximation.lean",
+    "source_symbol": "ambient_chiGL_le_one",
+    "line": 91,
+    "role": "direct ambient GL proof",
+    "declaration_start": "theorem ambient_chiGL_le_one (a : BlockParameters) : chiGL (Ambient a) ≤ 1 :=",
+    "source_sha256": "5F674F8CB28D0D1D36B8E720C19A947868605C04521122567B677747B3E6F209"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientFiniteApproximation.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientFiniteApproximation.lean",
+    "source_symbol": "ambientDual_chiGL_le_one",
+    "line": 110,
+    "role": "direct ambient dual GL proof",
+    "declaration_start": "theorem ambientDual_chiGL_le_one (a : BlockParameters) :",
+    "source_sha256": "5F674F8CB28D0D1D36B8E720C19A947868605C04521122567B677747B3E6F209"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientFiniteApproximation.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientFiniteApproximation.lean",
+    "source_symbol": "ambient_hasFiniteUnconditionalApproximations",
+    "line": 79,
+    "role": "ambient finite approximation proof",
+    "declaration_start": "theorem ambient_hasFiniteUnconditionalApproximations (a : BlockParameters) :",
+    "source_sha256": "5F674F8CB28D0D1D36B8E720C19A947868605C04521122567B677747B3E6F209"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientFiniteApproximation.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientFiniteApproximation.lean",
+    "source_symbol": "ambientDual_chiDPR_le_one",
+    "line": 103,
+    "role": "ambient dual DPR upper bound proof",
+    "declaration_start": "theorem ambientDual_chiDPR_le_one (a : BlockParameters) :",
+    "source_sha256": "5F674F8CB28D0D1D36B8E720C19A947868605C04521122567B677747B3E6F209"
+  },
+  {
+    "file": "ComplementedSubspace/DPRtoGL.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\DPRtoGL.lean",
+    "source_symbol": "chiGL_le_chiDPR",
+    "line": 199,
+    "role": "DPR-to-GL comparison proof",
+    "declaration_start": "theorem chiGL_le_chiDPR (Z : Type*) [NormedAddCommGroup Z] [NormedSpace ℝ Z] :",
+    "source_sha256": "FD61437D513847BFE98421764FE725BC8096D8CF0CA04A64C91D0DBB39B4305A"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteApproximation.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteApproximation.lean",
+    "source_symbol": "chiDPR_le_constant_of_finite_approximations",
+    "line": 131,
+    "role": "finite approximation to DPR proof",
+    "declaration_start": "theorem chiDPR_le_constant_of_finite_approximations",
+    "source_sha256": "6C8C0840AA83C40B24423D1F8B2BA0978CDF526D4B13196D00F7D710D36A81DE"
+  },
+  {
+    "file": "ComplementedSubspace/LatticeApproximation.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LatticeApproximation.lean",
+    "source_symbol": "chiDPR_dual_lattice_le_one",
+    "line": 41,
+    "role": "dual lattice DPR bound proof",
+    "declaration_start": "theorem chiDPR_dual_lattice_le_one",
+    "source_sha256": "AC38F607840630954FCA0DCAAC3301940BFFAF4F6285E1A0BC03AACF7B0EA336"
+  },
+  {
+    "file": "ComplementedSubspace/LatticeApproximation.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LatticeApproximation.lean",
+    "source_symbol": "hasFiniteUnconditionalApproximations_dual",
+    "line": 36,
+    "role": "dual lattice approximation proof",
+    "declaration_start": "theorem hasFiniteUnconditionalApproximations_dual",
+    "source_sha256": "AC38F607840630954FCA0DCAAC3301940BFFAF4F6285E1A0BC03AACF7B0EA336"
+  },
+  {
+    "file": "ComplementedSubspace/LatticeApproximation.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LatticeApproximation.lean",
+    "source_symbol": "hasFiniteUnconditionalApproximations_of_principalProjectionProperty",
+    "line": 18,
+    "role": "lattice spectral approximation proof",
+    "declaration_start": "theorem hasFiniteUnconditionalApproximations_of_principalProjectionProperty",
+    "source_sha256": "AC38F607840630954FCA0DCAAC3301940BFFAF4F6285E1A0BC03AACF7B0EA336"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientSeparable.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientSeparable.lean",
+    "source_symbol": "ambientSeparableSpace",
+    "line": 16,
+    "role": "direct synthesized separability proof instance",
+    "declaration_start": "instance ambientSeparableSpace (a : BlockParameters) : SeparableSpace (Ambient a) := by",
+    "source_sha256": "50191618FBDA12052D9EED73E99850ACC880BBF74423D89589E725DC0EA8BD82"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientUniformConvex.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientUniformConvex.lean",
+    "source_symbol": "ambientUniformConvexSpace",
+    "line": 17,
+    "role": "direct synthesized uniform convexity proof instance",
+    "declaration_start": "instance ambientUniformConvexSpace (a : BlockParameters) : UniformConvexSpace (Ambient a) :=",
+    "source_sha256": "BCF3AD915F3DEFB4FF941C898B02BA9CE0395C1332FC40EAE8DB59013C58381A"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientUniformConvex.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientUniformConvex.lean",
+    "source_symbol": "block_hasCubicSumModulus",
+    "line": 11,
+    "role": "finite block modulus proof",
+    "declaration_start": "theorem block_hasCubicSumModulus (a : BlockParameters) (j : ℕ) :",
+    "source_sha256": "BCF3AD915F3DEFB4FF941C898B02BA9CE0395C1332FC40EAE8DB59013C58381A"
+  },
+  {
+    "file": "ComplementedSubspace/LpTwoUniformConvex.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\LpTwoUniformConvex.lean",
+    "source_symbol": "lp_two_uniformConvexSpace_of_cubicModulus",
+    "line": 137,
+    "role": "sum uniform convexity proof",
+    "declaration_start": "theorem lp_two_uniformConvexSpace_of_cubicModulus {ι : Type*} {E : ι → Type*}",
+    "source_sha256": "5DA989DB4B1FFF92A3526515308D09E7F9AACFF96EF5842A558E3DB6D9327D64"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteLpGeometry.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteLpGeometry.lean",
+    "source_symbol": "finitePiLp_uniform_modulus",
+    "line": 182,
+    "role": "finite lp modulus proof",
+    "declaration_start": "theorem finitePiLp_uniform_modulus {ι 𝕜 : Type*} [Fintype ι] [RCLike 𝕜]",
+    "source_sha256": "D3504078F5AD9966735841A01A97E509566673ABC9B8842606EDE7E763A6A309"
+  },
+  {
+    "file": "ComplementedSubspace/FiniteLpGeometry.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\FiniteLpGeometry.lean",
+    "source_symbol": "finitePiLp_clarkson",
+    "line": 63,
+    "role": "finite lp Clarkson inequality proof",
+    "declaration_start": "theorem finitePiLp_clarkson {ι 𝕜 : Type*} [Fintype ι] [RCLike 𝕜]",
+    "source_sha256": "D3504078F5AD9966735841A01A97E509566673ABC9B8842606EDE7E763A6A309"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientLattice.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientLattice.lean",
+    "source_symbol": "ambient_hasRealBanachLatticeOrder",
+    "line": 121,
+    "role": "direct ambient lattice proof",
+    "declaration_start": "theorem ambient_hasRealBanachLatticeOrder (a : BlockParameters) :",
+    "source_sha256": "15A495E3B9E2D0CC724F267B8818D9E718119FBEB43CCB374C46975A533BA2AB"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientLattice.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientLattice.lean",
+    "source_symbol": "piLpLattice",
+    "line": 41,
+    "role": "finite lattice structure instance",
+    "declaration_start": "instance piLpLattice : Lattice (PiLp p E) :=",
+    "source_sha256": "15A495E3B9E2D0CC724F267B8818D9E718119FBEB43CCB374C46975A533BA2AB"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientLattice.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientLattice.lean",
+    "source_symbol": "lpLattice",
+    "line": 91,
+    "role": "sum lattice structure instance",
+    "declaration_start": "instance lpLattice : Lattice (lp E p) :=",
+    "source_sha256": "15A495E3B9E2D0CC724F267B8818D9E718119FBEB43CCB374C46975A533BA2AB"
+  },
+  {
+    "file": "ComplementedSubspace/AmbientLattice.lean",
+    "absolute_file": "LEAN_PROJECT\\ComplementedSubspace\\AmbientLattice.lean",
+    "source_symbol": "lpHasSolidNorm",
+    "line": 99,
+    "role": "sum solid norm proof instance",
+    "declaration_start": "instance lpHasSolidNorm : HasSolidNorm (lp E p) where",
+    "source_sha256": "15A495E3B9E2D0CC724F267B8818D9E718119FBEB43CCB374C46975A533BA2AB"
+  }
+]

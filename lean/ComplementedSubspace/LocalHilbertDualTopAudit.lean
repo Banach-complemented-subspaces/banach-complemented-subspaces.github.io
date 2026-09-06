@@ -1,0 +1,4 @@
+import ComplementedSubspace.LocalHilbertDualTop
+
+#print axioms ComplementedSubspace.DualSubspacesLocallyHilbertWithin.dual
+#print axioms ComplementedSubspace.locallyHilbert_bidual_of_dualSubspaces

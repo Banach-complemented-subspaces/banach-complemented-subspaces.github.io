@@ -1,0 +1,5 @@
+import ComplementedSubspace.ProjectionCorollaries
+
+#print axioms ComplementedSubspace.completeSpace_projection_range
+#print axioms ComplementedSubspace.hasSeparatedRange_of_DPR_obstructions
+#print axioms ComplementedSubspace.corollary_negations_of_DPR_obstructions

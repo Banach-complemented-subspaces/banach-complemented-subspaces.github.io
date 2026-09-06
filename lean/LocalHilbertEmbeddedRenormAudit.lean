@@ -1,0 +1,5 @@
+import ComplementedSubspace.LocalHilbertEmbeddedRenorm
+#print axioms ComplementedSubspace.embeddedRenormEquiv_norm_le
+#print axioms ComplementedSubspace.embeddedRenormEquiv_symm_norm_le
+#print axioms ComplementedSubspace.embeddedRenormSpace_approxParallelogram
+#print axioms ComplementedSubspace.embedded_renorm_dual_subspace_dual_localHilbert

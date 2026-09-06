@@ -1,0 +1,110 @@
+[
+  {
+    "name": "plausible",
+    "url": "https://github.com/leanprover-community/plausible",
+    "manifest_revision": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "actual_revision": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\plausible",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\plausible",
+    "tracked_files": 35,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  },
+  {
+    "name": "LeanSearchClient",
+    "url": "https://github.com/leanprover-community/LeanSearchClient",
+    "manifest_revision": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "actual_revision": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\LeanSearchClient",
+    "tracked_files": 15,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  },
+  {
+    "name": "importGraph",
+    "url": "https://github.com/leanprover-community/import-graph",
+    "manifest_revision": "1681d78dd6e65e38b143f9740d829c826673807c",
+    "actual_revision": "1681d78dd6e65e38b143f9740d829c826673807c",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\importGraph",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\importGraph",
+    "tracked_files": 63,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  },
+  {
+    "name": "proofwidgets",
+    "url": "https://github.com/leanprover-community/ProofWidgets4",
+    "manifest_revision": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "actual_revision": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\proofwidgets",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\proofwidgets",
+    "tracked_files": 111,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  },
+  {
+    "name": "aesop",
+    "url": "https://github.com/leanprover-community/aesop",
+    "manifest_revision": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "actual_revision": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\aesop",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\aesop",
+    "tracked_files": 258,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  },
+  {
+    "name": "Qq",
+    "url": "https://github.com/leanprover-community/quote4",
+    "manifest_revision": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "actual_revision": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\Qq",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\Qq",
+    "tracked_files": 35,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  },
+  {
+    "name": "batteries",
+    "url": "https://github.com/leanprover-community/batteries",
+    "manifest_revision": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+    "actual_revision": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\batteries",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\batteries",
+    "tracked_files": 288,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  },
+  {
+    "name": "Cli",
+    "url": "https://github.com/leanprover/lean4-cli",
+    "manifest_revision": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+    "actual_revision": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\Cli",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\Cli",
+    "tracked_files": 12,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  },
+  {
+    "name": "mathlib",
+    "url": "https://github.com/leanprover-community/mathlib4.git",
+    "manifest_revision": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+    "actual_revision": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+    "original_path": "LEAN_PROJECT\\.lake\\packages\\mathlib",
+    "reproduction_path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\mathlib",
+    "tracked_files": 9239,
+    "working_tree_status": "",
+    "git_repository_copied_independently": true,
+    "shared_objects": false
+  }
+]

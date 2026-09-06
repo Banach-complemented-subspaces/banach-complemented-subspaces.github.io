@@ -1,0 +1,7 @@
+import ComplementedSubspace.BasisBounds
+
+#print axioms ComplementedSubspace.unconditionalBasisConstant_lt_top
+#print axioms ComplementedSubspace.unconditionalConstant_lt_top
+#print axioms ComplementedSubspace.chiDPR_eq_unconditionalConstant_top
+#print axioms ComplementedSubspace.finiteDimensional_hasDPRLocalUnconditionalStructure
+#print axioms ComplementedSubspace.finiteDimensional_hasGLLocalUnconditionalStructure

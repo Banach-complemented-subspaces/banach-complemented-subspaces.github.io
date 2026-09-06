@@ -1,0 +1,4 @@
+import ComplementedSubspace.FiniteSelectedHilbertModel
+
+#print axioms ComplementedSubspace.selected_coordinates_have_hilbert_factorization
+#print axioms ComplementedSubspace.exists_frame_selectedHilbertFactorization

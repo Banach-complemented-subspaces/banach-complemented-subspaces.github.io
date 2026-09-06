@@ -1,0 +1,7 @@
+import ComplementedSubspace.LpUniformEquiv
+#print axioms ComplementedSubspace.lpUniformEquiv
+#print axioms ComplementedSubspace.lpUniformEquiv_apply
+#print axioms ComplementedSubspace.lpUniformEquiv_symm_apply
+#print axioms ComplementedSubspace.lpUniformEquiv_norm_le
+#print axioms ComplementedSubspace.lpUniformEquiv_symm_norm_le
+#print axioms ComplementedSubspace.lpUniformEquiv_norm_bounds

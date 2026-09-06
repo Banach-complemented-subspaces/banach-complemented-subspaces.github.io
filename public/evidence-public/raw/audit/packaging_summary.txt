@@ -1,0 +1,11 @@
+PACKAGING PASS
+Archive: WORKSPACE\output\Complemented_Subspace_Lean_Independent_Audit.zip
+Bytes: 8844763
+SHA256: 83c339ca7cd48f6b89de7a8d2b7f85e527a5fd94144686c1980bdc700437ec25
+Original source/config files: 233
+Evidence files: 70
+ZIP members: 305
+CRC and all 304 manifest-covered SHA256 entries verified.
+Before/after/current originals and final scanner hashes agree; both compiler status files passed.
+Final report: verification_report.md
+Result metadata: LEAN_PROJECT\verification\independent-audit-2026-09-05\packaging_result.json

@@ -1,0 +1,9 @@
+import ComplementedSubspace.ComplexTensorProjection
+
+#print axioms ComplementedSubspace.finite_projection_norm_energy_bound
+#print axioms ComplementedSubspace.complexifyMatrix_pythagorean
+#print axioms ComplementedSubspace.complexFrameProjection_clm_idempotent
+#print axioms ComplementedSubspace.complexFrameProjection_norm_le
+#print axioms ComplementedSubspace.complexTensorFrameProjection_clm_idempotent
+#print axioms ComplementedSubspace.complexTensorFrameProjection_norm_le_exp
+#print axioms ComplementedSubspace.complexTensorFrameProjection_norm_tendsto_one

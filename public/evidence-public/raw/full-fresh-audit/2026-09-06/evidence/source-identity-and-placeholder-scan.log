@@ -1,0 +1,43 @@
+{
+  "label": "source-identity-and-placeholder-scan",
+  "cwd": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854",
+  "executable": "USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "arguments": [
+    "-B",
+    "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\evidence\\check_identity_and_scan.py"
+  ],
+  "windows_command_line": "\"USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -B \"WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\evidence\\check_identity_and_scan.py\"",
+  "started": "2026-09-06T12:41:20.567263+00:00",
+  "environment": {
+    "PATH": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin;USER_HOME\\.codex\\tmp\\arg0\\codex-arg0rksJmG;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;USER_HOME\\AppData\\Local\\Microsoft\\WindowsApps;USER_HOME\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\;USER_HOME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\80b8e5c230e43848;USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\27d6a192e9c98618",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "stdout": "source-identity-and-placeholder-scan.stdout.log",
+  "stderr": "source-identity-and-placeholder-scan.stderr.log",
+  "timeout_seconds": 1200,
+  "pid": 20388,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "PASS",
+  "ended": "2026-09-06T12:48:26.140861+00:00",
+  "elapsed_seconds": 425.5780000000086
+}
+
+STDOUT (verbatim)
+SOURCE IDENTITY AND SUPPLEMENTARY LEXICAL AUDIT
+PASS: identity and supplementary project gate only
+Start: 2026-09-06T12:41:20.672439+00:00
+End: 2026-09-06T12:48:26.109141+00:00
+Original: LEAN_PROJECT
+Reproduction: WORKSPACE\output\full_fresh_audit_2026-09-06_102854\reproduction
+Expected project manifest files per tree: 233
+Manifest results: [{"label": "original-source", "root": "LEAN_PROJECT", "expected_files": 233, "observed_files": 233, "mismatch_count": 0, "matches": true}, {"label": "reproduction-source", "root": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction", "expected_files": 233, "observed_files": 233, "mismatch_count": 0, "matches": true}, {"label": "original-dependency-source", "root": "LEAN_PROJECT\\.lake\\packages", "expected_files": 10056, "observed_files": 10056, "mismatch_count": 0, "matches": true}, {"label": "reproduction-dependency-source", "root": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages", "expected_files": 10056, "observed_files": 10056, "mismatch_count": 0, "matches": true}]
+Files scanned by scope: {"project-unrelated-or-audit": 53, "project-imported": 177, "fresh-evidence-audit-only": 4, "external-built-module-source": 2597}
+Project imported gate hits: 0
+External executable hits requiring review: 3985
+Website snippets/contexts checked: 82
+Failure count: 0
+This report is supplementary; it does not establish successful build, kernel replay, or external metaprogram trust.
+Full details: identity-source-and-scan.json; identity-lexical-occurrences.jsonl; identity-lexical-source-inventory.json
+
+STDERR (verbatim)

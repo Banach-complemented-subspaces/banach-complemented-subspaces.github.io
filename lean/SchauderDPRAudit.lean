@@ -1,0 +1,7 @@
+import ComplementedSubspace.SchauderDPR
+
+#print axioms ComplementedSubspace.norm_linearMap_le_of_cube_vertices
+#print axioms ComplementedSubspace.norm_sum_smul_le_of_subsum_bound
+#print axioms ComplementedSubspace.hasFiniteUnconditionalApproximations_of_schauder
+#print axioms ComplementedSubspace.chiDPR_le_of_unconditionalSchauderBasis
+#print axioms ComplementedSubspace.not_hasUnconditionalSchauderBasis_of_chiDPR_top

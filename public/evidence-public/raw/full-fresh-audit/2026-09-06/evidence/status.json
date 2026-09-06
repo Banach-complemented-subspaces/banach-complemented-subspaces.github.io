@@ -1,0 +1,19 @@
+{
+  "started": "2026-09-06T10:28:54+00:00",
+  "overall": "PASS",
+  "computation_deadline": "2026-09-06T13:13:54+00:00",
+  "handoff_deadline": "2026-09-06T13:28:54+00:00",
+  "target": "ComplementedSubspace",
+  "stages": {
+    "2_existing_fresh_replay": "PASS",
+    "3_source_reproduction": "PASS",
+    "4_rebuilt_fresh_replay": "PASS",
+    "5_endpoint_definition_axiom_checks": "PASS",
+    "1_source_environment_target_identity": "PASS",
+    "6_final_preservation_and_packaging": "PASS"
+  },
+  "label": "FULL FRESH AUDIT: PASS",
+  "report_assembled_utc": "2026-09-06T13:06:30.913425+00:00",
+  "archive_validation_receipt": "../archive-validation.json",
+  "source_manifest_sha256": "875e2219bcfe9ea3c6a66a21fecbb077fc225b47e4ab39a0720f82735fe8fa3a"
+}

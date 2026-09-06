@@ -1,0 +1,7 @@
+import ComplementedSubspace.LatticeApproximation
+
+#print axioms ComplementedSubspace.exists_finite_disjoint_approximation
+#print axioms ComplementedSubspace.exists_unconditional_basis_of_disjoint
+#print axioms ComplementedSubspace.hasFiniteUnconditionalApproximations_of_orderComplete
+#print axioms ComplementedSubspace.chiDPR_dual_lattice_le_one
+#print axioms ComplementedSubspace.hasDPRLocalUnconditionalStructure_dual_lattice

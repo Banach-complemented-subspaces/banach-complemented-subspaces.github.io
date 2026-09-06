@@ -1,0 +1,257 @@
+INDEPENDENT ENVIRONMENT/SOURCE AUDIT
+UTC started: 2026-09-05T22:38:19.580651+00:00
+Collector: LEAN_PROJECT\verification\independent-audit-2026-09-05\collect_environment.py
+Collector SHA256: 79530984ceaf94ed10a06ce1e3a790704482497c55226a52939ca76fa4102a15
+No Lean compilation or build is performed by this collector.
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" --version
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "--version"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+git version 2.53.0.windows.2
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" --version
+ARGUMENTS (JSON): ["USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe", "--version"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+Python 3.12.14
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" -c "import platform,sys; print(platform.platform()); print('python_executable:',sys.executable)"
+ARGUMENTS (JSON): ["USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe", "-c", "import platform,sys; print(platform.platform()); print('python_executable:',sys.executable)"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+Windows-11-10.0.26200-SP0
+python_executable: USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lean.exe" --version
+ARGUMENTS (JSON): ["WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lean.exe", "--version"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+Lean (version 4.34.0-rc2, x86_64-w64-windows-gnu, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe" --version
+ARGUMENTS (JSON): ["WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe", "--version"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+Lake version 5.0.0-src+6a10ac8 (Lean version 4.34.0-rc2)
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" -c "import hashlib,pathlib; root=pathlib.Path(r'WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin'); [(print(str(root/n),hashlib.sha256((root/n).read_bytes()).hexdigest())) for n in ['lean.exe','lake.exe']]"
+ARGUMENTS (JSON): ["USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe", "-c", "import hashlib,pathlib; root=pathlib.Path(r'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin'); [(print(str(root/n),hashlib.sha256((root/n).read_bytes()).hexdigest())) for n in ['lean.exe','lake.exe']]"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lean.exe 37dfe799f69b990251f3b6bcff8a1c10c1afe2adcdecc5c580cc6726ffb63433
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe 5afaf2ad866c1aa6c1eda7bdb84ebd99e1de8be3a95a219094654dfa00b47c0a
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" -c "import pathlib,sys; sys.stdout.buffer.write(pathlib.Path(sys.argv[1]).read_bytes())" "LEAN_PROJECT\lean-toolchain"
+ARGUMENTS (JSON): ["USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe", "-c", "import pathlib,sys; sys.stdout.buffer.write(pathlib.Path(sys.argv[1]).read_bytes())", "LEAN_PROJECT\\lean-toolchain"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+leanprover/lean4:v4.34.0-rc2
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" -c "import pathlib,sys; sys.stdout.buffer.write(pathlib.Path(sys.argv[1]).read_bytes())" "LEAN_PROJECT\lakefile.toml"
+ARGUMENTS (JSON): ["USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe", "-c", "import pathlib,sys; sys.stdout.buffer.write(pathlib.Path(sys.argv[1]).read_bytes())", "LEAN_PROJECT\\lakefile.toml"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+name = "complemented_subspace_trial"
+version = "0.1.0"
+defaultTargets = ["ComplementedSubspace"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7"
+
+[[lean_lib]]
+name = "ComplementedSubspace"
+weakLeanArgs = ["-j1", "-M8192"]
+
+[[lean_lib]]
+name = "BanLat"
+weakLeanArgs = ["-j1", "-M8192"]
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" -c "import pathlib,sys; sys.stdout.buffer.write(pathlib.Path(sys.argv[1]).read_bytes())" "LEAN_PROJECT\lake-manifest.json"
+ARGUMENTS (JSON): ["USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe", "-c", "import pathlib,sys; sys.stdout.buffer.write(pathlib.Path(sys.argv[1]).read_bytes())", "LEAN_PROJECT\\lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+{
+  "version": "1.2.0",
+  "packagesDir": ".lake/packages",
+  "packages": [
+    {
+      "url": "https://github.com/leanprover-community/plausible",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+      "name": "plausible",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "ba67e212be1197b84c1f1f6299488a10a3002713",
+      "name": "LeanSearchClient",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/import-graph",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "1681d78dd6e65e38b143f9740d829c826673807c",
+      "name": "importGraph",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+      "name": "proofwidgets",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/aesop",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+      "name": "aesop",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "master",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/quote4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+      "name": "Qq",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "master",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/batteries",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+      "name": "batteries",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover/lean4-cli",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover",
+      "rev": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+      "name": "Cli",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.34.0-rc2",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+      "name": "mathlib",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+      "inherited": false,
+      "configFile": "lakefile.lean"
+    }
+  ],
+  "name": "complemented_subspace_trial",
+  "lakeDir": ".lake",
+  "fixedToolchain": true
+}
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" -c "import os,json; print(json.dumps({k:os.environ.get(k) for k in ['LEAN_PATH','LEAN_SRC_PATH','LEAN_SYSROOT','LAKE_HOME','ELAN_HOME']},indent=2))"
+ARGUMENTS (JSON): ["USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe", "-c", "import os,json; print(json.dumps({k:os.environ.get(k) for k in ['LEAN_PATH','LEAN_SRC_PATH','LEAN_SYSROOT','LAKE_HOME','ELAN_HOME']},indent=2))"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+{
+  "LEAN_PATH": null,
+  "LEAN_SRC_PATH": null,
+  "LEAN_SYSROOT": null,
+  "LAKE_HOME": null,
+  "ELAN_HOME": null
+}
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+The absolute portable runtime above was queried directly; this does not claim a globally installed Lean or Lake.

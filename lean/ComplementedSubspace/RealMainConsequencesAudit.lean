@@ -1,0 +1,8 @@
+import ComplementedSubspace.RealMainConsequences
+
+#print axioms ComplementedSubspace.actualProjection_range_bidual_chiDPR_eq_top
+#print axioms ComplementedSubspace.actualProjection_complement_range_bidual_chiDPR_eq_top
+#print axioms ComplementedSubspace.realMainTheorem
+#print axioms ComplementedSubspace.realCorollary
+#print axioms ComplementedSubspace.realUnconditionalCorollary
+#print axioms ComplementedSubspace.realSeparableNonprimarity

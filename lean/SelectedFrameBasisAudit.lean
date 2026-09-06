@@ -1,0 +1,4 @@
+import ComplementedSubspace.SelectedFrameBasis
+#print axioms ComplementedSubspace.selectedFrameNormalizedBasis_constant
+#print axioms ComplementedSubspace.selectedFrameNormalizedBasis_norm
+#print axioms ComplementedSubspace.selectedCoefficient_euclidean_norm_le

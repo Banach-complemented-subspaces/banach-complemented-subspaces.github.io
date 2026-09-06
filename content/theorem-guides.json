@@ -1,0 +1,435 @@
+{
+  "RealMainTheoremStatement": [
+    {
+      "fragment": "def RealMainTheoremStatement : Prop :=",
+      "syntax": "def introduces a definition. RealMainTheoremStatement is its name; : Prop says its value is a proposition, and := begins that proposition.",
+      "math": "We name the following statement RealMainTheoremStatement.",
+      "role": "This is the statement corresponding to Theorem A, with the stronger uniform-convexity clause below. Defining it does not prove it; the closed declaration realMainTheorem proves this proposition."
+    },
+    {
+      "fragment": "∀ ρ : ℝ, 0 < ρ →",
+      "syntax": "∀ means “for every”; ρ : ℝ makes ρ a real number. Here → means implication: under the hypothesis 0 < ρ, everything to the right must hold.",
+      "math": "For every real $\\rho>0$, the following witnesses and conclusions exist.",
+      "role": "This is the opening “For every positive tolerance” of Theorem A. All subsequent choices may depend on this ρ; the same ρ is used in both norm bounds."
+    },
+    {
+      "fragment": "∃ a : BlockParameters,",
+      "syntax": "∃ means “there exists”. Here a specifies the two sequences in BlockParameters, satisfying all its conditions.",
+      "math": "Choose positive integers $N_j$ and real exponents $2<p_j\\leq3$, with $p_{j+1}\\leq p_j$ and $p_j\\to2$.",
+      "role": "These are the sequences in Theorem A. Ambient a is the corresponding Banach space. Lean indexes the sequences from 0. Nonincreasing does not mean strictly decreasing.",
+      "terms": [
+        "BlockParameters",
+        "Ambient"
+      ]
+    },
+    {
+      "fragment": "TopologicalSpace.SeparableSpace (Ambient a) ∧",
+      "syntax": "Ambient a applies the space construction Ambient to the chosen parameters a. The parentheses make it the argument of SeparableSpace. The final ∧ means “and”, joining this clause to all the following clauses.",
+      "math": "The space $X=(\\bigoplus_j\\ell_{p_j}^{N_j}(\\mathbb R))_2$ is separable: it has a countable dense subset.",
+      "role": "This requires the ambient space in Theorem A to be separable. Every later occurrence of Ambient a refers to this same choice of a.",
+      "terms": [
+        "TopologicalSpace.SeparableSpace",
+        "Ambient",
+        "Block"
+      ]
+    },
+    {
+      "fragment": "UniformConvexSpace (Ambient a) ∧",
+      "syntax": "UniformConvexSpace means that the space is uniformly convex. Again ∧ means that this and the remaining conditions hold together.",
+      "math": "The existing norm of the same space $X$ is uniformly convex.",
+      "role": "The literal clause strengthens the displayed superreflexivity conclusion of Theorem A; the manuscript also establishes uniform convexity in Corollary 4.2(ii). The mathematical consequence “hence superreflexive” is distinct from what this Lean clause literally says.",
+      "terms": [
+        "UniformConvexSpace",
+        "Ambient"
+      ]
+    },
+    {
+      "fragment": "HasRealBanachLatticeOrder (Ambient a) ∧",
+      "syntax": "The project-defined predicate HasRealBanachLatticeOrder is applied to that same Ambient a. Its definition existentially chooses a lattice order; ∧ continues the conjunction.",
+      "math": "The space $X$, with its existing complete norm, admits a real vector-lattice order compatible with addition and nonnegative scalar multiplication, and the norm is solid: $|x|\\leq|y|$ implies $\\|x\\|\\leq\\|y\\|$.",
+      "role": "This is the real Banach lattice condition in Theorem A. It chooses an order on X without replacing its norm or its scalar structure.",
+      "terms": [
+        "HasRealBanachLatticeOrder",
+        "Ambient"
+      ]
+    },
+    {
+      "fragment": "∃ P : Ambient a →L[ℝ] Ambient a,",
+      "syntax": "∃ P chooses a map. In X →L[ℝ] X, the spaces before and after the arrow are its domain and codomain; L and [ℝ] specify a continuous real-linear map.",
+      "math": "There exists a bounded real-linear operator $P:X\\to X$.",
+      "role": "This chooses the single operator used in every remaining clause. It introduces an operator; the next clause establishes that it is a projection.",
+      "terms": [
+        "ContinuousLinearMap",
+        "Ambient"
+      ]
+    },
+    {
+      "fragment": "P.comp P = P ∧",
+      "syntax": "P.comp P is the composition of P with itself. = means equality of operators, and ∧ keeps the remaining requirements attached to the same P.",
+      "math": "$P^2=P$, so $P$ is a projection.",
+      "role": "This is the projection requirement in Theorem A, not an additional choice of operator.",
+      "terms": [
+        "ContinuousLinearMap"
+      ]
+    },
+    {
+      "fragment": "‖P‖ < 1 + ρ ∧",
+      "syntax": "The norm bars denote the operator norm of the bounded linear map P. < is a strict inequality, and ρ is the positive number fixed at the beginning.",
+      "math": "$\\|P\\|<1+\\rho$.",
+      "role": "This is the upper projection-norm bound in Theorem A(i); it constrains the P already chosen. The theorem does not choose a new tolerance here."
+    },
+    {
+      "fragment": "‖ContinuousLinearMap.id ℝ (Ambient a) - P‖ < 1 + ρ ∧",
+      "syntax": "ContinuousLinearMap.id ℝ (Ambient a) is the identity real-linear operator on X. Subtracting P forms another bounded operator; the surrounding norm bars take the norm of this entire difference.",
+      "math": "$\\|I_X-P\\|<1+\\rho$. Since $P^2=P$, $I_X-P$ is the complementary projection.",
+      "role": "This is the first additional requirement in Theorem A(ii). It holds for the same P and the same ρ as the preceding bound.",
+      "terms": [
+        "ContinuousLinearMap.id",
+        "ContinuousLinearMap",
+        "Ambient"
+      ]
+    },
+    {
+      "fragment": "HasSeparatedRange P ∧",
+      "syntax": "Applying HasSeparatedRange to P substitutes P into a four-clause project definition. In that definition P.range is its range, →L[ℝ] ℝ is the continuous real dual, ⊤ is infinity, and ‖P‖ₑ is the operator norm in the extended nonnegative reals.",
+      "math": "Put $Z=P(X)$. For both $V=Z$ and $V=Z^*$, $\\chi_{\\mathrm{GL}}(V)\\leq\\|P\\|$ and $\\chi_{\\mathrm{DPR}}(V)=\\infty$. The range carries the inherited norm and the continuous dual carries its operator norm.",
+      "role": "These are the four local-structure conclusions in Theorem A(i). Together with the earlier inequality they give the displayed chain χGL(V) ≤ ||P|| < 1+ρ. Idempotence is a separate requirement.",
+      "terms": [
+        "HasSeparatedRange",
+        "chiGL",
+        "chiDPR",
+        "ContinuousLinearMap"
+      ]
+    },
+    {
+      "fragment": "HasSeparatedRange (ContinuousLinearMap.id ℝ (Ambient a) - P)",
+      "syntax": "The parentheses give the whole operator I_X - P as the argument of the same predicate. Its definition therefore uses the range and norm of I_X - P throughout.",
+      "math": "Put $W=(I_X-P)(X)$. For both $V=W$ and $V=W^*$, $\\chi_{\\mathrm{GL}}(V)\\leq\\|I_X-P\\|$ and $\\chi_{\\mathrm{DPR}}(V)=\\infty$.",
+      "role": "This completes Theorem A(ii). Both complementary ranges and both continuous duals satisfy separation simultaneously, for the one chosen X and P. The complementary GL bound is ||I_X-P||, not ||P||.",
+      "terms": [
+        "HasSeparatedRange",
+        "ContinuousLinearMap.id",
+        "chiGL",
+        "chiDPR"
+      ]
+    }
+  ],
+  "RealCorollaryStatement": [
+    {
+      "fragment": "def RealCorollaryStatement : Prop :=",
+      "syntax": "def names a definition; : Prop says it is a proposition, and := introduces its full content.",
+      "math": "We name the real-field statement RealCorollaryStatement.",
+      "role": "This proposition expresses the real case of Theorem B, including both nonlattice conclusions. The separate closed theorem realCorollary proves it."
+    },
+    {
+      "fragment": "∀ ρ : ℝ, 0 < ρ →",
+      "syntax": "For every real number ρ, assume 0 < ρ. The implication arrow makes every subsequent existential and conjunction part of the conclusion under that assumption.",
+      "math": "For every $\\rho>0$, the following holds.",
+      "role": "The tolerance is arbitrary. The witnesses chosen next may depend on it."
+    },
+    {
+      "fragment": "∃ X : BanachModel.{0} ℝ,",
+      "syntax": "∃ chooses a real Banach space X. X.Carrier is its underlying space; .{0} concerns the size of the type, not its vector-space dimension.",
+      "math": "There exists a real Banach space $X$.",
+      "role": "This chooses the ambient space in the real case of Theorem B. All later basis and projection clauses refer to this one witness.",
+      "terms": [
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "HasOneUnconditionalSchauderBasis ℝ X.Carrier ∧",
+      "syntax": "The predicate takes the field ℝ and the underlying space X.Carrier as arguments. ∧ means this condition and the following ones must all hold.",
+      "math": "$X$ has an $\\mathbb N$-indexed $1$-unconditional Schauder basis: every finite coordinate multiplier with real coefficients of modulus at most one is contractive.",
+      "role": "This is the ambient basis in Theorem B. It is a basis with continuous coordinates and norm convergence, rather than only finite-dimensional local structure.",
+      "terms": [
+        "HasOneUnconditionalSchauderBasis",
+        "IsOneUnconditional",
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "∃ P : X.Carrier →L[ℝ] X.Carrier,",
+      "syntax": "∃ P chooses a continuous real-linear endomorphism of the same underlying space X.Carrier. On normed spaces, such linear maps are bounded operators.",
+      "math": "There exists a bounded real-linear map $P:X\\to X$.",
+      "role": "The remaining clauses constrain this one P and its one range; the next clause makes it a projection.",
+      "terms": [
+        "ContinuousLinearMap",
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "P.comp P = P ∧",
+      "syntax": "comp denotes operator composition. The equality requires idempotence, and ∧ attaches all the remaining requirements to the chosen operator.",
+      "math": "$P^2=P$.",
+      "role": "This is “a projection” in the real case of Theorem B.",
+      "terms": [
+        "ContinuousLinearMap"
+      ]
+    },
+    {
+      "fragment": "‖P‖ < 1 + ρ ∧",
+      "syntax": "‖P‖ is its operator norm; < makes the upper bound strict. The same positive ρ introduced above appears here.",
+      "math": "$\\|P\\|<1+\\rho$.",
+      "role": "This is the quantitative projection bound in Theorem B. This statement includes no norm bound for I-P."
+    },
+    {
+      "fragment": "¬ HasUnconditionalSchauderBasis ℝ P.range ∧",
+      "syntax": "¬ negates the whole basis-existence predicate. P.range denotes the range subspace, used with its inherited norm. ∧ continues the conjunction.",
+      "math": "The range $Z=P(X)$ admits no unconditional Schauder basis over $\\mathbb R$, whether finite or indexed by $\\mathbb N$.",
+      "role": "This is the first negative basis conclusion of Theorem B. The predicate includes the empty basis of the zero space; this exclusion has no finite-dimensional loophole.",
+      "terms": [
+        "HasUnconditionalSchauderBasis",
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "¬ HasUnconditionalSchauderBasis ℝ (P.range →L[ℝ] ℝ) ∧",
+      "syntax": "The parenthesized type consists of continuous real-linear functionals on P.range. ¬ again denies existence of either kind of unconditional Schauder basis.",
+      "math": "The continuous real dual $Z^*=\\mathcal B_{\\mathbb R}(Z,\\mathbb R)$, with its operator norm, admits no unconditional Schauder basis.",
+      "role": "This is the second negative basis conclusion, for the dual of the same range Z. It is not a claim about the algebraic dual.",
+      "terms": [
+        "HasUnconditionalSchauderBasis",
+        "ContinuousLinearMap"
+      ]
+    },
+    {
+      "fragment": "¬ IsIsomorphicToRealBanachLattice P.range ∧",
+      "syntax": "The negated project predicate would choose some complete real Banach-space model with a compatible lattice order and a bounded real-linear isomorphism from P.range to that model.",
+      "math": "$Z=P(X)$ is not isomorphic, as a real Banach space, to any real Banach lattice.",
+      "role": "This is the first extra conclusion for the real field in Theorem B. It excludes all target lattice norms, not only lattice orders on Z with its present norm; the isomorphism need not preserve order.",
+      "terms": [
+        "IsIsomorphicToRealBanachLattice",
+        "HasRealBanachLatticeOrder",
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "¬ IsIsomorphicToRealBanachLattice (P.range →L[ℝ] ℝ)",
+      "syntax": "The same negated isomorphism-existence predicate is now applied to the continuous real dual of P.range.",
+      "math": "$Z^*$ is not isomorphic, as a real Banach space, to any real Banach lattice.",
+      "role": "This completes the real case of Theorem B. All four exclusions concern the range of the single chosen projection and its continuous dual.",
+      "terms": [
+        "IsIsomorphicToRealBanachLattice",
+        "ContinuousLinearMap"
+      ]
+    }
+  ],
+  "UnconditionalCorollaryStatement": [
+    {
+      "fragment": "def UnconditionalCorollaryStatement (𝕜 : Type*) [NontriviallyNormedField 𝕜] : Prop :=",
+      "syntax": "def names a proposition depending on the field 𝕜. (𝕜 : Type*) specifies the scalar type, the square-bracketed argument requires a nontrivially normed field structure on it, : Prop identifies a proposition, and := begins its body.",
+      "math": "For a fixed nontrivially normed scalar field $\\mathbb K$, define the following unconditional-basis statement.",
+      "role": "This statement covers both scalar fields. Defining it for general 𝕜 does not prove it for every field. The selected theorems prove it over ℝ and, through ComplexCorollaryStatement, over ℂ."
+    },
+    {
+      "fragment": "∀ ρ : ℝ, 0 < ρ →",
+      "syntax": "∀ quantifies over real tolerances ρ, even when the space has complex scalars. The implication assumes positivity and governs the entire remaining conclusion.",
+      "math": "For every real $\\rho>0$, the following witnesses exist.",
+      "role": "This is the opening quantifier of Theorem B for the fixed scalar field. Space and projection can depend on ρ."
+    },
+    {
+      "fragment": "∃ X : BanachModel.{0} 𝕜,",
+      "syntax": "∃ chooses a BanachModel over the same field 𝕜. That structure specifies a normed vector space and completeness; .{0} concerns the type universe, not finite dimensionality.",
+      "math": "There exists a Banach space $X$ over $\\mathbb K$.",
+      "role": "This is the ambient-space witness of Theorem B. X.Carrier denotes this chosen space in the later clauses.",
+      "terms": [
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "HasOneUnconditionalSchauderBasis 𝕜 X.Carrier ∧",
+      "syntax": "Apply the project basis-existence predicate to the chosen field and space. ∧ means that this and the subsequent clauses all hold for the same witness.",
+      "math": "$X$ has an $\\mathbb N$-indexed $1$-unconditional Schauder basis. Every finite coordinate multiplier with $\\mathbb K$-valued coefficients of modulus at most one is contractive.",
+      "role": "This gives the ambient basis. For 𝕜 = ℂ it includes all complex phases, not merely real signs; for 𝕜 = ℝ it uses real multipliers.",
+      "terms": [
+        "HasOneUnconditionalSchauderBasis",
+        "IsOneUnconditional",
+        "UnconditionalSchauderBasis"
+      ]
+    },
+    {
+      "fragment": "∃ P : X.Carrier →L[𝕜] X.Carrier,",
+      "syntax": "∃ introduces P and →L[𝕜] makes it a continuous 𝕜-linear map from the chosen space to itself.",
+      "math": "There exists a bounded $\\mathbb K$-linear operator $P:X\\to X$.",
+      "role": "This is the single operator for all remaining requirements. In the complex case it is complex-linear, not only real-linear.",
+      "terms": [
+        "ContinuousLinearMap",
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "P.comp P = P ∧",
+      "syntax": "P.comp P composes the operator with itself. Equality to P requires idempotence, and ∧ continues the joint requirements.",
+      "math": "$P^2=P$, so $P$ is a projection.",
+      "role": "This is “a projection” in Theorem B, for the fixed field.",
+      "terms": [
+        "ContinuousLinearMap"
+      ]
+    },
+    {
+      "fragment": "‖P‖ < 1 + ρ ∧",
+      "syntax": "The norm bars denote the operator norm, < is strict, and ρ is the real tolerance fixed above.",
+      "math": "$\\|P\\|<1+\\rho$.",
+      "role": "This is the near-one upper bound in Theorem B. No strict lower bound 1 < ||P|| or complementary projection bound is a clause of this proposition."
+    },
+    {
+      "fragment": "¬ HasUnconditionalSchauderBasis 𝕜 P.range ∧",
+      "syntax": "¬ negates existence of a basis. P.range is the range of the chosen 𝕜-linear map, with its inherited norm; the basis predicate uses this same scalar field.",
+      "math": "$Z=P(X)$ admits no unconditional Schauder basis over $\\mathbb K$, finite or indexed by $\\mathbb N$.",
+      "role": "This is the first exclusion in Theorem B. The finite case, including the empty basis of the zero space, is included in the negated predicate.",
+      "terms": [
+        "HasUnconditionalSchauderBasis",
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "¬ HasUnconditionalSchauderBasis 𝕜 (P.range →L[𝕜] 𝕜)",
+      "syntax": "The parenthesized type is the space of continuous 𝕜-linear maps from P.range to 𝕜. The outer predicate is negated, so this dual space has no basis of either permitted index type.",
+      "math": "The continuous dual $Z^*=\\mathcal B_{\\mathbb K}(Z,\\mathbb K)$, with its operator norm, admits no unconditional Schauder basis over $\\mathbb K$.",
+      "role": "This completes the basis conclusion for both Z and its continuous dual. With 𝕜 = ℂ the functionals are complex-linear. This template adds no nonlattice or GL/DPR conclusion.",
+      "terms": [
+        "HasUnconditionalSchauderBasis",
+        "ContinuousLinearMap"
+      ]
+    }
+  ],
+  "ComplexCorollaryStatement": [
+    {
+      "fragment": "def ComplexCorollaryStatement : Prop :=",
+      "syntax": "def introduces a named proposition. : Prop gives its kind and := introduces what it means.",
+      "math": "We name the complex-field statement ComplexCorollaryStatement.",
+      "role": "The closed theorem complexCorollary proves this proposition. The definition itself is not a proof."
+    },
+    {
+      "fragment": "UnconditionalCorollaryStatement ℂ",
+      "syntax": "Set 𝕜 = ℂ in the shared proposition. This defines the complex case without adding any assumptions.",
+      "math": "For every real $\\rho>0$, there exist a complex Banach space $X$ with a $1$-unconditional Schauder basis and a complex-linear projection $P:X\\to X$ with $\\|P\\|<1+\\rho$, such that neither $Z=P(X)$ nor its continuous complex dual $Z^*$ admits an unconditional Schauder basis.",
+      "role": "This is the complex case of Theorem B. Read the full UnconditionalCorollaryStatement body with 𝕜 = ℂ beside this alias: its quantifiers, conjunctions and both negations all remain in force. Ambient multipliers include complex phases; basis exclusions include finite bases. No complex GL/DPR or complex nonlattice conclusion is added.",
+      "terms": [
+        "UnconditionalCorollaryStatement",
+        "HasOneUnconditionalSchauderBasis",
+        "HasUnconditionalSchauderBasis",
+        "ContinuousLinearMap"
+      ]
+    }
+  ],
+  "SeparableNonprimarityStatement": [
+    {
+      "fragment": "def SeparableNonprimarityStatement : Prop :=",
+      "syntax": "def names a proposition, : Prop identifies it as a proposition, and := begins its content.",
+      "math": "We name the following statement of a counterexample to primariness.",
+      "role": "The theorem realSeparableNonprimarity proves this proposition. It provides a concrete counterexample for Corollary C rather than defining a general “primary class” predicate."
+    },
+    {
+      "fragment": "∀ ρ : ℝ, 0 < ρ →",
+      "syntax": "∀ ranges over real ρ. Under the positivity hypothesis, the implication requires all the following witnesses and properties.",
+      "math": "For every $\\rho>0$, the following holds.",
+      "role": "The quantitative witness can be chosen for every positive tolerance. Both projection bounds below use this same ρ."
+    },
+    {
+      "fragment": "∃ X : BanachModel.{0} ℝ,",
+      "syntax": "∃ chooses a real Banach space. X.Carrier is its underlying space. The .{0} annotation fixes the type universe; it does not mean that the dimension is zero.",
+      "math": "There exists a real Banach space $X$.",
+      "role": "This is the single ambient space of the counterexample. It may depend on ρ, and all the following properties concern this same X.",
+      "terms": [
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "TopologicalSpace.SeparableSpace X.Carrier ∧",
+      "syntax": "The library separability predicate is applied to the underlying space X. The final ∧ requires this and the remaining clauses together.",
+      "math": "$X$ is separable: it has a countable dense subset.",
+      "role": "This puts the ambient example in the separable setting of Corollary C.",
+      "terms": [
+        "TopologicalSpace.SeparableSpace",
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "HasRealBanachLatticeOrder X.Carrier ∧",
+      "syntax": "This project predicate chooses a compatible real lattice order on the existing complete normed space X.Carrier. It does not choose a new ambient norm.",
+      "math": "$X$ is a real Banach lattice in its given norm: the order respects the vector-space operations and the norm is solid.",
+      "role": "This places the ambient example in the class whose primariness is disproved. The two summands will fail membership even up to isomorphism.",
+      "terms": [
+        "HasRealBanachLatticeOrder"
+      ]
+    },
+    {
+      "fragment": "IsSuperreflexiveByRenorming ℝ X.Carrier ∧",
+      "syntax": "The project predicate takes the field ℝ and X.Carrier. Its definition chooses a complete uniformly convex normed real space H and a continuous linear equivalence between X and H.",
+      "math": "$X$ is isomorphic to a complete uniformly convex real normed space; equivalently, it has an equivalent uniformly convex norm.",
+      "role": "This is the superreflexivity convention used for the quantitative Corollary C witness. It is a renormability condition, distinct from a literal UniformConvexSpace X clause.",
+      "terms": [
+        "IsSuperreflexiveByRenorming",
+        "UniformConvexSpace"
+      ]
+    },
+    {
+      "fragment": "HasOneUnconditionalSchauderBasis ℝ X.Carrier ∧",
+      "syntax": "The project predicate specifies an ℕ-indexed real unconditional Schauder basis and requires all finite coordinate multipliers of modulus at most one to be contractions.",
+      "math": "The ambient space $X$ has a $1$-unconditional Schauder basis.",
+      "role": "This adds the ambient basis promised by the explicit witness in Corollary 4.6, p.20. It is compatible with all the preceding conditions on the same X.",
+      "terms": [
+        "HasOneUnconditionalSchauderBasis",
+        "IsOneUnconditional"
+      ]
+    },
+    {
+      "fragment": "∃ P : X.Carrier →L[ℝ] X.Carrier,",
+      "syntax": "∃ P chooses a continuous real-linear operator on the underlying space X, which is the same real Banach space fixed above.",
+      "math": "There exists a bounded real-linear map $P:X\\to X$.",
+      "role": "The following idempotence, two norm inequalities and two negations all concern this single P.",
+      "terms": [
+        "ContinuousLinearMap",
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "P.comp P = P ∧",
+      "syntax": "comp means operator composition. This equality makes P idempotent; ∧ continues the conjunction.",
+      "math": "$P^2=P$. Hence $P$ and $I_X-P$ are complementary projections and $X=P(X)\\oplus(I_X-P)(X)$.",
+      "role": "This gives the complemented decomposition used to refute primariness. Because P is bounded, both summands are closed.",
+      "terms": [
+        "ContinuousLinearMap"
+      ]
+    },
+    {
+      "fragment": "‖P‖ < 1 + ρ ∧",
+      "syntax": "Take the operator norm of P and compare it strictly with 1 + ρ, using the tolerance chosen at the start.",
+      "math": "$\\|P\\|<1+\\rho$.",
+      "role": "This controls the first projection in the quantitative nonprimarity witness."
+    },
+    {
+      "fragment": "‖ContinuousLinearMap.id ℝ X.Carrier - P‖ < 1 + ρ ∧",
+      "syntax": "ContinuousLinearMap.id ℝ X.Carrier is I_X. Subtraction forms I_X - P before its operator norm is taken. The same ρ appears in the strict upper bound.",
+      "math": "$\\|I_X-P\\|<1+\\rho$.",
+      "role": "This controls the complementary projection simultaneously; no new operator or tolerance is chosen.",
+      "terms": [
+        "ContinuousLinearMap.id",
+        "ContinuousLinearMap"
+      ]
+    },
+    {
+      "fragment": "¬ IsIsomorphicToRealBanachLattice P.range ∧",
+      "syntax": "P.range is the first range with its inherited norm. ¬ negates existence of any complete real Banach lattice model and a bounded real-linear isomorphism from this range to that model.",
+      "math": "$P(X)$ is not isomorphic to any real Banach lattice.",
+      "role": "This excludes the first summand from the lattice class, even after a change of norm. The isomorphism in the negated predicate is a Banach-space isomorphism; it need not preserve order.",
+      "terms": [
+        "IsIsomorphicToRealBanachLattice",
+        "HasRealBanachLatticeOrder",
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "¬ IsIsomorphicToRealBanachLattice\n        (ContinuousLinearMap.id ℝ X.Carrier - P).range",
+      "syntax": "The parentheses form I_X - P, and .range then takes its range. The same isomorphism-existence predicate is negated for this second subspace. The physical line break does not split the clause.",
+      "math": "$(I_X-P)(X)$ is not isomorphic to any real Banach lattice.",
+      "role": "Together with the preceding exclusion, this gives a separable real Banach lattice decomposed into two closed summands, neither isomorphic to a Banach lattice: the counterexample in Corollary C. This exact statement does not add nonlattice conclusions for the summands’ duals.",
+      "terms": [
+        "IsIsomorphicToRealBanachLattice",
+        "ContinuousLinearMap.id",
+        "Submodule"
+      ]
+    }
+  ]
+}

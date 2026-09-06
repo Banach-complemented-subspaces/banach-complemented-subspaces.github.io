@@ -1,0 +1,23 @@
+import ComplementedSubspace
+
+-- This checks transitive axiom dependencies of the delivered definitions and proofs.
+-- The expected allowlist is propext, Classical.choice, Quot.sound.
+#print axioms ComplementedSubspace.chiDPR
+#print axioms ComplementedSubspace.chiGL
+#print axioms ComplementedSubspace.GLFactorization.ofUnconditionalBasis
+#print axioms ComplementedSubspace.GLFactorization.aux_cost_le
+#print axioms ComplementedSubspace.blockProjection_idempotent
+#print axioms ComplementedSubspace.norm_blockProjection_le_one
+#print axioms ComplementedSubspace.hasSum_blockProjection
+#print axioms ComplementedSubspace.ambientSeparableSpace
+#print axioms ComplementedSubspace.synthesis_diagonal_bound
+#print axioms ComplementedSubspace.paired_column_moments_bound
+#print axioms ComplementedSubspace.circleMomentMap_rankOne_hsSq
+#print axioms ComplementedSubspace.circle_paired_column_moments_bound
+#print axioms ComplementedSubspace.chiGL_le_of_retraction
+#print axioms ComplementedSubspace.chiGL_range_le_projection_norm
+#print axioms ComplementedSubspace.RealMainTheoremStatement
+#print axioms ComplementedSubspace.chiGL_le_chiDPR
+#print axioms ComplementedSubspace.ambient_hasRealBanachLatticeOrder
+#print axioms ComplementedSubspace.canonicalBlockParameters
+#print axioms ComplementedSubspace.blockParameters_nonempty

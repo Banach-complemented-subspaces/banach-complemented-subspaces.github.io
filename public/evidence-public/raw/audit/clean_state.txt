@@ -1,0 +1,4 @@
+Validated absolute clean target: LEAN_PROJECT\.lake\build
+External .lake/packages dependency caches are retained; all root-project and vendored BanLat build artifacts are removed.
+LEAN_NUM_THREADS=2; each project compiler uses -j1 -M8192 from lakefile.toml.
+Root build .olean files after clean: 0

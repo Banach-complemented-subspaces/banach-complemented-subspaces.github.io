@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "startedUtc": "2026-09-06T12:41:20.699241+00:00",
+  "finishedUtc": "2026-09-06T12:43:13.628197+00:00",
+  "command": [
+    "USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\evidence\\check_resolved_build_inputs.py",
+    "--output-dir",
+    "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\evidence\\resolved-build-inputs"
+  ],
+  "pythonVersion": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "win32",
+  "checkerSha256": "b79fcc2e7191b9e04fee738ca41564f05c52ce6e9ff164ca994ed28788cba368",
+  "allowedRoots": {
+    "reproduction": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction",
+    "pinned_toolchain": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows"
+  },
+  "requiredModule": "ComplementedSubspace",
+  "manifestSha256": "5a1a4b9a38d977d11c668216238f135a975d4ee757f2b4c25bfd9e0f588324e8",
+  "setupFileCount": 2774,
+  "uniquePathCount": 15954,
+  "referenceCounts": {
+    "inputReferences": 9354642,
+    "importArts": 9354642
+  },
+  "findingsByStatus": {},
+  "uniquePathsByStatus": {
+    "PASS": 15954
+  },
+  "uniquePathsByAllowedRoot": {
+    "reproduction": 15954
+  },
+  "packageDirectories": [
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 177
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\aesop",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\aesop\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 132
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\batteries",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\batteries\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 74
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\Cli",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\Cli\\.lake\\build\\ir",
+      "present": false
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\importGraph",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\importGraph\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 10
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\LeanSearchClient",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\LeanSearchClient\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 4
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\mathlib",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\mathlib\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 2340
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\plausible",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\plausible\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 13
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\proofwidgets",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\proofwidgets\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 10
+    },
+    {
+      "packageDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\Qq",
+      "irDirectory": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction\\.lake\\packages\\Qq\\.lake\\build\\ir",
+      "present": true,
+      "setupFileCount": 14
+    }
+  ],
+  "scope": "Every discovered setup JSON in root and manifest-layout package .lake/build/ir trees; explicit importArts, dynlibs and plugins paths only.",
+  "limits": [
+    "This is a post-build filesystem observation, not interception of compiler file reads.",
+    "Setup files can omit toolchain imports resolved by the compiler; environment/replay evidence remains necessary.",
+    "Containment does not prove artifact freshness, pin correctness, build success or full import-closure compilation.",
+    "Artifact contents and native library transitive loader dependencies are not audited by this helper.",
+    "Input files must remain quiescent; setup content hashes and timestamps detect only changes during each read."
+  ],
+  "files": [
+    "findings.json",
+    "paths.json",
+    "module_map.jsonl",
+    "module_summaries.json"
+  ],
+  "reportSha256": {
+    "findings.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "paths.json": "6e06da2525216d049206e45d57acc2785b0d262ab40af5f7528850171aacb30f",
+    "module_map.jsonl": "5ce1067dd152b69e3b2d129cb349475af683babb48db83d0ddffc88aba350f83",
+    "module_summaries.json": "96bc878f9317949da98912915a017174b133f1ac82fcd567ca166e8ddab3a8ee"
+  }
+}

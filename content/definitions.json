@@ -1,0 +1,921 @@
+{
+  "schemaVersion": 1,
+  "projectRoot": "LEAN_PROJECT",
+  "sourceAuthority": "Actual source files matching source_hashes_after.json from independent-audit-2026-09-05. The current content task did not run Lean.",
+  "snippetPolicy": "UTF-8 decoded byte-exact complete source lines, with original line endings retained. JSON escaping is reversible. Start/end lines are inclusive. Namespace and implicit-variable context are separate sourceContext captures; snippets are not claimed to be standalone compilable units.",
+  "definitions": [
+    {
+      "id": "basisMultiplier",
+      "name": "basisMultiplier",
+      "qualifiedName": "ComplementedSubspace.basisMultiplier",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 49,
+        "endLine": 51,
+        "snippet": "def basisMultiplier {n : ℕ} (b : Module.Basis (Fin n) ℝ E)\n    (θ : Fin n → ℝ) : E →L[ℝ] E :=\n  b.constrL (fun i => θ i • b i)\n",
+        "snippetSha256": "2d82fd3b77a792bc076799e84477ddf9b9f5d2ee68cc80372ff8c1242630cb5c"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 45,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n\nsection BasisConstants\n\nvariable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]\n",
+          "snippetSha256": "47114f8b8be4f1d9d22154262b0bcc28504c45f1b117bbd1b19d673b8e639a80"
+        }
+      ],
+      "mathTex": "M_{b,\\theta}\\!\\left(\\sum_{i=0}^{n-1}x_i b_i\\right)=\\sum_{i=0}^{n-1}\\theta_i x_i b_i,\\qquad \\theta\\in\\mathbb R^n.",
+      "explanation": "The bounded linear operator that multiplies the coordinates of a finite real algebraic basis by the chosen real scalars. The basis makes the space finite-dimensional, so constrL also ensures continuity.",
+      "dependsOn": [],
+      "notes": [
+        "The definition of the operator allows arbitrary θ; the bound |θ_i| ≤ 1 enters the unconditional constant."
+      ]
+    },
+    {
+      "id": "unconditionalBasisConstant",
+      "name": "unconditionalBasisConstant",
+      "qualifiedName": "ComplementedSubspace.unconditionalBasisConstant",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 62,
+        "endLine": 63,
+        "snippet": "def unconditionalBasisConstant {n : ℕ} (b : Module.Basis (Fin n) ℝ E) : ℝ≥0∞ :=\n  max 1 (⨆ (θ : Fin n → ℝ) (_ : ∀ i, ‖θ i‖ ≤ 1), ‖basisMultiplier b θ‖ₑ)\n",
+        "snippetSha256": "750183698b42c455016642779bf9d4bc7d6f2fd7148f16e19866d737f4afa14e"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 45,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n\nsection BasisConstants\n\nvariable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]\n",
+          "snippetSha256": "47114f8b8be4f1d9d22154262b0bcc28504c45f1b117bbd1b19d673b8e639a80"
+        }
+      ],
+      "mathTex": "u(b)=\\max\\left\\{1,\\sup_{\\theta\\in[-1,1]^n}\\|M_{b,\\theta}\\|\\right\\}.",
+      "explanation": "The unconditional constant of one finite real basis, measured in the existing norm of E. Every real scalar multiplier of modulus at most one is included. The maximum with one fixes the zero-dimensional convention.",
+      "dependsOn": [
+        "basisMultiplier"
+      ],
+      "notes": [
+        "The codomain is ℝ≥0∞, the extended nonnegative reals; ‖T‖ₑ is the operator norm embedded there."
+      ]
+    },
+    {
+      "id": "unconditionalConstant",
+      "name": "unconditionalConstant",
+      "qualifiedName": "ComplementedSubspace.unconditionalConstant",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 109,
+        "endLine": 111,
+        "snippet": "def unconditionalConstant (E : Type*) [NormedAddCommGroup E]\n    [NormedSpace ℝ E] : ℝ≥0∞ :=\n  ⨅ (n : ℕ) (b : Module.Basis (Fin n) ℝ E), unconditionalBasisConstant b\n",
+        "snippetSha256": "a6a4caef2373da5a0e35b0266d622bbdd0c7c86d09ed6bfac8e65e57dc9eb00e"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 45,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n\nsection BasisConstants\n\nvariable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]\n",
+          "snippetSha256": "47114f8b8be4f1d9d22154262b0bcc28504c45f1b117bbd1b19d673b8e639a80"
+        }
+      ],
+      "mathTex": "u(E)=\\inf_{n\\in\\mathbb N}\\ \\inf_{b\\text{ a basis of }E\\text{ indexed by }\\{0,\\ldots,n-1\\}}u(b).",
+      "explanation": "The best finite-basis unconditional constant in the given norm. This is an infimum over all finite bases, with no claim that an optimal basis exists.",
+      "dependsOn": [
+        "unconditionalBasisConstant"
+      ],
+      "notes": [
+        "If E has no finite basis this infimum is ∞; the empty basis gives u({0}) = 1."
+      ]
+    },
+    {
+      "id": "lambdaDPR",
+      "name": "lambdaDPR",
+      "qualifiedName": "ComplementedSubspace.lambdaDPR",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 125,
+        "endLine": 127,
+        "snippet": "def lambdaDPR (V : Submodule ℝ Z) : ℝ≥0∞ :=\n  ⨅ (F : Submodule ℝ Z) (_ : V ≤ F) (_ : FiniteDimensional ℝ ↥F),\n    unconditionalConstant ↥F\n",
+        "snippetSha256": "cc0c70f3edcefd128274f9c6e2dbe6f42ff7d1e32435c4bae53dfe389b032117"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 41,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "f3d428ab77bf40ac1c779dd1a7f1493b8697efac47a9c7910279d5a8f18c7e24"
+        },
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 119,
+          "endLine": 121,
+          "snippet": "section DPR\n\nvariable (Z : Type*) [NormedAddCommGroup Z] [NormedSpace ℝ Z]\n",
+          "snippetSha256": "4f6d4c95ef96e7d1293e6d661c2c6f9e31c2cad406844654cbb0bf08ff132dd3"
+        }
+      ],
+      "mathTex": "\\lambda_{\\mathrm{DPR}}(Z,V)=\\inf\\{u(F):V\\subseteq F\\subseteq Z,\\ \\dim F<\\infty\\}.",
+      "explanation": "One starts with a real linear subspace V of Z and enlarges it to a finite-dimensional subspace F of the same Z. Both subspaces carry their inherited norms.",
+      "dependsOn": [
+        "unconditionalConstant"
+      ],
+      "notes": [
+        "The definition accepts arbitrary V; finite dimensionality is imposed when taking the outer supremum."
+      ]
+    },
+    {
+      "id": "chiDPR",
+      "name": "chiDPR",
+      "qualifiedName": "ComplementedSubspace.chiDPR",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 130,
+        "endLine": 132,
+        "snippet": "def chiDPR : ℝ≥0∞ :=\n  ⨆ (V : Submodule ℝ Z) (_ : FiniteDimensional ℝ ↥V) (_ : V ≠ ⊥),\n    lambdaDPR Z V\n",
+        "snippetSha256": "598cc961793562a24437e0e010e7d023211dc7bb34fe7dfa0064b208f1f1f0b0"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 41,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "f3d428ab77bf40ac1c779dd1a7f1493b8697efac47a9c7910279d5a8f18c7e24"
+        },
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 119,
+          "endLine": 121,
+          "snippet": "section DPR\n\nvariable (Z : Type*) [NormedAddCommGroup Z] [NormedSpace ℝ Z]\n",
+          "snippetSha256": "4f6d4c95ef96e7d1293e6d661c2c6f9e31c2cad406844654cbb0bf08ff132dd3"
+        }
+      ],
+      "mathTex": "\\chi_{\\mathrm{DPR}}(Z)=\\sup_{\\substack{V\\subseteq Z\\\\0<\\dim V<\\infty}}\\lambda_{\\mathrm{DPR}}(Z,V).",
+      "explanation": "The supremum of the local DPR constants over nonzero finite-dimensional real subspaces. Equality to ∞ means that there is no finite uniform bound.",
+      "dependsOn": [
+        "lambdaDPR"
+      ],
+      "notes": [
+        "The zero subspace is excluded. An empty supremum is zero, so χDPR({0}) = 0."
+      ]
+    },
+    {
+      "id": "GLFactorization",
+      "name": "GLFactorization",
+      "qualifiedName": "ComplementedSubspace.GLFactorization",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 159,
+        "endLine": 171,
+        "snippet": "structure GLFactorization (V : Submodule ℝ Z) where\n  dimension : ℕ\n  auxNorm : Seminorm ℝ (Fin dimension → ℝ)\n  positive_definite : ∀ x, auxNorm x = 0 → x = 0\n  unconditional : ∀ (θ x : Fin dimension → ℝ),\n    (∀ i, ‖θ i‖ ≤ 1) → auxNorm (fun i => θ i * x i) ≤ auxNorm x\n  a : ↥V →ₗ[ℝ] (Fin dimension → ℝ)\n  b : (Fin dimension → ℝ) →ₗ[ℝ] Z\n  factorizes : b.comp a = V.subtype\n  aBound : ℝ≥0\n  bBound : ℝ≥0\n  bound_a : ∀ x : ↥V, auxNorm (a x) ≤ (aBound : ℝ) * ‖x‖\n  bound_b : ∀ x : Fin dimension → ℝ, ‖b x‖ ≤ (bBound : ℝ) * auxNorm x\n",
+        "snippetSha256": "a402e3ea74653ea87177a06c97d4120312c6072d41705be488c2f3514b259815"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 41,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "f3d428ab77bf40ac1c779dd1a7f1493b8697efac47a9c7910279d5a8f18c7e24"
+        },
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 149,
+          "endLine": 151,
+          "snippet": "section GordonLewis\n\nvariable {Z : Type*} [NormedAddCommGroup Z] [NormedSpace ℝ Z]\n",
+          "snippetSha256": "fb6b222178102b02c75d078479c273720644485517fd414a1b3c6d77f5248267"
+        }
+      ],
+      "mathTex": "\\begin{gathered}U=(\\mathbb R^n,\\nu),\\quad \\nu(\\theta\\cdot x)\\leq\\nu(x)\\quad(|\\theta_i|\\leq1),\\\\a:V\\to U,\\quad b:U\\to Z,\\quad ba=\\iota_V,\\\\A,B\\geq0,\\quad \\nu(ax)\\leq A\\|x\\|,\\quad\\|by\\|\\leq B\\nu(y).\\end{gathered}",
+      "explanation": "A finite factorisation of the inclusion V → Z. The auxiliary norm ν is defined by a positive-definite real seminorm, and coordinate multipliers are required to be contractions. The linear maps carry explicit finite nonnegative bounds A and B, which make them bounded for that auxiliary norm.",
+      "dependsOn": [],
+      "notes": [
+        "The auxiliary norm is arbitrary subject to these conditions; it is not restricted to a particular ℓp norm.",
+        "No injectivity condition is imposed on b. Injectivity of a follows from ba = inclusion.",
+        "The coordinate carrier Fin n → ℝ does not mean that the auxiliary norm is the default supremum norm.",
+        "The conversions between finite-dimensional representations are in LocalUnconditional.lean: ofUnconditionalBasis 220–254, ofUnconditionalBasis_cost 257–264, Aux and its norm/complete-space instances 272–298, auxBasis_unconditional 314–324, auxA/auxB and aux_factorizes 327–336, aux_cost_le 347–351."
+      ]
+    },
+    {
+      "id": "GLFactorization-cost",
+      "name": "GLFactorization.cost",
+      "qualifiedName": "ComplementedSubspace.GLFactorization.cost",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 174,
+        "endLine": 175,
+        "snippet": "def GLFactorization.cost {V : Submodule ℝ Z} (F : GLFactorization V) : ℝ≥0∞ :=\n  (F.aBound : ℝ≥0∞) * (F.bBound : ℝ≥0∞)\n",
+        "snippetSha256": "da073bf584fa5ab810641fd8c4350d0dcd547ee86f18a05120fcf562a619925e"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 41,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "f3d428ab77bf40ac1c779dd1a7f1493b8697efac47a9c7910279d5a8f18c7e24"
+        },
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 149,
+          "endLine": 151,
+          "snippet": "section GordonLewis\n\nvariable {Z : Type*} [NormedAddCommGroup Z] [NormedSpace ℝ Z]\n",
+          "snippetSha256": "fb6b222178102b02c75d078479c273720644485517fd414a1b3c6d77f5248267"
+        }
+      ],
+      "mathTex": "\\operatorname{cost}(F)=A_F B_F\\in[0,\\infty].",
+      "explanation": "The product of the two certified bounds in a factorisation. These bounds need not be the smallest possible bounds; all admissible choices are included in the subsequent infimum.",
+      "dependsOn": [
+        "GLFactorization"
+      ],
+      "notes": []
+    },
+    {
+      "id": "lambdaGL",
+      "name": "lambdaGL",
+      "qualifiedName": "ComplementedSubspace.lambdaGL",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 359,
+        "endLine": 360,
+        "snippet": "def lambdaGL (V : Submodule ℝ Z) : ℝ≥0∞ :=\n  ⨅ F : GLFactorization V, F.cost\n",
+        "snippetSha256": "4a204a83687e9825e904197ffad83feb117eba1df5afcac0a547bd7f72a3c1a4"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 41,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "f3d428ab77bf40ac1c779dd1a7f1493b8697efac47a9c7910279d5a8f18c7e24"
+        },
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 149,
+          "endLine": 151,
+          "snippet": "section GordonLewis\n\nvariable {Z : Type*} [NormedAddCommGroup Z] [NormedSpace ℝ Z]\n",
+          "snippetSha256": "fb6b222178102b02c75d078479c273720644485517fd414a1b3c6d77f5248267"
+        },
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 355,
+          "endLine": 355,
+          "snippet": "variable (Z)\n",
+          "snippetSha256": "db5cab1102208695103dc3d036ced245a0a09771c260a77b6821de69f1087006"
+        }
+      ],
+      "mathTex": "\\lambda_{\\mathrm{GL}}(Z,V)=\\inf_{F\\in\\operatorname{GLFactorization}(V)}\\operatorname{cost}(F).",
+      "explanation": "The infimum over every finite coordinate factorisation of the inclusion, including every admissible auxiliary unconditional norm and every certified pair of operator bounds.",
+      "dependsOn": [
+        "GLFactorization",
+        "GLFactorization.cost"
+      ],
+      "notes": [
+        "The source converts bounded-operator factorisations into these witnesses using their exact operator norms, and converts witnesses back without increasing cost."
+      ]
+    },
+    {
+      "id": "chiGL",
+      "name": "chiGL",
+      "qualifiedName": "ComplementedSubspace.chiGL",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/LocalUnconditional.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+        "startLine": 364,
+        "endLine": 366,
+        "snippet": "def chiGL : ℝ≥0∞ :=\n  ⨆ (V : Submodule ℝ Z) (_ : FiniteDimensional ℝ ↥V) (_ : V ≠ ⊥),\n    lambdaGL Z V\n",
+        "snippetSha256": "b38857c768c3c51b36c26c1dbd5500210a95828db0dca4be606a58bd155b95cf"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 37,
+          "endLine": 41,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal NNReal\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "f3d428ab77bf40ac1c779dd1a7f1493b8697efac47a9c7910279d5a8f18c7e24"
+        },
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 149,
+          "endLine": 151,
+          "snippet": "section GordonLewis\n\nvariable {Z : Type*} [NormedAddCommGroup Z] [NormedSpace ℝ Z]\n",
+          "snippetSha256": "fb6b222178102b02c75d078479c273720644485517fd414a1b3c6d77f5248267"
+        },
+        {
+          "file": "ComplementedSubspace/LocalUnconditional.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\LocalUnconditional.lean",
+          "startLine": 355,
+          "endLine": 355,
+          "snippet": "variable (Z)\n",
+          "snippetSha256": "db5cab1102208695103dc3d036ced245a0a09771c260a77b6821de69f1087006"
+        }
+      ],
+      "mathTex": "\\chi_{\\mathrm{GL}}(Z)=\\sup_{\\substack{V\\subseteq Z\\\\0<\\dim V<\\infty}}\\lambda_{\\mathrm{GL}}(Z,V).",
+      "explanation": "The project’s real GL local unconditional structure constant: take the local factorisation infimum for each nonzero finite-dimensional real subspace, then take the supremum.",
+      "dependsOn": [
+        "lambdaGL"
+      ],
+      "notes": [
+        "This name refers to the definition above. The project does not identify it with a separately defined operator-ideal constant."
+      ]
+    },
+    {
+      "id": "BlockParameters",
+      "name": "BlockParameters",
+      "qualifiedName": "ComplementedSubspace.BlockParameters",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/Ambient.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+        "startLine": 23,
+        "endLine": 29,
+        "snippet": "structure BlockParameters where\n  dimension : ℕ → ℕ+\n  exponent : ℕ → ℝ\n  two_lt_exponent : ∀ j, 2 < exponent j\n  exponent_le_three : ∀ j, exponent j ≤ 3\n  exponent_antitone : Antitone exponent\n  exponent_tendsto : Filter.Tendsto exponent Filter.atTop (𝓝 2)\n",
+        "snippetSha256": "c11677873a89642c74b07f9a69e50f1c6aaf1dc0e739a159348507d93717374d"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/Ambient.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+          "startLine": 16,
+          "endLine": 20,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal Topology\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "4a8d84c0e5644db02b37cc6de0b6cb5f9440916335758afe91bfb92a61d033d8"
+        }
+      ],
+      "mathTex": "N_j\\in\\mathbb N_{>0},\\qquad 2<p_j\\leq3,\\qquad p_{j+1}\\leq p_j,\\qquad\\lim_{j\\to\\infty}p_j=2.",
+      "explanation": "The positive finite dimensions and real exponents of the countable block sum. Antitone means nonincreasing, not strictly decreasing. Lean indexes the sequence starting at zero.",
+      "dependsOn": [],
+      "notes": []
+    },
+    {
+      "id": "Block",
+      "name": "Block",
+      "qualifiedName": "ComplementedSubspace.Block",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/Ambient.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+        "startLine": 39,
+        "endLine": 40,
+        "snippet": "abbrev Block (a : BlockParameters) (j : ℕ) :=\n  PiLp (ENNReal.ofReal (a.exponent j)) (fun _ : Fin (a.dimension j) => ℝ)\n",
+        "snippetSha256": "16c9a444ea0a594cf6d22d99ac10abca0f7e02985c0fdf97c7c76712326fa9c5"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/Ambient.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+          "startLine": 16,
+          "endLine": 20,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal Topology\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "4a8d84c0e5644db02b37cc6de0b6cb5f9440916335758afe91bfb92a61d033d8"
+        }
+      ],
+      "mathTex": "\\operatorname{Block}(a,j)=\\ell_{p_j}^{N_j}(\\mathbb R),\\qquad\\|x\\|=\\left(\\sum_{i=0}^{N_j-1}|x_i|^{p_j}\\right)^{1/p_j}.",
+      "explanation": "A finite PiLp space over ℝ at the exponent specified by a. The sum in the norm uses counting measure; it is not divided by the dimension.",
+      "dependsOn": [
+        "BlockParameters"
+      ],
+      "notes": [
+        "The local Fact (1 ≤ ENNReal.ofReal (a.exponent j)) instance in Ambient.lean 31–36 specifies the normed-space side condition."
+      ]
+    },
+    {
+      "id": "Ambient",
+      "name": "Ambient",
+      "qualifiedName": "ComplementedSubspace.Ambient",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/Ambient.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+        "startLine": 43,
+        "endLine": 43,
+        "snippet": "abbrev Ambient (a : BlockParameters) := lp (Block a) 2\n",
+        "snippetSha256": "86772b89ed376f7c463afc6ec8d886940c495ea5f42ab472a87ace1aa40c9892"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/Ambient.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+          "startLine": 16,
+          "endLine": 20,
+          "snippet": "noncomputable section\n\nopen scoped ENNReal Topology\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "4a8d84c0e5644db02b37cc6de0b6cb5f9440916335758afe91bfb92a61d033d8"
+        },
+        {
+          "file": "ComplementedSubspace/Ambient.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\Ambient.lean",
+          "startLine": 31,
+          "endLine": 36,
+          "snippet": "instance (a : BlockParameters) (j : ℕ) :\n    Fact (1 ≤ ENNReal.ofReal (a.exponent j)) := by\n  constructor\n  have h : (1 : ℝ) ≤ a.exponent j :=\n    (by norm_num : (1 : ℝ) ≤ 2).trans (a.two_lt_exponent j).le\n  simpa using ENNReal.ofReal_le_ofReal h\n",
+          "snippetSha256": "d4c03427f3cee747efcdb2e032d3db1f3fc2b73cc1c24dee65196112ed820fcf"
+        }
+      ],
+      "mathTex": "X_a=\\left(\\bigoplus_{j\\in\\mathbb N}\\ell_{p_j}^{N_j}(\\mathbb R)\\right)_2,\\qquad\\|x\\|=\\left(\\sum_{j=0}^{\\infty}\\|x_j\\|_{p_j}^{2}\\right)^{1/2}.",
+      "explanation": "The dependent ℓ² sum of the finite blocks: vectors are block sequences with square-summable block norms. The abbreviation selects Mathlib’s lp construction, whose type is an additive subgroup coerced to its carrier.",
+      "dependsOn": [
+        "Block"
+      ],
+      "notes": []
+    },
+    {
+      "id": "HasRealBanachLatticeOrder",
+      "name": "HasRealBanachLatticeOrder",
+      "qualifiedName": "ComplementedSubspace.HasRealBanachLatticeOrder",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/TheoremStatement.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\TheoremStatement.lean",
+        "startLine": 34,
+        "endLine": 38,
+        "snippet": "def HasRealBanachLatticeOrder (X : Type*) [NormedAddCommGroup X]\n    [NormedSpace ℝ X] [CompleteSpace X] : Prop :=\n  ∃ latticeOrder : Lattice X,\n    letI : Lattice X := latticeOrder\n    IsOrderedAddMonoid X ∧ PosSMulMono ℝ X ∧ HasSolidNorm X\n",
+        "snippetSha256": "fb949e02e06bfbe4f50d6582b398c98d33f392b40bb61e7aad1288453af4509b"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/TheoremStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\TheoremStatement.lean",
+          "startLine": 26,
+          "endLine": 30,
+          "snippet": "noncomputable section\n\nopen scoped NNReal ENNReal Topology\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "4fc6591967dd9d31b43d66d179af125214d2426216ea31a452b924232b96d00a"
+        }
+      ],
+      "mathTex": "\\exists\\ \\text{a lattice order on }X:\\quad x\\leq y\\Rightarrow x+z\\leq y+z,\\quad t\\geq0,\\ x\\leq y\\Rightarrow tx\\leq ty,\\quad |x|\\leq|y|\\Rightarrow\\|x\\|\\leq\\|y\\|.",
+      "explanation": "On a complete normed real vector space with its existing norm, there is a compatible lattice order. The order must respect addition and nonnegative scalar multiplication, and the norm must be solid.",
+      "dependsOn": [],
+      "notes": [
+        "The predicate assumes that X is complete. Only the order is existentially chosen; the existing norm is retained."
+      ]
+    },
+    {
+      "id": "HasSeparatedRange",
+      "name": "HasSeparatedRange",
+      "qualifiedName": "ComplementedSubspace.HasSeparatedRange",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/TheoremStatement.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\TheoremStatement.lean",
+        "startLine": 42,
+        "endLine": 47,
+        "snippet": "def HasSeparatedRange {X : Type*} [NormedAddCommGroup X] [NormedSpace ℝ X]\n    (P : X →L[ℝ] X) : Prop :=\n  chiGL ↥P.range ≤ ‖P‖ₑ ∧\n  chiDPR ↥P.range = ⊤ ∧\n  chiGL (↥P.range →L[ℝ] ℝ) ≤ ‖P‖ₑ ∧\n  chiDPR (↥P.range →L[ℝ] ℝ) = ⊤\n",
+        "snippetSha256": "8bfc9690eb8cba842af46144776c2d9a30ddc7b56a82b97f2ead73df484d77f9"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/TheoremStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\TheoremStatement.lean",
+          "startLine": 26,
+          "endLine": 30,
+          "snippet": "noncomputable section\n\nopen scoped NNReal ENNReal Topology\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "4fc6591967dd9d31b43d66d179af125214d2426216ea31a452b924232b96d00a"
+        }
+      ],
+      "mathTex": "Z=\\operatorname{ran}P,\\quad\\chi_{\\mathrm{GL}}(Z)\\leq\\|P\\|,\\quad\\chi_{\\mathrm{DPR}}(Z)=\\infty,\\quad\\chi_{\\mathrm{GL}}(Z^*)\\leq\\|P\\|,\\quad\\chi_{\\mathrm{DPR}}(Z^*)=\\infty.",
+      "explanation": "Combines the four local-structure conditions for the range and its continuous real dual. The range has the inherited subspace norm, and its dual has the operator norm.",
+      "dependsOn": [
+        "chiGL",
+        "chiDPR"
+      ],
+      "notes": [
+        "The predicate itself does not require P² = P; idempotence is a separate clause of the main theorem.",
+        "Applied to I − P, its bound is ‖I − P‖, because the predicate uses the norm of its own argument."
+      ]
+    },
+    {
+      "id": "BanachModel",
+      "name": "BanachModel",
+      "qualifiedName": "ComplementedSubspace.BanachModel",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/CorollaryStatement.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+        "startLine": 25,
+        "endLine": 29,
+        "snippet": "structure BanachModel (𝕜 : Type*) [NontriviallyNormedField 𝕜] where\n  Carrier : Type u\n  normedGroup : NormedAddCommGroup Carrier\n  normedSpace : letI := normedGroup; NormedSpace 𝕜 Carrier\n  completeSpace : letI := normedGroup; CompleteSpace Carrier\n",
+        "snippetSha256": "a38e124f52831c99c003f2939d6fec956875e78a4e4ea62c4b163301d98fc0eb"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 19,
+          "endLine": 22,
+          "snippet": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "0b9bc00bf91110028124bacd6ad0a852cefa464840488cd402a4f61b4fc3f05e"
+        }
+      ],
+      "mathTex": "\\mathcal B_{\\mathbb K}=(X,\\|\\cdot\\|,\\mathbb K\\text{-vector structure},\\text{completeness}).",
+      "explanation": "A bundled Banach-space witness: an underlying type, a normed additive group, a compatible normed vector-space structure over the field, and completeness. This lets existential statements choose the space and its norm together.",
+      "dependsOn": [],
+      "notes": [
+        "The selected corollaries quantify over BanachModel.{0}; the renormability and nonlattice predicates use a model in the same universe as E."
+      ]
+    },
+    {
+      "id": "HasUnconditionalSchauderBasis",
+      "name": "HasUnconditionalSchauderBasis",
+      "qualifiedName": "ComplementedSubspace.HasUnconditionalSchauderBasis",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/CorollaryStatement.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+        "startLine": 40,
+        "endLine": 43,
+        "snippet": "def HasUnconditionalSchauderBasis (𝕜 : Type*) [NontriviallyNormedField 𝕜]\n    (E : Type u) [NormedAddCommGroup E] [NormedSpace 𝕜 E] : Prop :=\n  (∃ n : ℕ, Nonempty (UnconditionalSchauderBasis (Fin n) 𝕜 E)) ∨\n    Nonempty (UnconditionalSchauderBasis ℕ 𝕜 E)\n",
+        "snippetSha256": "573d70d66a4d775cecde3e524860e0e38213444b7241506c11b7805eb954af61"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 19,
+          "endLine": 22,
+          "snippet": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "0b9bc00bf91110028124bacd6ad0a852cefa464840488cd402a4f61b4fc3f05e"
+        },
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 31,
+          "endLine": 31,
+          "snippet": "attribute [instance] BanachModel.normedGroup BanachModel.normedSpace BanachModel.completeSpace\n",
+          "snippetSha256": "891f26dd3fc2cb68fb4f6a4163eb8e066c1c89e8d012f2bf0cd8bd69cab8d167"
+        }
+      ],
+      "mathTex": "\\bigl(\\exists n\\in\\mathbb N,\\ (b_i)_{i<n}\\text{ is an unconditional Schauder basis of }E\\bigr)\\ \\lor\\ \\bigl(\\exists(b_i)_{i\\in\\mathbb N}\\text{ an unconditional Schauder basis of }E\\bigr).",
+      "explanation": "There is either a finite unconditional Schauder basis or one indexed by ℕ, using Mathlib’s continuous coordinate functionals and unconditional norm convergence of finite partial sums.",
+      "dependsOn": [],
+      "notes": [
+        "Finite bases include the empty basis of the zero space. Nonempty packages existence of a basis object."
+      ]
+    },
+    {
+      "id": "IsOneUnconditional",
+      "name": "IsOneUnconditional",
+      "qualifiedName": "ComplementedSubspace.IsOneUnconditional",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/CorollaryStatement.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+        "startLine": 47,
+        "endLine": 49,
+        "snippet": "def IsOneUnconditional (b : UnconditionalSchauderBasis ℕ 𝕜 E) : Prop :=\n  ∀ (s : Finset ℕ) (θ : ℕ → 𝕜), (∀ i, ‖θ i‖ ≤ 1) →\n    ∀ x : E, ‖∑ i ∈ s, (θ i * b.coord i x) • b i‖ ≤ ‖x‖\n",
+        "snippetSha256": "1f4d684326233c77730a089c513951af242b130374b1dcbfc11b2185a6df9bff"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 19,
+          "endLine": 22,
+          "snippet": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "0b9bc00bf91110028124bacd6ad0a852cefa464840488cd402a4f61b4fc3f05e"
+        },
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 31,
+          "endLine": 31,
+          "snippet": "attribute [instance] BanachModel.normedGroup BanachModel.normedSpace BanachModel.completeSpace\n",
+          "snippetSha256": "891f26dd3fc2cb68fb4f6a4163eb8e066c1c89e8d012f2bf0cd8bd69cab8d167"
+        },
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 33,
+          "endLine": 34,
+          "snippet": "variable {𝕜 : Type*} [NontriviallyNormedField 𝕜]\n  {E : Type u} [NormedAddCommGroup E] [NormedSpace 𝕜 E]\n",
+          "snippetSha256": "728edabc994deb614af9876d593cb2d3dfe7dc96584a517abf963dc17db09b73"
+        }
+      ],
+      "mathTex": "\\forall s\\subset\\mathbb N\\text{ finite},\\ \\forall\\theta\\in\\mathbb K^{\\mathbb N}\\ (|\\theta_i|\\leq1),\\ \\forall x\\in E:\\quad\\left\\|\\sum_{i\\in s}\\theta_i b_i^*(x)b_i\\right\\|\\leq\\|x\\|.",
+      "explanation": "Every finite coordinate multiplier of an ℕ-indexed unconditional Schauder basis is contractive. The condition uses all scalars of modulus at most one; over ℂ it includes all complex phases.",
+      "dependsOn": [],
+      "notes": []
+    },
+    {
+      "id": "HasOneUnconditionalSchauderBasis",
+      "name": "HasOneUnconditionalSchauderBasis",
+      "qualifiedName": "ComplementedSubspace.HasOneUnconditionalSchauderBasis",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/CorollaryStatement.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+        "startLine": 55,
+        "endLine": 57,
+        "snippet": "def HasOneUnconditionalSchauderBasis (𝕜 : Type*) [NontriviallyNormedField 𝕜]\n    (E : Type u) [NormedAddCommGroup E] [NormedSpace 𝕜 E] : Prop :=\n  ∃ b : UnconditionalSchauderBasis ℕ 𝕜 E, IsOneUnconditional b\n",
+        "snippetSha256": "776b3fde26ae85090af9fd1544d5316761ad6b958a08c816bcbe33af78b50a9f"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 19,
+          "endLine": 22,
+          "snippet": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "0b9bc00bf91110028124bacd6ad0a852cefa464840488cd402a4f61b4fc3f05e"
+        },
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 31,
+          "endLine": 31,
+          "snippet": "attribute [instance] BanachModel.normedGroup BanachModel.normedSpace BanachModel.completeSpace\n",
+          "snippetSha256": "891f26dd3fc2cb68fb4f6a4163eb8e066c1c89e8d012f2bf0cd8bd69cab8d167"
+        }
+      ],
+      "mathTex": "\\exists(b_i)_{i\\in\\mathbb N}\\text{ an unconditional Schauder basis of }E:\\ \\operatorname{IsOneUnconditional}(b).",
+      "explanation": "Existence of an ℕ-indexed unconditional Schauder basis satisfying the finite multiplier contraction condition. This is the positive ambient-space witness in the corollaries.",
+      "dependsOn": [
+        "IsOneUnconditional"
+      ],
+      "notes": [
+        "This positive predicate uses ℕ; the negative range predicate HasUnconditionalSchauderBasis also counts finite bases."
+      ]
+    },
+    {
+      "id": "IsSuperreflexiveByRenorming",
+      "name": "IsSuperreflexiveByRenorming",
+      "qualifiedName": "ComplementedSubspace.IsSuperreflexiveByRenorming",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/CorollaryStatement.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+        "startLine": 60,
+        "endLine": 63,
+        "snippet": "def IsSuperreflexiveByRenorming (𝕜 : Type*) [NontriviallyNormedField 𝕜]\n    (E : Type u) [NormedAddCommGroup E] [NormedSpace 𝕜 E] : Prop :=\n  ∃ H : BanachModel.{u} 𝕜,\n    UniformConvexSpace H.Carrier ∧ Nonempty (E ≃L[𝕜] H.Carrier)\n",
+        "snippetSha256": "a323edcb4b9e572de07c68aae698e034e7bd4a4ab0c963d209fc6e1fb27db528"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 19,
+          "endLine": 22,
+          "snippet": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "0b9bc00bf91110028124bacd6ad0a852cefa464840488cd402a4f61b4fc3f05e"
+        },
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 31,
+          "endLine": 31,
+          "snippet": "attribute [instance] BanachModel.normedGroup BanachModel.normedSpace BanachModel.completeSpace\n",
+          "snippetSha256": "891f26dd3fc2cb68fb4f6a4163eb8e066c1c89e8d012f2bf0cd8bd69cab8d167"
+        }
+      ],
+      "mathTex": "\\exists H\\text{ a complete uniformly convex normed }\\mathbb K\\text{-space}:\\quad E\\simeq H\\text{ by a bounded linear isomorphism}.",
+      "explanation": "The convention used for superreflexivity in the separable nonprimarity statement: E is boundedly linearly isomorphic to a complete uniformly convex normed space.",
+      "dependsOn": [
+        "BanachModel"
+      ],
+      "notes": [
+        "The project does not prove equivalence here with a separately formalised finite-representability definition of superreflexivity. The real main theorem directly asks for uniform convexity of the displayed ambient norm."
+      ]
+    },
+    {
+      "id": "IsIsomorphicToRealBanachLattice",
+      "name": "IsIsomorphicToRealBanachLattice",
+      "qualifiedName": "ComplementedSubspace.IsIsomorphicToRealBanachLattice",
+      "kind": "project-defined",
+      "source": {
+        "file": "ComplementedSubspace/CorollaryStatement.lean",
+        "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+        "startLine": 67,
+        "endLine": 70,
+        "snippet": "def IsIsomorphicToRealBanachLattice (E : Type u) [NormedAddCommGroup E]\n    [NormedSpace ℝ E] : Prop :=\n  ∃ L : BanachModel.{u} ℝ,\n    HasRealBanachLatticeOrder L.Carrier ∧ Nonempty (E ≃L[ℝ] L.Carrier)\n",
+        "snippetSha256": "168b139a0ed581d35df6895f74862c9c8b0bdcdfe86fed9d9093b39b19de2d7a"
+      },
+      "sourceContext": [
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 19,
+          "endLine": 22,
+          "snippet": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace\n",
+          "snippetSha256": "0b9bc00bf91110028124bacd6ad0a852cefa464840488cd402a4f61b4fc3f05e"
+        },
+        {
+          "file": "ComplementedSubspace/CorollaryStatement.lean",
+          "absoluteFile": "LEAN_PROJECT\\ComplementedSubspace\\CorollaryStatement.lean",
+          "startLine": 31,
+          "endLine": 31,
+          "snippet": "attribute [instance] BanachModel.normedGroup BanachModel.normedSpace BanachModel.completeSpace\n",
+          "snippetSha256": "891f26dd3fc2cb68fb4f6a4163eb8e066c1c89e8d012f2bf0cd8bd69cab8d167"
+        }
+      ],
+      "mathTex": "\\exists L\\text{ a real Banach space}:\\quad L\\text{ has a compatible Banach lattice order},\\quad E\\simeq L\\text{ by a bounded real-linear isomorphism}.",
+      "explanation": "There exists some Banach-space model L carrying a compatible lattice order and a continuous real-linear equivalence from E to L. Thus its negation excludes all such Banach lattice models, including models with a different norm.",
+      "dependsOn": [
+        "BanachModel",
+        "HasRealBanachLatticeOrder"
+      ],
+      "notes": [
+        "The chosen model lies in the same type universe as E. No order-preservation condition is imposed on the isomorphism."
+      ]
+    }
+  ],
+  "standardMathlib": [
+    {
+      "id": "ContinuousLinearMap",
+      "name": "ContinuousLinearMap",
+      "kind": "standard-mathlib",
+      "module": "Mathlib.Topology.Algebra.Module.ContinuousLinearMap.Basic",
+      "localModulePath": "Mathlib/Topology/Algebra/Module/ContinuousLinearMap/Basic.lean",
+      "source": {
+        "file": ".lake/packages/mathlib/Mathlib/Topology/Algebra/Module/ContinuousLinearMap/Basic.lean",
+        "absoluteFile": "LEAN_PROJECT\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Module\\ContinuousLinearMap\\Basic.lean",
+        "startLine": 60,
+        "endLine": 64,
+        "snippet": "structure ContinuousLinearMap {R : Type*} {S : Type*} [Semiring R] [Semiring S] (σ : R →+* S)\r\n    (M : Type*) [TopologicalSpace M] [AddCommMonoid M] (M₂ : Type*) [TopologicalSpace M₂]\r\n    [AddCommMonoid M₂] [Module R M] [Module S M₂] extends M →ₛₗ[σ] M₂ where\r\n  cont : Continuous toFun := by\r\n    first | fun_prop | eta_expand; dsimp; fun_prop | skip\r\n",
+        "snippetSha256": "0ed81968328ebc489de27752500951a676932424732dc6e8863bd8876cf5e198"
+      },
+      "mathTex": "E\\to_L^{\\mathbb K}F=\\{T:E\\to F:T\\text{ is linear and continuous}\\}.",
+      "explanation": "In these normed spaces, →L[𝕜] means a bounded linear operator. Its operator norm is used for projection and dual norms. The underlying generic Mathlib structure also supports semilinear maps.",
+      "documentationUrl": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Topology/Algebra/Module/ContinuousLinearMap/Basic.html",
+      "documentationUrlStatus": "Official documentation module page successfully opened with web tool on 2026-09-06. Fragment omitted because separate exact HTML id check was not completed; current official docs may differ from pinned local source."
+    },
+    {
+      "id": "UniformConvexSpace",
+      "name": "UniformConvexSpace",
+      "kind": "standard-mathlib",
+      "module": "Mathlib.Analysis.Convex.Uniform",
+      "localModulePath": "Mathlib/Analysis/Convex/Uniform.lean",
+      "source": {
+        "file": ".lake/packages/mathlib/Mathlib/Analysis/Convex/Uniform.lean",
+        "absoluteFile": "LEAN_PROJECT\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Convex\\Uniform.lean",
+        "startLine": 39,
+        "endLine": 41,
+        "snippet": "class UniformConvexSpace (E : Type*) [SeminormedAddCommGroup E] : Prop where\r\n  uniform_convex : ∀ ⦃ε : ℝ⦄,\r\n    0 < ε → ∃ δ, 0 < δ ∧ ∀ ⦃x : E⦄, ‖x‖ = 1 → ∀ ⦃y⦄, ‖y‖ = 1 → ε ≤ ‖x - y‖ → ‖x + y‖ ≤ 2 - δ\r\n",
+        "snippetSha256": "ddea07d1bb8feb89a531834dbb0fcb73372a3ecc7cf4d5ee5d742eb79af00e29"
+      },
+      "mathTex": "\\forall\\varepsilon>0\\ \\exists\\delta>0:\\quad\\|x\\|=\\|y\\|=1,\\ \\|x-y\\|\\geq\\varepsilon\\Rightarrow\\|x+y\\|\\leq2-\\delta.",
+      "explanation": "Uniform convexity is a property of the given norm. The local Mathlib class uses this sphere formulation.",
+      "documentationUrl": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Convex/Uniform.html",
+      "documentationUrlStatus": "Official documentation module page successfully opened with web tool on 2026-09-06. Fragment omitted because separate exact HTML id check was not completed; current official docs may differ from pinned local source."
+    },
+    {
+      "id": "TopologicalSpace-SeparableSpace",
+      "name": "TopologicalSpace.SeparableSpace",
+      "kind": "standard-mathlib",
+      "module": "Mathlib.Topology.Bases",
+      "localModulePath": "Mathlib/Topology/Bases.lean",
+      "source": {
+        "file": ".lake/packages/mathlib/Mathlib/Topology/Bases.lean",
+        "absoluteFile": "LEAN_PROJECT\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Bases.lean",
+        "startLine": 346,
+        "endLine": 348,
+        "snippet": "@[mk_iff] class SeparableSpace : Prop where\r\n  /-- There exists a countable dense set. -/\r\n  exists_countable_dense : ∃ s : Set α, s.Countable ∧ Dense s\r\n",
+        "snippetSha256": "56b03e8fbb1519b475c5b670e9b578984b22d254c877f5dd46c4112b7b65114a"
+      },
+      "mathTex": "\\exists D\\subseteq X:\\quad D\\text{ is countable and }\\overline D=X.",
+      "explanation": "Existence of a countable dense subset in the given topology.",
+      "documentationUrl": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Topology/Bases.html",
+      "documentationUrlStatus": "Official documentation module page successfully opened with web tool on 2026-09-06. Fragment omitted because separate exact HTML id check was not completed; current official docs may differ from pinned local source."
+    },
+    {
+      "id": "Submodule",
+      "name": "Submodule",
+      "kind": "standard-mathlib",
+      "module": "Mathlib.Algebra.Module.Submodule.Defs",
+      "localModulePath": "Mathlib/Algebra/Module/Submodule/Defs.lean",
+      "source": {
+        "file": ".lake/packages/mathlib/Mathlib/Algebra/Module/Submodule/Defs.lean",
+        "absoluteFile": "LEAN_PROJECT\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Module\\Submodule\\Defs.lean",
+        "startLine": 41,
+        "endLine": 42,
+        "snippet": "structure Submodule (R : Type u) (M : Type v) [Semiring R] [AddCommMonoid M] [Module R M] : Type v\r\n    extends AddSubmonoid M, SubMulAction R M\r\n",
+        "snippetSha256": "50e30fdd9831b2624945800d3bc17958dd5139464b5c0b8193d1085732b5b47c"
+      },
+      "mathTex": "V\\subseteq Z,\\qquad0\\in V,\\quad V+V\\subseteq V,\\quad\\mathbb K V\\subseteq V.",
+      "explanation": "A bundled linear subspace. It is not required to be topologically closed by this definition. The notation ↥V denotes its carrier as a type, inheriting the subspace norm in the statements.",
+      "documentationUrl": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Algebra/Module/Submodule/Defs.html",
+      "documentationUrlStatus": "Official documentation module page successfully opened with web tool on 2026-09-06. Fragment omitted because separate exact HTML id check was not completed; current official docs may differ from pinned local source."
+    },
+    {
+      "id": "lp",
+      "name": "lp",
+      "kind": "standard-mathlib",
+      "module": "Mathlib.Analysis.Normed.Lp.lpSpace",
+      "localModulePath": "Mathlib/Analysis/Normed/Lp/lpSpace.lean",
+      "source": {
+        "file": ".lake/packages/mathlib/Mathlib/Analysis/Normed/Lp/lpSpace.lean",
+        "absoluteFile": "LEAN_PROJECT\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Lp\\lpSpace.lean",
+        "startLine": 371,
+        "endLine": 375,
+        "snippet": "def lp (E : α → Type*) [∀ i, NormedAddCommGroup (E i)] (p : ℝ≥0∞) : AddSubgroup (PreLp E) where\r\n  carrier := { f | Memℓp f p }\r\n  zero_mem' := zero_memℓp\r\n  add_mem' := Memℓp.add\r\n  neg_mem' := Memℓp.neg\r\n",
+        "snippetSha256": "b64409d05e2423e2ce654ca2056cdf00f84b9343d42faeb696356350ed61cdee"
+      },
+      "mathTex": "\\ell^2(E_j)=\\{(x_j):\\sum_j\\|x_j\\|^2<\\infty\\}.",
+      "explanation": "The dependent ℓp construction; the displayed formula is its p = 2 specialisation used by Ambient. The general definition uses the Memℓp predicate.",
+      "documentationUrl": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Normed/Lp/lpSpace.html",
+      "documentationUrlStatus": "Official documentation module page successfully opened with web tool on 2026-09-06. Fragment omitted because separate exact HTML id check was not completed; current official docs may differ from pinned local source."
+    },
+    {
+      "id": "PiLp",
+      "name": "PiLp",
+      "kind": "standard-mathlib",
+      "module": "Mathlib.Analysis.Normed.Lp.PiLp",
+      "localModulePath": "Mathlib/Analysis/Normed/Lp/PiLp.lean",
+      "source": {
+        "file": ".lake/packages/mathlib/Mathlib/Analysis/Normed/Lp/PiLp.lean",
+        "absoluteFile": "LEAN_PROJECT\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Lp\\PiLp.lean",
+        "startLine": 87,
+        "endLine": 88,
+        "snippet": "abbrev PiLp (p : ℝ≥0∞) {ι : Type*} (α : ι → Type*) : Type _ :=\r\n  WithLp p (∀ i : ι, α i)\r\n",
+        "snippetSha256": "9effa3a99892ac4f877768e771dc4d77e8db9d80ae84ae66e80c06f88eec1316"
+      },
+      "mathTex": "\\left\\|(x_i)_{i<n}\\right\\|_p=\\left(\\sum_{i<n}\\|x_i\\|^p\\right)^{1/p}\\quad(1\\leq p<\\infty).",
+      "explanation": "A type synonym for a product carrying the indicated ℓp norm. The displayed finite-p formula is the case used in Block.",
+      "documentationUrl": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Normed/Lp/PiLp.html",
+      "documentationUrlStatus": "Official documentation module page successfully opened with web tool on 2026-09-06. Fragment omitted because separate exact HTML id check was not completed; current official docs may differ from pinned local source."
+    },
+    {
+      "id": "UnconditionalSchauderBasis",
+      "name": "UnconditionalSchauderBasis",
+      "kind": "standard-mathlib",
+      "module": "Mathlib.Analysis.Normed.Module.Bases",
+      "localModulePath": "Mathlib/Analysis/Normed/Module/Bases.lean",
+      "source": {
+        "file": ".lake/packages/mathlib/Mathlib/Analysis/Normed/Module/Bases.lean",
+        "absoluteFile": "LEAN_PROJECT\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Module\\Bases.lean",
+        "startLine": 137,
+        "endLine": 139,
+        "snippet": "abbrev UnconditionalSchauderBasis (β : Type*)\r\n    (𝕜 : Type*) (X : Type*) [NontriviallyNormedField 𝕜] [NormedAddCommGroup X] [NormedSpace 𝕜 X] :=\r\n  GeneralSchauderBasis β 𝕜 X (SummationFilter.unconditional β)\r\n",
+        "snippetSha256": "89beda9d81c00b225a3f025f6e60ea31b39acf4e96ca99239d5a3b29fc78d0af"
+      },
+      "mathTex": "b_i^*(b_j)=\\delta_{ij},\\qquad x=\\sum_i b_i^*(x)b_i\\text{ unconditionally in norm}.",
+      "explanation": "An abbreviation for GeneralSchauderBasis with the unconditional summation filter. GeneralSchauderBasis 105–115 stores the vectors, continuous coordinate functionals, biorthogonality and expansion.",
+      "documentationUrl": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Normed/Module/Bases.html",
+      "documentationUrlStatus": "Official documentation module page successfully opened with web tool on 2026-09-06. Fragment omitted because separate exact HTML id check was not completed; current official docs may differ from pinned local source."
+    }
+  ],
+  "sourceIntegrity": [
+    {
+      "file": "ComplementedSubspace/LocalUnconditional.lean",
+      "sha256": "3ca23f64e18fcc14e9ee4a2a535acb40305acd9edc2862b6101f897f7bb14857",
+      "matchesAuditAfter": true
+    },
+    {
+      "file": "ComplementedSubspace/Ambient.lean",
+      "sha256": "cf65a5aa2da2262f84695696283cda9f3b918215ce12fd777b2e0e70c355f347",
+      "matchesAuditAfter": true
+    },
+    {
+      "file": "ComplementedSubspace/TheoremStatement.lean",
+      "sha256": "8bae1822f09c36532811144dfad0faefd1724ac184c0167745fae48f0af4cd97",
+      "matchesAuditAfter": true
+    },
+    {
+      "file": "ComplementedSubspace/CorollaryStatement.lean",
+      "sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "matchesAuditAfter": true
+    }
+  ],
+  "conventions": [
+    "All project DPR/GL and finite-basis constants here are real and take values in ℝ≥0∞.",
+    "⊤ is infinity; the infimum over an empty family is infinity; the supremum over an empty family is zero.",
+    "The local constants do not assume attainment of an infimum.",
+    "P.range has the inherited subspace norm; P.range →L[𝕜] 𝕜 is the continuous dual with operator norm.",
+    "Parenthesized arguments are explicit, brace arguments are implicit, and bracket arguments are typeclass structures/properties inferred from the context.",
+    "The notation ⨅ is an indexed infimum and ⨆ an indexed supremum. An index that is a proposition enforces that condition.",
+    "↥V coerces a bundled subspace to its carrier type. ∧ means conjunction; Nonempty expresses existence of an object.",
+    "≃L[𝕜] means a linear equivalence continuous in both directions; in these normed spaces this is a bounded linear isomorphism.",
+    "No manuscript-faithfulness claim follows merely from parsing definitions or checking their source hashes."
+  ]
+}

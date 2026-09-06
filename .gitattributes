@@ -1,0 +1,2 @@
+# Preserve the audited bytes, including line endings, in sources and evidence.
+* -text

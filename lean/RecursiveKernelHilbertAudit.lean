@@ -1,0 +1,6 @@
+import ComplementedSubspace.RecursiveKernelHilbert
+#print axioms ComplementedSubspace.recursiveProfileTail_approxParallelogram
+#print axioms ComplementedSubspace.recursiveProfileTail_locallyHilbert
+#print axioms ComplementedSubspace.locallyHilbert_of_isometricEmbedding_prodL2
+#print axioms ComplementedSubspace.recursiveProfile_kernel_locallyHilbert
+#print axioms ComplementedSubspace.recursiveDiagonalRange_kernel_locallyHilbert

@@ -1,0 +1,6 @@
+import ComplementedSubspace.NormalizedHilbertSynthesis
+#print axioms ComplementedSubspace.unconditionalBasisConstant_isUnitSMul
+#print axioms ComplementedSubspace.exists_hilbert_normalized_basis
+#print axioms ComplementedSubspace.norm_basisHilbertSynthesisEquiv_le
+#print axioms ComplementedSubspace.norm_basisHilbertSynthesisEquiv_symm_le
+#print axioms ComplementedSubspace.exists_normalized_hilbert_synthesis

@@ -1,0 +1,8 @@
+import ComplementedSubspace.FiniteParameterBounds
+
+#print axioms ComplementedSubspace.hasDerivAt_realFrameLogOverlap_two
+#print axioms ComplementedSubspace.finiteParameter_overlap_tendsto
+#print axioms ComplementedSubspace.exists_finiteFrame_parameters
+#print axioms ComplementedSubspace.realFrameOverlapScale_eq
+#print axioms ComplementedSubspace.realFrameAlpha_mul_conjugate_ge_one
+#print axioms ComplementedSubspace.realFrame_scales_ordered

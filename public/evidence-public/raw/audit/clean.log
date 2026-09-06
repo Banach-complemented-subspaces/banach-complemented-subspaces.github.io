@@ -1,0 +1,6 @@
+WORKING DIRECTORY: LEAN_PROJECT
+START UTC: 2026-09-05T22:40:09.1896145Z
+COMMAND: & 'WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe' '--no-cache' 'clean' 'complemented_subspace_trial'
+TERMINAL OUTPUT:
+EXIT CODE: 0
+END UTC: 2026-09-05T22:40:11.6873016Z

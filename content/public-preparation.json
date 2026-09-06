@@ -1,0 +1,10 @@
+{
+  "status": "Prepared for a private repository; GitHub Pages must remain disabled.",
+  "date": "2026-09-06",
+  "publicEvidenceRoot": "/evidence-public/",
+  "originalEvidencePreserved": true,
+  "originalSourceFilesUnchanged": 233,
+  "newLeanAudit": false,
+  "publicFileManifest": "/evidence-public/PUBLIC_COPY_SHA256.json",
+  "publicArchiveManifest": "/evidence-public/PUBLIC_ARCHIVE_MEMBERS_SHA256.json"
+}

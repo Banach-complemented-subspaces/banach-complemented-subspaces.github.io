@@ -1,0 +1,12 @@
+WORKING DIRECTORY: LEAN_PROJECT
+START UTC: 2026-09-05T23:15:55.9165438Z
+COMMAND: & 'WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'WholeProjectAudit.lean'
+TERMINAL OUTPUT:
+'ComplementedSubspace.realMainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplementedSubspace.realCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplementedSubspace.realUnconditionalCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplementedSubspace.realSeparableNonprimarity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplementedSubspace.complexCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+Audited 2573 declarations in ComplementedSubspace. All transitive axioms are in the allowlist: propext, Classical.choice, Quot.sound.
+EXIT CODE: 0
+END UTC: 2026-09-05T23:16:19.9147602Z

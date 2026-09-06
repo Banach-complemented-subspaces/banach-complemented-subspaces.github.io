@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "started": "2026-09-06T13:06:30.936249+00:00",
+  "completed": "2026-09-06T13:07:03.739703+00:00",
+  "archive": "full-fresh-audit-evidence.zip",
+  "archive_bytes": 91734840,
+  "archive_sha256": "a3ec86982d133dcc694c4fdea8065785c3826fd0c587d37d22443ff47ef5ab24",
+  "checked_content_files": 296,
+  "internal_manifest": "CONTENTS.sha256",
+  "internal_manifest_sha256": "a8ee8b35b6a722630a5f353ff55b71edcd8337020307a21b1af05c76669ef845",
+  "exact_member_set_checked": true,
+  "all_members_crc_checked": true,
+  "all_members_sha256_checked": true,
+  "full_audit_elapsed_seconds": 9489.880512475967,
+  "exclusion_note": "The manifest excludes itself. This detached receipt and the final packaging process record are outside the archive to avoid self-reference; all Lean run records and raw streams are included.",
+  "privacy_note": "Unredacted local evidence includes Windows personal paths and username. Review/redact a separately labelled copy before public release. No project material was uploaded or published."
+}

@@ -1,0 +1,10 @@
+import ComplementedSubspace.AmbientFiniteApproximation
+import ComplementedSubspace.GLDualRetraction
+
+#print axioms ComplementedSubspace.hasFiniteUnconditionalApproximations_of_dense_disjoint_span
+#print axioms ComplementedSubspace.ambient_chiDPR_le_one
+#print axioms ComplementedSubspace.ambient_chiGL_le_one
+#print axioms ComplementedSubspace.ambientDual_chiDPR_le_one
+#print axioms ComplementedSubspace.ambientDual_chiGL_le_one
+#print axioms ComplementedSubspace.chiGL_dual_le_of_retraction
+#print axioms ComplementedSubspace.chiGL_dual_range_le_projection_norm

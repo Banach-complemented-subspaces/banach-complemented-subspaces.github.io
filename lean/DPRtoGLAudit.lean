@@ -1,0 +1,7 @@
+import ComplementedSubspace.DPRtoGL
+
+#print axioms ComplementedSubspace.unconditionalRenorm_multiplier_le
+#print axioms ComplementedSubspace.GLFactorization.ofContainingBasis
+#print axioms ComplementedSubspace.lambdaGL_le_lambdaDPR
+#print axioms ComplementedSubspace.chiGL_le_chiDPR
+#print axioms ComplementedSubspace.HasDPRLocalUnconditionalStructure.hasGLLocalUnconditionalStructure

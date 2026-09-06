@@ -1,0 +1,8 @@
+import ComplementedSubspace.SelectedHilbertReplacement
+
+#print axioms ComplementedSubspace.selectedHilbertMap_injective
+#print axioms ComplementedSubspace.selectedHilbertEquiv_symm_bound
+#print axioms ComplementedSubspace.selectedHilbertBasis_constant_le
+#print axioms ComplementedSubspace.norm_selectedHilbertLift_le
+#print axioms ComplementedSubspace.selectedHilbertFirstProjection_lift
+#print axioms ComplementedSubspace.exists_selectedHilbertReplacement

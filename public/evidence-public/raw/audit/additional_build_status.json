@@ -1,0 +1,31 @@
+{
+  "finishedUtc": "2026-09-05T23:27:47.3964378Z",
+  "sourceUnchanged": true,
+  "sourceValidationLog": "additional_source_unchanged.txt",
+  "exitCode": 0,
+  "arguments": [
+    "--no-cache",
+    "build",
+    "+ComplementedSubspace.ComplexCorollaryAudit:olean",
+    "+ComplementedSubspace.ComplexRealDPRAudit:olean",
+    "+ComplementedSubspace.FiniteHilbertWitnessAudit:olean",
+    "+ComplementedSubspace.FiniteOverlapScaleAudit:olean",
+    "+ComplementedSubspace.FiniteParameterAudit:olean",
+    "+ComplementedSubspace.LocalHilbertAudit:olean",
+    "+ComplementedSubspace.LocalHilbertDualTopAudit:olean",
+    "+ComplementedSubspace.LocalHilbertQuotientAudit:olean",
+    "+ComplementedSubspace.LocalHilbertRecursiveQuotient:olean",
+    "+ComplementedSubspace.ProductFrameTranspose:olean",
+    "+ComplementedSubspace.ProjectionAssemblyAudit:olean",
+    "+ComplementedSubspace.PureFrameDPRAudit:olean",
+    "+ComplementedSubspace.RealMainAudit:olean",
+    "+ComplementedSubspace.RealMainConsequencesAudit:olean",
+    "+ComplementedSubspace.RecursiveParametersAudit:olean",
+    "+ComplementedSubspace.SelectedFrameBasis:olean"
+  ],
+  "log": "additional_modules_build.log",
+  "status": "passed",
+  "startedUtc": "2026-09-05T23:23:37.2559236Z",
+  "command": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'build' '+ComplementedSubspace.ComplexCorollaryAudit:olean' '+ComplementedSubspace.ComplexRealDPRAudit:olean' '+ComplementedSubspace.FiniteHilbertWitnessAudit:olean' '+ComplementedSubspace.FiniteOverlapScaleAudit:olean' '+ComplementedSubspace.FiniteParameterAudit:olean' '+ComplementedSubspace.LocalHilbertAudit:olean' '+ComplementedSubspace.LocalHilbertDualTopAudit:olean' '+ComplementedSubspace.LocalHilbertQuotientAudit:olean' '+ComplementedSubspace.LocalHilbertRecursiveQuotient:olean' '+ComplementedSubspace.ProductFrameTranspose:olean' '+ComplementedSubspace.ProjectionAssemblyAudit:olean' '+ComplementedSubspace.PureFrameDPRAudit:olean' '+ComplementedSubspace.RealMainAudit:olean' '+ComplementedSubspace.RealMainConsequencesAudit:olean' '+ComplementedSubspace.RecursiveParametersAudit:olean' '+ComplementedSubspace.SelectedFrameBasis:olean'",
+  "moduleCount": 16
+}

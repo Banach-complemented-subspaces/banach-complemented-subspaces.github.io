@@ -1,0 +1,26 @@
+import ComplementedSubspace.LocalHilbertProjection
+import ComplementedSubspace.LocalHilbertDual
+import ComplementedSubspace.LocalHilbertFactorization
+import ComplementedSubspace.LocalHilbertSum
+import ComplementedSubspace.LocalHilbertSumDual
+
+#print axioms ComplementedSubspace.exists_bounded_basis
+#print axioms ComplementedSubspace.exists_normalized_coordinates
+#print axioms ComplementedSubspace.normalizedNorm_local_hilbert
+#print axioms ComplementedSubspace.exists_localHilbert_threshold
+#print axioms ComplementedSubspace.exists_localHilbert_subspace_threshold
+#print axioms ComplementedSubspace.exists_parallelogram_complement_threshold
+#print axioms ComplementedSubspace.dual_pair_norm_sq_le_of_eval_sq
+#print axioms ComplementedSubspace.ApproxParallelogram.dual
+#print axioms ComplementedSubspace.exists_hilbertFactorization_of_local
+#print axioms ComplementedSubspace.exists_hilbertFactorization_norm_product
+#print axioms ComplementedSubspace.localHilbert_prodL2
+#print axioms ComplementedSubspace.HasHilbertNormWithin.dual
+#print axioms ComplementedSubspace.HasHilbertNormWithin.bidual
+#print axioms ComplementedSubspace.exists_localHilbert_prodL2_threshold
+#print axioms ComplementedSubspace.prodL2Dual_norm_sq
+#print axioms ComplementedSubspace.localHilbert_prodL2_dual
+#print axioms ComplementedSubspace.prodL2DualEquiv
+#print axioms ComplementedSubspace.realDualIsometryEquiv
+#print axioms ComplementedSubspace.prodL2BidualEquiv
+#print axioms ComplementedSubspace.localHilbert_prodL2_bidual

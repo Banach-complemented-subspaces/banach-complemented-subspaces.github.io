@@ -1,0 +1,14 @@
+LAKE_ARTIFACT_CACHE=
+LAKE_CACHE_DIR=USER_HOME\.cache\lake
+LEAN_GITHASH=6a10ac8c22beadecabdbb0919c2b50214762f91d
+LEAN_AR=WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\llvm-ar.exe
+LEAN_SRC_PATH=LEAN_PROJECT\.lake\packages\Cli;LEAN_PROJECT\.lake\packages\Cli;LEAN_PROJECT\.lake\packages\batteries;LEAN_PROJECT\.lake\packages\batteries;LEAN_PROJECT\.lake\packages\Qq;LEAN_PROJECT\.lake\packages\Qq;LEAN_PROJECT\.lake\packages\aesop;LEAN_PROJECT\.lake\packages\aesop;LEAN_PROJECT\.lake\packages\proofwidgets;LEAN_PROJECT\.lake\packages\proofwidgets;LEAN_PROJECT\.lake\packages\proofwidgets;LEAN_PROJECT\.lake\packages\importGraph;LEAN_PROJECT\.lake\packages\importGraph;LEAN_PROJECT\.lake\packages\LeanSearchClient;LEAN_PROJECT\.lake\packages\LeanSearchClient;LEAN_PROJECT\.lake\packages\plausible;LEAN_PROJECT\.lake\packages\plausible;LEAN_PROJECT\.lake\packages\mathlib;LEAN_PROJECT\.lake\packages\mathlib;LEAN_PROJECT\.lake\packages\mathlib;LEAN_PROJECT\.lake\packages\mathlib;LEAN_PROJECT\.lake\packages\mathlib;LEAN_PROJECT\.lake\packages\mathlib;LEAN_PROJECT\.lake\packages\mathlib;LEAN_PROJECT;LEAN_PROJECT;WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\lake
+LEAN_SYSROOT=WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows
+LAKE_CONFIG=USER_HOME\.lake\config.toml
+LEAN_PATH=LEAN_PROJECT\.lake\packages\Cli\.lake\build\lib\lean;LEAN_PROJECT\.lake\packages\batteries\.lake\build\lib\lean;LEAN_PROJECT\.lake\packages\Qq\.lake\build\lib\lean;LEAN_PROJECT\.lake\packages\aesop\.lake\build\lib\lean;LEAN_PROJECT\.lake\packages\proofwidgets\.lake\build\lib\lean;LEAN_PROJECT\.lake\packages\importGraph\.lake\build\lib\lean;LEAN_PROJECT\.lake\packages\LeanSearchClient\.lake\build\lib\lean;LEAN_PROJECT\.lake\packages\plausible\.lake\build\lib\lean;LEAN_PROJECT\.lake\packages\mathlib\.lake\build\lib\lean;LEAN_PROJECT\.lake\build\lib\lean;WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\lib\lean
+LAKE_RESTORE_ARTIFACTS=
+LAKE=WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe
+LAKE_HOME=WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows
+LAKE_NO_CACHE=false
+LAKE_PKG_URL_MAP={}
+LEAN=WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lean.exe

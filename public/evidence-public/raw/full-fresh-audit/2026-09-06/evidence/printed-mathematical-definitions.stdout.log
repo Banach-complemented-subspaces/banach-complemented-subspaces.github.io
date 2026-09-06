@@ -1,0 +1,268 @@
+def ComplementedSubspace.RealMainTheoremStatement : Prop :=
+∀ (ρ : ℝ),
+  LT.lt.{0} 0 ρ →
+    ∃ a,
+      TopologicalSpace.SeparableSpace.{0} ↥(ComplementedSubspace.Ambient a) ∧
+        UniformConvexSpace.{0} ↥(ComplementedSubspace.Ambient a) ∧
+          ComplementedSubspace.HasRealBanachLatticeOrder.{0} ↥(ComplementedSubspace.Ambient a) ∧
+            ∃ P,
+              Eq.{1} (ContinuousLinearMap.comp.{0, 0, 0, 0, 0, 0} P P) P ∧
+                LT.lt.{0} (Norm.norm.{0} P) (HAdd.hAdd.{0, 0, 0} 1 ρ) ∧
+                  LT.lt.{0}
+                      (Norm.norm.{0}
+                        (HSub.hSub.{0, 0, 0} (ContinuousLinearMap.id.{0, 0} ℝ ↥(ComplementedSubspace.Ambient a)) P))
+                      (HAdd.hAdd.{0, 0, 0} 1 ρ) ∧
+                    ComplementedSubspace.HasSeparatedRange.{0} P ∧
+                      ComplementedSubspace.HasSeparatedRange.{0}
+                        (HSub.hSub.{0, 0, 0} (ContinuousLinearMap.id.{0, 0} ℝ ↥(ComplementedSubspace.Ambient a)) P)
+def ComplementedSubspace.RealCorollaryStatement : Prop :=
+∀ (ρ : ℝ),
+  LT.lt.{0} 0 ρ →
+    ∃ X,
+      ComplementedSubspace.HasOneUnconditionalSchauderBasis.{0, 0} ℝ
+          (ComplementedSubspace.BanachModel.Carrier.{0, 0} X) ∧
+        ∃ P,
+          Eq.{1} (ContinuousLinearMap.comp.{0, 0, 0, 0, 0, 0} P P) P ∧
+            LT.lt.{0} (Norm.norm.{0} P) (HAdd.hAdd.{0, 0, 0} 1 ρ) ∧
+              ¬ComplementedSubspace.HasUnconditionalSchauderBasis.{0, 0} ℝ ↥(LinearMap.range.{0, 0, 0, 0} ↑P) ∧
+                ¬ComplementedSubspace.HasUnconditionalSchauderBasis.{0, 0} ℝ
+                      (ContinuousLinearMap.{0, 0, 0, 0} (RingHom.id.{0} ℝ) ↥(LinearMap.range.{0, 0, 0, 0} ↑P) ℝ) ∧
+                  ¬ComplementedSubspace.IsIsomorphicToRealBanachLattice.{0} ↥(LinearMap.range.{0, 0, 0, 0} ↑P) ∧
+                    ¬ComplementedSubspace.IsIsomorphicToRealBanachLattice.{0}
+                        (ContinuousLinearMap.{0, 0, 0, 0} (RingHom.id.{0} ℝ) ↥(LinearMap.range.{0, 0, 0, 0} ↑P) ℝ)
+def ComplementedSubspace.UnconditionalCorollaryStatement.{u_2} : (𝕜 : Type u_2) →
+  [NontriviallyNormedField.{u_2} 𝕜] → Prop :=
+fun 𝕜 [NontriviallyNormedField.{u_2} 𝕜] =>
+  ∀ (ρ : ℝ),
+    LT.lt.{0} 0 ρ →
+      ∃ X,
+        ComplementedSubspace.HasOneUnconditionalSchauderBasis.{0, u_2} 𝕜
+            (ComplementedSubspace.BanachModel.Carrier.{0, u_2} X) ∧
+          ∃ P,
+            Eq.{1} (ContinuousLinearMap.comp.{u_2, u_2, u_2, 0, 0, 0} P P) P ∧
+              LT.lt.{0} (Norm.norm.{0} P) (HAdd.hAdd.{0, 0, 0} 1 ρ) ∧
+                ¬ComplementedSubspace.HasUnconditionalSchauderBasis.{0, u_2} 𝕜 ↥(LinearMap.range.{u_2, u_2, 0, 0} ↑P) ∧
+                  ¬ComplementedSubspace.HasUnconditionalSchauderBasis.{u_2, u_2} 𝕜
+                      (ContinuousLinearMap.{u_2, u_2, 0, u_2} (RingHom.id.{u_2} 𝕜)
+                        (↥(LinearMap.range.{u_2, u_2, 0, 0} ↑P)) 𝕜)
+def ComplementedSubspace.ComplexCorollaryStatement : Prop :=
+ComplementedSubspace.UnconditionalCorollaryStatement.{0} ℂ
+def ComplementedSubspace.SeparableNonprimarityStatement : Prop :=
+∀ (ρ : ℝ),
+  LT.lt.{0} 0 ρ →
+    ∃ X,
+      TopologicalSpace.SeparableSpace.{0} (ComplementedSubspace.BanachModel.Carrier.{0, 0} X) ∧
+        ComplementedSubspace.HasRealBanachLatticeOrder.{0} (ComplementedSubspace.BanachModel.Carrier.{0, 0} X) ∧
+          ComplementedSubspace.IsSuperreflexiveByRenorming.{0, 0} ℝ
+              (ComplementedSubspace.BanachModel.Carrier.{0, 0} X) ∧
+            ComplementedSubspace.HasOneUnconditionalSchauderBasis.{0, 0} ℝ
+                (ComplementedSubspace.BanachModel.Carrier.{0, 0} X) ∧
+              ∃ P,
+                Eq.{1} (ContinuousLinearMap.comp.{0, 0, 0, 0, 0, 0} P P) P ∧
+                  LT.lt.{0} (Norm.norm.{0} P) (HAdd.hAdd.{0, 0, 0} 1 ρ) ∧
+                    LT.lt.{0}
+                        (Norm.norm.{0}
+                          (HSub.hSub.{0, 0, 0}
+                            (ContinuousLinearMap.id.{0, 0} ℝ (ComplementedSubspace.BanachModel.Carrier.{0, 0} X)) P))
+                        (HAdd.hAdd.{0, 0, 0} 1 ρ) ∧
+                      ¬ComplementedSubspace.IsIsomorphicToRealBanachLattice.{0} ↥(LinearMap.range.{0, 0, 0, 0} ↑P) ∧
+                        ¬ComplementedSubspace.IsIsomorphicToRealBanachLattice.{0}
+                            ↥(LinearMap.range.{0, 0, 0, 0}
+                                ↑(HSub.hSub.{0, 0, 0}
+                                    (ContinuousLinearMap.id.{0, 0} ℝ
+                                      (ComplementedSubspace.BanachModel.Carrier.{0, 0} X))
+                                    P))
+def ComplementedSubspace.basisMultiplier.{u_1} : {E : Type u_1} →
+  [inst : NormedAddCommGroup.{u_1} E] →
+    [inst_1 : NormedSpace.{0, u_1} ℝ E] →
+      {n : ℕ} →
+        Module.Basis.{0, 0, u_1} (Fin n) ℝ E →
+          (Fin n → ℝ) → ContinuousLinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} ℝ) E E :=
+fun {E} [NormedAddCommGroup.{u_1} E] [NormedSpace.{0, u_1} ℝ E] {n} b θ =>
+  Module.Basis.constrL.{0, u_1, u_1, 0} b fun i => HSMul.hSMul.{0, u_1, u_1} (θ i) (b i)
+def ComplementedSubspace.unconditionalBasisConstant.{u_1} : {E : Type u_1} →
+  [inst : NormedAddCommGroup.{u_1} E] →
+    [inst_1 : NormedSpace.{0, u_1} ℝ E] → {n : ℕ} → Module.Basis.{0, 0, u_1} (Fin n) ℝ E → ENNReal :=
+fun {E} [NormedAddCommGroup.{u_1} E] [NormedSpace.{0, u_1} ℝ E] {n} b =>
+  Max.max.{0} 1
+    (⨆ θ,
+      ⨆ (_ : ∀ (i : Fin n), LE.le.{0} (Norm.norm.{0} (θ i)) 1),
+        ENorm.enorm.{u_1} (ComplementedSubspace.basisMultiplier.{u_1} b θ))
+def ComplementedSubspace.unconditionalConstant.{u_2} : (E : Type u_2) →
+  [inst : NormedAddCommGroup.{u_2} E] → [NormedSpace.{0, u_2} ℝ E] → ENNReal :=
+fun E [NormedAddCommGroup.{u_2} E] [NormedSpace.{0, u_2} ℝ E] =>
+  ⨅ n, ⨅ b, ComplementedSubspace.unconditionalBasisConstant.{u_2} b
+def ComplementedSubspace.lambdaDPR.{u_1} : (Z : Type u_1) →
+  [inst : NormedAddCommGroup.{u_1} Z] → [inst_1 : NormedSpace.{0, u_1} ℝ Z] → Submodule.{0, u_1} ℝ Z → ENNReal :=
+fun Z [NormedAddCommGroup.{u_1} Z] [NormedSpace.{0, u_1} ℝ Z] V =>
+  ⨅ F,
+    ⨅ (_ : LE.le.{u_1} V F),
+      ⨅ (_ : FiniteDimensional.{0, u_1} ℝ ↥F), ComplementedSubspace.unconditionalConstant.{u_1} ↥F
+def ComplementedSubspace.chiDPR.{u_1} : (Z : Type u_1) →
+  [inst : NormedAddCommGroup.{u_1} Z] → [NormedSpace.{0, u_1} ℝ Z] → ENNReal :=
+fun Z [NormedAddCommGroup.{u_1} Z] [NormedSpace.{0, u_1} ℝ Z] =>
+  ⨆ V,
+    ⨆ (_ : FiniteDimensional.{0, u_1} ℝ ↥V),
+      ⨆ (_ : Ne.{u_1 + 1} V Bot.bot.{u_1}), ComplementedSubspace.lambdaDPR.{u_1} Z V
+structure ComplementedSubspace.GLFactorization.{u_1} {Z : Type u_1} [NormedAddCommGroup.{u_1} Z]
+  [NormedSpace.{0, u_1} ℝ Z] (V : Submodule.{0, u_1} ℝ Z) : Type u_1
+number of parameters: 4
+fields:
+  ComplementedSubspace.GLFactorization.dimension.{u_1} : ℕ
+  ComplementedSubspace.GLFactorization.auxNorm.{u_1} : Seminorm.{0, 0} ℝ
+      (Fin (ComplementedSubspace.GLFactorization.dimension.{u_1} self) → ℝ)
+  ComplementedSubspace.GLFactorization.positive_definite.{u_1} : ∀
+      (x : Fin (ComplementedSubspace.GLFactorization.dimension.{u_1} self) → ℝ),
+      Eq.{1} ((ComplementedSubspace.GLFactorization.auxNorm.{u_1} self) x) 0 → Eq.{1} x 0
+  ComplementedSubspace.GLFactorization.unconditional.{u_1} : ∀
+      (θ x : Fin (ComplementedSubspace.GLFactorization.dimension.{u_1} self) → ℝ),
+      (∀ (i : Fin (ComplementedSubspace.GLFactorization.dimension.{u_1} self)), LE.le.{0} (Norm.norm.{0} (θ i)) 1) →
+        LE.le.{0} ((ComplementedSubspace.GLFactorization.auxNorm.{u_1} self) fun i => HMul.hMul.{0, 0, 0} (θ i) (x i))
+          ((ComplementedSubspace.GLFactorization.auxNorm.{u_1} self) x)
+  ComplementedSubspace.GLFactorization.a.{u_1} : LinearMap.{0, 0, u_1, 0} (RingHom.id.{0} ℝ) (↥V)
+      (Fin (ComplementedSubspace.GLFactorization.dimension.{u_1} self) → ℝ)
+  ComplementedSubspace.GLFactorization.b.{u_1} : LinearMap.{0, 0, 0, u_1} (RingHom.id.{0} ℝ)
+      (Fin (ComplementedSubspace.GLFactorization.dimension.{u_1} self) → ℝ) Z
+  ComplementedSubspace.GLFactorization.factorizes.{u_1} : Eq.{u_1 + 1}
+      (ComplementedSubspace.GLFactorization.b.{u_1} self ∘ₗ ComplementedSubspace.GLFactorization.a.{u_1} self)
+      (Submodule.subtype.{0, u_1} V)
+  ComplementedSubspace.GLFactorization.aBound.{u_1} : NNReal
+  ComplementedSubspace.GLFactorization.bBound.{u_1} : NNReal
+  ComplementedSubspace.GLFactorization.bound_a.{u_1} : ∀ (x : ↥V),
+      LE.le.{0}
+        ((ComplementedSubspace.GLFactorization.auxNorm.{u_1} self)
+          ((ComplementedSubspace.GLFactorization.a.{u_1} self) x))
+        (HMul.hMul.{0, 0, 0} (↑(ComplementedSubspace.GLFactorization.aBound.{u_1} self)) (Norm.norm.{u_1} x))
+  ComplementedSubspace.GLFactorization.bound_b.{u_1} : ∀
+      (x : Fin (ComplementedSubspace.GLFactorization.dimension.{u_1} self) → ℝ),
+      LE.le.{0} (Norm.norm.{u_1} ((ComplementedSubspace.GLFactorization.b.{u_1} self) x))
+        (HMul.hMul.{0, 0, 0} (↑(ComplementedSubspace.GLFactorization.bBound.{u_1} self))
+          ((ComplementedSubspace.GLFactorization.auxNorm.{u_1} self) x))
+constructor:
+  ComplementedSubspace.GLFactorization.mk.{u_1} {Z : Type u_1} [NormedAddCommGroup.{u_1} Z] [NormedSpace.{0, u_1} ℝ Z]
+    {V : Submodule.{0, u_1} ℝ Z} (dimension : ℕ) (auxNorm : Seminorm.{0, 0} ℝ (Fin dimension → ℝ))
+    (positive_definite : ∀ (x : Fin dimension → ℝ), Eq.{1} (auxNorm x) 0 → Eq.{1} x 0)
+    (unconditional :
+      ∀ (θ x : Fin dimension → ℝ),
+        (∀ (i : Fin dimension), LE.le.{0} (Norm.norm.{0} (θ i)) 1) →
+          LE.le.{0} (auxNorm fun i => HMul.hMul.{0, 0, 0} (θ i) (x i)) (auxNorm x))
+    (a : LinearMap.{0, 0, u_1, 0} (RingHom.id.{0} ℝ) (↥V) (Fin dimension → ℝ))
+    (b : LinearMap.{0, 0, 0, u_1} (RingHom.id.{0} ℝ) (Fin dimension → ℝ) Z)
+    (factorizes : Eq.{u_1 + 1} (b ∘ₗ a) (Submodule.subtype.{0, u_1} V)) (aBound bBound : NNReal)
+    (bound_a : ∀ (x : ↥V), LE.le.{0} (auxNorm (a x)) (HMul.hMul.{0, 0, 0} (↑aBound) (Norm.norm.{u_1} x)))
+    (bound_b :
+      ∀ (x : Fin dimension → ℝ), LE.le.{0} (Norm.norm.{u_1} (b x)) (HMul.hMul.{0, 0, 0} (↑bBound) (auxNorm x))) :
+    ComplementedSubspace.GLFactorization.{u_1} V
+def ComplementedSubspace.GLFactorization.cost.{u_1} : {Z : Type u_1} →
+  [inst : NormedAddCommGroup.{u_1} Z] →
+    [inst_1 : NormedSpace.{0, u_1} ℝ Z] →
+      {V : Submodule.{0, u_1} ℝ Z} → ComplementedSubspace.GLFactorization.{u_1} V → ENNReal :=
+fun {Z} [NormedAddCommGroup.{u_1} Z] [NormedSpace.{0, u_1} ℝ Z] {V} F =>
+  HMul.hMul.{0, 0, 0} ↑(ComplementedSubspace.GLFactorization.aBound.{u_1} F)
+    ↑(ComplementedSubspace.GLFactorization.bBound.{u_1} F)
+def ComplementedSubspace.lambdaGL.{u_1} : (Z : Type u_1) →
+  [inst : NormedAddCommGroup.{u_1} Z] → [inst_1 : NormedSpace.{0, u_1} ℝ Z] → Submodule.{0, u_1} ℝ Z → ENNReal :=
+fun Z [NormedAddCommGroup.{u_1} Z] [NormedSpace.{0, u_1} ℝ Z] V =>
+  ⨅ F, ComplementedSubspace.GLFactorization.cost.{u_1} F
+def ComplementedSubspace.chiGL.{u_1} : (Z : Type u_1) →
+  [inst : NormedAddCommGroup.{u_1} Z] → [NormedSpace.{0, u_1} ℝ Z] → ENNReal :=
+fun Z [NormedAddCommGroup.{u_1} Z] [NormedSpace.{0, u_1} ℝ Z] =>
+  ⨆ V,
+    ⨆ (_ : FiniteDimensional.{0, u_1} ℝ ↥V),
+      ⨆ (_ : Ne.{u_1 + 1} V Bot.bot.{u_1}), ComplementedSubspace.lambdaGL.{u_1} Z V
+structure ComplementedSubspace.BlockParameters : Type
+number of parameters: 0
+fields:
+  ComplementedSubspace.BlockParameters.dimension : ℕ → ℕ+
+  ComplementedSubspace.BlockParameters.exponent : ℕ → ℝ
+  ComplementedSubspace.BlockParameters.two_lt_exponent : ∀ (j : ℕ), LT.lt.{0} 2 (self.exponent j)
+  ComplementedSubspace.BlockParameters.exponent_le_three : ∀ (j : ℕ), LE.le.{0} (self.exponent j) 3
+  ComplementedSubspace.BlockParameters.exponent_antitone : Antitone.{0, 0} self.exponent
+  ComplementedSubspace.BlockParameters.exponent_tendsto : Filter.Tendsto.{0, 0} self.exponent Filter.atTop.{0}
+      (nhds.{0} 2)
+constructor:
+  ComplementedSubspace.BlockParameters.mk (dimension : ℕ → ℕ+) (exponent : ℕ → ℝ)
+    (two_lt_exponent : ∀ (j : ℕ), LT.lt.{0} 2 (exponent j)) (exponent_le_three : ∀ (j : ℕ), LE.le.{0} (exponent j) 3)
+    (exponent_antitone : Antitone.{0, 0} exponent)
+    (exponent_tendsto : Filter.Tendsto.{0, 0} exponent Filter.atTop.{0} (nhds.{0} 2)) :
+    ComplementedSubspace.BlockParameters
+@[reducible] def ComplementedSubspace.Block : ComplementedSubspace.BlockParameters → ℕ → Type :=
+fun a j => PiLp.{0, 0} (ENNReal.ofReal (a.exponent j)) fun x => ℝ
+@[reducible] def ComplementedSubspace.Ambient : (a : ComplementedSubspace.BlockParameters) →
+  AddSubgroup.{0} (PreLp.{0, 0} (ComplementedSubspace.Block a)) :=
+fun a => lp.{0, 0} (ComplementedSubspace.Block a) 2
+def ComplementedSubspace.HasRealBanachLatticeOrder.{u_1} : (X : Type u_1) →
+  [inst : NormedAddCommGroup.{u_1} X] → [NormedSpace.{0, u_1} ℝ X] → [CompleteSpace.{u_1} X] → Prop :=
+fun X [NormedAddCommGroup.{u_1} X] [NormedSpace.{0, u_1} ℝ X] [CompleteSpace.{u_1} X] =>
+  ∃ latticeOrder, IsOrderedAddMonoid.{u_1} X ∧ PosSMulMono.{0, u_1} ℝ X ∧ HasSolidNorm.{u_1} X
+def ComplementedSubspace.HasSeparatedRange.{u_1} : {X : Type u_1} →
+  [inst : NormedAddCommGroup.{u_1} X] →
+    [inst_1 : NormedSpace.{0, u_1} ℝ X] → ContinuousLinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} ℝ) X X → Prop :=
+fun {X} [NormedAddCommGroup.{u_1} X] [NormedSpace.{0, u_1} ℝ X] P =>
+  LE.le.{0} (ComplementedSubspace.chiGL.{u_1} ↥(LinearMap.range.{0, 0, u_1, u_1} ↑P)) (ENorm.enorm.{u_1} P) ∧
+    Eq.{1} (ComplementedSubspace.chiDPR.{u_1} ↥(LinearMap.range.{0, 0, u_1, u_1} ↑P)) Top.top.{0} ∧
+      LE.le.{0}
+          (ComplementedSubspace.chiGL.{u_1}
+            (ContinuousLinearMap.{0, 0, u_1, 0} (RingHom.id.{0} ℝ) ↥(LinearMap.range.{0, 0, u_1, u_1} ↑P) ℝ))
+          (ENorm.enorm.{u_1} P) ∧
+        Eq.{1}
+          (ComplementedSubspace.chiDPR.{u_1}
+            (ContinuousLinearMap.{0, 0, u_1, 0} (RingHom.id.{0} ℝ) ↥(LinearMap.range.{0, 0, u_1, u_1} ↑P) ℝ))
+          Top.top.{0}
+structure ComplementedSubspace.BanachModel.{u, u_1} (𝕜 : Type u_1) [NontriviallyNormedField.{u_1} 𝕜] :
+  Type (max (u + 1) u_1)
+number of parameters: 2
+fields:
+  ComplementedSubspace.BanachModel.Carrier.{u, u_1} : Type u
+  ComplementedSubspace.BanachModel.normedGroup.{u,
+    u_1} : NormedAddCommGroup.{u} (ComplementedSubspace.BanachModel.Carrier.{u, u_1} self)
+  ComplementedSubspace.BanachModel.normedSpace.{u,
+    u_1} : NormedSpace.{u_1, u} 𝕜 (ComplementedSubspace.BanachModel.Carrier.{u, u_1} self)
+  ComplementedSubspace.BanachModel.completeSpace.{u,
+    u_1} : CompleteSpace.{u} (ComplementedSubspace.BanachModel.Carrier.{u, u_1} self)
+constructor:
+  ComplementedSubspace.BanachModel.mk.{u, u_1} {𝕜 : Type u_1} [NontriviallyNormedField.{u_1} 𝕜] (Carrier : Type u)
+    (normedGroup : NormedAddCommGroup.{u} Carrier) (normedSpace : NormedSpace.{u_1, u} 𝕜 Carrier)
+    (completeSpace : CompleteSpace.{u} Carrier) : ComplementedSubspace.BanachModel.{u, u_1} 𝕜
+def ComplementedSubspace.HasUnconditionalSchauderBasis.{u, u_2} : (𝕜 : Type u_2) →
+  [inst : NontriviallyNormedField.{u_2} 𝕜] →
+    (E : Type u) → [inst_1 : NormedAddCommGroup.{u} E] → [NormedSpace.{u_2, u} 𝕜 E] → Prop :=
+fun 𝕜 [NontriviallyNormedField.{u_2} 𝕜] E [NormedAddCommGroup.{u} E] [NormedSpace.{u_2, u} 𝕜 E] =>
+  (∃ n, Nonempty.{max (max (u + 1) (u_2 + 1)) 1} (UnconditionalSchauderBasis.{0, u_2, u} (Fin n) 𝕜 E)) ∨
+    Nonempty.{max (max (u + 1) (u_2 + 1)) 1} (UnconditionalSchauderBasis.{0, u_2, u} ℕ 𝕜 E)
+def ComplementedSubspace.IsOneUnconditional.{u, u_1} : {𝕜 : Type u_1} →
+  [inst : NontriviallyNormedField.{u_1} 𝕜] →
+    {E : Type u} →
+      [inst_1 : NormedAddCommGroup.{u} E] →
+        [inst_2 : NormedSpace.{u_1, u} 𝕜 E] → UnconditionalSchauderBasis.{0, u_1, u} ℕ 𝕜 E → Prop :=
+fun {𝕜} [NontriviallyNormedField.{u_1} 𝕜] {E} [NormedAddCommGroup.{u} E] [NormedSpace.{u_1, u} 𝕜 E] b =>
+  ∀ (s : Finset.{0} ℕ) (θ : ℕ → 𝕜),
+    (∀ (i : ℕ), LE.le.{0} (Norm.norm.{u_1} (θ i)) 1) →
+      ∀ (x : E),
+        LE.le.{0}
+          (Norm.norm.{u}
+            (∑ i ∈ s,
+              HSMul.hSMul.{u_1, u, u} (HMul.hMul.{u_1, u_1, u_1} (θ i) ((GeneralSchauderBasis.coord.{0, u_1, u} b i) x))
+                (↑b i)))
+          (Norm.norm.{u} x)
+def ComplementedSubspace.HasOneUnconditionalSchauderBasis.{u, u_2} : (𝕜 : Type u_2) →
+  [inst : NontriviallyNormedField.{u_2} 𝕜] →
+    (E : Type u) → [inst_1 : NormedAddCommGroup.{u} E] → [NormedSpace.{u_2, u} 𝕜 E] → Prop :=
+fun 𝕜 [NontriviallyNormedField.{u_2} 𝕜] E [NormedAddCommGroup.{u} E] [NormedSpace.{u_2, u} 𝕜 E] =>
+  ∃ b, ComplementedSubspace.IsOneUnconditional.{u, u_2} b
+def ComplementedSubspace.IsSuperreflexiveByRenorming.{u, u_2} : (𝕜 : Type u_2) →
+  [inst : NontriviallyNormedField.{u_2} 𝕜] →
+    (E : Type u) → [inst_1 : NormedAddCommGroup.{u} E] → [NormedSpace.{u_2, u} 𝕜 E] → Prop :=
+fun 𝕜 [NontriviallyNormedField.{u_2} 𝕜] E [NormedAddCommGroup.{u} E] [NormedSpace.{u_2, u} 𝕜 E] =>
+  ∃ H,
+    UniformConvexSpace.{u} (ComplementedSubspace.BanachModel.Carrier.{u, u_2} H) ∧
+      Nonempty.{u + 1}
+        (ContinuousLinearEquiv.{u_2, u_2, u, u} (RingHom.id.{u_2} 𝕜) E
+          (ComplementedSubspace.BanachModel.Carrier.{u, u_2} H))
+def ComplementedSubspace.IsIsomorphicToRealBanachLattice.{u} : (E : Type u) →
+  [inst : NormedAddCommGroup.{u} E] → [NormedSpace.{0, u} ℝ E] → Prop :=
+fun E [NormedAddCommGroup.{u} E] [NormedSpace.{0, u} ℝ E] =>
+  ∃ L,
+    ComplementedSubspace.HasRealBanachLatticeOrder.{u} (ComplementedSubspace.BanachModel.Carrier.{u, 0} L) ∧
+      Nonempty.{u + 1}
+        (ContinuousLinearEquiv.{0, 0, u, u} (RingHom.id.{0} ℝ) E (ComplementedSubspace.BanachModel.Carrier.{u, 0} L))

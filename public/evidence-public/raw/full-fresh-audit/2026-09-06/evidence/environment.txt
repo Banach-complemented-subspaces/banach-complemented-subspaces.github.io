@@ -1,0 +1,8 @@
+Pinned retained toolchain: WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows
+lean-toolchain:
+leanprover/lean4:v4.34.0-rc2
+
+
+Executable identity: snapshot.json
+Native command outputs: lean-version.log, lake-version.log, original-search-path.log, project-git-head.log, project-git-status.log
+Initial Lake PID 7848 seen during discovery had exited before the read-only process query; no process was stopped. No overlapping Lean build was present.

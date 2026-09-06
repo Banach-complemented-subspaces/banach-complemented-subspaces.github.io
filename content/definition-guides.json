@@ -1,0 +1,792 @@
+{
+  "basisMultiplier": [
+    {
+      "fragment": "def basisMultiplier {n : ℕ} (b : Module.Basis (Fin n) ℝ E)",
+      "syntax": "def names a construction. The braces make n an implicit natural-number argument, inferred from b. Module.Basis (Fin n) ℝ E is a real algebraic basis of E indexed by the n elements 0,…,n−1.",
+      "math": "Fix a finite real basis b₀,…,bₙ₋₁ of the normed real space E. The normed-space structures on E are specified in the surrounding source context.",
+      "role": "This specifies the basis whose coordinates the operator will multiply. A finite basis also ensures finite dimensionality.",
+      "terms": [
+        "Module.Basis",
+        "Fin"
+      ]
+    },
+    {
+      "fragment": "(θ : Fin n → ℝ) : E →L[ℝ] E :=",
+      "syntax": "θ is a function assigning one real scalar to each index. The expression after the colon is the result type: →L[ℝ] means a continuous real-linear map. := introduces its construction.",
+      "math": "For each scalar tuple θ, construct a bounded real-linear operator from E to E.",
+      "role": "The multiplier itself permits any real scalars. Bounds on their moduli are imposed later in unconditionalBasisConstant."
+    },
+    {
+      "fragment": "b.constrL (fun i => θ i • b i)",
+      "syntax": "fun i => … defines the value assigned to an index. b i is the corresponding basis vector, and • denotes scalar multiplication. b.constrL constructs the continuous linear map with these images of the basis vectors.",
+      "math": "The resulting operator sends bᵢ to θᵢbᵢ, hence sends Σᵢ xᵢbᵢ to Σᵢ θᵢxᵢbᵢ.",
+      "role": "This is the coordinate multiplier whose operator norm enters the finite-basis unconditional constant.",
+      "terms": [
+        "Module.Basis.constrL"
+      ]
+    }
+  ],
+  "unconditionalBasisConstant": [
+    {
+      "fragment": "def unconditionalBasisConstant {n : ℕ} (b : Module.Basis (Fin n) ℝ E) : ℝ≥0∞ :=",
+      "syntax": "def introduces a numerical definition. The implicit n is the finite basis length; b is a real basis of the normed space E. ℝ≥0∞ is the extended nonnegative real line, allowing infinity.",
+      "math": "Define u(b), the unconditional constant of this particular finite real basis in E’s existing norm.",
+      "role": "The construction fixes a basis first; the separate definition unconditionalConstant later takes an infimum over bases.",
+      "terms": [
+        "Module.Basis",
+        "Fin"
+      ]
+    },
+    {
+      "fragment": "max 1",
+      "syntax": "max takes the larger of its two arguments; its second argument is the supremum that follows.",
+      "math": "Require u(b) to be at least one.",
+      "role": "This includes the zero-dimensional convention: the empty basis has no nonzero multiplier operator, but its basis constant is one."
+    },
+    {
+      "fragment": "(⨆ (θ : Fin n → ℝ) (_ : ∀ i, ‖θ i‖ ≤ 1),",
+      "syntax": "⨆ denotes an indexed supremum. The first binder ranges over scalar tuples θ. The anonymous second binder ranges over proofs that every scalar has modulus at most one; it therefore restricts the admissible tuples.",
+      "math": "Take the supremum over all θ ∈ [−1,1]ⁿ, including every admissible real coordinate multiplier.",
+      "role": "The condition controls all scalar multipliers, not only coordinate projections. In ℝ≥0∞ an empty supremum is zero; the preceding max still keeps the constant at least one."
+    },
+    {
+      "fragment": "‖basisMultiplier b θ‖ₑ",
+      "syntax": "basisMultiplier b θ applies the project construction to b and θ. The subscript ₑ writes the operator norm as an extended nonnegative real.",
+      "math": "For each admissible θ, measure the operator norm of x = Σᵢxᵢbᵢ ↦ Σᵢθᵢxᵢbᵢ.",
+      "role": "These norms enter the supremum in the definition of u(b).",
+      "terms": [
+        "basisMultiplier"
+      ]
+    }
+  ],
+  "unconditionalConstant": [
+    {
+      "fragment": "def unconditionalConstant (E : Type*) [NormedAddCommGroup E]\n    [NormedSpace ℝ E] : ℝ≥0∞ :=",
+      "syntax": "Let E be a real normed space. Square-bracket arguments specify its normed additive-group and compatible real normed-space structures. The result is an extended nonnegative real; := begins its definition.",
+      "math": "Define u(E) for a real normed space E with its given norm. Completeness is not an assumption of this definition.",
+      "role": "This is a property of the space and norm, rather than of a previously selected basis.",
+      "terms": [
+        "NormedAddCommGroup",
+        "NormedSpace"
+      ]
+    },
+    {
+      "fragment": "⨅ (n : ℕ) (b : Module.Basis (Fin n) ℝ E),",
+      "syntax": "⨅ denotes an indexed infimum. First choose a natural number n, then a real basis b of E with n elements. The second binder is dependent on the first.",
+      "math": "Take an infimum over all finite real bases of E, of every possible finite length.",
+      "role": "The infimum need not be attained by a basis. If there is no finite basis, the infimum is infinity; the empty basis is available for the zero space.",
+      "terms": [
+        "Module.Basis",
+        "Fin"
+      ]
+    },
+    {
+      "fragment": "unconditionalBasisConstant b",
+      "syntax": "Apply the finite-basis constant to each basis b in the preceding infimum.",
+      "math": "The infimum is taken over u(b), the maximum of one and the supremum of the admissible coordinate-multiplier norms.",
+      "role": "Thus u(E) is the best unconditional constant in the existing norm. With the empty-basis convention, u({0}) = 1.",
+      "terms": [
+        "unconditionalBasisConstant"
+      ]
+    }
+  ],
+  "lambdaDPR": [
+    {
+      "fragment": "def lambdaDPR (V : Submodule ℝ Z) : ℝ≥0∞ :=",
+      "syntax": "V is a real linear subspace of Z, represented as a Submodule. The result is an extended nonnegative real. The surrounding source context specifies the real normed space Z.",
+      "math": "Define the local DPR constant λDPR(Z,V) at a subspace V of Z.",
+      "role": "The ambient space and its norm remain fixed throughout this definition. Finite dimensionality of V is not required in this header.",
+      "terms": [
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "⨅ (F : Submodule ℝ Z)",
+      "syntax": "⨅ starts an indexed infimum over real linear subspaces F of the same Z.",
+      "math": "Search for a subspace F lying inside Z.",
+      "role": "F is a containing subspace in the original normed space, not a separately chosen auxiliary normed space.",
+      "terms": [
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "(_ : V ≤ F)",
+      "syntax": "For submodules, ≤ means inclusion. This anonymous binder requires a proof of V ≤ F and so admits only choices of F containing V.",
+      "math": "Require V ⊆ F.",
+      "role": "This turns the search over arbitrary subspaces into a search over extensions of the prescribed V. The underscore leaves the proof unnamed; it does not remove the condition."
+    },
+    {
+      "fragment": "(_ : FiniteDimensional ℝ ↥F),",
+      "syntax": "FiniteDimensional ℝ means finite dimension over ℝ. ↥F turns the submodule into the type of its vectors. The anonymous proof binder restricts the infimum to subspaces having this property.",
+      "math": "Require dimℝ F < ∞.",
+      "role": "Only finite-dimensional containing spaces contribute. An inadmissible choice contributes an empty inner infimum, which is infinity and does not improve the bound.",
+      "terms": [
+        "FiniteDimensional"
+      ]
+    },
+    {
+      "fragment": "unconditionalConstant ↥F",
+      "syntax": "Apply unconditionalConstant to the vectors in F. Its norm is inherited from Z through the subspace structure.",
+      "math": "Take the infimum of u(F) over all finite-dimensional F with V ⊆ F ⊆ Z.",
+      "role": "This completes λDPR(Z,V). If no such F exists the value is infinity; a containing subspace and basis attaining the infimum need not exist.",
+      "terms": [
+        "unconditionalConstant"
+      ]
+    }
+  ],
+  "chiDPR": [
+    {
+      "fragment": "def chiDPR : ℝ≥0∞ :=",
+      "syntax": "def names an extended nonnegative real. Z does not appear in this short header because the surrounding source section declares the real normed-space argument Z.",
+      "math": "Define χDPR(Z), the DPR local unconditional structure constant of Z.",
+      "role": "This turns all the local constants at subspaces into one constant for the ambient space."
+    },
+    {
+      "fragment": "⨆ (V : Submodule ℝ Z)",
+      "syntax": "⨆ is an indexed supremum, here over the real linear subspaces V of Z.",
+      "math": "Consider each subspace V of the fixed space Z.",
+      "role": "The next two proof binders specify exactly which initial subspaces are included.",
+      "terms": [
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "(_ : FiniteDimensional ℝ ↥V)",
+      "syntax": "The binder requires a proof that the carrier ↥V has finite real dimension.",
+      "math": "Restrict attention to finite-dimensional V.",
+      "role": "The outer constant measures finite-dimensional local structure, although lambdaDPR itself accepts arbitrary subspaces.",
+      "terms": [
+        "FiniteDimensional"
+      ]
+    },
+    {
+      "fragment": "(_ : V ≠ ⊥),",
+      "syntax": "⊥ is the bottom submodule, consisting only of zero. ≠ means inequality; this anonymous proof binder retains exactly the nonzero subspaces.",
+      "math": "Require V ≠ {0}.",
+      "role": "The zero subspace is excluded. Inadmissible choices give empty inner suprema, equal to zero; consequently χDPR({0}) = 0."
+    },
+    {
+      "fragment": "lambdaDPR Z V",
+      "syntax": "Evaluate lambdaDPR at the same Z and each admitted V, then take the preceding supremum.",
+      "math": "Take sup over 0 < dimℝ V < ∞ of inf{u(F) : V ⊆ F ⊆ Z, dimℝ F < ∞}.",
+      "role": "Equality χDPR(Z) = ∞ says there is no finite uniform bound on these local containing-space constants; the supremum need not be attained by a subspace.",
+      "terms": [
+        "lambdaDPR"
+      ]
+    }
+  ],
+  "GLFactorization": [
+    {
+      "fragment": "structure GLFactorization (V : Submodule ℝ Z) where",
+      "syntax": "structure lists the auxiliary space, its norm, the two linear maps and the conditions they satisfy. V is a subspace of the real normed space Z specified in the surrounding context. where begins this list.",
+      "math": "A witness will factor the inclusion V ↪ Z through a finite-dimensional space with a 1-unconditional coordinate basis.",
+      "role": "This is the project’s explicit finite factorisation representation, not a pre-existing Mathlib GL predicate. V and the norm of Z stay fixed.",
+      "terms": [
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "dimension : ℕ",
+      "syntax": "dimension is a natural number n, the dimension of the auxiliary space.",
+      "math": "Choose the finite dimension n of the auxiliary coordinate space.",
+      "role": "The auxiliary vectors in the following fields are functions Fin n → ℝ, or real n-tuples. Zero is permitted as a dimension."
+    },
+    {
+      "fragment": "auxNorm : Seminorm ℝ (Fin dimension → ℝ)",
+      "syntax": "Seminorm ℝ describes a nonnegative real-valued seminorm with the triangle inequality and absolute real homogeneity. Fin dimension → ℝ is the type of coordinate vectors.",
+      "math": "Choose an arbitrary seminorm ν on ℝⁿ.",
+      "role": "The auxiliary norm is chosen freely, subject to the stated conditions; it need not be the supremum norm or a particular ℓp norm.",
+      "terms": [
+        "Seminorm",
+        "Fin"
+      ]
+    },
+    {
+      "fragment": "positive_definite : ∀ x, auxNorm x = 0 → x = 0",
+      "syntax": "This field is a proof. ∀ x quantifies over all auxiliary coordinate vectors, and → reads as implication.",
+      "math": "If ν(x) = 0, then x = 0.",
+      "role": "Together with the seminorm axioms, this makes ν a norm on the chosen finite coordinate space."
+    },
+    {
+      "fragment": "unconditional : ∀ (θ x : Fin dimension → ℝ),\n    (∀ i, ‖θ i‖ ≤ 1) → auxNorm (fun i => θ i * x i) ≤ auxNorm x",
+      "syntax": "For every pair of coordinate tuples θ and x, the implication applies whenever every θᵢ has modulus at most one. fun i => θ i * x i denotes their coordinatewise product.",
+      "math": "For all θ with |θᵢ| ≤ 1 and all x, require ν((θᵢxᵢ)ᵢ) ≤ ν(x).",
+      "role": "This makes every admissible coordinate multiplier contractive in the same auxiliary norm, giving its coordinate basis the project’s 1-unconditional property."
+    },
+    {
+      "fragment": "a : ↥V →ₗ[ℝ] (Fin dimension → ℝ)",
+      "syntax": "↥V denotes the vectors in V, and →ₗ[ℝ] means a real-linear map. This is the first map of the factorisation.",
+      "math": "Choose a linear map a : V → ℝⁿ.",
+      "role": "The inequality bound_a gives boundedness for the chosen auxiliary norm; V has the norm inherited from Z."
+    },
+    {
+      "fragment": "b : (Fin dimension → ℝ) →ₗ[ℝ] Z",
+      "syntax": "This is a real-linear map from the same auxiliary coordinate space back to Z.",
+      "math": "Choose a linear map b : ℝⁿ → Z.",
+      "role": "It is the second factorisation map. No injectivity is required of b; its norm bound comes later."
+    },
+    {
+      "fragment": "factorizes : b.comp a = V.subtype",
+      "syntax": "b.comp a is composition, first a and then b. V.subtype is the linear inclusion of V into Z.",
+      "math": "For every x ∈ V, require b(a(x)) = x as a vector of Z.",
+      "role": "This ties both maps to the inclusion being factored. In particular a must be injective as a consequence, while b may have a kernel."
+    },
+    {
+      "fragment": "aBound : ℝ≥0",
+      "syntax": "ℝ≥0 denotes the finite nonnegative real numbers. A is a bound for a.",
+      "math": "Choose A ≥ 0.",
+      "role": "A need not equal the operator norm. The inequality bound_a states the bound it must satisfy."
+    },
+    {
+      "fragment": "bBound : ℝ≥0",
+      "syntax": "B is another finite nonnegative real number, now a bound for b.",
+      "math": "Choose B ≥ 0.",
+      "role": "The same witness will use A and B in its cost. The field bound_b will certify this second bound."
+    },
+    {
+      "fragment": "bound_a : ∀ x : ↥V, auxNorm (a x) ≤ (aBound : ℝ) * ‖x‖",
+      "syntax": "∀ ranges over V. The cast (aBound : ℝ) views the stored nonnegative real as a real number. The left side uses the chosen auxiliary norm; the right side uses V’s inherited norm.",
+      "math": "For every x ∈ V, require ν(a(x)) ≤ A‖x‖.",
+      "role": "This certifies continuity and operator bound A for the first map with the correct domain and auxiliary norms."
+    },
+    {
+      "fragment": "bound_b : ∀ x : Fin dimension → ℝ, ‖b x‖ ≤ (bBound : ℝ) * auxNorm x",
+      "syntax": "The quantifier ranges over all auxiliary vectors. The target norm is Z’s existing norm, and (bBound : ℝ) uses the stored nonnegative bound as a real scalar.",
+      "math": "For every y ∈ ℝⁿ, require ‖b(y)‖ ≤ Bν(y).",
+      "role": "This completes the bounded factorisation. GLFactorization.cost is AB; lambdaGL ranges over all such witnesses and bounds. The source constructs a finite-dimensional Banach space and bounded maps from these choices, and converts factorisations through finite-dimensional spaces with 1-unconditional bases into this representation.",
+      "terms": [
+        "GLFactorization.cost",
+        "lambdaGL"
+      ]
+    }
+  ],
+  "GLFactorization-cost": [
+    {
+      "fragment": "def GLFactorization.cost {V : Submodule ℝ Z} (F : GLFactorization V) : ℝ≥0∞ :=",
+      "syntax": "This definition belongs to the GLFactorization namespace. V is inferred from the witness F; the result is an extended nonnegative real.",
+      "math": "Assign a numerical cost to a particular bounded factorisation of V ↪ Z.",
+      "role": "The witness already includes the auxiliary norm, the two linear maps and their certified bounds.",
+      "terms": [
+        "GLFactorization",
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "(F.aBound : ℝ≥0∞) * (F.bBound : ℝ≥0∞)",
+      "syntax": "Dot notation selects F’s two bounds. Each cast embeds a finite nonnegative real into ℝ≥0∞, and * multiplies the values.",
+      "math": "Set cost(F) = AFBF.",
+      "role": "These are valid operator bounds, which may exceed the exact operator norms. The later infimum includes every admissible choice of bounds, and the conversions to and from normed spaces preserve or decrease the corresponding costs."
+    }
+  ],
+  "lambdaGL": [
+    {
+      "fragment": "def lambdaGL (V : Submodule ℝ Z) : ℝ≥0∞ :=",
+      "syntax": "Define an extended nonnegative real for a real subspace V. The surrounding source context specifies the real normed-space argument Z.",
+      "math": "Define λGL(Z,V), the local finite factorisation constant of the inclusion V ↪ Z.",
+      "role": "The original space Z and V’s inherited norm are fixed, while the auxiliary finite-dimensional space will vary.",
+      "terms": [
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "⨅ F : GLFactorization V,",
+      "syntax": "⨅ takes the infimum over all factorisations F satisfying the stated conditions at V.",
+      "math": "Range over all finite dimensions, admissible auxiliary 1-unconditional norms, factorisation maps and certified bounds.",
+      "role": "If no such factorisation exists the infimum is infinity. A factorisation attaining the infimum need not exist.",
+      "terms": [
+        "GLFactorization"
+      ]
+    },
+    {
+      "fragment": "F.cost",
+      "syntax": "Dot notation applies GLFactorization.cost to each witness F.",
+      "math": "Take the infimum of the products AB of the two operator bounds.",
+      "role": "This produces λGL(Z,V). The source converts between this representation and factorisations through finite-dimensional normed spaces; the coordinate notation allows arbitrary auxiliary norms.",
+      "terms": [
+        "GLFactorization.cost"
+      ]
+    }
+  ],
+  "chiGL": [
+    {
+      "fragment": "def chiGL : ℝ≥0∞ :=",
+      "syntax": "This defines an extended nonnegative real. The real normed-space argument Z is specified in the surrounding source section, although it is absent from the short header.",
+      "math": "Define χGL(Z), the project’s real GL local unconditional structure constant.",
+      "role": "It collects the finite-dimensional local factorisation constants into a uniform constant for Z."
+    },
+    {
+      "fragment": "⨆ (V : Submodule ℝ Z)",
+      "syntax": "⨆ starts an indexed supremum over real linear subspaces V of Z.",
+      "math": "Examine all subspaces V inside the same normed ambient space.",
+      "role": "The following conditions restrict the supremum to nonzero finite-dimensional subspaces.",
+      "terms": [
+        "Submodule"
+      ]
+    },
+    {
+      "fragment": "(_ : FiniteDimensional ℝ ↥V)",
+      "syntax": "The anonymous binder asks for evidence that the carrier of V is finite-dimensional over ℝ.",
+      "math": "Require dimℝ V < ∞.",
+      "role": "The outer constant concerns finite-dimensional inclusions even though lambdaGL has been defined for an arbitrary subspace.",
+      "terms": [
+        "FiniteDimensional"
+      ]
+    },
+    {
+      "fragment": "(_ : V ≠ ⊥),",
+      "syntax": "⊥ is the zero submodule, and ≠ excludes equality with it. The underscore leaves the required proof unnamed.",
+      "math": "Require V to be nonzero.",
+      "role": "The zero initial subspace is excluded. An empty supremum in ℝ≥0∞ is zero, giving χGL({0}) = 0."
+    },
+    {
+      "fragment": "lambdaGL Z V",
+      "syntax": "Evaluate the local factorisation infimum for each admitted V and take the preceding supremum.",
+      "math": "Take the supremum, over 0 < dimℝ V < ∞, of the infimum of the factorisation costs for V ↪ Z.",
+      "role": "A finite value gives a uniform finite factorisation bound in the infimum sense; no optimal auxiliary space is assumed. This is the exact GL constant used by HasSeparatedRange.",
+      "terms": [
+        "lambdaGL",
+        "HasSeparatedRange"
+      ]
+    }
+  ],
+  "BlockParameters": [
+    {
+      "fragment": "structure BlockParameters where",
+      "syntax": "structure lists two sequences and the conditions they must satisfy after where.",
+      "math": "Two sequences of parameters for the real ambient space, satisfying the following conditions.",
+      "role": "a : BlockParameters specifies the dimensions and exponents; Block and Ambient define the corresponding spaces.",
+      "terms": [
+        "Block",
+        "Ambient"
+      ]
+    },
+    {
+      "fragment": "dimension : ℕ → ℕ+",
+      "syntax": "The arrow denotes a function. ℕ indexes the sequence starting at zero, and ℕ+ is the type of positive natural numbers.",
+      "math": "Choose positive integers Nⱼ for every j ≥ 0.",
+      "role": "These are the finite block dimensions. Positivity is built into the codomain, so no separate positivity proof field is needed."
+    },
+    {
+      "fragment": "exponent : ℕ → ℝ",
+      "syntax": "This is a sequence of real numbers indexed by the same natural numbers.",
+      "math": "Choose a real exponent pⱼ for every block j.",
+      "role": "The next four fields certify the bounds, monotonicity and limit of this same exponent sequence."
+    },
+    {
+      "fragment": "two_lt_exponent : ∀ j, 2 < exponent j",
+      "syntax": "∀ j means for every index j; exponent j is function application to that index.",
+      "math": "For every j, require 2 < pⱼ.",
+      "role": "Each finite block exponent lies strictly above two."
+    },
+    {
+      "fragment": "exponent_le_three : ∀ j, exponent j ≤ 3",
+      "syntax": "This is another universally quantified proof field; ≤ is the non-strict order relation.",
+      "math": "For every j, require pⱼ ≤ 3.",
+      "role": "Together with the previous field this puts every exponent in (2,3]."
+    },
+    {
+      "fragment": "exponent_antitone : Antitone exponent",
+      "syntax": "Antitone means order reversing in the weak sense: if i ≤ j then exponent j ≤ exponent i.",
+      "math": "The sequence pⱼ is nonincreasing.",
+      "role": "Repeated exponents are allowed; strict decrease is not required.",
+      "terms": [
+        "Antitone"
+      ]
+    },
+    {
+      "fragment": "exponent_tendsto : Filter.Tendsto exponent Filter.atTop (𝓝 2)",
+      "syntax": "Filter.Tendsto describes convergence. Filter.atTop on ℕ means sufficiently large indices, and 𝓝 2 is the neighborhood filter of the real number 2.",
+      "math": "As j tends to infinity, pⱼ tends to 2; equivalently, for every ε > 0, eventually |pⱼ − 2| < ε.",
+      "role": "This completes all requirements on the parameters used to form the countable block sum.",
+      "terms": [
+        "Filter.Tendsto",
+        "Filter.atTop"
+      ]
+    }
+  ],
+  "Block": [
+    {
+      "fragment": "abbrev Block (a : BlockParameters) (j : ℕ) :=",
+      "syntax": "abbrev names an expression that Lean can unfold directly. It takes the parameters a and a block index j; := gives the resulting type.",
+      "math": "Define the jth finite real block for the selected parameters a.",
+      "role": "This is a project-defined abbreviation built from a standard Mathlib space; it remains tied to the same a used by Ambient.",
+      "terms": [
+        "BlockParameters",
+        "Ambient"
+      ]
+    },
+    {
+      "fragment": "PiLp",
+      "syntax": "PiLp is Mathlib’s product type equipped with a chosen ℓp norm, rather than the usual supremum norm of an untagged function type.",
+      "math": "Use a finite product with its ℓp norm.",
+      "role": "The two following arguments specify the exponent and the coordinate spaces.",
+      "terms": [
+        "PiLp"
+      ]
+    },
+    {
+      "fragment": "(ENNReal.ofReal (a.exponent j))",
+      "syntax": "a.exponent j selects pⱼ. ENNReal.ofReal expresses that real number as an extended nonnegative real, which is the exponent type expected by PiLp.",
+      "math": "The block norm uses exponent pⱼ. The parameter fields ensure 2 < pⱼ ≤ 3, so this conversion preserves the positive exponent.",
+      "role": "This sets the exponent p in the finite ℓp construction.",
+      "terms": [
+        "ENNReal.ofReal"
+      ]
+    },
+    {
+      "fragment": "(fun _ : Fin (a.dimension j) => ℝ)",
+      "syntax": "fun _ : Fin … => ℝ assigns the real scalar space to each of Nⱼ = a.dimension j indices. The underscore indicates that the coordinate type is independent of which index is chosen.",
+      "math": "The block is ℓₚⱼᴺⱼ(ℝ): real Nⱼ-tuples with norm (Σᵢ |xᵢ|ᵖⱼ)¹⁄ᵖⱼ.",
+      "role": "The finite sum uses counting measure without division by Nⱼ. This completes the concrete block space.",
+      "terms": [
+        "Fin"
+      ]
+    }
+  ],
+  "Ambient": [
+    {
+      "fragment": "abbrev Ambient (a : BlockParameters) :=",
+      "syntax": "abbrev names the following space. The parameter a specifies its block dimensions and exponents.",
+      "math": "Define the real ambient space associated to the chosen dimensions and exponents.",
+      "role": "This is the concrete space X in the main real construction.",
+      "terms": [
+        "BlockParameters"
+      ]
+    },
+    {
+      "fragment": "lp (Block a) 2",
+      "syntax": "Block a is the family j ↦ Block a j, with a fixed. Mathlib’s lp takes that family and the outer exponent 2. Its additive-subgroup result is used as the type of its vectors.",
+      "math": "X is the ℓ² sum of the finite real blocks ℓₚⱼᴺⱼ: its vectors are sequences (xⱼ) with Σⱼ ‖xⱼ‖² < ∞, and ‖x‖ = (Σⱼ ‖xⱼ‖²)¹⁄².",
+      "role": "The inner norm of each xⱼ is its counting ℓpⱼ norm. The outer exponent is two. Separability, lattice structure and uniform convexity are proved elsewhere.",
+      "terms": [
+        "lp",
+        "Block"
+      ]
+    }
+  ],
+  "HasRealBanachLatticeOrder": [
+    {
+      "fragment": "def HasRealBanachLatticeOrder (X : Type*) [NormedAddCommGroup X]\n    [NormedSpace ℝ X] [CompleteSpace X] : Prop :=",
+      "syntax": "The square-bracket arguments specify an existing normed additive group, compatible real vector structure and completeness. Prop means that the definition describes a property; := begins its body.",
+      "math": "For a real Banach space X with its given norm, define what it means to admit a compatible Banach lattice order.",
+      "role": "The norm and completeness hypothesis are fixed. Only the order is to be chosen.",
+      "terms": [
+        "NormedAddCommGroup",
+        "NormedSpace",
+        "CompleteSpace"
+      ]
+    },
+    {
+      "fragment": "∃ latticeOrder : Lattice X,",
+      "syntax": "∃ means there exists. A value of Lattice X specifies an order with pairwise suprema and infima on X.",
+      "math": "There is a lattice order on the same underlying set X.",
+      "role": "All the compatibility requirements below refer to this one chosen order.",
+      "terms": [
+        "Lattice"
+      ]
+    },
+    {
+      "fragment": "letI : Lattice X := latticeOrder",
+      "syntax": "letI means that the remaining conditions use the chosen lattice order.",
+      "math": "Read every order comparison and lattice operation below using that chosen lattice order.",
+      "role": "This does not choose another order or impose a new mathematical condition; it fixes how the subsequent conditions are interpreted."
+    },
+    {
+      "fragment": "IsOrderedAddMonoid X ∧",
+      "syntax": "IsOrderedAddMonoid expresses compatibility of the order with addition. ∧ joins this requirement to the requirements that follow.",
+      "math": "Translation respects order: if x ≤ y then x + z ≤ y + z.",
+      "role": "This connects the chosen lattice order to X’s existing additive structure.",
+      "terms": [
+        "IsOrderedAddMonoid"
+      ]
+    },
+    {
+      "fragment": "PosSMulMono ℝ X ∧",
+      "syntax": "PosSMulMono ℝ X says that scalar multiplication by a nonnegative real is monotone. ∧ again means and.",
+      "math": "If t ≥ 0 and x ≤ y, then tx ≤ ty.",
+      "role": "The lattice order must also respect X’s existing real scalar multiplication.",
+      "terms": [
+        "PosSMulMono"
+      ]
+    },
+    {
+      "fragment": "HasSolidNorm X",
+      "syntax": "HasSolidNorm requires norm monotonicity under comparison of lattice absolute values.",
+      "math": "If |x| ≤ |y| in the chosen lattice order, then ‖x‖ ≤ ‖y‖.",
+      "role": "This last clause makes the existing complete norm compatible with the lattice order. By contrast, IsIsomorphicToRealBanachLattice permits a different Banach-space model and norm.",
+      "terms": [
+        "HasSolidNorm",
+        "IsIsomorphicToRealBanachLattice"
+      ]
+    }
+  ],
+  "HasSeparatedRange": [
+    {
+      "fragment": "def HasSeparatedRange {X : Type*} [NormedAddCommGroup X] [NormedSpace ℝ X]\n    (P : X →L[ℝ] X) : Prop :=",
+      "syntax": "The braces make X implicit. The bracket arguments provide a real normed-space structure. P is a continuous real-linear operator, and Prop means that the definition describes a property.",
+      "math": "For a bounded real-linear operator P : X → X, prescribe four local-structure conditions on its range and continuous dual.",
+      "role": "This predicate does not require P² = P. Idempotence is a separate clause where the main theorem uses it.",
+      "terms": [
+        "NormedAddCommGroup",
+        "NormedSpace"
+      ]
+    },
+    {
+      "fragment": "chiGL ↥P.range ≤ ‖P‖ₑ ∧",
+      "syntax": "P.range is the linear range; ↥ makes it a type of vectors with the inherited subspace norm. ‖P‖ₑ is the operator norm in ℝ≥0∞, and ∧ means and.",
+      "math": "For Z = P(X), require χGL(Z) ≤ ‖P‖.",
+      "role": "This is the first of four simultaneous conditions and gives the quantitative GL bound for the range itself.",
+      "terms": [
+        "chiGL"
+      ]
+    },
+    {
+      "fragment": "chiDPR ↥P.range = ⊤ ∧",
+      "syntax": "Apply chiDPR to the same range. ⊤ is the top element of ℝ≥0∞, namely infinity; ∧ retains the following requirements.",
+      "math": "For the same Z = P(X), require χDPR(Z) = ∞.",
+      "role": "Thus the range has no finite uniform DPR bound even though its GL constant has the preceding finite bound.",
+      "terms": [
+        "chiDPR"
+      ]
+    },
+    {
+      "fragment": "chiGL (↥P.range →L[ℝ] ℝ) ≤ ‖P‖ₑ ∧",
+      "syntax": "The parenthesized type consists of continuous real-linear functionals from the range to ℝ. It carries the operator norm, so it is the continuous dual rather than the algebraic dual.",
+      "math": "For Z* = (P(X))*, require χGL(Z*) ≤ ‖P‖.",
+      "role": "The third clause gives the same quantitative GL bound for the continuous dual.",
+      "terms": [
+        "chiGL"
+      ]
+    },
+    {
+      "fragment": "chiDPR (↥P.range →L[ℝ] ℝ) = ⊤",
+      "syntax": "Apply chiDPR to that same continuous-dual type and set its value equal to infinity.",
+      "math": "Require χDPR(Z*) = ∞.",
+      "role": "This completes the four conditions. When the main theorem applies the predicate to I − P, all four refer to (I − P)(X) and its dual, and both GL bounds use ‖I − P‖.",
+      "terms": [
+        "chiDPR"
+      ]
+    }
+  ],
+  "BanachModel": [
+    {
+      "fragment": "structure BanachModel (𝕜 : Type*) [NontriviallyNormedField 𝕜] where",
+      "syntax": "structure specifies a Banach space over 𝕜. The square-bracket condition requires a nontrivial norm on 𝕜; where begins the description of the space.",
+      "math": "Choose a Banach-space model over the scalar field 𝕜; the principal applications use ℝ or ℂ.",
+      "role": "This lets an existential statement choose the underlying space and its normed structures together.",
+      "terms": [
+        "NontriviallyNormedField"
+      ]
+    },
+    {
+      "fragment": "Carrier : Type u",
+      "syntax": "Carrier is the underlying type of vectors. Type u records its universe level, a size parameter in Lean’s type system.",
+      "math": "Choose the underlying set X of the Banach space.",
+      "role": "The following fields all describe structures on this same Carrier. The universe parameter is not a dimension or a norm bound."
+    },
+    {
+      "fragment": "normedGroup : NormedAddCommGroup Carrier",
+      "syntax": "This field specifies a normed commutative additive-group structure on the chosen type.",
+      "math": "Give X its additive structure and norm.",
+      "role": "The norm induces the metric used by the completeness field below.",
+      "terms": [
+        "NormedAddCommGroup"
+      ]
+    },
+    {
+      "fragment": "normedSpace : letI := normedGroup; NormedSpace 𝕜 Carrier",
+      "syntax": "letI means that NormedSpace 𝕜 Carrier uses the preceding normedGroup. The field specifies compatible scalar multiplication and the normed-space laws.",
+      "math": "Make the same normed additive group X into a normed vector space over 𝕜.",
+      "role": "The explicit local instance ensures the scalar structure refers to the norm and addition already chosen, rather than unrelated structures.",
+      "terms": [
+        "NormedSpace"
+      ]
+    },
+    {
+      "fragment": "completeSpace : letI := normedGroup; CompleteSpace Carrier",
+      "syntax": "Again letI selects the chosen normed-group structure; CompleteSpace means that its metric is complete.",
+      "math": "Require every Cauchy sequence for this norm to converge in X.",
+      "role": "This completes the Banach-space witness used by the corollary, renormability and nonlattice statements.",
+      "terms": [
+        "CompleteSpace"
+      ]
+    }
+  ],
+  "HasUnconditionalSchauderBasis": [
+    {
+      "fragment": "def HasUnconditionalSchauderBasis (𝕜 : Type*) [NontriviallyNormedField 𝕜]\n    (E : Type u) [NormedAddCommGroup E] [NormedSpace 𝕜 E] : Prop :=",
+      "syntax": "This defines a proposition for a normed space E over the indicated nontrivially normed field. The field and space structures are bracket arguments; := begins the definition.",
+      "math": "Define existence of an unconditional Schauder basis for E, allowing the finite or sequential index conventions below.",
+      "role": "In the principal corollaries 𝕜 is ℝ or ℂ. The negative range statements negate this entire proposition.",
+      "terms": [
+        "NontriviallyNormedField",
+        "NormedSpace"
+      ]
+    },
+    {
+      "fragment": "(∃ n : ℕ, Nonempty (UnconditionalSchauderBasis (Fin n) 𝕜 E)) ∨",
+      "syntax": "∃ n chooses a finite length. Nonempty means that a basis object exists. Fin n is the n-element index type. ∨ means or, joining this case to the next.",
+      "math": "E has an unconditional Schauder basis with some finite number n of vectors, including n = 0.",
+      "role": "Mathlib’s basis object includes continuous biorthogonal coordinate functionals and convergence of the net of finite partial sums. Counting finite bases prevents a finite-dimensional or zero-space loophole in a negated conclusion.",
+      "terms": [
+        "Nonempty",
+        "UnconditionalSchauderBasis",
+        "Fin"
+      ]
+    },
+    {
+      "fragment": "Nonempty (UnconditionalSchauderBasis ℕ 𝕜 E)",
+      "syntax": "This is existence of the same kind of basis object, now indexed by all natural numbers.",
+      "math": "Alternatively, E has an ℕ-indexed unconditional Schauder basis.",
+      "role": "Its expansion is unconditional norm convergence, not merely convergence in the usual sequential order. Negating the whole definition excludes both this infinite case and every finite case.",
+      "terms": [
+        "Nonempty",
+        "UnconditionalSchauderBasis"
+      ]
+    }
+  ],
+  "IsOneUnconditional": [
+    {
+      "fragment": "def IsOneUnconditional (b : UnconditionalSchauderBasis ℕ 𝕜 E) : Prop :=",
+      "syntax": "Let b be an ℕ-indexed unconditional Schauder basis. The surrounding context specifies the field 𝕜 and normed space E. Prop means that the following expression is a condition on b.",
+      "math": "Define the additional contractive-multiplier condition saying this basis is 1-unconditional.",
+      "role": "Unconditional convergence and the coordinate functionals already come from b; this definition adds the quantitative bound.",
+      "terms": [
+        "UnconditionalSchauderBasis"
+      ]
+    },
+    {
+      "fragment": "∀ (s : Finset ℕ) (θ : ℕ → 𝕜),",
+      "syntax": "∀ means for every. Finset ℕ is a finite set of indices, and θ is a scalar function on all natural numbers.",
+      "math": "Choose any finite index set s and any scalar sequence θ.",
+      "role": "The condition must hold for every finite selection of coordinates, not just initial segments.",
+      "terms": [
+        "Finset"
+      ]
+    },
+    {
+      "fragment": "(∀ i, ‖θ i‖ ≤ 1) →",
+      "syntax": "The parenthesized statement says every scalar has modulus at most one; → makes it the hypothesis for the following inequality.",
+      "math": "Assume |θᵢ| ≤ 1 for all i.",
+      "role": "Over ℂ this includes every complex phase and every scalar in the unit disk; it is not restricted to real signs."
+    },
+    {
+      "fragment": "∀ x : E, ‖∑ i ∈ s, (θ i * b.coord i x) • b i‖ ≤ ‖x‖",
+      "syntax": "Quantify over all x. b.coord i x is the ith continuous coordinate functional applied to x. * multiplies scalars, • scales the basis vector, and ∑ i ∈ s sums over the chosen finite set.",
+      "math": "For every x, require ‖Σᵢ∈s θᵢbᵢ*(x)bᵢ‖ ≤ ‖x‖.",
+      "role": "Every admissible finite coordinate multiplier is therefore contractive in E’s existing norm. This condition is the witness requirement in HasOneUnconditionalSchauderBasis.",
+      "terms": [
+        "HasOneUnconditionalSchauderBasis"
+      ]
+    }
+  ],
+  "HasOneUnconditionalSchauderBasis": [
+    {
+      "fragment": "def HasOneUnconditionalSchauderBasis (𝕜 : Type*) [NontriviallyNormedField 𝕜]\n    (E : Type u) [NormedAddCommGroup E] [NormedSpace 𝕜 E] : Prop :=",
+      "syntax": "Define a proposition for the given scalar field and normed space. The bracket arguments fix the normed-space structures in which the basis condition is read.",
+      "math": "State that E has a 1-unconditional Schauder basis in its existing norm.",
+      "role": "This positive existence predicate is used for the ambient Banach space in the principal corollaries.",
+      "terms": [
+        "NontriviallyNormedField",
+        "NormedSpace"
+      ]
+    },
+    {
+      "fragment": "∃ b : UnconditionalSchauderBasis ℕ 𝕜 E,",
+      "syntax": "∃ chooses a basis object b indexed by ℕ, with continuous biorthogonal coordinates and unconditional norm-convergent expansions.",
+      "math": "There is an ℕ-indexed unconditional Schauder basis b for E.",
+      "role": "This positive ambient witness uses an infinite sequence. The separate negative predicate HasUnconditionalSchauderBasis also includes finite bases.",
+      "terms": [
+        "UnconditionalSchauderBasis",
+        "HasUnconditionalSchauderBasis"
+      ]
+    },
+    {
+      "fragment": "IsOneUnconditional b",
+      "syntax": "Apply the project predicate IsOneUnconditional to that same chosen b.",
+      "math": "Require every finite coordinate multiplier with scalar moduli at most one to be contractive.",
+      "role": "The existence and the bound concern one and the same basis. Over ℂ the bound includes all complex scalars of modulus at most one.",
+      "terms": [
+        "IsOneUnconditional"
+      ]
+    }
+  ],
+  "IsSuperreflexiveByRenorming": [
+    {
+      "fragment": "def IsSuperreflexiveByRenorming (𝕜 : Type*) [NontriviallyNormedField 𝕜]\n    (E : Type u) [NormedAddCommGroup E] [NormedSpace 𝕜 E] : Prop :=",
+      "syntax": "This names a proposition about the given normed 𝕜-space E. Type u is a size universe, and the bracket arguments specify E’s existing normed structures.",
+      "math": "Express superreflexivity using the uniformly convex renormability convention recorded by the project.",
+      "role": "The definition below states that convention explicitly; it does not invoke a separately formalised finite-representability definition.",
+      "terms": [
+        "NontriviallyNormedField",
+        "NormedSpace"
+      ]
+    },
+    {
+      "fragment": "∃ H : BanachModel.{u} 𝕜,",
+      "syntax": "Choose a bundled Banach-space model H over the same scalar field. .{u} gives its carrier the same universe level as E.",
+      "math": "There exists a complete normed space H over 𝕜.",
+      "role": "This witness may have a different carrier and norm; the next clauses give its geometric property and connect it to E.",
+      "terms": [
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "UniformConvexSpace H.Carrier ∧",
+      "syntax": "H.Carrier is the vector type of the chosen model. UniformConvexSpace requires uniform convexity for H’s chosen norm, and ∧ means and.",
+      "math": "The chosen complete space H is uniformly convex in its norm.",
+      "role": "Uniform convexity is required of H here, rather than directly of E’s original norm.",
+      "terms": [
+        "UniformConvexSpace"
+      ]
+    },
+    {
+      "fragment": "Nonempty (E ≃L[𝕜] H.Carrier)",
+      "syntax": "Nonempty means that the indicated type has an element. ≃L[𝕜] is a linear equivalence continuous in both directions, hence a bounded linear isomorphism between these normed spaces.",
+      "math": "E is boundedly linearly isomorphic to that same complete uniformly convex space H.",
+      "role": "This is the renormability condition used in the separable nonprimarity statement. The project does not prove here its equivalence to a separate finite-representability definition of superreflexivity.",
+      "terms": [
+        "Nonempty"
+      ]
+    }
+  ],
+  "IsIsomorphicToRealBanachLattice": [
+    {
+      "fragment": "def IsIsomorphicToRealBanachLattice (E : Type u) [NormedAddCommGroup E]\n    [NormedSpace ℝ E] : Prop :=",
+      "syntax": "This names a proposition about an existing real normed space E. The square brackets specify its normed additive-group and real vector-space structures.",
+      "math": "Ask whether E is isomorphic as a real Banach space to some real Banach lattice.",
+      "role": "The question is broader than whether E’s current norm directly admits a compatible lattice order.",
+      "terms": [
+        "NormedAddCommGroup",
+        "NormedSpace"
+      ]
+    },
+    {
+      "fragment": "∃ L : BanachModel.{u} ℝ,",
+      "syntax": "∃ chooses a real Banach-space model L, including its carrier, norm and completeness. .{u} uses the same type universe as E.",
+      "math": "There exists a real Banach space L, with no prescribed norm or carrier beyond this universe convention.",
+      "role": "The model is free to have a norm different from E’s given norm; the next clauses must both hold for this same L.",
+      "terms": [
+        "BanachModel"
+      ]
+    },
+    {
+      "fragment": "HasRealBanachLatticeOrder L.Carrier ∧",
+      "syntax": "Apply the project lattice-order predicate to L’s carrier with its stored complete norm. ∧ joins this property to the following isomorphism requirement.",
+      "math": "L admits a lattice order compatible with addition, nonnegative real scalar multiplication and its norm’s solidity.",
+      "role": "This makes the chosen model a real Banach lattice. The order is required on L, not necessarily on E with its original norm.",
+      "terms": [
+        "HasRealBanachLatticeOrder"
+      ]
+    },
+    {
+      "fragment": "Nonempty (E ≃L[ℝ] L.Carrier)",
+      "syntax": "Nonempty means that a continuous real-linear equivalence exists. ≃L[ℝ] includes continuity of both the map and its inverse.",
+      "math": "There is a bounded real-linear isomorphism E → L with bounded inverse.",
+      "role": "No order preservation is required of the isomorphism. Negating this whole definition, as the real corollaries do, excludes every real Banach lattice model satisfying these conditions, including models with a different norm.",
+      "terms": [
+        "Nonempty"
+      ]
+    }
+  ]
+}

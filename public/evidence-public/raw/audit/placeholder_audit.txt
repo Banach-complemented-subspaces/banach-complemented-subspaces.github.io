@@ -1,0 +1,729 @@
+INDEPENDENT LOCAL LEAN PLACEHOLDER / TRUST SOURCE AUDIT
+UTC: 2026-09-05T23:24:14.585498+00:00
+Root: LEAN_PROJECT
+Exact command: "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" "LEAN_PROJECT\verification\independent-audit-2026-09-05\placeholder_scan.py"
+Self-test: PASS: nested comments, escaped and raw strings, character literal, interpolation code, quoted identifier, offsets/newlines
+Files: 234; lines: 29169
+Inventory groups: {"ComplementedSubspace": 171, "experiments/unverified": 2, "other local sources (including verification)": 4, "root sources (including scratch/audits)": 36, "vendored BanLat": 21}
+Lines by group: {"ComplementedSubspace": 17667, "experiments/unverified": 103, "other local sources (including verification)": 241, "root sources (including scratch/audits)": 659, "vendored BanLat": 10499}
+Exclusion rules: **/.lake/packages/** and **/.lake/build/** (external downloaded dependencies and compiled build artifacts)
+Excluded directories present at scan: .lake/build/, .lake/packages/
+No unused local Lean files excluded. Ignore files were not consulted.
+Unfollowed directory symlinks: []
+Independent rg --files --hidden --no-ignore inventory agrees exactly: True
+Lexical/import parsing errors: 0; source hashes changed during scan: []
+
+EXECUTABLE SOURCE TOKEN COUNTS (conservative candidates):
+sorry: 0
+sorryAx: 0
+admit: 0
+admitted: 0
+axiom: 0
+constant: 0
+constants: 1
+opaque: 0
+unsafe: 0
+partial: 0
+native_decide: 0
+native_decide_eq_true: 0
+native_decide_eq_false: 0
+implemented_by: 0
+extern: 0
+unsafeCast: 0
+lcProof: 0
+trust: 0
+trustLevel: 0
+skipKernelTC: 0
+debug.skipKernelTC: 0
+allowUnsafeReducibility: 3
+run_cmd: 5
+run_elab: 0
+run_meta: 0
+elab: 0
+elab_rules: 0
+macro: 0
+macro_rules: 0
+syntax: 0
+initialize: 0
+builtin_initialize: 0
+meta: 0
+unimplemented: 0
+mkSorry: 0
+mkSyntheticSorry: 0
+mkLabeledSorry: 0
+hasSorry: 0
+ofReduceBool: 0
+ofReduceNat: 0
+reduceBool: 0
+reduceNat: 0
+evalExpr: 0
+evalConst: 0
+addDecl: 0
+addDeclCore: 0
+addTrustedDecl: 0
+addAndCompile: 0
+addAndCompileUnsafe: 0
+replaceDecl: 0
+modifyEnv: 0
+setEnv: 0
+set_option: 131
+#eval: 0
+#run: 0
+#exit: 0
+#compile: 0
+
+Placeholder/trust bypass candidate occurrences: 0
+
+METAPROGRAMMING OCCURRENCES:
+RealConstructionAudit.lean:7:1 closure=False: run_cmd do
+TensorMomentAudit.lean:11:1 closure=False: run_cmd do
+WholeProjectAudit.lean:11:1 closure=False: run_cmd do
+verification/independent-audit-2026-09-05/MainIdentity.lean:15:1 closure=False: run_cmd do
+verification/independent-audit-2026-09-05/TraceDependencies.lean:191:1 closure=False: run_cmd liftTermElabM do
+The three pre-existing root run_cmd blocks inspect collectAxioms/getEnv and throw/log audit results; they do not insert declarations or mutate the environment.
+The verification MainIdentity block checks the theorem's stored type/kind; TraceDependencies traverses declarations and writes audit JSON/text. Both are outside the theorem's import closure and do not insert mathematical axioms.
+The sole executable token 'constants' occurs as env.constants.toList in WholeProjectAudit.lean:15, an environment-field access, not a constant declaration.
+
+ALL OPTION COUNTS:
+allowUnsafeReducibility true: 3
+backward.isDefEq.respectTransparency false: 85
+backward.isDefEq.respectTransparency.types false: 13
+maxHeartbeats 0: 1
+maxHeartbeats 300000: 4
+maxHeartbeats 800000: 3
+maxRecDepth 8192: 1
+pp.fullNames true: 1
+pp.proofs true: 1
+pp.universes true: 1
+synthInstance.maxSize 256: 18
+
+allowUnsafeReducibility LOCATIONS AND IMMEDIATELY FOLLOWING COMMAND:
+ComplementedSubspace/ProductFrameMoments.lean:10 closure=True: set_option allowUnsafeReducibility true in
+ComplementedSubspace/ProductFrameMoments.lean:11: attribute [local reducible] Matrix MomentIndex FrameIndex
+ComplementedSubspace/ProductFrameSymmetry.lean:6 closure=True: set_option allowUnsafeReducibility true in
+ComplementedSubspace/ProductFrameSymmetry.lean:7: attribute [local reducible] MomentIndex FrameIndex
+ComplementedSubspace/ProductFrameTrace.lean:69 closure=True: set_option allowUnsafeReducibility true in
+ComplementedSubspace/ProductFrameTrace.lean:70: attribute [local reducible] FrameCoefficient Matrix
+These three commands permit local elaborator reducibility attributes. They are not declarations of unsafe proofs, new axioms, or a kernel-check disable option.
+The precise Lean v4.34.0-rc2 implementation is in src/lean/Lean/ReducibilityAttrs.lean:122-184: the option skips validation of reducibility-attribute changes; the command then updates the reducibility environment extension.
+Other observed settings concern elaborator transparency, typeclass search size, or heartbeat resources. Exact locations of every option are in placeholder_scan.json.
+
+NON-EXECUTABLE HITS (comments/strings), NOT PLACEHOLDERS:
+BanLat/Normed.lean:17:1 [block_comment] axiom: axiom: `|x| ≤ |y|` implies `‖x‖ ≤ ‖y‖`. This single condition encodes compatibility
+BanLat/Normed.lean:48:46 [block_comment] constant: /-- The absolute value map is Lipschitz with constant 1; in particular it is continuous. -/
+BanLat/OrderComplete.lean:195:19 [block_comment] admit: countable subsets admit suprema and infima: for every countable set `s`,
+BanLat/Substructures/Band/Lattice.lean:23:48 [block_comment] partial: /-- Bands of `X`, ordered by inclusion, form a partial order. -/
+BanLat/Substructures/Band/PPP.lean:17:39 [block_comment] admit: PPP. Under PPP, two positive elements admit a positive disjoint refinement of
+BanLat/Substructures/Band/Projection.lean:600:34 [block_comment] partial: /-- Projection bands inherit the partial order by inclusion from `SetLike`. -/
+BanLat/Substructures/Ideal.lean:37:57 [block_comment] partial: /-- Order ideals of `X`, ordered by inclusion, form a **partial order**. -/
+BanLat/Substructures/Ideal.lean:145:25 [block_comment] admit: /-- Order ideals of `X` admit arbitrary intersections: they form a complete
+BanLat/Substructures/Ideal.lean:469:20 [block_comment] constant: /-- Any admissible constant bounds the gauge norm from above. -/
+BanLat/Substructures/Ideal.lean:969:32 [block_comment] partial: /-- Closed order ideals form a partial order under inclusion. -/
+BanLat/Substructures/Ideal.lean:1021:10 [line_comment] partial:   -- The partial sums of `a` live in the closed ideal `J₁`, hence so does `A`.
+BanLat/Substructures/Ideal.lean:1035:19 [line_comment] partial:   -- Telescoping: partial sums of `w` tend to `z - z_seq (φ 0)`.
+BanLat/Substructures/Ideal.lean:1046:37 [line_comment] partial:   -- Identify the two limits of the partial sums.
+BanLat/Substructures/Ideal.lean:1095:45 [block_comment] admit: /-- Closed order ideals of a Banach lattice admit **arbitrary intersections**:
+ComplementedSubspace/BasisRestriction.lean:3:63 [block_comment] constant: /-! # A subfamily of a finite unconditional basis retains its constant -/
+ComplementedSubspace/BasisRestriction.lean:48:58 [block_comment] constant: original ambient norm, without any loss of unconditional constant. -/
+ComplementedSubspace/ComplexFrameRealification.lean:6:31 [block_comment] constant: introduced, so the comparison constant is independent of tensor order. -/
+ComplementedSubspace/DPRObstruction.lean:3:65 [block_comment] constant: /-! # From finite basis obstructions to the actual infinite DPR constant -/
+ComplementedSubspace/DPRtoGL.lean:8:1 [block_comment] constant: constant supplies an explicit GL factorisation. Passing to the infima requires
+ComplementedSubspace/DPRtoGL.lean:169:51 [block_comment] constant: /-- The local GL infimum is bounded by each basis constant of every finite
+ComplementedSubspace/FiniteBasisTraceBound.lean:60:24 [block_comment] constant: maps, the finite basis constant, local Hilbert approximation, and the explicit
+ComplementedSubspace/FiniteCubeBound.lean:33:28 [block_comment] partial: /-- A uniform bound on all partial subsums controls every real multiplier in
+ComplementedSubspace/FiniteOverlapGoodSecond.lean:97:61 [block_comment] constant: /-- The good second moment needed in the overlap proof. The constant has no
+ComplementedSubspace/FiniteOverlapRandomization.lean:84:54 [block_comment] constant: with actual finite samples and the exact finite-sign constant. -/
+ComplementedSubspace/FiniteOverlapScale.lean:8:48 [block_comment] constant: kept distinct. All powers of the unconditional constant are combined exactly
+ComplementedSubspace/FiniteParameterGap.lean:32:30 [block_comment] constant: /-- Scalar moment root. This constant describes frame-supported directions. -/
+ComplementedSubspace/GLDualRetraction.lean:37:44 [block_comment] constant: /-- The empty supremum convention gives GL constant zero for the zero space. -/
+ComplementedSubspace/GLDualRetraction.lean:78:50 [block_comment] constant: /-- The dual of the range of a projection has GL constant bounded by the
+ComplementedSubspace/GLDualRetraction.lean:79:50 [block_comment] constant: projection norm whenever the ambient dual has GL constant at most one.
+ComplementedSubspace/GLRetraction.lean:12:43 [block_comment] constant: The theorem that the ambient space has GL constant one remains a separate
+ComplementedSubspace/GLRetraction.lean:93:10 [block_comment] constant: local GL constant. There is no selection of an optimal factorization. -/
+ComplementedSubspace/GLRetraction.lean:142:20 [block_comment] constant: and any ambient GL constant. -/
+ComplementedSubspace/GLRetraction.lean:163:58 [block_comment] constant: /-- Specialization used by the manuscript: an ambient GL constant at most one
+ComplementedSubspace/GLRetraction.lean:195:19 [block_comment] constant: on the ambient GL constant being at most one. -/
+ComplementedSubspace/LatticeApproximation.lean:48:54 [block_comment] constant: the dual of every real Banach lattice has finite DPR constant. -/
+ComplementedSubspace/LatticeSpectral.lean:318:53 [block_comment] admit: /-- Positive vectors dominated by a common majorant admit arbitrarily close
+ComplementedSubspace/LocalHilbertCompactness.lean:81:20 [block_comment] constant: the same Lipschitz constant. -/
+ComplementedSubspace/LocalHilbertCompactness.lean:146:5 [block_comment] constant: its constant. -/
+ComplementedSubspace/LocalHilbertCompactness.lean:153:8 [block_comment] constant: /-- At constant one, the reverse inequality follows by the substitution
+ComplementedSubspace/LocalHilbertDual.lean:86:35 [block_comment] constant: /-- The approximate parallelogram constant passes to the continuous real dual
+ComplementedSubspace/LocalHilbertDual.lean:119:38 [block_comment] constant: /-- The real dual preserves the same constant, including degenerate spaces.
+ComplementedSubspace/LocalHilbertHeadRenorm.lean:7:69 [block_comment] constant: so the global product inherits the tail's approximate parallelogram constant.
+ComplementedSubspace/LocalHilbertQuotient.lean:7:47 [block_comment] constant: A global renorming with a small parallelogram constant is transported to an
+ComplementedSubspace/LocalUnconditional.lean:11:25 [block_comment] constant: The unconditional basis constant uses all real coordinate multipliers of
+ComplementedSubspace/LocalUnconditional.lean:15:33 [block_comment] constant: when defining the unconditional constant of the zero dimensional space.
+ComplementedSubspace/LocalUnconditional.lean:17:23 [block_comment] constant: For the Gordon--Lewis constant we represent the auxiliary finite dimensional
+ComplementedSubspace/LocalUnconditional.lean:30:26 [block_comment] axiom: theorem is assumed as an axiom.
+ComplementedSubspace/LocalUnconditional.lean:60:23 [block_comment] constant: /-- The unconditional constant of a specified finite real basis. The maximum
+ComplementedSubspace/LocalUnconditional.lean:78:32 [block_comment] constant: /-- A basis with unconditional constant at most one gives contractions for
+ComplementedSubspace/LocalUnconditional.lean:123:15 [block_comment] constant: /-- Local DPR constant at `V`: infimum of `u(F)` over finite dimensional
+ComplementedSubspace/LocalUnconditional.lean:129:67 [block_comment] constant: /-- Dubinsky--Pełczyński--Rosenthal local unconditional structure constant. -/
+ComplementedSubspace/LocalUnconditional.lean:312:61 [block_comment] constant: /-- The canonical coordinate basis really has unconditional constant at most
+ComplementedSubspace/LocalUnconditional.lean:357:25 [block_comment] constant: /-- Local Gordon--Lewis constant in the coordinate presentation documented
+ComplementedSubspace/LocalUnconditional.lean:362:49 [block_comment] constant: /-- Gordon--Lewis local unconditional structure constant, using arbitrary
+ComplementedSubspace/LocalUnconditional.lean:376:67 [block_comment] constant: /-- Finiteness of the Gordon--Lewis local unconditional structure constant. -/
+ComplementedSubspace/TheoremStatement.lean:11:1 [block_comment] axiom: axiom. Its proof is `realMainTheorem` in `RealMainTheorem.lean`.
+GLRetractionAudit.lean:3:52 [block_comment] axiom: /- Run after building the module to inspect kernel axiom dependencies. -/
+MainTheoremReview.lean:26:19 [block_comment] constant: /-- Unconditional constant of a specified finite basis; the zero-space
+TensorMomentAudit.lean:22:59 [string] axiom:   logInfo "All five new tensor proofs passed the standard-axiom allowlist audit."
+TrialAudit.lean:3:27 [line_comment] axiom: -- This checks transitive axiom dependencies of the delivered definitions and proofs.
+verification/independent-audit-2026-09-05/MainIdentity.lean:20:86 [string] constant:         throwError "The theorem's stored type is not exactly the requested statement constant."
+verification/independent-audit-2026-09-05/TraceDependencies.lean:8:21 [block_comment] axiom: its imported-module axiom cache: it inspects every reachable declaration directly.
+verification/independent-audit-2026-09-05/TraceDependencies.lean:20:22 [string] axiom:   | .axiomInfo _ => "axiom"
+verification/independent-audit-2026-09-05/TraceDependencies.lean:23:23 [string] opaque:   | .opaqueInfo _ => "opaque"
+verification/independent-audit-2026-09-05/TraceDependencies.lean:99:67 [string] opaque:         (ci.isAxiom || ci.isUnsafe || ci.isPartial || kind ci == "opaque")
+verification/independent-audit-2026-09-05/TraceDependencies.lean:111:11 [string] unsafe:         ("unsafe", toJson ci.isUnsafe),
+verification/independent-audit-2026-09-05/TraceDependencies.lean:112:11 [string] partial:         ("partial", toJson ci.isPartial),
+verification/independent-audit-2026-09-05/TraceDependencies.lean:175:74 [string] opaque:     ("edge_semantics", toJson "Types and values for definitions/theorems/opaque declarations; types for axioms/constructors/recursors; types and constructor edges for inductives; quotient primitives are leaves. Values requested with allowOpaque=true. No imported axiom cache is used by this traversal.")]
+verification/independent-audit-2026-09-05/TraceDependencies.lean:175:264 [string] axiom:     ("edge_semantics", toJson "Types and values for definitions/theorems/opaque declarations; types for axioms/constructors/recursors; types and constructor edges for inductives; quotient primitives are leaves. Values requested with allowOpaque=true. No imported axiom cache is used by this traversal.")]
+verification/independent-audit-2026-09-05/TraceDependencies.lean:179:136 [string] axiom:   logInfo m!"Dependency audit: {checkedCount} constants; {localCount} project constants; {edgeCount} edges. Complete={complete}; stock axiom cross-check={axiomAgreement}; local suspicious={localSuspicious.size}."
+
+LOCAL IMPORT CLOSURE:
+Main module: ComplementedSubspace.RealMainTheorem
+Local modules including main: 148
+Closure groups: {"ComplementedSubspace": 127, "vendored BanLat": 21}
+Executable placeholder/trust-bypass candidates in closure: 0
+Metaprogramming candidates in closure: 0
+
+BanLat.Basic
+BanLat.Disjoint
+BanLat.Dual
+BanLat.LLexpr
+BanLat.Normed
+BanLat.Operators.Hom
+BanLat.Operators.OrderBounded
+BanLat.Operators.Positive
+BanLat.Operators.Regular
+BanLat.Operators.RieszKantorovich
+BanLat.OrderComplete
+BanLat.OrderUnit
+BanLat.RieszDec
+BanLat.Substructures.Band.Basic
+BanLat.Substructures.Band.DisjointComplement
+BanLat.Substructures.Band.Generated
+BanLat.Substructures.Band.Lattice
+BanLat.Substructures.Band.PPP
+BanLat.Substructures.Band.Projection
+BanLat.Substructures.Ideal
+BanLat.Substructures.Sublattice
+ComplementedSubspace.ActualProjectionDPR
+ComplementedSubspace.ActualProjectionDualDPR
+ComplementedSubspace.Ambient
+ComplementedSubspace.AmbientBasis
+ComplementedSubspace.AmbientFiniteApproximation
+ComplementedSubspace.AmbientLattice
+ComplementedSubspace.AmbientProjection
+ComplementedSubspace.AmbientSeparable
+ComplementedSubspace.AmbientUniformConvex
+ComplementedSubspace.BasisRestriction
+ComplementedSubspace.BasisTransport
+ComplementedSubspace.CorollaryStatement
+ComplementedSubspace.DPRIsomorphism
+ComplementedSubspace.DPRObstruction
+ComplementedSubspace.DPRtoGL
+ComplementedSubspace.DenseContractions
+ComplementedSubspace.DiagonalFrameProduct
+ComplementedSubspace.DiagonalFrameSummand
+ComplementedSubspace.FiniteApproximation
+ComplementedSubspace.FiniteBasisTraceBound
+ComplementedSubspace.FiniteBidual
+ComplementedSubspace.FiniteBlockDPRLower
+ComplementedSubspace.FiniteBlockObstruction
+ComplementedSubspace.FiniteCoordinateSelection
+ComplementedSubspace.FiniteCorrection
+ComplementedSubspace.FiniteCubeBound
+ComplementedSubspace.FiniteDualBasis
+ComplementedSubspace.FiniteDualDPRLower
+ComplementedSubspace.FiniteDualSuperspace
+ComplementedSubspace.FiniteFrame
+ComplementedSubspace.FiniteHeadHilbert
+ComplementedSubspace.FiniteHilbertAverage
+ComplementedSubspace.FiniteLpGeometry
+ComplementedSubspace.FiniteOverlapBasisColumns
+ComplementedSubspace.FiniteOverlapBound
+ComplementedSubspace.FiniteOverlapConclusion
+ComplementedSubspace.FiniteOverlapDualScale
+ComplementedSubspace.FiniteOverlapGoodSecond
+ComplementedSubspace.FiniteOverlapLp
+ComplementedSubspace.FiniteOverlapMatrixNorms
+ComplementedSubspace.FiniteOverlapMoments
+ComplementedSubspace.FiniteOverlapObstruction
+ComplementedSubspace.FiniteOverlapRandomization
+ComplementedSubspace.FiniteOverlapScale
+ComplementedSubspace.FiniteOverlapUpper
+ComplementedSubspace.FiniteParameterBounds
+ComplementedSubspace.FiniteParameterGap
+ComplementedSubspace.FiniteProductObstruction
+ComplementedSubspace.FiniteProjectionTrace
+ComplementedSubspace.FiniteSelectedHilbertModel
+ComplementedSubspace.FiniteSelectionCoordinates
+ComplementedSubspace.FiniteSigns
+ComplementedSubspace.FiniteSignsComplex
+ComplementedSubspace.FiniteSignsInterpolation
+ComplementedSubspace.FiniteSuperspaceSplitting
+ComplementedSubspace.FiniteTraceOverlap
+ComplementedSubspace.FiniteTraceSelection
+ComplementedSubspace.FrameCoefficient
+ComplementedSubspace.FrameCoefficientHilbert
+ComplementedSubspace.FrameCoefficientNorm
+ComplementedSubspace.FrameCoefficientRange
+ComplementedSubspace.FrameCoefficientReindexedRange
+ComplementedSubspace.FrameProjectionNorm
+ComplementedSubspace.FrameProjectionRange
+ComplementedSubspace.GLDualRetraction
+ComplementedSubspace.GLRetraction
+ComplementedSubspace.HilbertComplement
+ComplementedSubspace.HilbertOverlap
+ComplementedSubspace.HilbertTraceTransfer
+ComplementedSubspace.InfiniteFrameObstruction
+ComplementedSubspace.IsometricProductSplitting
+ComplementedSubspace.LatticeApproximation
+ComplementedSubspace.LatticeBasis
+ComplementedSubspace.LatticeNonisomorphism
+ComplementedSubspace.LatticeSpectral
+ComplementedSubspace.LocalHilbert
+ComplementedSubspace.LocalHilbertCompactness
+ComplementedSubspace.LocalHilbertCoordinates
+ComplementedSubspace.LocalHilbertDual
+ComplementedSubspace.LocalHilbertEmbeddedRenorm
+ComplementedSubspace.LocalHilbertFactorization
+ComplementedSubspace.LocalHilbertHeadRenorm
+ComplementedSubspace.LocalHilbertProjection
+ComplementedSubspace.LocalHilbertProperty
+ComplementedSubspace.LocalHilbertQuotient
+ComplementedSubspace.LocalHilbertRecursiveKernelDual
+ComplementedSubspace.LocalHilbertSum
+ComplementedSubspace.LocalHilbertSumDual
+ComplementedSubspace.LocalHilbertTransport
+ComplementedSubspace.LocalUnconditional
+ComplementedSubspace.LpHeadTail
+ComplementedSubspace.LpSubmodule
+ComplementedSubspace.LpTwoParallelogram
+ComplementedSubspace.LpTwoUniformConvex
+ComplementedSubspace.NormSqSplitting
+ComplementedSubspace.NormalizedHilbertSynthesis
+ComplementedSubspace.ProductFrame
+ComplementedSubspace.ProductFrameIndex
+ComplementedSubspace.ProductFrameLp
+ComplementedSubspace.ProductFrameMoments
+ComplementedSubspace.ProductFrameRowWitness
+ComplementedSubspace.ProductFrameSignContraction
+ComplementedSubspace.ProductFrameSignSample
+ComplementedSubspace.ProductFrameSymmetry
+ComplementedSubspace.ProductFrameTrace
+ComplementedSubspace.ProductFrameTraceBound
+ComplementedSubspace.ProductFrameWitness
+ComplementedSubspace.ProjectionCorollaries
+ComplementedSubspace.ProjectionOverlapLower
+ComplementedSubspace.ProjectionPerturbation
+ComplementedSubspace.RealMainTheorem
+ComplementedSubspace.RecursiveDiagonalDPR
+ComplementedSubspace.RecursiveDiagonalDualDPR
+ComplementedSubspace.RecursiveHeadHilbert
+ComplementedSubspace.RecursiveKernelHilbert
+ComplementedSubspace.RecursiveParameters
+ComplementedSubspace.RecursiveProjection
+ComplementedSubspace.RecursiveTailHilbert
+ComplementedSubspace.ReindexedFrameProjection
+ComplementedSubspace.SchauderDPR
+ComplementedSubspace.SelectedCoefficientHilbert
+ComplementedSubspace.SelectedHilbertReplacement
+ComplementedSubspace.SelectedProjectionSetup
+ComplementedSubspace.TensorMoment
+ComplementedSubspace.TensorProjection
+ComplementedSubspace.TheoremStatement
+ComplementedSubspace.UnconditionalHilbertSynthesis
+
+External direct import frontier (not recursively scanned): 91 modules
+Full frontier, all imports, all hits and all SHA-256 hashes are recorded in placeholder_scan.json and local-source-inventory.txt.
+LIMITATION: This scan does not prove that a file elaborates, nor that its generated proof terms avoid implicit sorries after errors. The independent rebuild/kernel axiom audit is required for that assertion.
+LIMITATION: An import closure is broader than the theorem's actual declaration dependency graph. No paper-faithfulness claim is made.
+
+READ-ONLY COMMAND TRANSCRIPTS (verbatim stdout/stderr also retained in JSON):
+CWD: LEAN_PROJECT
+$ rg --files --hidden --no-ignore -g *.lean -g !**/.lake/packages/** -g !**/.lake/build/** .
+Exit code: 0
+STDOUT:
+.\WholeProjectAudit.lean
+.\HilbertOverlapAudit.lean
+.\HilbertComplementAudit.lean
+.\GLRetractionAudit.lean
+.\FiniteSelectedHilbertModelAudit.lean
+.\FiniteObstructionAudit.lean
+.\FiniteHeadHilbertAudit.lean
+.\FiniteDualDPRLowerAudit.lean
+.\ProjectionCorollariesAudit.lean
+.\NormalizedHilbertSynthesisAudit.lean
+.\SelectedFrameBasisAudit.lean
+.\SelectedCoefficientHilbertAudit.lean
+.\SchauderDPRAudit.lean
+.\RecursiveKernelHilbertAudit.lean
+.\RealConstructionAudit.lean
+.\ProjectionPerturbationAudit.lean
+.\TensorMomentAudit.lean
+.\SelectedProjectionSetupAudit.lean
+.\SelectedHilbertReplacementAudit.lean
+.\TrialAudit.lean
+.\AmbientLatticeBoundsAudit.lean
+.\LocalUnconditionalAudit.lean
+.\LocalHilbertEmbeddedRenormAudit.lean
+.\LatticeNonisomorphismAudit.lean
+.\LatticeApproximationAudit.lean
+.\MainRealTheoremDefinitions.lean
+.\LpUniformEquivAudit.lean
+.\MainTheoremReview.lean
+.\BasisBoundsAudit.lean
+.\experiments\unverified\ProjectionPerturbationDraftAudit.lean
+.\experiments\unverified\ProjectionPerturbationDraft.lean
+.\DPRtoGLAudit.lean
+.\ComplexRecursiveProjectionAudit.lean
+.\ComplexProjectionAudit.lean
+.\ComplexFrameRealificationAudit.lean
+.\ComplexAmbientAudit.lean
+.\ComplementedSubspace.lean
+.\BasisBoundsCheck.lean
+.\BanLat\LLexpr.lean
+.\BanLat\Dual.lean
+.\BanLat\Disjoint.lean
+.\BanLat\Basic.lean
+.\BanLat\OrderUnit.lean
+.\BanLat\OrderComplete.lean
+.\BanLat\RieszDec.lean
+.\BanLat\Normed.lean
+.\BanLat\Operators\RieszKantorovich.lean
+.\BanLat\Operators\Regular.lean
+.\BanLat\Operators\Positive.lean
+.\BanLat\Operators\OrderBounded.lean
+.\BanLat\Operators\Hom.lean
+.\BanLat\Substructures\Sublattice.lean
+.\verification\independent-audit-2026-09-05\TraceDependencies.lean
+.\verification\independent-audit-2026-09-05\PrintDefinitions.lean
+.\BanLat\Substructures\Ideal.lean
+.\verification\independent-audit-2026-09-05\PrintAxioms.lean
+.\verification\independent-audit-2026-09-05\MainIdentity.lean
+.\BanLat\Substructures\Band\Projection.lean
+.\BanLat\Substructures\Band\PPP.lean
+.\BanLat\Substructures\Band\Lattice.lean
+.\BanLat\Substructures\Band\Generated.lean
+.\BanLat\Substructures\Band\DisjointComplement.lean
+.\BanLat\Substructures\Band\Basic.lean
+.\ComplementedSubspace\ActualProjectionBidualDPR.lean
+.\ComplementedSubspace\AmbientLattice.lean
+.\ComplementedSubspace\AmbientFiniteApproximation.lean
+.\ComplementedSubspace\AmbientBasis.lean
+.\ComplementedSubspace\Ambient.lean
+.\ComplementedSubspace\ActualProjectionDualDPR.lean
+.\ComplementedSubspace\ActualProjectionDPR.lean
+.\ComplementedSubspace\AmbientSeparable.lean
+.\ComplementedSubspace\AmbientSchauder.lean
+.\ComplementedSubspace\AmbientProjection.lean
+.\ComplementedSubspace\BasisBounds.lean
+.\ComplementedSubspace\AmbientUniformConvex.lean
+.\ComplementedSubspace\BasisRestriction.lean
+.\ComplementedSubspace\BasisTransport.lean
+.\ComplementedSubspace\ComplexFrameCoefficient.lean
+.\ComplementedSubspace\ComplexCorollaryAudit.lean
+.\ComplementedSubspace\ComplexCorollaryAssembly.lean
+.\ComplementedSubspace\ComplexCorollary.lean
+.\ComplementedSubspace\ComplexAmbientSchauder.lean
+.\ComplementedSubspace\ComplexAmbient.lean
+.\ComplementedSubspace\ComplexProjectionEnergy.lean
+.\ComplementedSubspace\ComplexFrameRealification.lean
+.\ComplementedSubspace\ComplexFrameProjection.lean
+.\ComplementedSubspace\ComplexFrameCoefficientRange.lean
+.\ComplementedSubspace\ComplexRealDPRAudit.lean
+.\ComplementedSubspace\ComplexRealDPR.lean
+.\ComplementedSubspace\ComplexProjectionRealEquiv.lean
+.\ComplementedSubspace\ComplexRecursiveProjection.lean
+.\ComplementedSubspace\ComplexReindexedFrameProjection.lean
+.\ComplementedSubspace\ComplexTensorProjection.lean
+.\ComplementedSubspace\CorollaryStatement.lean
+.\ComplementedSubspace\UnconditionalHilbertSynthesis.lean
+.\ComplementedSubspace\TheoremStatement.lean
+.\ComplementedSubspace\TensorProjection.lean
+.\ComplementedSubspace\TensorMoment.lean
+.\ComplementedSubspace\SelectedProjectionSetup.lean
+.\ComplementedSubspace\SelectedHilbertReplacement.lean
+.\ComplementedSubspace\SelectedFrameBasis.lean
+.\ComplementedSubspace\SelectedCoefficientHilbert.lean
+.\ComplementedSubspace\SchauderDPR.lean
+.\ComplementedSubspace\ReindexedFrameProjection.lean
+.\ComplementedSubspace\RecursiveTailHilbert.lean
+.\ComplementedSubspace\RecursiveProjection.lean
+.\ComplementedSubspace\RecursiveParametersAudit.lean
+.\ComplementedSubspace\RecursiveParameters.lean
+.\ComplementedSubspace\RecursiveKernelHilbert.lean
+.\ComplementedSubspace\RecursiveHeadHilbert.lean
+.\ComplementedSubspace\RecursiveDiagonalDualDPR.lean
+.\ComplementedSubspace\RecursiveDiagonalDPR.lean
+.\ComplementedSubspace\RecursiveDiagonalBidualDPR.lean
+.\ComplementedSubspace\RealMainTheorem.lean
+.\ComplementedSubspace\RealMainConsequencesAudit.lean
+.\ComplementedSubspace\RealMainConsequences.lean
+.\ComplementedSubspace\RealMainAudit.lean
+.\ComplementedSubspace\PureFrameDPRAudit.lean
+.\ComplementedSubspace\PureFrameDPR.lean
+.\ComplementedSubspace\ProjectionPerturbation.lean
+.\ComplementedSubspace\ProjectionOverlapLower.lean
+.\ComplementedSubspace\ProjectionCorollaries.lean
+.\ComplementedSubspace\ProjectionAssemblyAudit.lean
+.\ComplementedSubspace\ProductFrameWitness.lean
+.\ComplementedSubspace\ProductFrameTranspose.lean
+.\ComplementedSubspace\ProductFrameTraceBound.lean
+.\ComplementedSubspace\ProductFrameTrace.lean
+.\ComplementedSubspace\ProductFrameSymmetry.lean
+.\ComplementedSubspace\ProductFrameSignSample.lean
+.\ComplementedSubspace\ProductFrameSignContraction.lean
+.\ComplementedSubspace\ProductFrameRowWitness.lean
+.\ComplementedSubspace\ProductFrameMoments.lean
+.\ComplementedSubspace\ProductFrameLp.lean
+.\ComplementedSubspace\ProductFrameIndex.lean
+.\ComplementedSubspace\ProductFrame.lean
+.\ComplementedSubspace\Parameters.lean
+.\ComplementedSubspace\NormSqSplitting.lean
+.\ComplementedSubspace\NormalizedHilbertSynthesis.lean
+.\ComplementedSubspace\LpUniformEquiv.lean
+.\ComplementedSubspace\LpTwoUniformConvex.lean
+.\ComplementedSubspace\LpTwoParallelogram.lean
+.\ComplementedSubspace\LpSubmoduleScalar.lean
+.\ComplementedSubspace\LpSubmodule.lean
+.\ComplementedSubspace\LpHeadTail.lean
+.\ComplementedSubspace\LocalUnconditional.lean
+.\ComplementedSubspace\LocalHilbertTransport.lean
+.\ComplementedSubspace\LocalHilbertSumDual.lean
+.\ComplementedSubspace\LocalHilbertSum.lean
+.\ComplementedSubspace\LocalHilbertRecursiveQuotient.lean
+.\ComplementedSubspace\LocalHilbertRecursiveKernelDual.lean
+.\ComplementedSubspace\LocalHilbertQuotientAudit.lean
+.\ComplementedSubspace\LocalHilbertQuotient.lean
+.\ComplementedSubspace\LocalHilbertProperty.lean
+.\ComplementedSubspace\LocalHilbertProjection.lean
+.\ComplementedSubspace\LocalHilbertHeadRenorm.lean
+.\ComplementedSubspace\LocalHilbertFactorization.lean
+.\ComplementedSubspace\LocalHilbertEmbeddedRenorm.lean
+.\ComplementedSubspace\LocalHilbertDualTopAudit.lean
+.\ComplementedSubspace\LocalHilbertDualTop.lean
+.\ComplementedSubspace\LocalHilbertDual.lean
+.\ComplementedSubspace\LocalHilbertCoordinates.lean
+.\ComplementedSubspace\LocalHilbertCompactness.lean
+.\ComplementedSubspace\LocalHilbertAudit.lean
+.\ComplementedSubspace\LocalHilbert.lean
+.\ComplementedSubspace\LatticeSpectral.lean
+.\ComplementedSubspace\LatticeNonisomorphism.lean
+.\ComplementedSubspace\LatticeBasis.lean
+.\ComplementedSubspace\LatticeApproximation.lean
+.\ComplementedSubspace\IsometricProductSplitting.lean
+.\ComplementedSubspace\IsometricProductDPRLower.lean
+.\ComplementedSubspace\InfiniteFrameObstruction.lean
+.\ComplementedSubspace\HilbertTraceTransfer.lean
+.\ComplementedSubspace\HilbertOverlap.lean
+.\ComplementedSubspace\HilbertComplement.lean
+.\ComplementedSubspace\GLRetraction.lean
+.\ComplementedSubspace\GLDualRetraction.lean
+.\ComplementedSubspace\FrameProjectionRange.lean
+.\ComplementedSubspace\FrameProjectionNorm.lean
+.\ComplementedSubspace\FrameCoefficientReindexedRange.lean
+.\ComplementedSubspace\FrameCoefficientRange.lean
+.\ComplementedSubspace\FrameCoefficientNorm.lean
+.\ComplementedSubspace\FrameCoefficientHilbert.lean
+.\ComplementedSubspace\FrameCoefficient.lean
+.\ComplementedSubspace\FiniteTraceSelection.lean
+.\ComplementedSubspace\FiniteTraceOverlap.lean
+.\ComplementedSubspace\FiniteSuperspaceSplitting.lean
+.\ComplementedSubspace\FiniteSignsInterpolation.lean
+.\ComplementedSubspace\FiniteSignsComplex.lean
+.\ComplementedSubspace\FiniteSigns.lean
+.\ComplementedSubspace\FiniteSelectionCoordinates.lean
+.\ComplementedSubspace\FiniteSelectedHilbertModel.lean
+.\ComplementedSubspace\FiniteProjectionTrace.lean
+.\ComplementedSubspace\FiniteProductObstruction.lean
+.\ComplementedSubspace\FiniteParameterGap.lean
+.\ComplementedSubspace\FiniteParameterBounds.lean
+.\ComplementedSubspace\FiniteParameterAudit.lean
+.\ComplementedSubspace\FiniteOverlapUpper.lean
+.\ComplementedSubspace\FiniteOverlapScaleAudit.lean
+.\ComplementedSubspace\FiniteOverlapScale.lean
+.\ComplementedSubspace\FiniteOverlapRandomization.lean
+.\ComplementedSubspace\FiniteOverlapObstruction.lean
+.\ComplementedSubspace\FiniteOverlapMoments.lean
+.\ComplementedSubspace\FiniteOverlapMatrixNorms.lean
+.\ComplementedSubspace\FiniteOverlapLp.lean
+.\ComplementedSubspace\FiniteOverlapGoodSecond.lean
+.\ComplementedSubspace\FiniteOverlapDualScale.lean
+.\ComplementedSubspace\FiniteOverlapConclusion.lean
+.\ComplementedSubspace\FiniteOverlapBound.lean
+.\ComplementedSubspace\FiniteOverlapBasisColumns.lean
+.\ComplementedSubspace\FiniteLpGeometry.lean
+.\ComplementedSubspace\FiniteHilbertWitnessAudit.lean
+.\ComplementedSubspace\FiniteHilbertAverage.lean
+.\ComplementedSubspace\FiniteHeadHilbert.lean
+.\ComplementedSubspace\FiniteFrame.lean
+.\ComplementedSubspace\FiniteDualSuperspace.lean
+.\ComplementedSubspace\FiniteDualDPRLower.lean
+.\ComplementedSubspace\FiniteDualBasis.lean
+.\ComplementedSubspace\FiniteCubeBound.lean
+.\ComplementedSubspace\FiniteCorrection.lean
+.\ComplementedSubspace\FiniteCoordinateSelection.lean
+.\ComplementedSubspace\FiniteBlockObstruction.lean
+.\ComplementedSubspace\FiniteBlockDPRLower.lean
+.\ComplementedSubspace\FiniteBidualDPRLower.lean
+.\ComplementedSubspace\FiniteBidual.lean
+.\ComplementedSubspace\FiniteBasisTraceBound.lean
+.\ComplementedSubspace\FiniteApproximation.lean
+.\ComplementedSubspace\DPRtoGL.lean
+.\ComplementedSubspace\DPRPredicates.lean
+.\ComplementedSubspace\DPRObstruction.lean
+.\ComplementedSubspace\DPRIsomorphism.lean
+.\ComplementedSubspace\DiagonalFrameSummand.lean
+.\ComplementedSubspace\DiagonalFrameProduct.lean
+.\ComplementedSubspace\DenseContractionsScalar.lean
+.\ComplementedSubspace\DenseContractions.lean
+
+STDERR:
+
+CWD: LEAN_PROJECT
+$ rg -n --hidden --no-ignore -g *.lean -g !**/.lake/packages/** -g !**/.lake/build/** \b(sorry|sorryAx|admit|admitted|axiom|opaque|unsafe|native_decide|implemented_by|extern)\b|allowUnsafeReducibility .
+Exit code: 0
+STDOUT:
+.\BanLat\Substructures\Ideal.lean:145:/-- Order ideals of `X` admit arbitrary intersections: they form a complete
+.\BanLat\Substructures\Ideal.lean:1095:/-- Closed order ideals of a Banach lattice admit **arbitrary intersections**:
+.\BanLat\Normed.lean:17:axiom: `|x| ≤ |y|` implies `‖x‖ ≤ ‖y‖`. This single condition encodes compatibility
+.\BanLat\OrderComplete.lean:195:countable subsets admit suprema and infima: for every countable set `s`,
+.\BanLat\Substructures\Band\PPP.lean:17:PPP. Under PPP, two positive elements admit a positive disjoint refinement of
+.\GLRetractionAudit.lean:3:/- Run after building the module to inspect kernel axiom dependencies. -/
+.\verification\independent-audit-2026-09-05\TraceDependencies.lean:8:its imported-module axiom cache: it inspects every reachable declaration directly.
+.\verification\independent-audit-2026-09-05\TraceDependencies.lean:20:  | .axiomInfo _ => "axiom"
+.\verification\independent-audit-2026-09-05\TraceDependencies.lean:23:  | .opaqueInfo _ => "opaque"
+.\verification\independent-audit-2026-09-05\TraceDependencies.lean:99:        (ci.isAxiom || ci.isUnsafe || ci.isPartial || kind ci == "opaque")
+.\verification\independent-audit-2026-09-05\TraceDependencies.lean:111:        ("unsafe", toJson ci.isUnsafe),
+.\verification\independent-audit-2026-09-05\TraceDependencies.lean:175:    ("edge_semantics", toJson "Types and values for definitions/theorems/opaque declarations; types for axioms/constructors/recursors; types and constructor edges for inductives; quotient primitives are leaves. Values requested with allowOpaque=true. No imported axiom cache is used by this traversal.")]
+.\verification\independent-audit-2026-09-05\TraceDependencies.lean:179:  logInfo m!"Dependency audit: {checkedCount} constants; {localCount} project constants; {edgeCount} edges. Complete={complete}; stock axiom cross-check={axiomAgreement}; local suspicious={localSuspicious.size}."
+.\TensorMomentAudit.lean:22:  logInfo "All five new tensor proofs passed the standard-axiom allowlist audit."
+.\TrialAudit.lean:3:-- This checks transitive axiom dependencies of the delivered definitions and proofs.
+.\ComplementedSubspace\LatticeSpectral.lean:318:/-- Positive vectors dominated by a common majorant admit arbitrarily close
+.\ComplementedSubspace\LocalUnconditional.lean:30:theorem is assumed as an axiom.
+.\ComplementedSubspace\ProductFrameMoments.lean:10:set_option allowUnsafeReducibility true in
+.\ComplementedSubspace\ProductFrameTrace.lean:69:set_option allowUnsafeReducibility true in
+.\ComplementedSubspace\ProductFrameSymmetry.lean:6:set_option allowUnsafeReducibility true in
+.\ComplementedSubspace\TheoremStatement.lean:11:axiom. Its proof is `realMainTheorem` in `RealMainTheorem.lean`.
+
+STDERR:
+
+CWD: LEAN_PROJECT
+$ rg -n allowUnsafeReducibility "WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean" -g *.lean -g *.cpp -g *.h
+Exit code: 0
+STDOUT:
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Lean\Elab\PreDefinition\Mutual.lean:34:  withOptions (allowUnsafeReducibility.set · true) do
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Lean\ReducibilityAttrs.lean:122:register_builtin_option allowUnsafeReducibility : Bool := {
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Lean\ReducibilityAttrs.lean:128:  let suffix := .note "Use `set_option allowUnsafeReducibility true` to override reducibility status validation"
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Lean\ReducibilityAttrs.lean:132:  unless allowUnsafeReducibility.get (← getOptions) do
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Init\Grind\AC.lean:62:set_option allowUnsafeReducibility true
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Init\Grind\Ordered\Linarith.lean:92:set_option allowUnsafeReducibility true in
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Init\Grind\Ring\CommSolver.lean:56:set_option allowUnsafeReducibility true
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Init\Data\Int\Linear.lean:47:set_option allowUnsafeReducibility true
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Init\Data\Nat\Internal\SOM.lean:25:set_option allowUnsafeReducibility true
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Init\Data\Nat\Internal\Linear.lean:123:set_option allowUnsafeReducibility true
+
+STDERR:
+
+
+PINNED LEAN SOURCE EVIDENCE:
+WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\src\lean\Lean\ReducibilityAttrs.lean
+SHA-256: 7fa5b42ddae7219a582c6d64aad75f0751c41b011eef15313beff61fb45b3e0e
+90: private def setReducibilityStatusCore (env : Environment) (declName : Name) (status : ReducibilityStatus) (attrKind : AttributeKind) (currNamespace : Name) : Environment :=
+91:   if attrKind matches .global then
+92:     match env.getModuleIdxFor? declName with
+93:     | some _ =>
+94:       -- Trying to set the attribute of a declaration defined in an imported module.
+95:       reducibilityExtraExt.addEntry env (declName, status)
+96:     | none =>
+97:       let _ : Inhabited Environment := ⟨env⟩
+98:       reducibilityCoreExt.addEntry (asyncDecl := declName) env (declName, status)
+99:   else
+100:     -- `scoped` and `local` must be handled by `reducibilityExtraExt`
+101:     reducibilityExtraExt.addCore env (declName, status) attrKind currNamespace
+102: 
+103: /-
+104: TODO: it would be great if we could distinguish between the following two situations
+105: 
+106: 1-
+107: ```
+108: @[reducible] def foo := ...
+109: ```
+110: 
+111: 2-
+112: ```
+113: def foo := ...
+114: ...
+115: attribute [reducible] foo
+116: ```
+117: 
+118: Reason: the second one is problematic if user has add simp theorems or TC instances that include `foo`.
+119: Recall that the discrimination trees unfold `[reducible]` declarations while indexing new entries.
+120: -/
+121: 
+122: register_builtin_option allowUnsafeReducibility : Bool := {
+123:   defValue := false
+124:   descr    := "enables users to modify the reducibility settings for declarations even when such changes are deemed potentially hazardous. For example, `simp` and type class resolution maintain term indices where reducible declarations are expanded."
+125: }
+126: 
+127: private def validate (declName : Name) (status : ReducibilityStatus) (attrKind : AttributeKind) : CoreM Unit := do
+128:   let suffix := .note "Use `set_option allowUnsafeReducibility true` to override reducibility status validation"
+129:   -- Allow global visibility attributes even on non-exported definitions - they may be relevant for
+130:   -- downstream non-`module`s.
+131:   withoutExporting do
+132:   unless allowUnsafeReducibility.get (← getOptions) do
+133:     unless (← getConstInfo declName).isDefinition do
+134:       throwError "failed to set reducibility status, `{.ofConstName declName}` is not a definition{suffix}"
+135:     let statusOld := getReducibilityStatusCore (← getEnv) declName
+136:     match attrKind with
+137:     | .scoped =>
+138:       throwError "failed to set reducibility status for `{.ofConstName declName}`, the `scoped` modifier is not recommended for this kind of attribute{suffix}"
+139:     | .global =>
+140:       if (← getEnv).getModuleIdxFor? declName matches some _ then
+141:         throwError "failed to set reducibility status, `{.ofConstName declName}` has not been defined in this file, consider using the `local` modifier{suffix}"
+142:       match status with
+143:       | .reducible =>
+144:         unless statusOld matches .semireducible do
+145:           throwError "failed to set `[reducible]`, `{.ofConstName declName}` is not currently `[semireducible]`, but `{statusOld.toAttrString}`{suffix}"
+146:       | .irreducible =>
+147:         unless statusOld matches .semireducible | .implicitReducible | .instanceReducible do
+148:           throwError "failed to set `[irreducible]`, `{.ofConstName declName}` is not currently `[semireducible]`, `[implicit_reducible]` nor `[instance_reducible]`, but `{statusOld.toAttrString}`{suffix}"
+149:       | .implicitReducible =>
+150:         -- Allow `[semireducible] -> [implicit_reducible]` and the upgrade
+151:         -- `[instance_reducible] -> [implicit_reducible]` (so instances can be strengthened to
+152:         -- only unfold during implicit-arg defeq).
+153:         unless statusOld matches .semireducible | .instanceReducible do
+154:           throwError "failed to set `[implicit_reducible]`, `{.ofConstName declName}` is not currently `[semireducible]` nor `[instance_reducible]`, but `{statusOld.toAttrString}`{suffix}"
+155:       | .instanceReducible =>
+156:         unless statusOld matches .semireducible do
+157:           throwError "failed to set `[instance_reducible]`, `{.ofConstName declName}` is not currently `[semireducible]`, but `{statusOld.toAttrString}`{suffix}"
+158:       | .semireducible =>
+159:         if statusOld matches .semireducible then do
+160:           throwError "failed to set `[semireducible]` for `{.ofConstName declName}` because it already is `[semireducible]`{suffix}"
+161:         else
+162:           throwError "failed to set `[semireducible]` for `{.ofConstName declName}`{suffix}"
+163:     | .local =>
+164:       match status with
+165:       | .reducible =>
+166:         throwError "failed to set `[local reducible]` for `{.ofConstName declName}`, recall that `[reducible]` affects the term indexing datastructures used by `simp` and type class resolution{suffix}"
+167:       | .irreducible =>
+168:         unless statusOld matches .semireducible | .implicitReducible | .instanceReducible do
+169:           throwError "failed to set `[local irreducible]`, `{.ofConstName declName}` is currently `{statusOld.toAttrString}`, `[semireducible]`, `[implicit_reducible]` nor `[instance_reducible]` expected{suffix}"
+170:       | .implicitReducible =>
+171:         unless statusOld matches .semireducible | .instanceReducible do
+172:           throwError "failed to set `[local implicit_reducible]`, `{.ofConstName declName}` is currently `{statusOld.toAttrString}`, `[semireducible]` or `[instance_reducible]` expected{suffix}"
+173:       | .instanceReducible =>
+174:         unless statusOld matches .semireducible do
+175:           throwError "failed to set `[local instance_reducible]`, `{.ofConstName declName}` is currently `{statusOld.toAttrString}`, `[semireducible]` expected{suffix}"
+176:       | .semireducible =>
+177:         unless statusOld matches .irreducible do
+178:           throwError "failed to set `[local semireducible]`, `{.ofConstName declName}` is currently `{statusOld.toAttrString}`, `[irreducible]` expected{suffix}"
+179: 
+180: private def addAttr (status : ReducibilityStatus) (declName : Name) (stx : Syntax) (attrKind : AttributeKind) : AttrM Unit := do
+181:   Attribute.Builtin.ensureNoArgs stx
+182:   validate declName status attrKind
+183:   let ns ← getCurrNamespace
+184:   modifyEnv fun env => setReducibilityStatusCore env declName status attrKind ns

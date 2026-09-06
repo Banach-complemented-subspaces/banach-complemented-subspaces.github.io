@@ -1,0 +1,17 @@
+{
+  "kind": "Inventory of actual isolated primary .olean outputs; not aggregate Lake jobs or replay-emitted counts",
+  "by_package": {
+    "project": 177,
+    "aesop": 132,
+    "batteries": 74,
+    "importGraph": 10,
+    "LeanSearchClient": 4,
+    "mathlib": 2340,
+    "plausible": 13,
+    "proofwidgets": 10,
+    "Qq": 14
+  },
+  "primary_olean_count": 2774,
+  "toolchain": "Retained pinned toolchain artifacts; safe imported logical declarations included by official fresh replay",
+  "root_present": true
+}

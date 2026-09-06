@@ -1,0 +1,25 @@
+ComplementedSubspace.realMainTheorem : ComplementedSubspace.RealMainTheoremStatement
+ComplementedSubspace.realCorollary : ComplementedSubspace.RealCorollaryStatement
+ComplementedSubspace.realUnconditionalCorollary : ComplementedSubspace.UnconditionalCorollaryStatement ℝ
+ComplementedSubspace.realSeparableNonprimarity : ComplementedSubspace.SeparableNonprimarityStatement
+ComplementedSubspace.complexCorollary : ComplementedSubspace.ComplexCorollaryStatement
+'ComplementedSubspace.realMainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplementedSubspace.realCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplementedSubspace.realUnconditionalCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplementedSubspace.realSeparableNonprimarity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplementedSubspace.complexCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+ENDPOINT: ComplementedSubspace.realMainTheorem; kind=theorem; no universe or theorem parameters; stored type=ComplementedSubspace.RealMainTheoremStatement; axioms=[propext,
+ Classical.choice,
+ Quot.sound]
+ENDPOINT: ComplementedSubspace.realCorollary; kind=theorem; no universe or theorem parameters; stored type=ComplementedSubspace.RealCorollaryStatement; axioms=[propext,
+ Classical.choice,
+ Quot.sound]
+ENDPOINT: ComplementedSubspace.realUnconditionalCorollary; kind=theorem; no universe or theorem parameters; stored type=ComplementedSubspace.UnconditionalCorollaryStatement
+  ℝ; axioms=[propext, Classical.choice, Quot.sound]
+ENDPOINT: ComplementedSubspace.realSeparableNonprimarity; kind=theorem; no universe or theorem parameters; stored type=ComplementedSubspace.SeparableNonprimarityStatement; axioms=[propext,
+ Classical.choice,
+ Quot.sound]
+ENDPOINT: ComplementedSubspace.complexCorollary; kind=theorem; no universe or theorem parameters; stored type=ComplementedSubspace.ComplexCorollaryStatement; axioms=[propext,
+ Classical.choice,
+ Quot.sound]
+NAMESPACE AXIOM AUDIT: 2573 imported ComplementedSubspace declarations; allowlist propext, Classical.choice, Quot.sound.

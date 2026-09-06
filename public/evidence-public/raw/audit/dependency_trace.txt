@@ -1,0 +1,29 @@
+Target: ComplementedSubspace.realMainTheorem
+Type: ComplementedSubspace.RealMainTheoremStatement
+Expanded target type: ∀ (ρ : ℝ),
+  0 < ρ →
+    ∃ a,
+      TopologicalSpace.SeparableSpace ↥(ComplementedSubspace.Ambient a) ∧
+        UniformConvexSpace ↥(ComplementedSubspace.Ambient a) ∧
+          ComplementedSubspace.HasRealBanachLatticeOrder ↥(ComplementedSubspace.Ambient a) ∧
+            ∃ P,
+              P ∘SL P = P ∧
+                ‖P‖ < 1 + ρ ∧
+                  ‖ContinuousLinearMap.id ℝ ↥(ComplementedSubspace.Ambient a) - P‖ < 1 + ρ ∧
+                    ComplementedSubspace.HasSeparatedRange P ∧
+                      ComplementedSubspace.HasSeparatedRange
+                        (ContinuousLinearMap.id ℝ ↥(ComplementedSubspace.Ambient a) - P)
+Traversal complete: true
+Checked constants: 40291
+Project constants: 1946
+Edges: 1332580
+Directly traversed axioms: #[propext, Classical.choice, Quot.sound]
+Stock collectAxioms: #[propext, Classical.choice, Quot.sound]
+Axiom lists agree: true
+Missing constants: #[]
+Missing expected bodies: #[]
+Local suspicious constants: 0
+Raw nodes: dependency_nodes.jsonl
+Raw typed edges: dependency_edges.jsonl
+Direct references: dependency_direct.jsonl
+Structured summary: kernel_dependency_summary.json

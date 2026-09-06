@@ -1,0 +1,8 @@
+import ComplementedSubspace.LocalUnconditional
+
+#print axioms ComplementedSubspace.chiDPR
+#print axioms ComplementedSubspace.chiGL
+#print axioms ComplementedSubspace.GLFactorization.ofUnconditionalBasis
+#print axioms ComplementedSubspace.GLFactorization.auxBasis_unconditional
+#print axioms ComplementedSubspace.GLFactorization.aux_cost_le
+#print axioms ComplementedSubspace.GLFactorization.one_le_cost

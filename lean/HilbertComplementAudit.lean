@@ -1,0 +1,7 @@
+import ComplementedSubspace.HilbertComplement
+
+#print axioms ComplementedSubspace.hilbert_complement_vector_identity
+#print axioms ComplementedSubspace.hilbert_complement_vector_norm_le
+#print axioms ComplementedSubspace.one_le_norm_nonzero_idempotent
+#print axioms ComplementedSubspace.hilbert_norm_complement_le
+#print axioms ComplementedSubspace.hilbert_norm_complement_eq

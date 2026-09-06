@@ -1,0 +1,945 @@
+{
+  "certificate": {
+    "status": "PASS",
+    "target": "ComplementedSubspace.realMainTheorem",
+    "report_generated_utc": "2026-09-05T23:29:14.226751+00:00",
+    "report_sha256": "5ee6b720af87fb151af8c7bda3ca525eb1fe3de6226f2f19edd41e9e5b02ec4f",
+    "recorded_guard_generated_utc": "2026-09-05T23:29:14.429957+00:00",
+    "core_pipeline_status": "passed",
+    "guard_issues": [],
+    "scope": "Mechanical checking of the stored Lean declaration, compiled dependencies, source scan and provenance; not a manuscript or natural-language faithfulness assessment.",
+    "public_report_sha256": "89e3f091f56c718a0b87599c6bd9ec95566b97dfdcc4c93639a36f75a9a73928"
+  },
+  "environment": {
+    "lean_version": "4.34.0-rc2",
+    "lean_commit": "6a10ac8c22beadecabdbb0919c2b50214762f91d",
+    "lean_platform": "x86_64-w64-windows-gnu",
+    "lean_build": "Release",
+    "lake_version": "5.0.0-src+6a10ac8",
+    "toolchain": "leanprover/lean4:v4.34.0-rc2",
+    "mathlib_revision": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+    "mathlib_recorded_head_matches_manifest": true,
+    "external_dependency_caches_retained": true,
+    "lean_binary_sha256": "37dfe799f69b990251f3b6bcff8a1c10c1afe2adcdecc5c580cc6726ffb63433",
+    "lake_binary_sha256": "5afaf2ad866c1aa6c1eda7bdb84ebd99e1de8be3a95a219094654dfa00b47c0a",
+    "source": "evidence-public/raw/audit/environment.txt",
+    "project_commit": null,
+    "project_commit_note": "Recorded enclosing repository has unborn refs/heads/master; source identity uses SHA256 snapshots and archives."
+  },
+  "scope_counts": {
+    "library_modules_built": 193,
+    "root_closure_modules_built": 177,
+    "additional_modules_built": 16,
+    "library_parts": {
+      "root": 1,
+      "ComplementedSubspace": 171,
+      "BanLat": 21
+    },
+    "original_lean_sources_snapshot": 230,
+    "snapshot_files_including_configuration": 233,
+    "scanned_lean_files": 234,
+    "scanned_lines": 29169,
+    "scanner_groups": {
+      "root sources (including scratch/audits)": 36,
+      "vendored BanLat": 21,
+      "ComplementedSubspace": 171,
+      "experiments/unverified": 2,
+      "other local sources (including verification)": 4
+    },
+    "scan_scope": "Every local .lean file under root, including unused/root/experimental/vendored/verification sources; no ignore-file filters",
+    "scan_exclusions": [
+      "**/.lake/packages/**",
+      "**/.lake/build/**"
+    ],
+    "main_module_local_syntactic_import_closure": 148,
+    "whole_imported_project_declarations_axiom_audited": 2573,
+    "kernel_graph_target": "ComplementedSubspace.realMainTheorem",
+    "kernel_graph_constants": 40291,
+    "kernel_graph_edges": 1332580,
+    "kernel_graph_project_constants": 1946,
+    "kernel_graph_project_origin_modules": 136,
+    "kernel_graph_traversal_complete": true,
+    "kernel_graph_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "kernel_graph_missing_bodies": [],
+    "kernel_graph_missing_constants": [],
+    "kernel_graph_project_suspicious_declarations": []
+  },
+  "endpoints": [
+    {
+      "symbol": "realMainTheorem",
+      "source_path": "ComplementedSubspace/RealMainTheorem.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/RealMainTheorem.lean",
+      "line_start": 15,
+      "line_end": 30,
+      "literal": "theorem realMainTheorem : RealMainTheoremStatement := by\n  intro ρ hρ\n  obtain ⟨η, hη, P, hPP, hP1, hP, hPc1, hPc, hcoords⟩ :=\n    exists_recursive_alternatingProjection_near_one (B := 1 + ρ) (by linarith)\n  let s := recursiveFrameSelection hη\n  refine ⟨s.toBlockParameters, inferInstance, inferInstance,\n    ambient_hasRealBanachLatticeOrder s.toBlockParameters, P, hPP, hP, hPc, ?_, ?_⟩\n  · exact hasSeparatedRange_of_DPR_obstructions P hPP\n      (ambient_chiGL_le_one s.toBlockParameters) (ambientDual_chiGL_le_one s.toBlockParameters)\n      (actualProjection_range_chiDPR_eq_top s P hcoords)\n      (actualProjection_range_dual_chiDPR_eq_top s P hcoords)\n  · exact hasSeparatedRange_of_DPR_obstructions\n      (ContinuousLinearMap.id ℝ (Ambient s.toBlockParameters) - P) (complement_idempotent P hPP)\n      (ambient_chiGL_le_one s.toBlockParameters) (ambientDual_chiGL_le_one s.toBlockParameters)\n      (actualProjection_complement_range_chiDPR_eq_top s P hcoords)\n      (actualProjection_complement_range_dual_chiDPR_eq_top s P hcoords)",
+      "source_sha256": "c08eb5568448a4908d5f90afd8da3ee5fdac8ee0e34e01824dc03ac6a3221917",
+      "before_sha256": "c08eb5568448a4908d5f90afd8da3ee5fdac8ee0e34e01824dc03ac6a3221917",
+      "after_sha256": "c08eb5568448a4908d5f90afd8da3ee5fdac8ee0e34e01824dc03ac6a3221917",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 9,
+          "line_end": 13,
+          "literal": "noncomputable section\nopen scoped ENNReal\nset_option backward.isDefEq.respectTransparency false\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/RealMainTheorem.lean",
+      "qualified_name": "ComplementedSubspace.realMainTheorem",
+      "literal_signature": "theorem realMainTheorem : RealMainTheoremStatement",
+      "statement": "RealMainTheoremStatement",
+      "implicit_parameters": "None at the endpoint. All quantification is inside the named proposition.",
+      "axiom_evidence": {
+        "source_path": "verification/independent-audit-2026-09-05/whole_project_axioms.txt",
+        "line_start": 5,
+        "line_end": 5,
+        "literal": "'ComplementedSubspace.realMainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "sha256": "834bc5b65a1d4c1aac99b6aef5bdcdce955094ee8490fb0941630c64f2d91086",
+        "recorded_exit_code": 0,
+        "recorded_started_utc": "2026-09-05T23:15:55.9165438Z",
+        "recorded_finished_utc": "2026-09-05T23:16:19.9147602Z",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "planned_raw_url": "evidence-public/raw/audit/whole_project_axioms.txt"
+      }
+    },
+    {
+      "symbol": "realCorollary",
+      "source_path": "ComplementedSubspace/RealMainConsequences.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/RealMainConsequences.lean",
+      "line_start": 22,
+      "line_end": 37,
+      "literal": "theorem realCorollary : RealCorollaryStatement := by\n  intro ρ hρ\n  obtain ⟨η, hη, P, hPP, hP1, hP, hPc1, hPc, hcoords⟩ :=\n    exists_recursive_alternatingProjection_near_one (B := 1 + ρ) (by linarith)\n  let s := recursiveFrameSelection hη\n  letI : CompleteSpace P.range := completeSpace_projection_range P hPP\n  have hn := @corollary_negations_of_DPR_obstructions P.range\n    (inferInstance : NormedAddCommGroup P.range)\n    (inferInstance : NormedSpace ℝ P.range)\n    (completeSpace_projection_range P hPP)\n    (actualProjection_range_chiDPR_eq_top s P hcoords)\n    (actualProjection_range_dual_chiDPR_eq_top s P hcoords)\n    (actualProjection_range_bidual_chiDPR_eq_top s P hcoords)\n  exact ⟨ambientBanachModel s.toBlockParameters,\n    ambient_hasOneUnconditionalSchauderBasis s.toBlockParameters,\n    P, hPP, hP, hn⟩",
+      "source_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "before_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "after_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 9,
+          "line_end": 14,
+          "literal": "noncomputable section\nset_option backward.isDefEq.respectTransparency false\nset_option backward.isDefEq.respectTransparency.types false\nset_option synthInstance.maxSize 256\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/RealMainConsequences.lean",
+      "qualified_name": "ComplementedSubspace.realCorollary",
+      "literal_signature": "theorem realCorollary : RealCorollaryStatement",
+      "statement": "RealCorollaryStatement",
+      "implicit_parameters": "None at the endpoint. All quantification is inside the named proposition.",
+      "axiom_evidence": {
+        "source_path": "verification/independent-audit-2026-09-05/whole_project_axioms.txt",
+        "line_start": 6,
+        "line_end": 6,
+        "literal": "'ComplementedSubspace.realCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "sha256": "834bc5b65a1d4c1aac99b6aef5bdcdce955094ee8490fb0941630c64f2d91086",
+        "recorded_exit_code": 0,
+        "recorded_started_utc": "2026-09-05T23:15:55.9165438Z",
+        "recorded_finished_utc": "2026-09-05T23:16:19.9147602Z",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "planned_raw_url": "evidence-public/raw/audit/whole_project_axioms.txt"
+      }
+    },
+    {
+      "symbol": "realUnconditionalCorollary",
+      "source_path": "ComplementedSubspace/RealMainConsequences.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/RealMainConsequences.lean",
+      "line_start": 39,
+      "line_end": 42,
+      "literal": "theorem realUnconditionalCorollary : UnconditionalCorollaryStatement ℝ := by\n  intro ρ hρ\n  obtain ⟨X, hX, P, hPP, hP, hZ, hZD, hZlat, hZDlat⟩ := realCorollary ρ hρ\n  exact ⟨X, hX, P, hPP, hP, hZ, hZD⟩",
+      "source_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "before_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "after_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 9,
+          "line_end": 14,
+          "literal": "noncomputable section\nset_option backward.isDefEq.respectTransparency false\nset_option backward.isDefEq.respectTransparency.types false\nset_option synthInstance.maxSize 256\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/RealMainConsequences.lean",
+      "qualified_name": "ComplementedSubspace.realUnconditionalCorollary",
+      "literal_signature": "theorem realUnconditionalCorollary : UnconditionalCorollaryStatement ℝ",
+      "statement": "UnconditionalCorollaryStatement ℝ",
+      "implicit_parameters": "None at the endpoint. All quantification is inside the named proposition.",
+      "axiom_evidence": {
+        "source_path": "verification/independent-audit-2026-09-05/whole_project_axioms.txt",
+        "line_start": 7,
+        "line_end": 7,
+        "literal": "'ComplementedSubspace.realUnconditionalCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "sha256": "834bc5b65a1d4c1aac99b6aef5bdcdce955094ee8490fb0941630c64f2d91086",
+        "recorded_exit_code": 0,
+        "recorded_started_utc": "2026-09-05T23:15:55.9165438Z",
+        "recorded_finished_utc": "2026-09-05T23:16:19.9147602Z",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "planned_raw_url": "evidence-public/raw/audit/whole_project_axioms.txt"
+      }
+    },
+    {
+      "symbol": "realSeparableNonprimarity",
+      "source_path": "ComplementedSubspace/RealMainConsequences.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/RealMainConsequences.lean",
+      "line_start": 54,
+      "line_end": 55,
+      "literal": "theorem realSeparableNonprimarity : SeparableNonprimarityStatement :=\n  separableNonprimarity_of_realMainTheorem realMainTheorem",
+      "source_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "before_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "after_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 9,
+          "line_end": 14,
+          "literal": "noncomputable section\nset_option backward.isDefEq.respectTransparency false\nset_option backward.isDefEq.respectTransparency.types false\nset_option synthInstance.maxSize 256\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/RealMainConsequences.lean",
+      "qualified_name": "ComplementedSubspace.realSeparableNonprimarity",
+      "literal_signature": "theorem realSeparableNonprimarity : SeparableNonprimarityStatement",
+      "statement": "SeparableNonprimarityStatement",
+      "implicit_parameters": "None at the endpoint. All quantification is inside the named proposition.",
+      "axiom_evidence": {
+        "source_path": "verification/independent-audit-2026-09-05/whole_project_axioms.txt",
+        "line_start": 8,
+        "line_end": 8,
+        "literal": "'ComplementedSubspace.realSeparableNonprimarity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "sha256": "834bc5b65a1d4c1aac99b6aef5bdcdce955094ee8490fb0941630c64f2d91086",
+        "recorded_exit_code": 0,
+        "recorded_started_utc": "2026-09-05T23:15:55.9165438Z",
+        "recorded_finished_utc": "2026-09-05T23:16:19.9147602Z",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "planned_raw_url": "evidence-public/raw/audit/whole_project_axioms.txt"
+      }
+    },
+    {
+      "symbol": "complexCorollary",
+      "source_path": "ComplementedSubspace/ComplexCorollary.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/ComplexCorollary.lean",
+      "line_start": 18,
+      "line_end": 20,
+      "literal": "theorem complexCorollary : ComplexCorollaryStatement := by\n  exact complexCorollary_of_recursive_range_equivalences\n    (fun s => ⟨s.predecessorComplexRangeRealEquiv⟩)",
+      "source_sha256": "ba3689e116cced5d2c40ca0823bcd549f9693929a19f1300c7c23d1a5aa71e88",
+      "before_sha256": "ba3689e116cced5d2c40ca0823bcd549f9693929a19f1300c7c23d1a5aa71e88",
+      "after_sha256": "ba3689e116cced5d2c40ca0823bcd549f9693929a19f1300c7c23d1a5aa71e88",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 8,
+          "line_end": 13,
+          "literal": "noncomputable section\nset_option backward.isDefEq.respectTransparency false\nset_option backward.isDefEq.respectTransparency.types false\nset_option synthInstance.maxSize 256\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/ComplexCorollary.lean",
+      "qualified_name": "ComplementedSubspace.complexCorollary",
+      "literal_signature": "theorem complexCorollary : ComplexCorollaryStatement",
+      "statement": "ComplexCorollaryStatement",
+      "implicit_parameters": "None at the endpoint. All quantification is inside the named proposition.",
+      "axiom_evidence": {
+        "source_path": "verification/independent-audit-2026-09-05/whole_project_axioms.txt",
+        "line_start": 9,
+        "line_end": 9,
+        "literal": "'ComplementedSubspace.complexCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "sha256": "834bc5b65a1d4c1aac99b6aef5bdcdce955094ee8490fb0941630c64f2d91086",
+        "recorded_exit_code": 0,
+        "recorded_started_utc": "2026-09-05T23:15:55.9165438Z",
+        "recorded_finished_utc": "2026-09-05T23:16:19.9147602Z",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "planned_raw_url": "evidence-public/raw/audit/whole_project_axioms.txt"
+      }
+    }
+  ],
+  "statements": [
+    {
+      "symbol": "RealMainTheoremStatement",
+      "source_path": "ComplementedSubspace/TheoremStatement.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/TheoremStatement.lean",
+      "line_start": 55,
+      "line_end": 66,
+      "literal": "def RealMainTheoremStatement : Prop :=\n  ∀ ρ : ℝ, 0 < ρ →\n    ∃ a : BlockParameters,\n      TopologicalSpace.SeparableSpace (Ambient a) ∧\n      UniformConvexSpace (Ambient a) ∧\n      HasRealBanachLatticeOrder (Ambient a) ∧\n      ∃ P : Ambient a →L[ℝ] Ambient a,\n        P.comp P = P ∧\n        ‖P‖ < 1 + ρ ∧\n        ‖ContinuousLinearMap.id ℝ (Ambient a) - P‖ < 1 + ρ ∧\n        HasSeparatedRange P ∧\n        HasSeparatedRange (ContinuousLinearMap.id ℝ (Ambient a) - P)",
+      "source_sha256": "8bae1822f09c36532811144dfad0faefd1724ac184c0167745fae48f0af4cd97",
+      "before_sha256": "8bae1822f09c36532811144dfad0faefd1724ac184c0167745fae48f0af4cd97",
+      "after_sha256": "8bae1822f09c36532811144dfad0faefd1724ac184c0167745fae48f0af4cd97",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 26,
+          "line_end": 30,
+          "literal": "noncomputable section\n\nopen scoped NNReal ENNReal Topology\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/TheoremStatement.lean"
+    },
+    {
+      "symbol": "UnconditionalCorollaryStatement",
+      "source_path": "ComplementedSubspace/CorollaryStatement.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+      "line_start": 73,
+      "line_end": 79,
+      "literal": "def UnconditionalCorollaryStatement (𝕜 : Type*) [NontriviallyNormedField 𝕜] : Prop :=\n  ∀ ρ : ℝ, 0 < ρ → ∃ X : BanachModel.{0} 𝕜,\n    HasOneUnconditionalSchauderBasis 𝕜 X.Carrier ∧\n    ∃ P : X.Carrier →L[𝕜] X.Carrier,\n      P.comp P = P ∧ ‖P‖ < 1 + ρ ∧\n      ¬ HasUnconditionalSchauderBasis 𝕜 P.range ∧\n      ¬ HasUnconditionalSchauderBasis 𝕜 (P.range →L[𝕜] 𝕜)",
+      "source_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "before_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "after_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 19,
+          "line_end": 22,
+          "literal": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/CorollaryStatement.lean"
+    },
+    {
+      "symbol": "RealCorollaryStatement",
+      "source_path": "ComplementedSubspace/CorollaryStatement.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+      "line_start": 82,
+      "line_end": 90,
+      "literal": "def RealCorollaryStatement : Prop :=\n  ∀ ρ : ℝ, 0 < ρ → ∃ X : BanachModel.{0} ℝ,\n    HasOneUnconditionalSchauderBasis ℝ X.Carrier ∧\n    ∃ P : X.Carrier →L[ℝ] X.Carrier,\n      P.comp P = P ∧ ‖P‖ < 1 + ρ ∧\n      ¬ HasUnconditionalSchauderBasis ℝ P.range ∧\n      ¬ HasUnconditionalSchauderBasis ℝ (P.range →L[ℝ] ℝ) ∧\n      ¬ IsIsomorphicToRealBanachLattice P.range ∧\n      ¬ IsIsomorphicToRealBanachLattice (P.range →L[ℝ] ℝ)",
+      "source_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "before_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "after_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 19,
+          "line_end": 22,
+          "literal": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/CorollaryStatement.lean"
+    },
+    {
+      "symbol": "ComplexCorollaryStatement",
+      "source_path": "ComplementedSubspace/CorollaryStatement.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+      "line_start": 92,
+      "line_end": 92,
+      "literal": "def ComplexCorollaryStatement : Prop := UnconditionalCorollaryStatement ℂ",
+      "source_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "before_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "after_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 19,
+          "line_end": 22,
+          "literal": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/CorollaryStatement.lean"
+    },
+    {
+      "symbol": "SeparableNonprimarityStatement",
+      "source_path": "ComplementedSubspace/CorollaryStatement.lean",
+      "source_absolute_path": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+      "line_start": 95,
+      "line_end": 106,
+      "literal": "def SeparableNonprimarityStatement : Prop :=\n  ∀ ρ : ℝ, 0 < ρ → ∃ X : BanachModel.{0} ℝ,\n    TopologicalSpace.SeparableSpace X.Carrier ∧\n    HasRealBanachLatticeOrder X.Carrier ∧\n    IsSuperreflexiveByRenorming ℝ X.Carrier ∧\n    HasOneUnconditionalSchauderBasis ℝ X.Carrier ∧\n    ∃ P : X.Carrier →L[ℝ] X.Carrier,\n      P.comp P = P ∧ ‖P‖ < 1 + ρ ∧\n      ‖ContinuousLinearMap.id ℝ X.Carrier - P‖ < 1 + ρ ∧\n      ¬ IsIsomorphicToRealBanachLattice P.range ∧\n      ¬ IsIsomorphicToRealBanachLattice\n        (ContinuousLinearMap.id ℝ X.Carrier - P).range",
+      "source_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "before_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "after_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "current_matches_before_after": true,
+      "implicit_context": [
+        {
+          "line_start": 19,
+          "line_end": 22,
+          "literal": "noncomputable section\nuniverse u\n\nnamespace ComplementedSubspace"
+        }
+      ],
+      "planned_raw_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/CorollaryStatement.lean"
+    }
+  ],
+  "archives": [
+    {
+      "filename": "Complemented_Subspace_Lean_Verified.PUBLIC.zip",
+      "absolute_path": "WORKSPACE/output/Complemented_Subspace_Lean_Verified.zip",
+      "bytes": 610816,
+      "current_sha256": "5fc920bc7bb22592c2170ac72447af563d17ef261e7f39dfd6123ba04b074148",
+      "recorded_sha256": "5fc920bc7bb22592c2170ac72447af563d17ef261e7f39dfd6123ba04b074148",
+      "current_matches_recorded": true,
+      "member_count": 262,
+      "planned_url": "evidence-public/downloads/Complemented_Subspace_Lean_Verified.PUBLIC.zip",
+      "public_sha256": "55571e0a3e1aafef6b4f78ca946ad7e7158fc6b2c3459232a85ba75bd6e9d4de",
+      "public_copy": true
+    },
+    {
+      "filename": "Complemented_Subspace_Lean_Independent_Audit.PUBLIC.zip",
+      "absolute_path": "WORKSPACE/output/Complemented_Subspace_Lean_Independent_Audit.zip",
+      "bytes": 8861083,
+      "current_sha256": "83c339ca7cd48f6b89de7a8d2b7f85e527a5fd94144686c1980bdc700437ec25",
+      "recorded_sha256": "83c339ca7cd48f6b89de7a8d2b7f85e527a5fd94144686c1980bdc700437ec25",
+      "current_matches_recorded": true,
+      "member_count": 305,
+      "planned_url": "evidence-public/downloads/Complemented_Subspace_Lean_Independent_Audit.PUBLIC.zip",
+      "public_sha256": "8915f0b4d68d26335b8652c6416847e8ae85fae4f17581d6cb433cdfbdb1ce77",
+      "public_copy": true
+    }
+  ],
+  "recommended_raw_files": [
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/verification_report.md",
+      "source_path": "verification_report.md",
+      "planned_url": "evidence-public/raw/audit/verification_report.md",
+      "bytes": 71816,
+      "sha256": "5ee6b720af87fb151af8c7bda3ca525eb1fe3de6226f2f19edd41e9e5b02ec4f"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/run_status.json",
+      "source_path": "run_status.json",
+      "planned_url": "evidence-public/raw/audit/run_status.json",
+      "bytes": 5416,
+      "sha256": "f502ff238516512cdd3844dcd5db8f24da47670d4ff1ff70eff56bb1fe0cd9f8"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/report_guard_results.json",
+      "source_path": "report_guard_results.json",
+      "planned_url": "evidence-public/raw/audit/report_guard_results.json",
+      "bytes": 59396,
+      "sha256": "29c79b9f17c63aa02f08658abb9b8719ce117639aba119fdfb9e113e1d1dbad5"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/environment.txt",
+      "source_path": "environment.txt",
+      "planned_url": "evidence-public/raw/audit/environment.txt",
+      "bytes": 12310,
+      "sha256": "bdb48a22064e9de79fe4f2ad5965b6ed26ad123c63cb61b71a050e5c1f087926"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/environment_collection_run.json",
+      "source_path": "environment_collection_run.json",
+      "planned_url": "evidence-public/raw/audit/environment_collection_run.json",
+      "bytes": 5748,
+      "sha256": "5595c4c6018eb5534100492be7967b90e0882938a33dd55f25a9ca4f347dfd3c"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/axioms.txt",
+      "source_path": "axioms.txt",
+      "planned_url": "evidence-public/raw/audit/axioms.txt",
+      "bytes": 811,
+      "sha256": "1629af12eafcb44e438e926de6705c59c15751dc56dcbe1e53fb3ffce82a2fb8"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/whole_project_axioms.txt",
+      "source_path": "whole_project_axioms.txt",
+      "planned_url": "evidence-public/raw/audit/whole_project_axioms.txt",
+      "bytes": 1089,
+      "sha256": "834bc5b65a1d4c1aac99b6aef5bdcdce955094ee8490fb0941630c64f2d91086"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/theorem_check.txt",
+      "source_path": "theorem_check.txt",
+      "planned_url": "evidence-public/raw/audit/theorem_check.txt",
+      "bytes": 7481,
+      "sha256": "35fc6a30112c50dabb58fb198ba6dd8f1b1fd952c3b592d1f2c7b9759083ba35"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/main_source_check.log",
+      "source_path": "main_source_check.log",
+      "planned_url": "evidence-public/raw/audit/main_source_check.log",
+      "bytes": 458,
+      "sha256": "b6ce85faf1b1955ff22c0a1b0fc6c8d903655d8eb5da88c91b749592d49ce4e6"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/definitions.txt",
+      "source_path": "definitions.txt",
+      "planned_url": "evidence-public/raw/audit/definitions.txt",
+      "bytes": 10809,
+      "sha256": "70e8260e42fcd8f6b71296f99923d787f28e31a4a6448905eb3354db86ec4c78"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/definition_source_files.txt",
+      "source_path": "definition_source_files.txt",
+      "planned_url": "evidence-public/raw/audit/definition_source_files.txt",
+      "bytes": 30167,
+      "sha256": "daab5c364506b5a475f0c1a67327da0a00683bc8bd26fbe53cc53112d5a942dd"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/clean.log",
+      "source_path": "clean.log",
+      "planned_url": "evidence-public/raw/audit/clean.log",
+      "bytes": 424,
+      "sha256": "217f62a1867cdec708abe696438c64e9f2d06c3d9d71a7e9ce02be3fdbf70d18"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/clean_state.txt",
+      "source_path": "clean_state.txt",
+      "planned_url": "evidence-public/raw/audit/clean_state.txt",
+      "bytes": 375,
+      "sha256": "9f37cee7113b879fd7caef22a65baacbd3d030b1b48b200d8108a7fb1378414a"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/build.log",
+      "source_path": "build.log",
+      "planned_url": "evidence-public/raw/audit/build.log",
+      "bytes": 87539,
+      "sha256": "95f947e4db3f8a169548b70ca7e1a161e6a135314e29bb6117f903874d7a9c88"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/additional_modules_build.log",
+      "source_path": "additional_modules_build.log",
+      "planned_url": "evidence-public/raw/audit/additional_modules_build.log",
+      "bytes": 101466,
+      "sha256": "16880dfc34a5829d16a018cbcefe01177d8429ad721c00f72ef000c0fb92ea73"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/additional_build_status.json",
+      "source_path": "additional_build_status.json",
+      "planned_url": "evidence-public/raw/audit/additional_build_status.json",
+      "bytes": 2322,
+      "sha256": "c2eaa9b0f65e0ef8170ae9f1fab9872e96ac7f5db9321321a8f32eed1be3bd93"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/build_scope.json",
+      "source_path": "build_scope.json",
+      "planned_url": "evidence-public/raw/audit/build_scope.json",
+      "bytes": 15743,
+      "sha256": "abda9b50c6dd8fd8639de761995ec22dc853cdeb236353580a8d635bc563ae18"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/build_scope.md",
+      "source_path": "build_scope.md",
+      "planned_url": "evidence-public/raw/audit/build_scope.md",
+      "bytes": 7219,
+      "sha256": "543796e8052f38d85862655747b276cd35054caeadfd96bbe4bab9abf49f90f5"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/source_hashes_before.json",
+      "source_path": "source_hashes_before.json",
+      "planned_url": "evidence-public/raw/audit/source_hashes_before.json",
+      "bytes": 39851,
+      "sha256": "16f1a75202f685f2bbb3d7b7efef05290d43a631768e0e54236b44d15c87aef4"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/source_hashes_after.json",
+      "source_path": "source_hashes_after.json",
+      "planned_url": "evidence-public/raw/audit/source_hashes_after.json",
+      "bytes": 39851,
+      "sha256": "16f1a75202f685f2bbb3d7b7efef05290d43a631768e0e54236b44d15c87aef4"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/source_unchanged.txt",
+      "source_path": "source_unchanged.txt",
+      "planned_url": "evidence-public/raw/audit/source_unchanged.txt",
+      "bytes": 80,
+      "sha256": "c95a385da13df5e139a75062ac8df07c82bca4e2a38f62ec4400c00e897380c2"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/additional_source_unchanged.txt",
+      "source_path": "additional_source_unchanged.txt",
+      "planned_url": "evidence-public/raw/audit/additional_source_unchanged.txt",
+      "bytes": 132,
+      "sha256": "77eac8cd092190d3763bb8d67aff271cf6120ddf792cf2b1659f06451bfe4d26"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/placeholder_scan.json",
+      "source_path": "placeholder_scan.json",
+      "planned_url": "evidence-public/raw/audit/placeholder_scan.json",
+      "bytes": 290059,
+      "sha256": "d6ecda4953bd3d785a7a807daa8937fdbdc678aeed3eece4e7f04b4ebb4aab7d"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/placeholder_audit.txt",
+      "source_path": "placeholder_audit.txt",
+      "planned_url": "evidence-public/raw/audit/placeholder_audit.txt",
+      "bytes": 45923,
+      "sha256": "5ab6c3194538df708c74e4a7c0399818ae035e65d2fe3b81c98a65f005df6432"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/kernel_dependency_summary.json",
+      "source_path": "kernel_dependency_summary.json",
+      "planned_url": "evidence-public/raw/audit/kernel_dependency_summary.json",
+      "bytes": 7902,
+      "sha256": "bf39f1bba6051ac91e14f405e312c96507d0cbdd5a64e9f6b0bdfdf0b527f9fe"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/dependency_summary.json",
+      "source_path": "dependency_summary.json",
+      "planned_url": "evidence-public/raw/audit/dependency_summary.json",
+      "bytes": 3967,
+      "sha256": "01f57f9d2eb85509f6225efba1b51bc55ec4f538807d117ab73e35162024c6d7"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/dependency_summary.md",
+      "source_path": "dependency_summary.md",
+      "planned_url": "evidence-public/raw/audit/dependency_summary.md",
+      "bytes": 20066,
+      "sha256": "21cae9b01a9a4f942e6f9bbfdc1ec1acee7bf33fe1ef894424b1231262b31de2"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/dependency_graph_review.json",
+      "source_path": "dependency_graph_review.json",
+      "planned_url": "evidence-public/raw/audit/dependency_graph_review.json",
+      "bytes": 55051,
+      "sha256": "560409df3b7a408284bec26d4ff3591d2ab3704b970782ea794520ca22822e57"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/dependency_trace_run.txt",
+      "source_path": "dependency_trace_run.txt",
+      "planned_url": "evidence-public/raw/audit/dependency_trace_run.txt",
+      "bytes": 621,
+      "sha256": "e4d8da09f6e817f7d92e03e40072d9fcaf3341a72162cd92ff6f6fd04d79dd8e"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/dependency_trace.txt",
+      "source_path": "dependency_trace.txt",
+      "planned_url": "evidence-public/raw/audit/dependency_trace.txt",
+      "bytes": 1305,
+      "sha256": "2d8c3f26ad7ccb0499e65a1a5d584ff6e4fe3105d19f493553fcbe898d154176"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/dependency_direct.jsonl",
+      "source_path": "dependency_direct.jsonl",
+      "planned_url": "evidence-public/raw/audit/dependency_direct.jsonl",
+      "bytes": 42422,
+      "sha256": "77e6e5c345d7c46e925a05034d4aacb1aa5754cf3ab08619cab749701c096e1c"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/dependency_source_map.json",
+      "source_path": "dependency_source_map.json",
+      "planned_url": "evidence-public/raw/audit/dependency_source_map.json",
+      "bytes": 46345,
+      "sha256": "4110a8aba9d7fbe6a7b3d87d1c2959b2a57b44ec47a42f207ede4d0446dae02c"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/archive_comparison.json",
+      "source_path": "archive_comparison.json",
+      "planned_url": "evidence-public/raw/audit/archive_comparison.json",
+      "bytes": 100363,
+      "sha256": "827fb27c6e76fba0b9cdc02125b80106b2672d4b5491b1c75164931e0bd08338"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/packaging_result.json",
+      "source_path": "packaging_result.json",
+      "planned_url": "evidence-public/raw/audit/packaging_result.json",
+      "bytes": 1187,
+      "sha256": "507ba8b765328938f778a8060f489129d45d5d97853ae388ce7f4bb81a25bfc7"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/packaging_summary.txt",
+      "source_path": "packaging_summary.txt",
+      "planned_url": "evidence-public/raw/audit/packaging_summary.txt",
+      "bytes": 668,
+      "sha256": "4bd3c31bb17b6b3b06ac95f3b4949d74e0e881002311fdee62cf09989fe2b72d"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/dependency_provenance.txt",
+      "source_path": "dependency_provenance.txt",
+      "planned_url": "evidence-public/raw/audit/dependency_provenance.txt",
+      "bytes": 156933,
+      "sha256": "977ca8470a35d1ebaead55793c55f26d0683eb34ff6b6d8efc49dd1b3853eec6"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/git_status.txt",
+      "source_path": "git_status.txt",
+      "planned_url": "evidence-public/raw/audit/git_status.txt",
+      "bytes": 16590,
+      "sha256": "27badfd08e38c682538da0d5a0bc223183683a4d4b1d611860f0fcd111ddb624"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/initial_failed_theorem_check.txt",
+      "source_path": "initial_failed_theorem_check.txt",
+      "planned_url": "evidence-public/raw/audit/initial_failed_theorem_check.txt",
+      "bytes": 7580,
+      "sha256": "7b50622c7b06910c5ecefc2175d35cf9b8c5c10e6371ae5145948ed2a7942c6c"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/initial_failed_run_status.json",
+      "source_path": "initial_failed_run_status.json",
+      "planned_url": "evidence-public/raw/audit/initial_failed_run_status.json",
+      "bytes": 2562,
+      "sha256": "4636a9acf8de993930199a0311c1550a40e6b7056d8bc0167095a3b3079a9edd"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/audit_failure.txt",
+      "source_path": "audit_failure.txt",
+      "planned_url": "evidence-public/raw/audit/audit_failure.txt",
+      "bytes": 136,
+      "sha256": "613a322919f7ef98e490c9a049029ba66c07a3f12c888fca268f9fb760367147"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/MainIdentity.before_formatter_fix.txt",
+      "source_path": "MainIdentity.before_formatter_fix.txt",
+      "planned_url": "evidence-public/raw/audit/MainIdentity.before_formatter_fix.txt",
+      "bytes": 1117,
+      "sha256": "71ccccc7a5ae37a5de129c200e32fa623b9762fc920e0e1d46a9a95a6cb70e63"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/PrintDefinitions.before_formatter_fix.txt",
+      "source_path": "PrintDefinitions.before_formatter_fix.txt",
+      "planned_url": "evidence-public/raw/audit/PrintDefinitions.before_formatter_fix.txt",
+      "bytes": 732,
+      "sha256": "92958b4afdd205d8b0e9d6baa1ff083caca30d169b6081c787f51353d7c362ed"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/MainIdentity.lean",
+      "source_path": "MainIdentity.lean",
+      "planned_url": "evidence-public/raw/audit/MainIdentity.lean",
+      "bytes": 1093,
+      "sha256": "452913370a3c789e349e21525a7258879da254d35ea69c4f42dd7332fc2663c3"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/PrintDefinitions.lean",
+      "source_path": "PrintDefinitions.lean",
+      "planned_url": "evidence-public/raw/audit/PrintDefinitions.lean",
+      "bytes": 708,
+      "sha256": "795406e7f826673476d956b56fc6ac72707479ac5a0825a94076b466c8a91965"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/initial_failed_dependency_trace.txt",
+      "source_path": "initial_failed_dependency_trace.txt",
+      "planned_url": "evidence-public/raw/audit/initial_failed_dependency_trace.txt",
+      "bytes": 5261,
+      "sha256": "a6cee4224338b3ea1a7aeaf198420305ceabbe55b48bd1322afc1dc17d8a4c2e"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/second_failed_run_status.json",
+      "source_path": "second_failed_run_status.json",
+      "planned_url": "evidence-public/raw/audit/second_failed_run_status.json",
+      "bytes": 5331,
+      "sha256": "514364e48d8a98e936605ffbd6506d0781424504f3b126c5884a3850ae6a8a05"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/resumed_audit_failure.txt",
+      "source_path": "resumed_audit_failure.txt",
+      "planned_url": "evidence-public/raw/audit/resumed_audit_failure.txt",
+      "bytes": 166,
+      "sha256": "a916ad855980527b58632cb9cb7e8fd1a0dc29c2fa30451a7cff339386941620"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/TraceDependencies.before_io_fix.txt",
+      "source_path": "TraceDependencies.before_io_fix.txt",
+      "planned_url": "evidence-public/raw/audit/TraceDependencies.before_io_fix.txt",
+      "bytes": 9910,
+      "sha256": "da03c7b74ce33f55dd3a689a252903c11e106f7052fc6c12fafbeaa56f725c01"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/TraceDependencies.lean",
+      "source_path": "TraceDependencies.lean",
+      "planned_url": "evidence-public/raw/audit/TraceDependencies.lean",
+      "bytes": 10130,
+      "sha256": "da19376e92f4136f1f3b37e784f227286350137c242edfb0a6c4f91b04499e00"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/before_io_placeholder_scan.json",
+      "source_path": "before_io_placeholder_scan.json",
+      "planned_url": "evidence-public/raw/audit/before_io_placeholder_scan.json",
+      "bytes": 291172,
+      "sha256": "aa007dd4af1c7eec847d9f61a6e24966e870e8ebb2c0079125e61da1b48e9cfa"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/resume_after_formatter_fix.before_io_resume.txt",
+      "source_path": "resume_after_formatter_fix.before_io_resume.txt",
+      "planned_url": "evidence-public/raw/audit/resume_after_formatter_fix.before_io_resume.txt",
+      "bytes": 8151,
+      "sha256": "fd63f1426a0894a4a30571218cee70c053453530ed5ad0962b640f55e656bda8"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/resume_after_formatter_fix.ps1",
+      "source_path": "resume_after_formatter_fix.ps1",
+      "planned_url": "evidence-public/raw/audit/resume_after_formatter_fix.ps1",
+      "bytes": 9361,
+      "sha256": "c0b9dd80b23a20556f227d4cdfef5464be47f7e579dbb47120cb4845bbb40c3c"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/PrintAxioms.lean",
+      "source_path": "PrintAxioms.lean",
+      "planned_url": "evidence-public/raw/audit/PrintAxioms.lean",
+      "bytes": 153,
+      "sha256": "d7cdde0d7041a8c6021b7dda99865b4c415612e072b26fe0e650241eb8e5652f"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/verification/independent-audit-2026-09-05/run_independent_audit.ps1",
+      "source_path": "run_independent_audit.ps1",
+      "planned_url": "evidence-public/raw/audit/run_independent_audit.ps1",
+      "bytes": 9159,
+      "sha256": "e10dd6ab324998d25debf5c9d4e84d4e5154e06808dc87bfabb7a092c3f7c31c"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/Ambient.lean",
+      "source_path": "ComplementedSubspace/Ambient.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/Ambient.lean",
+      "bytes": 3741,
+      "sha256": "cf65a5aa2da2262f84695696283cda9f3b918215ce12fd777b2e0e70c355f347"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/ComplexCorollary.lean",
+      "source_path": "ComplementedSubspace/ComplexCorollary.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/ComplexCorollary.lean",
+      "bytes": 960,
+      "sha256": "ba3689e116cced5d2c40ca0823bcd549f9693929a19f1300c7c23d1a5aa71e88"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+      "source_path": "ComplementedSubspace/CorollaryStatement.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/CorollaryStatement.lean",
+      "bytes": 5279,
+      "sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/LocalUnconditional.lean",
+      "source_path": "ComplementedSubspace/LocalUnconditional.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/LocalUnconditional.lean",
+      "bytes": 16438,
+      "sha256": "3ca23f64e18fcc14e9ee4a2a535acb40305acd9edc2862b6101f897f7bb14857"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/RealMainConsequences.lean",
+      "source_path": "ComplementedSubspace/RealMainConsequences.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/RealMainConsequences.lean",
+      "bytes": 2518,
+      "sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/RealMainTheorem.lean",
+      "source_path": "ComplementedSubspace/RealMainTheorem.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/RealMainTheorem.lean",
+      "bytes": 1550,
+      "sha256": "c08eb5568448a4908d5f90afd8da3ee5fdac8ee0e34e01824dc03ac6a3221917"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/TheoremStatement.lean",
+      "source_path": "ComplementedSubspace/TheoremStatement.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/TheoremStatement.lean",
+      "bytes": 2912,
+      "sha256": "8bae1822f09c36532811144dfad0faefd1724ac184c0167745fae48f0af4cd97"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/WholeProjectAudit.lean",
+      "source_path": "WholeProjectAudit.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/WholeProjectAudit.lean",
+      "bytes": 973,
+      "sha256": "25fd7072add542713a48f5ea3c2185b059820ea930adb285a770fa7971f45f43"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/lake-manifest.json",
+      "source_path": "lake-manifest.json",
+      "planned_url": "evidence-public/raw/evidence-public/source/lake-manifest.json",
+      "bytes": 3681,
+      "sha256": "5a1a4b9a38d977d11c668216238f135a975d4ee757f2b4c25bfd9e0f588324e8"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/lakefile.toml",
+      "source_path": "lakefile.toml",
+      "planned_url": "evidence-public/raw/evidence-public/source/lakefile.toml",
+      "bytes": 377,
+      "sha256": "2d6217379e267956a128d7bf9026e3a84fb6d699e5a941172901c4c37f0d1863"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/lean-toolchain",
+      "source_path": "lean-toolchain",
+      "planned_url": "evidence-public/raw/evidence-public/source/lean-toolchain",
+      "bytes": 30,
+      "sha256": "3a3b72fe5a9f28230ef800828bfd48d585b2f493a3f66c86a2913f87e7ff0ccc"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/ProductFrameMoments.lean",
+      "source_path": "ComplementedSubspace/ProductFrameMoments.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/ProductFrameMoments.lean",
+      "bytes": 8570,
+      "sha256": "cbf741b32f8185450e96af0bd516f9cc7aee6c2c671126fbb9c677e2d226ecd1"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/ProductFrameSymmetry.lean",
+      "source_path": "ComplementedSubspace/ProductFrameSymmetry.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/ProductFrameSymmetry.lean",
+      "bytes": 7798,
+      "sha256": "3a22dee4034e1f35e3cc2b199dc557fcd675c7b2414a39e1514ede3b05eb20be"
+    },
+    {
+      "absolute_source_path": "LEAN_PROJECT/ComplementedSubspace/ProductFrameTrace.lean",
+      "source_path": "ComplementedSubspace/ProductFrameTrace.lean",
+      "planned_url": "evidence-public/raw/evidence-public/source/ComplementedSubspace/ProductFrameTrace.lean",
+      "bytes": 6426,
+      "sha256": "ceb640e3af666b3912844befa09a6e6f9fa61e07e2ac852e099cf0220aeff377"
+    },
+    {
+      "absolute_source_path": "WORKSPACE/tmp/lean_library_definition_audit_2026-09-05/lean-4.34.0-rc2-windows/src/lean/Lean/ReducibilityAttrs.lean",
+      "source_path": "Lean/ReducibilityAttrs.lean",
+      "planned_url": "evidence-public/raw/runtime/Lean/ReducibilityAttrs.lean",
+      "bytes": 15310,
+      "sha256": "7fa5b42ddae7219a582c6d64aad75f0751c41b011eef15313beff61fb45b3e0e"
+    }
+  ],
+  "recorded_scanner_code_token_counts": {
+    "sorry": 0,
+    "sorryAx": 0,
+    "admit": 0,
+    "admitted": 0,
+    "axiom": 0,
+    "constant": 0,
+    "constants": 1,
+    "opaque": 0,
+    "unsafe": 0,
+    "partial": 0,
+    "native_decide": 0,
+    "native_decide_eq_true": 0,
+    "native_decide_eq_false": 0,
+    "implemented_by": 0,
+    "extern": 0,
+    "unsafeCast": 0,
+    "lcProof": 0,
+    "trust": 0,
+    "trustLevel": 0,
+    "skipKernelTC": 0,
+    "debug.skipKernelTC": 0,
+    "allowUnsafeReducibility": 3,
+    "run_cmd": 5,
+    "run_elab": 0,
+    "run_meta": 0,
+    "elab": 0,
+    "elab_rules": 0,
+    "macro": 0,
+    "macro_rules": 0,
+    "syntax": 0,
+    "initialize": 0,
+    "builtin_initialize": 0,
+    "meta": 0,
+    "unimplemented": 0,
+    "mkSorry": 0,
+    "mkSyntheticSorry": 0,
+    "mkLabeledSorry": 0,
+    "hasSorry": 0,
+    "ofReduceBool": 0,
+    "ofReduceNat": 0,
+    "reduceBool": 0,
+    "reduceNat": 0,
+    "evalExpr": 0,
+    "evalConst": 0,
+    "addDecl": 0,
+    "addDeclCore": 0,
+    "addTrustedDecl": 0,
+    "addAndCompile": 0,
+    "addAndCompileUnsafe": 0,
+    "replaceDecl": 0,
+    "modifyEnv": 0,
+    "setEnv": 0,
+    "set_option": 131,
+    "#eval": 0,
+    "#run": 0,
+    "#exit": 0,
+    "#compile": 0
+  }
+}

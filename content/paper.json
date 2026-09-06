@@ -1,0 +1,454 @@
+{
+  "scope": "Read-only local manuscript/Lean statement comparison. No Lean build, mathematical source modification, website initialization, upload, or online search was performed.",
+  "manuscript": {
+    "path": "paper/manuscript.pdf",
+    "sha256": "fc39f52a0dd7ac2ec2d4851485234b13284ffb797930326bdce7d9ae07a4f97a",
+    "pdf_pages": 27,
+    "title": "A negative solution to the complemented subspace problem for Banach spaces with unconditional bases",
+    "display_title": "A NEGATIVE SOLUTION TO THE COMPLEMENTED SUBSPACE PROBLEM FOR BANACH SPACES WITH UNCONDITIONAL BASES",
+    "authors": [
+      "Antonio Acuaviva"
+    ],
+    "date": "5 September 2026",
+    "title_author_abstract_page": 1,
+    "abstract_tex": "We give a negative solution to the complemented subspace problem for Banach spaces with unconditional bases over both the real and complex fields. For every $\\rho>0$, we construct a projection $P_\\rho$ of norm less than $1+\\rho$ on a separable superreflexive space\n\\[\nX_\\rho=\\left(\\bigoplus_{j=1}^{\\infty}\\ell_{p_j}^{N_j}\\right)_2,\\qquad p_j\\downarrow2,\n\\]\nsuch that $Z_\\rho=P_\\rho(X_\\rho)$ and its dual $Z_\\rho^*$ have Schauder bases but admit no unconditional bases. Over the real field, both spaces have Gordon–Lewis local unconditional structure (GL-lust) but fail Dubinsky–Pełczyński–Rosenthal local unconditional structure (DPR-lust), disproving a conjecture of Figiel, Johnson and Tzafriri. In particular, neither is isomorphic to a Banach lattice, giving a negative solution to the separable Banach-lattice complemented subspace problem. A modification of the construction also shows that the class of separable real Banach lattices is not primary. A complete Lean 4 formalisation of the main results accompanies the paper.",
+    "title_abstract_source": "paper/main.tex",
+    "abstract_note": "Title, abstract and downloadable PDF follow the nearly final manuscript of 6 September 2026. Mathematical typesetting is normalised. The abstract includes further results beyond the five Lean theorems presented on this site.",
+    "page_number_convention": "All page numbers are 1-based PDF page numbers; printed page numbers agree.",
+    "rendered_pages_inspected": [
+      1,
+      3,
+      4,
+      6,
+      18,
+      19,
+      20,
+      23
+    ],
+    "previous_pdf_sha256": "04d0d221f12ac54d2cccfe875a3e869b516704cff0f57864ea8ec25dddadbdf7",
+    "statement_mapping_note": "The detailed statement comparison retains page references to the earlier PDF. The main theorem statements are unchanged; Theorem A starts on page 2 and Theorem B and Corollary C are on page 3 of the current PDF."
+  },
+  "lean_project": "LEAN_PROJECT",
+  "verification_scope": {
+    "report": "LEAN_PROJECT/verification/independent-audit-2026-09-05/verification_report.md",
+    "result": "PASS",
+    "caveat": "Existing report, not a new build. Report explicitly disclaims manuscript/natural-language faithfulness assessment. The present mapping is human-readable source comparison, not a kernel proof of English-to-Lean equivalence."
+  },
+  "endpoints": {
+    "realMainTheorem": {
+      "name": "ComplementedSubspace.realMainTheorem",
+      "type": "ComplementedSubspace.RealMainTheoremStatement",
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/RealMainTheorem.lean",
+        "line": 15
+      },
+      "statement_source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/TheoremStatement.lean",
+        "line": 55
+      }
+    },
+    "realCorollary": {
+      "name": "ComplementedSubspace.realCorollary",
+      "type": "ComplementedSubspace.RealCorollaryStatement",
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/RealMainConsequences.lean",
+        "line": 22
+      },
+      "statement_source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+        "line": 82
+      }
+    },
+    "realUnconditionalCorollary": {
+      "name": "ComplementedSubspace.realUnconditionalCorollary",
+      "type": "ComplementedSubspace.UnconditionalCorollaryStatement ℝ",
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/RealMainConsequences.lean",
+        "line": 39
+      },
+      "statement_source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+        "line": 73
+      }
+    },
+    "realSeparableNonprimarity": {
+      "name": "ComplementedSubspace.realSeparableNonprimarity",
+      "type": "ComplementedSubspace.SeparableNonprimarityStatement",
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/RealMainConsequences.lean",
+        "line": 54
+      },
+      "statement_source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+        "line": 95
+      }
+    },
+    "complexCorollary": {
+      "name": "ComplementedSubspace.complexCorollary",
+      "type": "ComplementedSubspace.ComplexCorollaryStatement",
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/ComplexCorollary.lean",
+        "line": 18
+      },
+      "statement_source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+        "line": 92
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "theorem-a",
+      "paper_label": "Theorem A",
+      "latex_label": "thm:real-consequences",
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "statement_tex": "For every $\\rho>0$, there exist sequences $(N_j)_{j=1}^{\\infty}$ in $\\mathbb N$ and $(p_j)_{j=1}^{\\infty}$ in $(2,3]$, with $p_j\\downarrow2$, and a projection $P_\\rho$ on the separable superreflexive real Banach lattice\n\\[\nX_\\rho=\\left(\\bigoplus_{j=1}^{\\infty}\\ell_{p_j}^{N_j}(\\mathbb R)\\right)_2\n\\]\nsuch that, with $Z_\\rho=P_\\rho(X_\\rho)$:\n(i) for $V\\in\\{Z_\\rho,Z_\\rho^*\\}$,\n\\[\n\\chi_{\\mathrm{GL}}(V)\\leq\\|P_\\rho\\|<1+\\rho,\\qquad\\chi_{\\mathrm{DPR}}(V)=\\infty;\n\\]\n(ii) $P_\\rho$ can be chosen so that $\\|I-P_\\rho\\|<1+\\rho$ and (i) also holds for $(I-P_\\rho)(X_\\rho)$ and its dual, with $P_\\rho$ replaced by $I-P_\\rho$.",
+      "lean_endpoints": [
+        "realMainTheorem"
+      ],
+      "correspondence": "Quantifiers, block parameters, idempotence, both strict norm bounds, and all four GL/DPR range and continuous-dual clauses match. Geometry is encoded differently as described below.",
+      "lean_statement_tex": "The displayed Theorem A with the ambient superreflexivity clause replaced by uniform convexity of the existing $\\ell_2(\\ell_{p_j}^{N_j})$ norm. Equivalently, for each $Q\\in\\{P,I-P\\}$ and $V\\in\\{Q(X),Q(X)^*\\}$, $\\chi_{\\mathrm{GL}}(V)\\leq\\|Q\\|$ and $\\chi_{\\mathrm{DPR}}(V)=\\infty$, with $\\|P\\|,\\|I-P\\|<1+\\rho$.",
+      "caveats": [
+        "The exact Lean target says UniformConvexSpace, not a separately defined superreflexivity predicate. The manuscript also proves uniform convexity in Corollary 4.2(ii), p.18. The project does not prove the general equivalence with the finite-representability definition of superreflexivity.",
+        "Lean indexes blocks by 0,1,... and uses positive natural dimensions. Its antitone exponent condition means nonincreasing convergence to 2; do not restate it as strictly decreasing.",
+        "The main target does not itself include basis existence or nonlattice conclusions. Separate real corollary theorems establish those conclusions."
+      ]
+    },
+    {
+      "id": "theorem-b",
+      "paper_label": "Theorem B",
+      "latex_label": "thm:main",
+      "pdf_pages": [
+        3
+      ],
+      "statement_tex": "For $\\mathbb K\\in\\{\\mathbb R,\\mathbb C\\}$ and every $\\rho>0$, there are a Banach space $X_\\rho$ over $\\mathbb K$ with a $1$-unconditional basis and a projection $P_\\rho$ on $X_\\rho$ with $\\|P_\\rho\\|<1+\\rho$ such that, writing $Z_\\rho=P_\\rho(X_\\rho)$, neither $Z_\\rho$ nor $Z_\\rho^*$ admits an unconditional basis. If $\\mathbb K=\\mathbb R$, neither space is isomorphic to a Banach lattice.",
+      "lean_endpoints": [
+        "realCorollary",
+        "realUnconditionalCorollary",
+        "complexCorollary"
+      ],
+      "correspondence": "realCorollary matches the real case including both universal nonlattice negations. realUnconditionalCorollary extracts the real basis-only case. complexCorollary matches the complex case via ComplexCorollaryStatement = UnconditionalCorollaryStatement ℂ.",
+      "caveats": [
+        "Negative basis predicates include finite bases (including the empty zero-space basis) and natural-number-indexed bases. The ambient witness is an infinite 1-unconditional Schauder basis.",
+        "Over the complex field 1-unconditional means contractivity for all complex multipliers of modulus at most 1, including phases.",
+        "Theorem B itself and these Lean theorem statements do not include conditional Schauder-basis existence, shrinking/bounded completeness, tail basis constants, or the strict lower projection bound 1 < ||P||.",
+        "The complex theorem does not state complex GL/DPR constants or nonisomorphism to a complex Banach lattice. Real chiGL/chiDPR must not be presented as complex predicates."
+      ]
+    },
+    {
+      "id": "corollary-c",
+      "paper_label": "Corollary C",
+      "latex_label": "cor:separable-nonprimarity",
+      "pdf_pages": [
+        3
+      ],
+      "statement_tex": "The class of separable real Banach lattices is not primary.",
+      "lean_endpoints": [
+        "realSeparableNonprimarity"
+      ],
+      "lean_statement_tex": "For every $\\rho>0$ there is a separable real Banach lattice $X$, isomorphic to a complete uniformly convex space, with a $1$-unconditional Schauder basis and a bounded real-linear map $P:X\\to X$ such that $P^2=P$, $\\|P\\|<1+\\rho$, $\\|I-P\\|<1+\\rho$, and neither $P(X)$ nor $(I-P)(X)$ is isomorphic to any real Banach lattice.",
+      "correspondence": "The theorem gives a counterexample over the real field. It does not define a general class-primary predicate. The real-field scope and detailed witness are stated in PDF Section 4.3 and Corollary 4.6, p.20.",
+      "caveats": [
+        "Superreflexivity in this theorem is IsSuperreflexiveByRenorming: bounded linear isomorphism to a complete uniformly convex normed space."
+      ]
+    },
+    {
+      "id": "corollary-4-2",
+      "paper_label": "Corollary 4.2",
+      "latex_label": "cor:range-not-lattice / cor:local-structure",
+      "pdf_pages": [
+        18
+      ],
+      "statement_tex": "For the Section 3.6 projection $P$ and $Z=P(X)$ with inherited norm: (i) $\\chi_{\\mathrm{GL}}(Z)\\leq\\|P\\|<1+\\rho$ and $\\chi_{\\mathrm{DPR}}(Z)=\\infty$; $Z$ has no unconditional Schauder basis and, over $\\mathbb R$, is not isomorphic to any Banach lattice. (ii) $X$ and $Z$ are uniformly convex and hence superreflexive. (iii) $Z$ has a contractive unconditional finite-dimensional decomposition and the metric approximation property.",
+      "lean_endpoints": [
+        "realMainTheorem",
+        "realCorollary",
+        "complexCorollary"
+      ],
+      "correspondence": "These theorems include the real local-structure conclusions, the basis exclusions and uniform convexity of the real ambient norm. They do not prove the full corollary for the manuscript’s projection.",
+      "caveats": [
+        "Complex GL/DPR clauses are not in the selected Lean statements.",
+        "FDD and metric approximation property are outside selected verified theorems.",
+        "Do not claim that all Corollary 4.2 clauses occur in one exported target."
+      ]
+    },
+    {
+      "id": "corollary-4-5",
+      "paper_label": "Corollary 4.5",
+      "latex_label": "cor:dual-consequences",
+      "pdf_pages": [
+        19
+      ],
+      "proof_pages": [
+        19,
+        20
+      ],
+      "statement_tex": "For $Z=P(X)$ as in Corollary 4.2: (i) $\\chi_{\\mathrm{GL}}(Z^*)\\leq\\|P\\|<1+\\rho$ and $\\chi_{\\mathrm{DPR}}(Z^*)=\\infty$; $Z^*$ has no unconditional Schauder basis and, over $\\mathbb R$, is not isomorphic to any Banach lattice. (ii) $Z^*$ is superreflexive. (iii) $Z^*$ has a contractive unconditional finite-dimensional decomposition and the metric approximation property.",
+      "lean_endpoints": [
+        "realMainTheorem",
+        "realCorollary",
+        "complexCorollary"
+      ],
+      "correspondence": "These theorems cover part of the result: real GL/DPR clauses for the continuous dual and real/complex dual-basis exclusions; realCorollary also excludes every real Banach lattice for the dual.",
+      "caveats": [
+        "No full Corollary 4.5 theorem, no complex GL/DPR theorem, and no selected FDD/MAP or dual-superreflexivity clause."
+      ]
+    },
+    {
+      "id": "corollary-4-6",
+      "paper_label": "Corollary 4.6",
+      "latex_label": "cor:two-nonlattice-ranges",
+      "pdf_pages": [
+        20
+      ],
+      "proof_pages": [
+        20,
+        21
+      ],
+      "statement_tex": "For every $\\rho>0$ there are a separable superreflexive real Banach lattice $X$ with a $1$-unconditional basis and a projection $Q$ with $\\|Q\\|<1+\\rho$ and $\\|I-Q\\|<1+\\rho$. Each of $QX,(I-Q)X,(QX)^*,((I-Q)X)^*$ (i) has GL-lust, fails DPR-lust, and is not isomorphic to a Banach lattice; (ii) has a contractive unconditional finite-dimensional decomposition and the metric approximation property. Consequently, the class of separable real Banach lattices is not primary.",
+      "lean_endpoints": [
+        "realMainTheorem",
+        "realSeparableNonprimarity"
+      ],
+      "correspondence": "realMainTheorem gives both projection norms and all four real GL/DPR conclusions. realSeparableNonprimarity gives the geometric/basis ambient witness and nonlattice conclusions for the two complementary ranges. These Lean statements are not a single full formalisation of Corollary 4.6.",
+      "caveats": [
+        "The two complementary dual nonlattice negations are not conjuncts of SeparableNonprimarityStatement; do not silently add them to that theorem.",
+        "FDD/MAP is outside selected theorems.",
+        "Keep the uniform-convexity/renormability convention explicit."
+      ]
+    },
+    {
+      "id": "corollary-5-2",
+      "paper_label": "Corollary 5.2",
+      "latex_label": "cor:schauder-bases",
+      "pdf_pages": [
+        23
+      ],
+      "statement_tex": "For $Z_\\rho$ of Theorem B and its dual over either scalar field, and over $\\mathbb R$ also for $QX,(I-Q)X$ of Corollary 4.6 and their duals: (i) each space admits a conditional Schauder basis which is shrinking and boundedly complete; (ii) these bases may be chosen so that their restrictions to successive block tails have basis constants tending to one.",
+      "lean_endpoints": [],
+      "correspondence": "Manuscript result only; explicitly outside the selected verified scope.",
+      "caveats": [
+        "The abstract includes Schauder-basis existence. Reproducing the abstract is appropriate only when identified as manuscript text, not as a summary of all Lean-verified conclusions."
+      ]
+    },
+    {
+      "id": "remark-4-3",
+      "paper_label": "Remark 4.3",
+      "latex_label": "rem:c0-stabilisation",
+      "pdf_pages": [
+        19
+      ],
+      "statement_tex": "Over $\\mathbb R$, $Z\\oplus_\\infty c_0$ has DPR-lust although its contractively complemented subspace $Z$ does not; hence DPR-lust is not preserved even by contractively complemented subspaces.",
+      "lean_endpoints": [],
+      "correspondence": "A consequence of the stabilisation theorem cited in the manuscript, outside the selected verified theorems.",
+      "caveats": []
+    }
+  ],
+  "definitions": [
+    {
+      "name": "DPR constant",
+      "pdf_pages": [
+        6
+      ],
+      "statement_tex": "u(F)=\\inf_b\\operatorname{unc}(b),\\quad\\lambda_{\\mathrm{DPR}}(Z;V)=\\inf_{V\\subseteq F\\subseteq Z,\\ \\dim F<\\infty}u(F),\\quad\\chi_{\\mathrm{DPR}}(Z)=\\sup_{V\\subseteq Z,\\ 0<\\dim V<\\infty}\\lambda_{\\mathrm{DPR}}(Z;V).",
+      "lean": [
+        "unconditionalConstant",
+        "lambdaDPR",
+        "chiDPR"
+      ],
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/LocalUnconditional.lean",
+        "line": 109
+      },
+      "notes": "Submodules with inherited norms; both outer suprema exclude zero; values in nonnegative extended reals. The infima need not be attained."
+    },
+    {
+      "name": "GL constant",
+      "pdf_pages": [
+        6
+      ],
+      "statement_tex": "\\chi_{\\mathrm{GL}}(Z)=\\sup_{V\\subseteq Z,\\ 0<\\dim V<\\infty}\\inf\\{\\|a\\|\\|b\\|: V\\xrightarrow{a}U\\xrightarrow{b}Z,\\ ba=\\iota_V,\\ U\\text{ finite dimensional with a }1\\text{-unconditional basis}\\}.",
+      "lean": [
+        "GLFactorization",
+        "lambdaGL",
+        "chiGL"
+      ],
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/LocalUnconditional.lean",
+        "line": 159
+      },
+      "notes": "Auxiliary coordinates carry an arbitrary positive-definite norm, with infimum over certified bounds. The source converts to and from factorisations through normed spaces. The map b need not be injective. These constants are real-field definitions only."
+    },
+    {
+      "name": "Unconditional basis",
+      "pdf_pages": [
+        5
+      ],
+      "statement_tex": "\\left\\|\\sum_i\\theta_i b_i\\otimes b_i^*\\right\\|\\leq C\\quad\\text{for every finitely supported }(\\theta_i),\\ |\\theta_i|\\leq1.",
+      "lean": [
+        "HasUnconditionalSchauderBasis",
+        "IsOneUnconditional",
+        "HasOneUnconditionalSchauderBasis"
+      ],
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+        "line": 40
+      },
+      "notes": "Finite or sequential bases count in exclusions. The ambient basis is sequential. Complex multipliers include phases, not only real signs or coordinate projections."
+    },
+    {
+      "name": "Ambient blocks",
+      "pdf_pages": [
+        3,
+        5
+      ],
+      "statement_tex": "X=\\left(\\bigoplus_{j=1}^{\\infty}\\ell_{p_j}^{N_j}(\\mathbb R)\\right)_2,\\quad N_j\\geq1,\\quad 2<p_j\\leq3,\\quad p_j\\downarrow2.",
+      "lean": [
+        "BlockParameters",
+        "Block",
+        "Ambient"
+      ],
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/Ambient.lean",
+        "line": 23
+      },
+      "notes": "Mathlib PiLp counting norms in finite blocks; outer dependent lp exponent 2. Lean indexing begins at 0. The manuscript construction also uses normalised counting norms before rescaling."
+    },
+    {
+      "name": "Range and dual",
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "statement_tex": "Z=P(X),\\qquad Z^*=\\mathcal B_{\\mathbb K}(Z,\\mathbb K).",
+      "lean": [
+        "HasSeparatedRange"
+      ],
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/TheoremStatement.lean",
+        "line": 42
+      },
+      "notes": "Range has the inherited norm; dual is the continuous dual with operator norm. Complement GL bounds use ||I-P||, not ||P||."
+    },
+    {
+      "name": "Lattice and superreflexivity conventions",
+      "pdf_pages": [
+        3,
+        18,
+        20
+      ],
+      "statement_tex": "E\\simeq L\\text{ for some real Banach lattice }L;\\qquad E\\simeq H\\text{ for some complete uniformly convex }H.",
+      "lean": [
+        "HasRealBanachLatticeOrder",
+        "IsIsomorphicToRealBanachLattice",
+        "IsSuperreflexiveByRenorming"
+      ],
+      "source": {
+        "file": "LEAN_PROJECT/ComplementedSubspace/CorollaryStatement.lean",
+        "line": 60
+      },
+      "notes": "Nonlattice means no bounded real-linear isomorphism to any Banach lattice model with any norm. It is not merely failure of a lattice order for the current norm. Superreflexivity is expressed by uniformly convex renormability; no finite-representability equivalence is proved."
+    }
+  ],
+  "proof_route_differences": [
+    {
+      "topic": "Finite model",
+      "paper_pages": [
+        4,
+        7,
+        8,
+        16,
+        17
+      ],
+      "paper": "Circle/sphere function spaces and later finite-dimensional embeddings, including real circle-grid sampling and complex finite conditional expectations.",
+      "lean": "Direct finite frames and finite products with normalised coefficient norms and range isometries.",
+      "readme_lines": [
+        232,
+        249
+      ]
+    },
+    {
+      "topic": "Moment estimates",
+      "paper_pages": [
+        4,
+        8,
+        12
+      ],
+      "paper": "Gaussian coefficient vectors and tensor/fourth-moment estimates.",
+      "lean": "Finite independent signs, explicit finite-sum second/fourth moments, and finite Holder interpolation; real polarisation and a 2-by-2 block induction.",
+      "readme_lines": [
+        233,
+        234
+      ]
+    },
+    {
+      "topic": "Projection estimates",
+      "paper_pages": [
+        4,
+        8,
+        20
+      ],
+      "paper": "Cancellation in the one-factor bound near p=2 and Stern's projection-complement estimate.",
+      "lean": "A scalar energy derivative and Pythagoras give a fixed four-coordinate bound 1+18(p-2)^2 and its tensor bound; elementary Hilbert geometry controls complementary projections.",
+      "readme_lines": [
+        235,
+        237
+      ]
+    },
+    {
+      "topic": "Local Hilbert and dual geometry",
+      "paper_pages": [
+        12,
+        13,
+        19
+      ],
+      "paper": "Quantitative local Hilbert estimates, reflexivity and Hahn-Banach quotient identifications in the dual obstruction.",
+      "lean": "Compactness of normalised finite-dimensional norms and the exact parallelogram law establish the existence of the constants needed for the local Hilbert estimates; squared-evaluation arguments handle continuous duals and biduals without global reflexivity.",
+      "readme_lines": [
+        236,
+        244,
+        245
+      ]
+    },
+    {
+      "topic": "Nonlattice deduction",
+      "paper_pages": [
+        3,
+        6,
+        18,
+        19,
+        20
+      ],
+      "paper": "Uses DPR-lust of real Banach lattices and invariance under isomorphism.",
+      "lean": "Proves chiDPR of each real Banach lattice's continuous dual is at most one through disjoint approximation; combines primal, dual and bidual obstructions to obtain the required nonlattice statements.",
+      "readme_lines": [
+        240,
+        248
+      ]
+    },
+    {
+      "topic": "Complex case",
+      "paper_pages": [
+        4,
+        8,
+        17
+      ],
+      "paper": "Complex sphere tensors and a corrected finite-dimensional embedding.",
+      "lean": "Pure complex frame projection of order n_j-1; a uniform underlying-real equivalence to the real frame of order n_j, lifted to the outer sum, transfers the real DPR obstruction and its continuous-dual counterpart.",
+      "readme_lines": [
+        249
+      ]
+    }
+  ],
+  "principal_caveats": [
+    "Theorems A and B have no detected contradiction in the compared quantitative/basis clauses. This is not a certification of the entire manuscript.",
+    "Theorem A requires uniform convexity in Lean; nonprimarity uses uniformly convex renormability. The general analytic superreflexivity equivalences are not proved by this project.",
+    "The manuscript PDF and bundled LaTeX have wording differences, notably Corollary C. The PDF is authoritative for titles, quotes and page labels in this mapping.",
+    "The abstract includes existence of conditional Schauder bases. Corollary 5.2, FDD/MAP, stabilisation, geometric Remark 5.3, and the external sharp contractive complex theorem are outside the selected Lean statements.",
+    "Only real GL/DPR constants are defined. The complex theorem directly proves both basis exclusions.",
+    "Do not combine separate existential Lean statements into an unrecorded single stronger target, or call full Corollaries 4.2/4.5/4.6 verified on the basis of partial correspondence."
+  ]
+}

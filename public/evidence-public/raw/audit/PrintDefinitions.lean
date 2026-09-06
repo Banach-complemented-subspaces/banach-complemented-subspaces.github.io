@@ -1,0 +1,19 @@
+import ComplementedSubspace.RealMainTheorem
+
+set_option pp.universes true
+set_option pp.fullNames true
+
+#print ComplementedSubspace.RealMainTheoremStatement
+#print ComplementedSubspace.HasSeparatedRange
+#print ComplementedSubspace.HasRealBanachLatticeOrder
+#print ComplementedSubspace.BlockParameters
+#print ComplementedSubspace.Ambient
+#print ComplementedSubspace.Block
+#print ComplementedSubspace.chiGL
+#print ComplementedSubspace.lambdaGL
+#print ComplementedSubspace.GLFactorization
+#print ComplementedSubspace.chiDPR
+#print ComplementedSubspace.lambdaDPR
+#print ComplementedSubspace.unconditionalConstant
+#print ComplementedSubspace.unconditionalBasisConstant
+#print ComplementedSubspace.basisMultiplier

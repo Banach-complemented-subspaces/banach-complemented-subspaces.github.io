@@ -1,0 +1,1285 @@
+{
+  "review_scope": "Independent parsing of final raw node/direct/edge JSONL and source-map membership, without Lean execution",
+  "node_count": 40291,
+  "unique_node_count": 40291,
+  "project_node_count": 1946,
+  "project_private_name_count": 150,
+  "project_origin_module_count": 136,
+  "project_origin_module_counts_by_library": {
+    "BanLat": 17,
+    "ComplementedSubspace": 119
+  },
+  "project_nodes_by_kind": {
+    "theorem": 1497,
+    "definition": 410,
+    "inductive": 17,
+    "constructor": 17,
+    "recursor": 5
+  },
+  "project_nodes_by_module": {
+    "BanLat.Basic": 24,
+    "BanLat.Disjoint": 21,
+    "BanLat.Dual": 41,
+    "BanLat.Normed": 14,
+    "BanLat.Operators.OrderBounded": 50,
+    "BanLat.Operators.Positive": 28,
+    "BanLat.Operators.RieszKantorovich": 60,
+    "BanLat.OrderComplete": 8,
+    "BanLat.RieszDec": 1,
+    "BanLat.Substructures.Band.Basic": 14,
+    "BanLat.Substructures.Band.DisjointComplement": 8,
+    "BanLat.Substructures.Band.Generated": 12,
+    "BanLat.Substructures.Band.Lattice": 21,
+    "BanLat.Substructures.Band.PPP": 4,
+    "BanLat.Substructures.Band.Projection": 81,
+    "BanLat.Substructures.Ideal": 48,
+    "BanLat.Substructures.Sublattice": 10,
+    "ComplementedSubspace.ActualProjectionDPR": 2,
+    "ComplementedSubspace.ActualProjectionDualDPR": 2,
+    "ComplementedSubspace.Ambient": 17,
+    "ComplementedSubspace.AmbientBasis": 9,
+    "ComplementedSubspace.AmbientFiniteApproximation": 7,
+    "ComplementedSubspace.AmbientLattice": 29,
+    "ComplementedSubspace.AmbientProjection": 10,
+    "ComplementedSubspace.AmbientSeparable": 1,
+    "ComplementedSubspace.AmbientUniformConvex": 3,
+    "ComplementedSubspace.BasisRestriction": 1,
+    "ComplementedSubspace.BasisTransport": 3,
+    "ComplementedSubspace.DPRObstruction": 2,
+    "ComplementedSubspace.DPRtoGL": 32,
+    "ComplementedSubspace.DiagonalFrameProduct": 14,
+    "ComplementedSubspace.DiagonalFrameSummand": 18,
+    "ComplementedSubspace.FiniteApproximation": 11,
+    "ComplementedSubspace.FiniteBasisTraceBound": 5,
+    "ComplementedSubspace.FiniteBidual": 15,
+    "ComplementedSubspace.FiniteBlockDPRLower": 2,
+    "ComplementedSubspace.FiniteBlockObstruction": 3,
+    "ComplementedSubspace.FiniteCoordinateSelection": 2,
+    "ComplementedSubspace.FiniteCorrection": 18,
+    "ComplementedSubspace.FiniteDualBasis": 12,
+    "ComplementedSubspace.FiniteDualDPRLower": 1,
+    "ComplementedSubspace.FiniteDualSuperspace": 19,
+    "ComplementedSubspace.FiniteFrame": 9,
+    "ComplementedSubspace.FiniteHeadHilbert": 5,
+    "ComplementedSubspace.FiniteHilbertAverage": 5,
+    "ComplementedSubspace.FiniteLpGeometry": 11,
+    "ComplementedSubspace.FiniteOverlapBasisColumns": 11,
+    "ComplementedSubspace.FiniteOverlapBound": 1,
+    "ComplementedSubspace.FiniteOverlapConclusion": 1,
+    "ComplementedSubspace.FiniteOverlapDualScale": 1,
+    "ComplementedSubspace.FiniteOverlapGoodSecond": 5,
+    "ComplementedSubspace.FiniteOverlapLp": 1,
+    "ComplementedSubspace.FiniteOverlapMatrixNorms": 4,
+    "ComplementedSubspace.FiniteOverlapMoments": 8,
+    "ComplementedSubspace.FiniteOverlapObstruction": 4,
+    "ComplementedSubspace.FiniteOverlapRandomization": 8,
+    "ComplementedSubspace.FiniteOverlapScale": 14,
+    "ComplementedSubspace.FiniteOverlapUpper": 8,
+    "ComplementedSubspace.FiniteParameterBounds": 8,
+    "ComplementedSubspace.FiniteParameterGap": 42,
+    "ComplementedSubspace.FiniteProductObstruction": 1,
+    "ComplementedSubspace.FiniteProjectionTrace": 20,
+    "ComplementedSubspace.FiniteSelectedHilbertModel": 10,
+    "ComplementedSubspace.FiniteSelectionCoordinates": 6,
+    "ComplementedSubspace.FiniteSigns": 41,
+    "ComplementedSubspace.FiniteSignsInterpolation": 6,
+    "ComplementedSubspace.FiniteSuperspaceSplitting": 15,
+    "ComplementedSubspace.FiniteTraceOverlap": 7,
+    "ComplementedSubspace.FiniteTraceSelection": 5,
+    "ComplementedSubspace.FrameCoefficient": 43,
+    "ComplementedSubspace.FrameCoefficientHilbert": 11,
+    "ComplementedSubspace.FrameCoefficientNorm": 5,
+    "ComplementedSubspace.FrameCoefficientRange": 6,
+    "ComplementedSubspace.FrameCoefficientReindexedRange": 15,
+    "ComplementedSubspace.FrameProjectionNorm": 31,
+    "ComplementedSubspace.FrameProjectionRange": 6,
+    "ComplementedSubspace.GLDualRetraction": 13,
+    "ComplementedSubspace.GLRetraction": 20,
+    "ComplementedSubspace.HilbertComplement": 4,
+    "ComplementedSubspace.HilbertOverlap": 20,
+    "ComplementedSubspace.HilbertTraceTransfer": 1,
+    "ComplementedSubspace.IsometricProductSplitting": 17,
+    "ComplementedSubspace.LatticeApproximation": 4,
+    "ComplementedSubspace.LatticeBasis": 3,
+    "ComplementedSubspace.LatticeSpectral": 40,
+    "ComplementedSubspace.LocalHilbert": 50,
+    "ComplementedSubspace.LocalHilbertCompactness": 36,
+    "ComplementedSubspace.LocalHilbertCoordinates": 3,
+    "ComplementedSubspace.LocalHilbertDual": 7,
+    "ComplementedSubspace.LocalHilbertEmbeddedRenorm": 9,
+    "ComplementedSubspace.LocalHilbertFactorization": 4,
+    "ComplementedSubspace.LocalHilbertHeadRenorm": 9,
+    "ComplementedSubspace.LocalHilbertProjection": 3,
+    "ComplementedSubspace.LocalHilbertProperty": 7,
+    "ComplementedSubspace.LocalHilbertQuotient": 11,
+    "ComplementedSubspace.LocalHilbertRecursiveKernelDual": 2,
+    "ComplementedSubspace.LocalHilbertSum": 4,
+    "ComplementedSubspace.LocalHilbertSumDual": 30,
+    "ComplementedSubspace.LocalHilbertTransport": 3,
+    "ComplementedSubspace.LocalUnconditional": 33,
+    "ComplementedSubspace.LpHeadTail": 50,
+    "ComplementedSubspace.LpSubmodule": 34,
+    "ComplementedSubspace.LpTwoParallelogram": 1,
+    "ComplementedSubspace.LpTwoUniformConvex": 10,
+    "ComplementedSubspace.NormSqSplitting": 16,
+    "ComplementedSubspace.NormalizedHilbertSynthesis": 9,
+    "ComplementedSubspace.ProductFrame": 16,
+    "ComplementedSubspace.ProductFrameIndex": 16,
+    "ComplementedSubspace.ProductFrameLp": 6,
+    "ComplementedSubspace.ProductFrameMoments": 15,
+    "ComplementedSubspace.ProductFrameRowWitness": 15,
+    "ComplementedSubspace.ProductFrameSignContraction": 8,
+    "ComplementedSubspace.ProductFrameSignSample": 15,
+    "ComplementedSubspace.ProductFrameSymmetry": 30,
+    "ComplementedSubspace.ProductFrameTrace": 11,
+    "ComplementedSubspace.ProductFrameTraceBound": 13,
+    "ComplementedSubspace.ProductFrameWitness": 11,
+    "ComplementedSubspace.ProjectionCorollaries": 2,
+    "ComplementedSubspace.ProjectionOverlapLower": 7,
+    "ComplementedSubspace.ProjectionPerturbation": 6,
+    "ComplementedSubspace.RealMainTheorem": 1,
+    "ComplementedSubspace.RecursiveDiagonalDPR": 7,
+    "ComplementedSubspace.RecursiveDiagonalDualDPR": 1,
+    "ComplementedSubspace.RecursiveHeadHilbert": 4,
+    "ComplementedSubspace.RecursiveKernelHilbert": 2,
+    "ComplementedSubspace.RecursiveParameters": 65,
+    "ComplementedSubspace.RecursiveProjection": 19,
+    "ComplementedSubspace.RecursiveTailHilbert": 7,
+    "ComplementedSubspace.ReindexedFrameProjection": 19,
+    "ComplementedSubspace.SelectedCoefficientHilbert": 13,
+    "ComplementedSubspace.SelectedHilbertReplacement": 25,
+    "ComplementedSubspace.SelectedProjectionSetup": 27,
+    "ComplementedSubspace.TensorMoment": 43,
+    "ComplementedSubspace.TensorProjection": 15,
+    "ComplementedSubspace.TheoremStatement": 12,
+    "ComplementedSubspace.UnconditionalHilbertSynthesis": 5
+  },
+  "project_private_names": [
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.selectedFrameChoice",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.stageHeadBound",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.frameChoiceHistory",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.NextFrameChoiceSpec",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.nextFrameChoice_spec",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.frameChoiceHistory_length",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.selectedFrameChoice_mem_history",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyHilbertBound",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyHilbertBound_ge_two",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyHilbertBound_ge_mem",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.nextFrameChoice",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.frameChoiceHistory._f",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.exists_nextFrameChoice",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.selectedFrameChoice_mem_history._proof_1_1",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.selectedFrameChoice_mem_history._proof_1_2",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyHilbertBound._f",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.frameChoiceHistory.match_1",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyTolerance",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyTolerance_pos",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyTolerance_le_error",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyTolerance_le_mem",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyHilbertBound.match_1",
+    "_private.BanLat.Dual.0.StrongDual.toOrderDualSpace_sup",
+    "_private.BanLat.Dual.0.StrongDual.toOrderDualSpace_inf",
+    "_private.BanLat.Dual.0.StrongDual.toOrderDualSpace_add",
+    "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.historyTolerance._f",
+    "_private.ComplementedSubspace.LpTwoUniformConvex.0.ComplementedSubspace.scalar_deficit",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obSup",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.le_obSup_left",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.le_obSup_right",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obSup_le",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obInf",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obInf_le_left",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obInf_le_right",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.le_obInf",
+    "_private.BanLat.Dual.0.StrongDual.toOrderDualSpace_injective",
+    "_private.BanLat.Dual.0.StrongDual.toOrderDualSpace_le",
+    "_private.BanLat.Dual.0.StrongDual.toOrderDualSpace_lt",
+    "_private.BanLat.Operators.OrderBounded.0.OrderBoundedHom.toLinearMap_injective",
+    "_private.BanLat.Dual.0.StrongDual.abs_apply_le_abs_apply_abs",
+    "_private.BanLat.Dual.0.StrongDual.abs_apply_le_norm_mul",
+    "_private.ComplementedSubspace.FiniteOverlapScale.0.ComplementedSubspace.overlap_scalar_bounds",
+    "_private.ComplementedSubspace.LpTwoUniformConvex.0.ComplementedSubspace.scalar_deficit_of_le",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obPosPart",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.le_obPosPart",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obPosPart_nonneg",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obPosPart_le",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obInf_le_left._abel_1_1",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obInf_le_right._abel_1_1",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obInf_le_right._abel_1_2",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.le_obInf._abel_1_1",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.le_obInf._abel_1_2",
+    "_private.BanLat.Dual.0.StrongDual.toOrderDualSpace_smul",
+    "_private.BanLat.Dual.0.StrongDual.coe_abs_apply",
+    "_private.ComplementedSubspace.LocalHilbertSumDual.0.ComplementedSubspace.dual_cross_eval_sq_le",
+    "_private.ComplementedSubspace.LocalHilbertSumDual.0.ComplementedSubspace.dual_cross_norm_sq_le",
+    "_private.BanLat.Disjoint.0.abs_sum_finset",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppOp",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.obPosPart._proof_1",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.le_ppOp",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppOp_positive",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppOp_le",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.add_apply'",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.map_sub_val",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.neg_apply'",
+    "_private.BanLat.Disjoint.0.isVLDisjoint_finset_sum",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppOp._proof_1",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppFun",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppFun_nonneg",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppFun_add",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.le_ppFun",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppOp_apply_nonneg",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppFun_le",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppSet",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppOp_le.match_1_1",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.posPart_apply_eq_ppFun",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppFun_isLUB",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.sub_apply",
+    "_private.BanLat.Substructures.Band.Projection.0.ProjectionBand.exists_decomposition_of_isLUB_pos",
+    "_private.BanLat.Substructures.Band.Generated.0.Band.isLUB_inf_nsmul_of_mem_generated_singleton",
+    "_private.BanLat.Basic.0.nsmul_posPart_le_of_forall_nsmul_le",
+    "_private.ComplementedSubspace.FiniteBasisTraceBound.0.ComplementedSubspace.norm_sandwich_le",
+    "_private.ComplementedSubspace.FiniteHeadHilbert.0.ComplementedSubspace.sum_rpow_le_rpow_sum_nonneg",
+    "_private.BanLat.Disjoint.0.disjoint_smul_nonneg",
+    "_private.BanLat.Disjoint.0.inf_eq_zero_of_le_disjoint",
+    "_private.BanLat.Operators.Positive.0.Positive.extFun_add",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppFun_add.match_1_1",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppFun_add.match_1_3",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.map_add_val",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.sup_zero_eq_obPosPart",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppSet_nonempty",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppSet_bddAbove",
+    "_private.BanLat.Substructures.Band.Projection.0.ProjectionBand.id_sub_bandProjection_mem'",
+    "_private.BanLat.Substructures.Band.Projection.0.ProjectionBand.exists_decomposition_of_isLUB_pos._abel_1_2",
+    "_private.BanLat.Substructures.Band.Projection.0.ProjectionBand.exists_decomposition_of_isLUB_pos._abel_1_1",
+    "_private.BanLat.Substructures.Band.Generated.0.Band.solid_dd",
+    "_private.BanLat.Substructures.Band.Generated.0.Band.archimedean_disjoint_step",
+    "_private.ComplementedSubspace.FiniteParameterBounds.0.ComplementedSubspace.sqrt_two_rpow",
+    "_private.BanLat.Operators.Positive.0.Positive.extFun_add._abel_1_1",
+    "_private.BanLat.Operators.Positive.0.Positive.extFun_add._abel_1_2",
+    "_private.BanLat.Operators.Positive.0.Positive.extFun_add._abel_1_3",
+    "_private.BanLat.Operators.Positive.0.Positive.extFun_smul",
+    "_private.BanLat.Operators.Positive.0.Positive.tau_zero",
+    "_private.BanLat.Operators.RieszKantorovich.0.OrderBoundedHom.ppSet_bddAbove.match_1_1",
+    "_private.BanLat.Substructures.Band.Projection.0.ProjectionBand.bandProjection_mem_band",
+    "_private.BanLat.Substructures.Band.Generated.0.Band.mem_generated_of_nonneg_of_mem_ddc",
+    "_private.BanLat.Substructures.Band.Generated.0.Band.posPart_mem_dd",
+    "_private.BanLat.Substructures.Band.Generated.0.Band.negPart_mem_dd",
+    "_private.BanLat.Operators.Positive.0.Positive.posPart_smul_nonneg",
+    "_private.BanLat.Operators.Positive.0.Positive.negPart_smul_nonneg",
+    "_private.BanLat.Operators.Positive.0.Positive.tau_real_smul",
+    "_private.BanLat.Substructures.Ideal.0.OrderIdeal.sum_pos_mem",
+    "_private.ComplementedSubspace.ProductFrameSignSample.0.ComplementedSubspace.signCoordinateCovariance",
+    "_private.ComplementedSubspace.ProductFrameLp.0.ComplementedSubspace.abs_rpow_as_square_rpow",
+    "_private.ComplementedSubspace.ProductFrameRowWitness.0.ComplementedSubspace.frameRowKernel",
+    "_private.ComplementedSubspace.ProductFrameRowWitness.0.ComplementedSubspace.frameRowKernel_moment",
+    "_private.BanLat.Operators.Positive.0.Positive.tau_nsmul",
+    "_private.BanLat.Operators.Positive.0.Positive.tau_mono",
+    "_private.BanLat.Substructures.Band.Projection.0.ProjectionBand.mem_disjointComplement_band_sup",
+    "_private.BanLat.Substructures.Ideal.0.OrderIdeal.sum_pos_mem._abel_1_1",
+    "_private.BanLat.Substructures.Ideal.0.OrderIdeal.sum_pos_mem._abel_1_2",
+    "_private.ComplementedSubspace.LocalHilbertFactorization.0.ComplementedSubspace.rangeRestrict_norm_eq",
+    "_private.ComplementedSubspace.ProductFrameSignSample.0.ComplementedSubspace.signCoordinateCovariance._simp_1_1",
+    "_private.ComplementedSubspace.ProductFrameRowWitness.0.ComplementedSubspace.productFrameGram",
+    "_private.ComplementedSubspace.ProductFrameRowWitness.0.ComplementedSubspace.normalizedProductFrameRow_eval",
+    "_private.ComplementedSubspace.ProductFrameRowWitness.0.ComplementedSubspace.productFrameGram_succ",
+    "_private.ComplementedSubspace.ProductFrameRowWitness.0.ComplementedSubspace.frameRowKernel._proof_1",
+    "_private.ComplementedSubspace.ProductFrameRowWitness.0.ComplementedSubspace.frameRowKernel_eq",
+    "_private.BanLat.Operators.Positive.0.Positive.tau_mono._abel_1_1",
+    "_private.ComplementedSubspace.ProductFrameSignSample.0.ComplementedSubspace.frameSignCoefficients",
+    "_private.ComplementedSubspace.ProductFrameSignSample.0.ComplementedSubspace.productFrameEval_normalizedFrameSign",
+    "_private.ComplementedSubspace.ProductFrameSignSample.0.ComplementedSubspace.frameSignCoefficients_length_sq",
+    "_private.ComplementedSubspace.FiniteOverlapRandomization.0.ComplementedSubspace.overlapSignCoefficients",
+    "_private.ComplementedSubspace.FiniteOverlapRandomization.0.ComplementedSubspace.productFrameEval_randomized",
+    "_private.ComplementedSubspace.FiniteOverlapRandomization.0.ComplementedSubspace.overlapSignCoefficients_length_sq",
+    "_private.ComplementedSubspace.ProductFrameSignSample.0.ComplementedSubspace.frameSignCoefficients_length_sq._simp_1_1",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.square_sum_mul_square_sum",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.square_sum_mul_square_sum._simp_1_1",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.square_sum_mul_square_sum._simp_1_2",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.sideIndex",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.productFrameFourth_succ",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.sideFrame",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.realProductFrame_side",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.four_products",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.sideFrame_fourth",
+    "_private.ComplementedSubspace.ProductFrameSignContraction.0.ComplementedSubspace.contractedSignCoefficients",
+    "_private.ComplementedSubspace.ProductFrameSignContraction.0.ComplementedSubspace.productFrameEval_contractedSign",
+    "_private.ComplementedSubspace.ProductFrameSignContraction.0.ComplementedSubspace.contractedSignCoefficients_length_sq",
+    "_private.ComplementedSubspace.ProductFrameMoments.0.ComplementedSubspace.sideFrame._proof_1",
+    "_private.ComplementedSubspace.ProductFrameSignContraction.0.ComplementedSubspace.contractedSignCoefficients_length_sq._simp_1_1"
+  ],
+  "raw_edge_count": 1332580,
+  "raw_edge_counts_by_kind": {
+    "type": 491845,
+    "value": 839812,
+    "inductive_constructor": 923
+  },
+  "direct_edge_count": 224,
+  "direct_unique_names": 224,
+  "direct_project_edge_count": 34,
+  "direct_project_references": [
+    {
+      "edge_kind": "type",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.TheoremStatement",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RealMainTheoremStatement"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.Ambient",
+      "project_owned": true,
+      "to": "ComplementedSubspace.Block"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.RecursiveParameters",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RecursiveFrameSelection.toBlockParameters"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.RecursiveParameters",
+      "project_owned": true,
+      "to": "ComplementedSubspace.recursiveFrameExponentTolerance"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.RecursiveParameters",
+      "project_owned": true,
+      "to": "ComplementedSubspace.recursiveFrameSelection"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.Ambient",
+      "project_owned": true,
+      "to": "ComplementedSubspace.BlockParameters.exponent"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.Ambient",
+      "project_owned": true,
+      "to": "ComplementedSubspace.BlockParameters.dimension"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.Ambient",
+      "project_owned": true,
+      "to": "ComplementedSubspace.instFactLeENNRealOfNatOfRealExponent"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.Ambient",
+      "project_owned": true,
+      "to": "ComplementedSubspace.Ambient"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.Ambient",
+      "project_owned": true,
+      "to": "ComplementedSubspace.Ambient._proof_1"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.RecursiveProjection",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RecursiveFrameSelection.alternatingBlockProjection"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "inductive",
+      "origin_module": "ComplementedSubspace.Ambient",
+      "project_owned": true,
+      "to": "ComplementedSubspace.BlockParameters"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.TheoremStatement",
+      "project_owned": true,
+      "to": "ComplementedSubspace.HasRealBanachLatticeOrder"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.TheoremStatement",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RealMainTheoremStatement._proof_1"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.TheoremStatement",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RealMainTheoremStatement._proof_2"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.TheoremStatement",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RealMainTheoremStatement._proof_3"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.TheoremStatement",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RealMainTheoremStatement._proof_4"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.TheoremStatement",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RealMainTheoremStatement._proof_5"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "ComplementedSubspace.TheoremStatement",
+      "project_owned": true,
+      "to": "ComplementedSubspace.HasSeparatedRange"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.RecursiveProjection",
+      "project_owned": true,
+      "to": "ComplementedSubspace.exists_recursive_alternatingProjection_near_one"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "inductive",
+      "origin_module": "ComplementedSubspace.RecursiveParameters",
+      "project_owned": true,
+      "to": "ComplementedSubspace.RecursiveFrameSelection"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.AmbientSeparable",
+      "project_owned": true,
+      "to": "ComplementedSubspace.ambientSeparableSpace"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.AmbientUniformConvex",
+      "project_owned": true,
+      "to": "ComplementedSubspace.ambientUniformConvexSpace"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.AmbientLattice",
+      "project_owned": true,
+      "to": "ComplementedSubspace.ambient_hasRealBanachLatticeOrder"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.ProjectionCorollaries",
+      "project_owned": true,
+      "to": "ComplementedSubspace.hasSeparatedRange_of_DPR_obstructions"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "BanLat.Normed",
+      "project_owned": true,
+      "to": "NormedVectorLattice.instNormedSpace"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "definition",
+      "origin_module": "BanLat.Normed",
+      "project_owned": true,
+      "to": "instNormedVectorLatticeReal"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.AmbientFiniteApproximation",
+      "project_owned": true,
+      "to": "ComplementedSubspace.ambient_chiGL_le_one"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.AmbientFiniteApproximation",
+      "project_owned": true,
+      "to": "ComplementedSubspace.ambientDual_chiGL_le_one"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.ActualProjectionDPR",
+      "project_owned": true,
+      "to": "ComplementedSubspace.actualProjection_range_chiDPR_eq_top"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.ActualProjectionDualDPR",
+      "project_owned": true,
+      "to": "ComplementedSubspace.actualProjection_range_dual_chiDPR_eq_top"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.RecursiveProjection",
+      "project_owned": true,
+      "to": "ComplementedSubspace.complement_idempotent"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.ActualProjectionDPR",
+      "project_owned": true,
+      "to": "ComplementedSubspace.actualProjection_complement_range_chiDPR_eq_top"
+    },
+    {
+      "edge_kind": "value",
+      "from": "ComplementedSubspace.realMainTheorem",
+      "kind": "theorem",
+      "origin_module": "ComplementedSubspace.ActualProjectionDualDPR",
+      "project_owned": true,
+      "to": "ComplementedSubspace.actualProjection_complement_range_dual_chiDPR_eq_top"
+    }
+  ],
+  "source_map_entries": 85,
+  "source_map_entries_found": 85,
+  "source_map_entries_not_found": [],
+  "source_map_kernel_matches": [
+    {
+      "module": "ComplementedSubspace.RealMainTheorem",
+      "symbol": "realMainTheorem",
+      "role": "target theorem",
+      "kernel_names": [
+        "ComplementedSubspace.realMainTheorem"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.TheoremStatement",
+      "symbol": "RealMainTheoremStatement",
+      "role": "target proposition definition",
+      "kernel_names": [
+        "ComplementedSubspace.RealMainTheoremStatement"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.TheoremStatement",
+      "symbol": "HasSeparatedRange",
+      "role": "range assertion definition",
+      "kernel_names": [
+        "ComplementedSubspace.HasSeparatedRange"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.TheoremStatement",
+      "symbol": "HasRealBanachLatticeOrder",
+      "role": "lattice assertion definition",
+      "kernel_names": [
+        "ComplementedSubspace.HasRealBanachLatticeOrder"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.Ambient",
+      "symbol": "BlockParameters",
+      "role": "parameter data structure",
+      "kernel_names": [
+        "ComplementedSubspace.BlockParameters"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.Ambient",
+      "symbol": "Block",
+      "role": "ambient block abbreviation",
+      "kernel_names": [
+        "ComplementedSubspace.Block"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.Ambient",
+      "symbol": "Ambient",
+      "role": "ambient sum abbreviation",
+      "kernel_names": [
+        "ComplementedSubspace.Ambient"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalUnconditional",
+      "symbol": "chiDPR",
+      "role": "DPR constant definition",
+      "kernel_names": [
+        "ComplementedSubspace.chiDPR"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalUnconditional",
+      "symbol": "lambdaDPR",
+      "role": "local DPR constant definition",
+      "kernel_names": [
+        "ComplementedSubspace.lambdaDPR"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalUnconditional",
+      "symbol": "unconditionalConstant",
+      "role": "finite-basis infimum definition",
+      "kernel_names": [
+        "ComplementedSubspace.unconditionalConstant"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalUnconditional",
+      "symbol": "unconditionalBasisConstant",
+      "role": "basis constant definition",
+      "kernel_names": [
+        "ComplementedSubspace.unconditionalBasisConstant"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalUnconditional",
+      "symbol": "chiGL",
+      "role": "GL constant definition",
+      "kernel_names": [
+        "ComplementedSubspace.chiGL"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalUnconditional",
+      "symbol": "lambdaGL",
+      "role": "local GL constant definition",
+      "kernel_names": [
+        "ComplementedSubspace.lambdaGL"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalUnconditional",
+      "symbol": "GLFactorization",
+      "role": "factorization data structure",
+      "kernel_names": [
+        "ComplementedSubspace.GLFactorization"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveParameters",
+      "symbol": "recursiveFrameSelection",
+      "role": "chosen parameter construction",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveFrameSelection"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveParameters",
+      "symbol": "exists_recursiveFrameSelection",
+      "role": "parameter-existence proof",
+      "kernel_names": [
+        "ComplementedSubspace.exists_recursiveFrameSelection"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveParameters",
+      "symbol": "exists_nextFrameChoice",
+      "role": "private finite-choice existence proof",
+      "kernel_names": [
+        "_private.ComplementedSubspace.RecursiveParameters.0.ComplementedSubspace.exists_nextFrameChoice"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveParameters",
+      "symbol": "toBlockParameters",
+      "role": "parameter data projection",
+      "kernel_names": [
+        "ComplementedSubspace.RecursiveFrameSelection.toBlockParameters"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveProjection",
+      "symbol": "exists_recursive_alternatingProjection_near_one",
+      "role": "direct projection existence proof",
+      "kernel_names": [
+        "ComplementedSubspace.exists_recursive_alternatingProjection_near_one"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveProjection",
+      "symbol": "exists_recursive_alternatingProjection_tolerance",
+      "role": "projection quantitative existence proof",
+      "kernel_names": [
+        "ComplementedSubspace.exists_recursive_alternatingProjection_tolerance"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveProjection",
+      "symbol": "complement_idempotent",
+      "role": "direct complementary projection proof",
+      "kernel_names": [
+        "ComplementedSubspace.complement_idempotent"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveProjection",
+      "symbol": "alternatingProjection",
+      "role": "diagonal projection definition",
+      "kernel_names": [
+        "ComplementedSubspace.RecursiveFrameSelection.alternatingProjection"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveProjection",
+      "symbol": "alternatingBlockProjection",
+      "role": "alternating finite projection definition",
+      "kernel_names": [
+        "ComplementedSubspace.RecursiveFrameSelection.alternatingBlockProjection"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ReindexedFrameProjection",
+      "symbol": "exists_recursive_complement_tolerance",
+      "role": "complement norm proof",
+      "kernel_names": [
+        "ComplementedSubspace.exists_recursive_complement_tolerance"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ReindexedFrameProjection",
+      "symbol": "exists_finTensorProjection_complement_threshold",
+      "role": "finite complement threshold proof",
+      "kernel_names": [
+        "ComplementedSubspace.exists_finTensorProjection_complement_threshold"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ReindexedFrameProjection",
+      "symbol": "finTensorProjection_norm_le_exp",
+      "role": "finite projection norm proof",
+      "kernel_names": [
+        "ComplementedSubspace.finTensorProjection_norm_le_exp"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ReindexedFrameProjection",
+      "symbol": "blockFrameProjection_norm_le",
+      "role": "recursive finite projection norm proof",
+      "kernel_names": [
+        "ComplementedSubspace.RecursiveFrameSelection.blockFrameProjection_norm_le"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.TensorProjection",
+      "symbol": "tensorFrameProjection_norm_le_exp",
+      "role": "tensor projection norm proof",
+      "kernel_names": [
+        "ComplementedSubspace.tensorFrameProjection_norm_le_exp"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.TensorProjection",
+      "symbol": "tensorFrameProjection_clm_idempotent",
+      "role": "tensor projection identity proof",
+      "kernel_names": [
+        "ComplementedSubspace.tensorFrameProjection_clm_idempotent"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalHilbertProjection",
+      "symbol": "norm_complement_le_of_localHilbert",
+      "role": "local Hilbert complement norm proof",
+      "kernel_names": [
+        "ComplementedSubspace.norm_complement_le_of_localHilbert"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalHilbert",
+      "symbol": "exists_localHilbert_subspace_threshold",
+      "role": "local Hilbert threshold proof",
+      "kernel_names": [
+        "ComplementedSubspace.exists_localHilbert_subspace_threshold"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ActualProjectionDPR",
+      "symbol": "actualProjection_range_chiDPR_eq_top",
+      "role": "direct primal range obstruction proof",
+      "kernel_names": [
+        "ComplementedSubspace.actualProjection_range_chiDPR_eq_top"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ActualProjectionDPR",
+      "symbol": "actualProjection_complement_range_chiDPR_eq_top",
+      "role": "direct primal complement obstruction proof",
+      "kernel_names": [
+        "ComplementedSubspace.actualProjection_complement_range_chiDPR_eq_top"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ActualProjectionDualDPR",
+      "symbol": "actualProjection_range_dual_chiDPR_eq_top",
+      "role": "direct dual range obstruction proof",
+      "kernel_names": [
+        "ComplementedSubspace.actualProjection_range_dual_chiDPR_eq_top"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ActualProjectionDualDPR",
+      "symbol": "actualProjection_complement_range_dual_chiDPR_eq_top",
+      "role": "direct dual complement obstruction proof",
+      "kernel_names": [
+        "ComplementedSubspace.actualProjection_complement_range_dual_chiDPR_eq_top"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveDiagonalDPR",
+      "symbol": "recursiveDiagonalRange_chiDPR_eq_top",
+      "role": "recursive primal obstruction proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveDiagonalRange_chiDPR_eq_top"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveDiagonalDualDPR",
+      "symbol": "recursiveDiagonalRange_dual_chiDPR_eq_top",
+      "role": "recursive dual obstruction proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveDiagonalRange_dual_chiDPR_eq_top"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteBlockDPRLower",
+      "symbol": "frame_block_le_chiDPR",
+      "role": "finite block DPR lower bound proof",
+      "kernel_names": [
+        "ComplementedSubspace.frame_block_le_chiDPR"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteDualDPRLower",
+      "symbol": "frame_product_le_chiDPR_dual",
+      "role": "finite dual DPR lower bound proof",
+      "kernel_names": [
+        "ComplementedSubspace.frame_product_le_chiDPR_dual"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteBlockObstruction",
+      "symbol": "finite_basis_obstruction_with_frame_summand",
+      "role": "finite basis contradiction proof",
+      "kernel_names": [
+        "ComplementedSubspace.finite_basis_obstruction_with_frame_summand"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteBlockObstruction",
+      "symbol": "finite_basis_obstruction_with_frame_summand_of_scale",
+      "role": "scale-specialized finite basis contradiction proof",
+      "kernel_names": [
+        "ComplementedSubspace.finite_basis_obstruction_with_frame_summand_of_scale"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteProductObstruction",
+      "symbol": "finite_basis_obstruction_of_frame_product",
+      "role": "product finite basis contradiction proof",
+      "kernel_names": [
+        "ComplementedSubspace.finite_basis_obstruction_of_frame_product"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteSelectedHilbertModel",
+      "symbol": "exists_frame_selectedHilbertFactorization",
+      "role": "selected Hilbert factorization existence proof",
+      "kernel_names": [
+        "ComplementedSubspace.exists_frame_selectedHilbertFactorization"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteOverlapObstruction",
+      "symbol": "finite_selected_trace_obstruction",
+      "role": "trace overlap contradiction proof",
+      "kernel_names": [
+        "ComplementedSubspace.finite_selected_trace_obstruction"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteOverlapObstruction",
+      "symbol": "finite_selected_trace_scale_le",
+      "role": "trace overlap upper scale proof",
+      "kernel_names": [
+        "ComplementedSubspace.finite_selected_trace_scale_le"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteOverlapObstruction",
+      "symbol": "finite_selected_projection_overlap_le",
+      "role": "selected projection overlap proof",
+      "kernel_names": [
+        "ComplementedSubspace.finite_selected_projection_overlap_le"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteOverlapConclusion",
+      "symbol": "finite_basis_overlap_scaled_bound",
+      "role": "overlap estimate proof",
+      "kernel_names": [
+        "ComplementedSubspace.finite_basis_overlap_scaled_bound"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ProjectionOverlapLower",
+      "symbol": "frame_trace_forces_projection_overlap",
+      "role": "trace-to-overlap proof",
+      "kernel_names": [
+        "ComplementedSubspace.frame_trace_forces_projection_overlap"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FrameCoefficientReindexedRange",
+      "symbol": "frameCoefficientEvenRangeEquiv",
+      "role": "even finite range isometry definition",
+      "kernel_names": [
+        "ComplementedSubspace.RecursiveFrameSelection.frameCoefficientEvenRangeEquiv"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FrameCoefficientReindexedRange",
+      "symbol": "frameCoefficientOddComplementRangeEquiv",
+      "role": "odd complementary finite range isometry definition",
+      "kernel_names": [
+        "ComplementedSubspace.RecursiveFrameSelection.frameCoefficientOddComplementRangeEquiv"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.DiagonalFrameProduct",
+      "symbol": "diagonalFrameProductEquiv",
+      "role": "actual diagonal product isometry definition",
+      "kernel_names": [
+        "ComplementedSubspace.diagonalFrameProductEquiv"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveKernelHilbert",
+      "symbol": "recursiveDiagonalRange_kernel_locallyHilbert",
+      "role": "primal kernel geometry proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveDiagonalRange_kernel_locallyHilbert"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalHilbertRecursiveKernelDual",
+      "symbol": "recursiveDiagonalRange_kernel_dual_subspaces",
+      "role": "dual kernel geometry proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveDiagonalRange_kernel_dual_subspaces"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LocalHilbertRecursiveKernelDual",
+      "symbol": "recursiveProfile_embedding_dual_subspaces",
+      "role": "dual embedded profile geometry proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveProfile_embedding_dual_subspaces"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveHeadHilbert",
+      "symbol": "recursiveProfile_finiteHead_hasHilbertNormWithin",
+      "role": "finite head geometry proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveProfile_finiteHead_hasHilbertNormWithin"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveHeadHilbert",
+      "symbol": "recursiveProfile_finiteHead_hilbertModel",
+      "role": "finite head model existence proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveProfile_finiteHead_hilbertModel"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveTailHilbert",
+      "symbol": "recursiveProfileTail_locallyHilbert",
+      "role": "tail local geometry proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveProfileTail_locallyHilbert"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.RecursiveTailHilbert",
+      "symbol": "recursiveProfileTail_approxParallelogram",
+      "role": "tail parallelogram proof",
+      "kernel_names": [
+        "ComplementedSubspace.recursiveProfileTail_approxParallelogram"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ProjectionCorollaries",
+      "symbol": "hasSeparatedRange_of_DPR_obstructions",
+      "role": "direct range conclusions assembly proof",
+      "kernel_names": [
+        "ComplementedSubspace.hasSeparatedRange_of_DPR_obstructions"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.ProjectionCorollaries",
+      "symbol": "chiGL_range_le_projection_norm_all",
+      "role": "primal GL projection proof including zero range",
+      "kernel_names": [
+        "ComplementedSubspace.chiGL_range_le_projection_norm_all"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.GLRetraction",
+      "symbol": "chiGL_range_le_projection_norm",
+      "role": "primal GL projection proof",
+      "kernel_names": [
+        "ComplementedSubspace.chiGL_range_le_projection_norm"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.GLRetraction",
+      "symbol": "chiGL_le_of_retraction",
+      "role": "GL retraction inequality proof",
+      "kernel_names": [
+        "ComplementedSubspace.chiGL_le_of_retraction"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.GLRetraction",
+      "symbol": "GLFactorization.throughRetraction",
+      "role": "GL factorization construction",
+      "kernel_names": [
+        "ComplementedSubspace.GLFactorization.throughRetraction"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.GLDualRetraction",
+      "symbol": "chiGL_dual_range_le_projection_norm",
+      "role": "dual GL projection proof",
+      "kernel_names": [
+        "ComplementedSubspace.chiGL_dual_range_le_projection_norm"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.GLDualRetraction",
+      "symbol": "chiGL_dual_le_of_retraction",
+      "role": "dual GL retraction inequality proof",
+      "kernel_names": [
+        "ComplementedSubspace.chiGL_dual_le_of_retraction"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.GLDualRetraction",
+      "symbol": "dualPullback",
+      "role": "dual retraction map definition",
+      "kernel_names": [
+        "ComplementedSubspace.dualPullback"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientFiniteApproximation",
+      "symbol": "ambient_chiGL_le_one",
+      "role": "direct ambient GL proof",
+      "kernel_names": [
+        "ComplementedSubspace.ambient_chiGL_le_one"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientFiniteApproximation",
+      "symbol": "ambientDual_chiGL_le_one",
+      "role": "direct ambient dual GL proof",
+      "kernel_names": [
+        "ComplementedSubspace.ambientDual_chiGL_le_one"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientFiniteApproximation",
+      "symbol": "ambient_hasFiniteUnconditionalApproximations",
+      "role": "ambient finite approximation proof",
+      "kernel_names": [
+        "ComplementedSubspace.ambient_hasFiniteUnconditionalApproximations"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientFiniteApproximation",
+      "symbol": "ambientDual_chiDPR_le_one",
+      "role": "ambient dual DPR upper bound proof",
+      "kernel_names": [
+        "ComplementedSubspace.ambientDual_chiDPR_le_one"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.DPRtoGL",
+      "symbol": "chiGL_le_chiDPR",
+      "role": "DPR-to-GL comparison proof",
+      "kernel_names": [
+        "ComplementedSubspace.chiGL_le_chiDPR"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteApproximation",
+      "symbol": "chiDPR_le_constant_of_finite_approximations",
+      "role": "finite approximation to DPR proof",
+      "kernel_names": [
+        "ComplementedSubspace.chiDPR_le_constant_of_finite_approximations"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LatticeApproximation",
+      "symbol": "chiDPR_dual_lattice_le_one",
+      "role": "dual lattice DPR bound proof",
+      "kernel_names": [
+        "ComplementedSubspace.chiDPR_dual_lattice_le_one"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LatticeApproximation",
+      "symbol": "hasFiniteUnconditionalApproximations_dual",
+      "role": "dual lattice approximation proof",
+      "kernel_names": [
+        "ComplementedSubspace.hasFiniteUnconditionalApproximations_dual"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LatticeApproximation",
+      "symbol": "hasFiniteUnconditionalApproximations_of_principalProjectionProperty",
+      "role": "lattice spectral approximation proof",
+      "kernel_names": [
+        "ComplementedSubspace.hasFiniteUnconditionalApproximations_of_principalProjectionProperty"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientSeparable",
+      "symbol": "ambientSeparableSpace",
+      "role": "direct synthesized separability proof instance",
+      "kernel_names": [
+        "ComplementedSubspace.ambientSeparableSpace"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientUniformConvex",
+      "symbol": "ambientUniformConvexSpace",
+      "role": "direct synthesized uniform convexity proof instance",
+      "kernel_names": [
+        "ComplementedSubspace.ambientUniformConvexSpace"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientUniformConvex",
+      "symbol": "block_hasCubicSumModulus",
+      "role": "finite block modulus proof",
+      "kernel_names": [
+        "ComplementedSubspace.block_hasCubicSumModulus"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.LpTwoUniformConvex",
+      "symbol": "lp_two_uniformConvexSpace_of_cubicModulus",
+      "role": "sum uniform convexity proof",
+      "kernel_names": [
+        "ComplementedSubspace.lp_two_uniformConvexSpace_of_cubicModulus"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteLpGeometry",
+      "symbol": "finitePiLp_uniform_modulus",
+      "role": "finite lp modulus proof",
+      "kernel_names": [
+        "ComplementedSubspace.finitePiLp_uniform_modulus"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.FiniteLpGeometry",
+      "symbol": "finitePiLp_clarkson",
+      "role": "finite lp Clarkson inequality proof",
+      "kernel_names": [
+        "ComplementedSubspace.finitePiLp_clarkson"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientLattice",
+      "symbol": "ambient_hasRealBanachLatticeOrder",
+      "role": "direct ambient lattice proof",
+      "kernel_names": [
+        "ComplementedSubspace.ambient_hasRealBanachLatticeOrder"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientLattice",
+      "symbol": "piLpLattice",
+      "role": "finite lattice structure instance",
+      "kernel_names": [
+        "ComplementedSubspace.LatticeSupport.piLpLattice"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientLattice",
+      "symbol": "lpLattice",
+      "role": "sum lattice structure instance",
+      "kernel_names": [
+        "ComplementedSubspace.LatticeSupport.lpLattice"
+      ]
+    },
+    {
+      "module": "ComplementedSubspace.AmbientLattice",
+      "symbol": "lpHasSolidNorm",
+      "role": "sum solid norm proof instance",
+      "kernel_names": [
+        "ComplementedSubspace.LatticeSupport.lpHasSolidNorm"
+      ]
+    }
+  ],
+  "raw_axiom_names": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "raw_local_suspicious": [],
+  "summary_consistency_checks": "PASS",
+  "mapped_source_hash_checks": "PASS"
+}

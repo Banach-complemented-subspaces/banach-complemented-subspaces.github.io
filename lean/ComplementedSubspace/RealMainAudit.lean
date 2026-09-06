@@ -1,0 +1,7 @@
+import ComplementedSubspace.RealMainTheorem
+
+#print axioms ComplementedSubspace.actualProjection_range_chiDPR_eq_top
+#print axioms ComplementedSubspace.actualProjection_complement_range_chiDPR_eq_top
+#print axioms ComplementedSubspace.actualProjection_range_dual_chiDPR_eq_top
+#print axioms ComplementedSubspace.actualProjection_complement_range_dual_chiDPR_eq_top
+#print axioms ComplementedSubspace.realMainTheorem

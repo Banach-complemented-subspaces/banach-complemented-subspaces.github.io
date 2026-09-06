@@ -1,0 +1,1626 @@
+{
+  "generated_utc": "2026-09-05T23:29:14.429957+00:00",
+  "status": "PASS",
+  "target": "ComplementedSubspace.realMainTheorem",
+  "generator": "LEAN_PROJECT\\verification\\independent-audit-2026-09-05\\generate_verification_report.py",
+  "generator_sha256": "a2827b0dd3fc77da66f1274a5f3cd7ec6e45810c89ed7ce530341cb21f09fb52",
+  "issues": [],
+  "conditions": [
+    {
+      "condition": "Compiler steps must not have duplicate records",
+      "passed": true,
+      "detail": [
+        "clean",
+        "build",
+        "direct main source check",
+        "theorem identity",
+        "exact definitions",
+        "axioms",
+        "whole imported project axiom audit",
+        "kernel dependency traversal"
+      ]
+    },
+    {
+      "condition": "Passed pipeline must record all eight required steps in order",
+      "passed": true,
+      "detail": [
+        "clean",
+        "build",
+        "direct main source check",
+        "theorem identity",
+        "exact definitions",
+        "axioms",
+        "whole imported project axiom audit",
+        "kernel dependency traversal"
+      ]
+    },
+    {
+      "condition": "Compiler step 'clean' must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Compiler step 'clean' arguments must match the required check",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "clean",
+        "complemented_subspace_trial"
+      ]
+    },
+    {
+      "condition": "Compiler step 'clean' must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'clean' 'complemented_subspace_trial'"
+    },
+    {
+      "condition": "Compiler step 'clean' must reference clean.log",
+      "passed": true,
+      "detail": "clean.log"
+    },
+    {
+      "condition": "Compiler step 'clean' must have start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "clean.log command must agree with run_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "clean.log must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "clean.log start/end UTC instants must match its command record (trailing fractional zeroes may differ)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "clean.log must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Compiler step 'build' must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Compiler step 'build' arguments must match the required check",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "build",
+        "+ComplementedSubspace:olean"
+      ]
+    },
+    {
+      "condition": "Compiler step 'build' must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'build' '+ComplementedSubspace:olean'"
+    },
+    {
+      "condition": "Compiler step 'build' must reference build.log",
+      "passed": true,
+      "detail": "build.log"
+    },
+    {
+      "condition": "Compiler step 'build' must have start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "build.log command must agree with run_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "build.log must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "build.log start/end UTC instants must match its command record (trailing fractional zeroes may differ)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "build.log must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Compiler step 'direct main source check' must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Compiler step 'direct main source check' arguments must match the required check",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "ComplementedSubspace/RealMainTheorem.lean"
+      ]
+    },
+    {
+      "condition": "Compiler step 'direct main source check' must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'ComplementedSubspace/RealMainTheorem.lean'"
+    },
+    {
+      "condition": "Compiler step 'direct main source check' must reference main_source_check.log",
+      "passed": true,
+      "detail": "main_source_check.log"
+    },
+    {
+      "condition": "Compiler step 'direct main source check' must have start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "main_source_check.log command must agree with run_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "main_source_check.log must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "main_source_check.log start/end UTC instants must match its command record (trailing fractional zeroes may differ)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "main_source_check.log must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Compiler step 'theorem identity' must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Compiler step 'theorem identity' arguments must match the required check",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "verification/independent-audit-2026-09-05/MainIdentity.lean"
+      ]
+    },
+    {
+      "condition": "Compiler step 'theorem identity' must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'verification/independent-audit-2026-09-05/MainIdentity.lean'"
+    },
+    {
+      "condition": "Compiler step 'theorem identity' must reference theorem_check.txt",
+      "passed": true,
+      "detail": "theorem_check.txt"
+    },
+    {
+      "condition": "Compiler step 'theorem identity' must have start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "theorem_check.txt command must agree with run_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "theorem_check.txt must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "theorem_check.txt start/end UTC instants must match its command record (trailing fractional zeroes may differ)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "theorem_check.txt must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Compiler step 'exact definitions' must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Compiler step 'exact definitions' arguments must match the required check",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "verification/independent-audit-2026-09-05/PrintDefinitions.lean"
+      ]
+    },
+    {
+      "condition": "Compiler step 'exact definitions' must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'verification/independent-audit-2026-09-05/PrintDefinitions.lean'"
+    },
+    {
+      "condition": "Compiler step 'exact definitions' must reference definitions.txt",
+      "passed": true,
+      "detail": "definitions.txt"
+    },
+    {
+      "condition": "Compiler step 'exact definitions' must have start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "definitions.txt command must agree with run_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "definitions.txt must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "definitions.txt start/end UTC instants must match its command record (trailing fractional zeroes may differ)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "definitions.txt must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Compiler step 'axioms' must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Compiler step 'axioms' arguments must match the required check",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "verification/independent-audit-2026-09-05/PrintAxioms.lean"
+      ]
+    },
+    {
+      "condition": "Compiler step 'axioms' must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'verification/independent-audit-2026-09-05/PrintAxioms.lean'"
+    },
+    {
+      "condition": "Compiler step 'axioms' must reference axioms.txt",
+      "passed": true,
+      "detail": "axioms.txt"
+    },
+    {
+      "condition": "Compiler step 'axioms' must have start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "axioms.txt command must agree with run_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "axioms.txt must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "axioms.txt start/end UTC instants must match its command record (trailing fractional zeroes may differ)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "axioms.txt must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Compiler step 'whole imported project axiom audit' must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Compiler step 'whole imported project axiom audit' arguments must match the required check",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "WholeProjectAudit.lean"
+      ]
+    },
+    {
+      "condition": "Compiler step 'whole imported project axiom audit' must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'WholeProjectAudit.lean'"
+    },
+    {
+      "condition": "Compiler step 'whole imported project axiom audit' must reference whole_project_axioms.txt",
+      "passed": true,
+      "detail": "whole_project_axioms.txt"
+    },
+    {
+      "condition": "Compiler step 'whole imported project axiom audit' must have start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "whole_project_axioms.txt command must agree with run_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "whole_project_axioms.txt must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "whole_project_axioms.txt start/end UTC instants must match its command record (trailing fractional zeroes may differ)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "whole_project_axioms.txt must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Compiler step 'kernel dependency traversal' must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Compiler step 'kernel dependency traversal' arguments must match the required check",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean"
+      ]
+    },
+    {
+      "condition": "Compiler step 'kernel dependency traversal' must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'verification/independent-audit-2026-09-05/TraceDependencies.lean'"
+    },
+    {
+      "condition": "Compiler step 'kernel dependency traversal' must reference dependency_trace_run.txt",
+      "passed": true,
+      "detail": "dependency_trace_run.txt"
+    },
+    {
+      "condition": "Compiler step 'kernel dependency traversal' must have start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "dependency_trace_run.txt command must agree with run_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "dependency_trace_run.txt must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "dependency_trace_run.txt start/end UTC instants must match its command record (trailing fractional zeroes may differ)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "dependency_trace_run.txt must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Fresh clean must leave zero root-project .olean files",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Stored theorem kind/type/no-parameters assertion must appear in the successful identity log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Successful #check output must name the exact target and statement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "All thirteen requested definitions plus the supporting Block abbreviation must appear in actual compiler output",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Whole imported-project axiom audit must report its completed declaration inspection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Original source snapshot must have unique paths",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Original-source scan scope must include all 230 pre-existing Lean files",
+      "passed": true,
+      "detail": 230
+    },
+    {
+      "condition": "Before/after SHA256, byte lengths, and original path inventory must agree exactly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Current original sources/configuration must still match the final snapshot",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Source-immutability completion marker must match the snapshot count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Executable-source token count 'sorry' must be zero",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Executable-source token count 'admit' must be zero",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Executable-source token count 'sorryAx' must be zero",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Executable-source token count 'axiom' must be zero",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Source scanner must have zero lexical/import errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Source scanner must have zero placeholder/trust-bypass candidates",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Independent rg and Python local-source inventories must agree",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Independent inventories must have no unmatched files",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Scanner must not silently skip directory symlinks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Source scanner must observe stable source hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Source-lexer self-test must pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Scanner file count must equal its complete inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Scanner must cover every original Lean source at its snapshotted hash",
+      "passed": true,
+      "detail": {
+        "missing": [],
+        "different": []
+      }
+    },
+    {
+      "condition": "All scanned files, including audit helpers, must still match the scanner inventory",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Configured root's complete local syntactic import closure must contain 177 modules",
+      "passed": true,
+      "detail": 177
+    },
+    {
+      "condition": "Fresh build.log must report Built for every root-closure local module",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Successful fresh build must have an .olean for every configured-root local module",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Exactly three local allowUnsafeReducibility settings must be recorded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Captured pinned Lean reducibility implementation must match its current source hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved initial run must record failure at the theorem identity helper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Initial failed run must preserve successful clean/build/direct-source checks and exit-1 identity attempt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Resumed pipeline must preserve the first three successful commands/results exactly and their timestamp instants unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved failed helper must have executed the exact recorded identity-check command",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved failed helper log must match its original command and timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved failed helper log must explicitly retain exit 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved helper failure must have exactly the unsupported pp.width diagnostic",
+      "passed": true,
+      "detail": [
+        "verification/independent-audit-2026-09-05/MainIdentity.lean:5:0: error: Unknown option `pp.width`"
+      ]
+    },
+    {
+      "condition": "Preserved failed helper output must show both checks, standard axioms, and stored-type assertion without treating its exit-1 run as success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Successful corrected pipeline must link its preserved initial failure using resumedFrom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "MainIdentity.lean must differ byte-for-byte from its preserved original only by removing line 5: set_option pp.width 110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved MainIdentity.lean must match the initial scanner's original SHA256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "PrintDefinitions.lean must differ byte-for-byte from its preserved original only by removing line 5: set_option pp.width 110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved PrintDefinitions.lean must match the initial scanner's original SHA256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency auditor must differ from preserved helper bytes only by the ten explicit IO-to-MetaM lift replacements",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Corrected dependency auditor must use all ten explicit lifts without an evaluation/trust bypass",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Preserved dependency helper must match the pre-IO-fix scanner's SHA256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved second run must record dependency-helper failure after the display-option correction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved dependency failure must have seven successful core steps followed by exit-1 walker",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Walker retry must retain the seven successful commands/results exactly and their UTC timestamp instants unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Failed walker must have used the exact audited dependency-traversal command",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved failed walker log must match its command and project directory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved failed walker log must match the recorded UTC instants",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved failed dependency helper must retain exit code 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved helper must contain the ten failing IO lifts and one unchanged run_cmd inspection entry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Preserved walker failure must contain exactly ten IO-monad mismatches and the recovery-placeholder evaluation abort",
+      "passed": true,
+      "detail": [
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:59:2: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:60:17: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:61:17: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:62:19: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:83:6: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:117:6: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:136:10: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:140:12: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:176:2: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:177:2: error: Type mismatch",
+        "verification/independent-audit-2026-09-05/TraceDependencies.lean:191:0: error: Aborting evaluation since the expression depends on the 'sorry' axiom, which can lead to runtime instability and crashes."
+      ]
+    },
+    {
+      "condition": "All ten preserved walker type errors must specifically compare CommandElabM against MetaM",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Successful walker retry must link its preserved second failure using dependencyResumedFrom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Environment evidence must include exact Lean and Lake version commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Lean/Lake version command must succeed and agree with the pinned toolchain",
+      "passed": true,
+      "detail": {
+        "command": "\"WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lean.exe\" --version",
+        "stdout": "Lean (version 4.34.0-rc2, x86_64-w64-windows-gnu, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)",
+        "stderr": "",
+        "exit_code": 0,
+        "cwd": "LEAN_PROJECT"
+      }
+    },
+    {
+      "condition": "Lean/Lake version command must succeed and agree with the pinned toolchain",
+      "passed": true,
+      "detail": {
+        "command": "\"WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe\" --version",
+        "stdout": "Lake version 5.0.0-src+6a10ac8 (Lean version 4.34.0-rc2)",
+        "stderr": "",
+        "exit_code": 0,
+        "cwd": "LEAN_PROJECT"
+      }
+    },
+    {
+      "condition": "Current lean-toolchain must be the audited pinned runtime",
+      "passed": true,
+      "detail": "leanprover/lean4:v4.34.0-rc2"
+    },
+    {
+      "condition": "Configured default target must be ComplementedSubspace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "lakefile, manifest, and audited Mathlib pin must agree",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency provenance must cover every manifest package exactly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency plausible HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency plausible status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency plausible must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency LeanSearchClient HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency LeanSearchClient status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency LeanSearchClient must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency importGraph HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency importGraph status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency importGraph must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency proofwidgets HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency proofwidgets status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency proofwidgets must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency aesop HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency aesop status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency aesop must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency Qq HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency Qq status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency Qq must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency batteries HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency batteries status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency batteries must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency Cli HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency Cli status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency Cli must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency mathlib HEAD and own-repository identity must match its manifest pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency mathlib status must be clean with exit 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Dependency mathlib must have no mathematical source differences",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Delivered archive must still match both recorded SHA256 measurements",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Delivered ZIP must be unchanged, CRC-valid, and free of duplicate entries",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "All 183 archived Lean/configuration files must match workspace source bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Archived source/configuration comparisons must remain current",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "All 261 internal archive manifest hashes must verify",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Git evidence must transparently record unborn HEAD and untracked project state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Exact target source mapping must identify RealMainTheorem.lean:15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Actual target source line 15 must be the recorded theorem declaration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Human dependency source map must match current source hashes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Supplemental build scope must agree with the independently derived 177-module root closure",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental scope must name exactly the sixteen omitted library modules and their exact targets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Root build plus supplemental targets must cover all 193 present library modules exactly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental target sources must match their build-scope SHA256 hashes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Supplemental build must exit 0",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "condition": "Supplemental build must confirm original sources/configuration unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental build must cover all sixteen omitted library modules",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental status must reference its exact raw build/source-validation logs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental build must have completed start/end timestamps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental build arguments must exactly match every build_scope.json target",
+      "passed": true,
+      "detail": [
+        "--no-cache",
+        "build",
+        "+ComplementedSubspace.ComplexCorollaryAudit:olean",
+        "+ComplementedSubspace.ComplexRealDPRAudit:olean",
+        "+ComplementedSubspace.FiniteHilbertWitnessAudit:olean",
+        "+ComplementedSubspace.FiniteOverlapScaleAudit:olean",
+        "+ComplementedSubspace.FiniteParameterAudit:olean",
+        "+ComplementedSubspace.LocalHilbertAudit:olean",
+        "+ComplementedSubspace.LocalHilbertDualTopAudit:olean",
+        "+ComplementedSubspace.LocalHilbertQuotientAudit:olean",
+        "+ComplementedSubspace.LocalHilbertRecursiveQuotient:olean",
+        "+ComplementedSubspace.ProductFrameTranspose:olean",
+        "+ComplementedSubspace.ProjectionAssemblyAudit:olean",
+        "+ComplementedSubspace.PureFrameDPRAudit:olean",
+        "+ComplementedSubspace.RealMainAudit:olean",
+        "+ComplementedSubspace.RealMainConsequencesAudit:olean",
+        "+ComplementedSubspace.RecursiveParametersAudit:olean",
+        "+ComplementedSubspace.SelectedFrameBasis:olean"
+      ]
+    },
+    {
+      "condition": "Supplemental build must execute the exact audited portable Lake command",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental build must produce every additional local module .olean",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Supplemental log must report Built for all sixteen additional library modules",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Supplemental raw log command must agree with additional_build_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental build must run in the audited project",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Supplemental raw log must contain one completed exit-0 footer",
+      "passed": true,
+      "detail": [
+        "0"
+      ]
+    },
+    {
+      "condition": "Supplemental source-validation log must explicitly record PASS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Kernel traversal target must be the exact closed theorem",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Kernel summary traversal_complete must be true",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "condition": "Kernel summary ownership_classification_complete must be true",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "condition": "Kernel summary axiom_cross_check_agrees must be true",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "condition": "Kernel summary missing_checked_constants must be empty",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Kernel summary missing_expected_bodies must be empty",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Kernel summary constants_without_import_origin must be empty",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Kernel summary reachable_project_axiom_opaque_unsafe_partial must be empty",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Kernel traversal must process every queued constant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Kernel reachable_axioms_direct_traversal must equal the exact three standard axioms",
+      "passed": true,
+      "detail": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "condition": "Kernel reachable_axioms_stock_collectAxioms must equal the exact three standard axioms",
+      "passed": true,
+      "detail": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "condition": "Actual #print axioms output must agree with the complete kernel traversal",
+      "passed": true,
+      "detail": [
+        [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      ]
+    },
+    {
+      "condition": "Raw node kind/ownership/body requirements and boolean flags must be internally valid",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Raw graph target must be the expected project theorem node",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Raw kernel node counts must agree with the summary",
+      "passed": true,
+      "detail": {
+        "nodes": 40291,
+        "project": 1946
+      }
+    },
+    {
+      "condition": "Raw node origins/axioms/suspicious flags must agree with the clean kernel summary",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "condition": "Raw labelled graph must contain every counted edge with checked endpoints",
+      "passed": true,
+      "detail": {
+        "edges": 1332580,
+        "bad_examples": []
+      }
+    },
+    {
+      "condition": "Every raw kernel node must be reachable from the actual target",
+      "passed": true,
+      "detail": {
+        "reached": 40291,
+        "recorded": 40291
+      }
+    },
+    {
+      "condition": "Raw direct-reference graph must originate at the audited target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Direct-reference records must equal the typed target-edge multiset in the full graph",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "condition": "Direct-reference origin/ownership/kind metadata must equal the destination-node metadata",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "original_source_count": 230,
+  "configured_root_local_modules": [
+    "BanLat.Basic",
+    "BanLat.Disjoint",
+    "BanLat.Dual",
+    "BanLat.LLexpr",
+    "BanLat.Normed",
+    "BanLat.Operators.Hom",
+    "BanLat.Operators.OrderBounded",
+    "BanLat.Operators.Positive",
+    "BanLat.Operators.Regular",
+    "BanLat.Operators.RieszKantorovich",
+    "BanLat.OrderComplete",
+    "BanLat.OrderUnit",
+    "BanLat.RieszDec",
+    "BanLat.Substructures.Band.Basic",
+    "BanLat.Substructures.Band.DisjointComplement",
+    "BanLat.Substructures.Band.Generated",
+    "BanLat.Substructures.Band.Lattice",
+    "BanLat.Substructures.Band.PPP",
+    "BanLat.Substructures.Band.Projection",
+    "BanLat.Substructures.Ideal",
+    "BanLat.Substructures.Sublattice",
+    "ComplementedSubspace",
+    "ComplementedSubspace.ActualProjectionBidualDPR",
+    "ComplementedSubspace.ActualProjectionDPR",
+    "ComplementedSubspace.ActualProjectionDualDPR",
+    "ComplementedSubspace.Ambient",
+    "ComplementedSubspace.AmbientBasis",
+    "ComplementedSubspace.AmbientFiniteApproximation",
+    "ComplementedSubspace.AmbientLattice",
+    "ComplementedSubspace.AmbientProjection",
+    "ComplementedSubspace.AmbientSchauder",
+    "ComplementedSubspace.AmbientSeparable",
+    "ComplementedSubspace.AmbientUniformConvex",
+    "ComplementedSubspace.BasisBounds",
+    "ComplementedSubspace.BasisRestriction",
+    "ComplementedSubspace.BasisTransport",
+    "ComplementedSubspace.ComplexAmbient",
+    "ComplementedSubspace.ComplexAmbientSchauder",
+    "ComplementedSubspace.ComplexCorollary",
+    "ComplementedSubspace.ComplexCorollaryAssembly",
+    "ComplementedSubspace.ComplexFrameCoefficient",
+    "ComplementedSubspace.ComplexFrameCoefficientRange",
+    "ComplementedSubspace.ComplexFrameProjection",
+    "ComplementedSubspace.ComplexFrameRealification",
+    "ComplementedSubspace.ComplexProjectionEnergy",
+    "ComplementedSubspace.ComplexProjectionRealEquiv",
+    "ComplementedSubspace.ComplexRealDPR",
+    "ComplementedSubspace.ComplexRecursiveProjection",
+    "ComplementedSubspace.ComplexReindexedFrameProjection",
+    "ComplementedSubspace.ComplexTensorProjection",
+    "ComplementedSubspace.CorollaryStatement",
+    "ComplementedSubspace.DPRIsomorphism",
+    "ComplementedSubspace.DPRObstruction",
+    "ComplementedSubspace.DPRPredicates",
+    "ComplementedSubspace.DPRtoGL",
+    "ComplementedSubspace.DenseContractions",
+    "ComplementedSubspace.DenseContractionsScalar",
+    "ComplementedSubspace.DiagonalFrameProduct",
+    "ComplementedSubspace.DiagonalFrameSummand",
+    "ComplementedSubspace.FiniteApproximation",
+    "ComplementedSubspace.FiniteBasisTraceBound",
+    "ComplementedSubspace.FiniteBidual",
+    "ComplementedSubspace.FiniteBidualDPRLower",
+    "ComplementedSubspace.FiniteBlockDPRLower",
+    "ComplementedSubspace.FiniteBlockObstruction",
+    "ComplementedSubspace.FiniteCoordinateSelection",
+    "ComplementedSubspace.FiniteCorrection",
+    "ComplementedSubspace.FiniteCubeBound",
+    "ComplementedSubspace.FiniteDualBasis",
+    "ComplementedSubspace.FiniteDualDPRLower",
+    "ComplementedSubspace.FiniteDualSuperspace",
+    "ComplementedSubspace.FiniteFrame",
+    "ComplementedSubspace.FiniteHeadHilbert",
+    "ComplementedSubspace.FiniteHilbertAverage",
+    "ComplementedSubspace.FiniteLpGeometry",
+    "ComplementedSubspace.FiniteOverlapBasisColumns",
+    "ComplementedSubspace.FiniteOverlapBound",
+    "ComplementedSubspace.FiniteOverlapConclusion",
+    "ComplementedSubspace.FiniteOverlapDualScale",
+    "ComplementedSubspace.FiniteOverlapGoodSecond",
+    "ComplementedSubspace.FiniteOverlapLp",
+    "ComplementedSubspace.FiniteOverlapMatrixNorms",
+    "ComplementedSubspace.FiniteOverlapMoments",
+    "ComplementedSubspace.FiniteOverlapObstruction",
+    "ComplementedSubspace.FiniteOverlapRandomization",
+    "ComplementedSubspace.FiniteOverlapScale",
+    "ComplementedSubspace.FiniteOverlapUpper",
+    "ComplementedSubspace.FiniteParameterBounds",
+    "ComplementedSubspace.FiniteParameterGap",
+    "ComplementedSubspace.FiniteProductObstruction",
+    "ComplementedSubspace.FiniteProjectionTrace",
+    "ComplementedSubspace.FiniteSelectedHilbertModel",
+    "ComplementedSubspace.FiniteSelectionCoordinates",
+    "ComplementedSubspace.FiniteSigns",
+    "ComplementedSubspace.FiniteSignsComplex",
+    "ComplementedSubspace.FiniteSignsInterpolation",
+    "ComplementedSubspace.FiniteSuperspaceSplitting",
+    "ComplementedSubspace.FiniteTraceOverlap",
+    "ComplementedSubspace.FiniteTraceSelection",
+    "ComplementedSubspace.FrameCoefficient",
+    "ComplementedSubspace.FrameCoefficientHilbert",
+    "ComplementedSubspace.FrameCoefficientNorm",
+    "ComplementedSubspace.FrameCoefficientRange",
+    "ComplementedSubspace.FrameCoefficientReindexedRange",
+    "ComplementedSubspace.FrameProjectionNorm",
+    "ComplementedSubspace.FrameProjectionRange",
+    "ComplementedSubspace.GLDualRetraction",
+    "ComplementedSubspace.GLRetraction",
+    "ComplementedSubspace.HilbertComplement",
+    "ComplementedSubspace.HilbertOverlap",
+    "ComplementedSubspace.HilbertTraceTransfer",
+    "ComplementedSubspace.InfiniteFrameObstruction",
+    "ComplementedSubspace.IsometricProductDPRLower",
+    "ComplementedSubspace.IsometricProductSplitting",
+    "ComplementedSubspace.LatticeApproximation",
+    "ComplementedSubspace.LatticeBasis",
+    "ComplementedSubspace.LatticeNonisomorphism",
+    "ComplementedSubspace.LatticeSpectral",
+    "ComplementedSubspace.LocalHilbert",
+    "ComplementedSubspace.LocalHilbertCompactness",
+    "ComplementedSubspace.LocalHilbertCoordinates",
+    "ComplementedSubspace.LocalHilbertDual",
+    "ComplementedSubspace.LocalHilbertDualTop",
+    "ComplementedSubspace.LocalHilbertEmbeddedRenorm",
+    "ComplementedSubspace.LocalHilbertFactorization",
+    "ComplementedSubspace.LocalHilbertHeadRenorm",
+    "ComplementedSubspace.LocalHilbertProjection",
+    "ComplementedSubspace.LocalHilbertProperty",
+    "ComplementedSubspace.LocalHilbertQuotient",
+    "ComplementedSubspace.LocalHilbertRecursiveKernelDual",
+    "ComplementedSubspace.LocalHilbertSum",
+    "ComplementedSubspace.LocalHilbertSumDual",
+    "ComplementedSubspace.LocalHilbertTransport",
+    "ComplementedSubspace.LocalUnconditional",
+    "ComplementedSubspace.LpHeadTail",
+    "ComplementedSubspace.LpSubmodule",
+    "ComplementedSubspace.LpSubmoduleScalar",
+    "ComplementedSubspace.LpTwoParallelogram",
+    "ComplementedSubspace.LpTwoUniformConvex",
+    "ComplementedSubspace.LpUniformEquiv",
+    "ComplementedSubspace.NormSqSplitting",
+    "ComplementedSubspace.NormalizedHilbertSynthesis",
+    "ComplementedSubspace.Parameters",
+    "ComplementedSubspace.ProductFrame",
+    "ComplementedSubspace.ProductFrameIndex",
+    "ComplementedSubspace.ProductFrameLp",
+    "ComplementedSubspace.ProductFrameMoments",
+    "ComplementedSubspace.ProductFrameRowWitness",
+    "ComplementedSubspace.ProductFrameSignContraction",
+    "ComplementedSubspace.ProductFrameSignSample",
+    "ComplementedSubspace.ProductFrameSymmetry",
+    "ComplementedSubspace.ProductFrameTrace",
+    "ComplementedSubspace.ProductFrameTraceBound",
+    "ComplementedSubspace.ProductFrameWitness",
+    "ComplementedSubspace.ProjectionCorollaries",
+    "ComplementedSubspace.ProjectionOverlapLower",
+    "ComplementedSubspace.ProjectionPerturbation",
+    "ComplementedSubspace.PureFrameDPR",
+    "ComplementedSubspace.RealMainConsequences",
+    "ComplementedSubspace.RealMainTheorem",
+    "ComplementedSubspace.RecursiveDiagonalBidualDPR",
+    "ComplementedSubspace.RecursiveDiagonalDPR",
+    "ComplementedSubspace.RecursiveDiagonalDualDPR",
+    "ComplementedSubspace.RecursiveHeadHilbert",
+    "ComplementedSubspace.RecursiveKernelHilbert",
+    "ComplementedSubspace.RecursiveParameters",
+    "ComplementedSubspace.RecursiveProjection",
+    "ComplementedSubspace.RecursiveTailHilbert",
+    "ComplementedSubspace.ReindexedFrameProjection",
+    "ComplementedSubspace.SchauderDPR",
+    "ComplementedSubspace.SelectedCoefficientHilbert",
+    "ComplementedSubspace.SelectedHilbertReplacement",
+    "ComplementedSubspace.SelectedProjectionSetup",
+    "ComplementedSubspace.TensorMoment",
+    "ComplementedSubspace.TensorProjection",
+    "ComplementedSubspace.TheoremStatement",
+    "ComplementedSubspace.UnconditionalHilbertSynthesis"
+  ],
+  "root_modules_reported_built": [
+    "BanLat.Basic",
+    "BanLat.Disjoint",
+    "BanLat.Dual",
+    "BanLat.LLexpr",
+    "BanLat.Normed",
+    "BanLat.Operators.Hom",
+    "BanLat.Operators.OrderBounded",
+    "BanLat.Operators.Positive",
+    "BanLat.Operators.Regular",
+    "BanLat.Operators.RieszKantorovich",
+    "BanLat.OrderComplete",
+    "BanLat.OrderUnit",
+    "BanLat.RieszDec",
+    "BanLat.Substructures.Band.Basic",
+    "BanLat.Substructures.Band.DisjointComplement",
+    "BanLat.Substructures.Band.Generated",
+    "BanLat.Substructures.Band.Lattice",
+    "BanLat.Substructures.Band.PPP",
+    "BanLat.Substructures.Band.Projection",
+    "BanLat.Substructures.Ideal",
+    "BanLat.Substructures.Sublattice",
+    "ComplementedSubspace",
+    "ComplementedSubspace.ActualProjectionBidualDPR",
+    "ComplementedSubspace.ActualProjectionDPR",
+    "ComplementedSubspace.ActualProjectionDualDPR",
+    "ComplementedSubspace.Ambient",
+    "ComplementedSubspace.AmbientBasis",
+    "ComplementedSubspace.AmbientFiniteApproximation",
+    "ComplementedSubspace.AmbientLattice",
+    "ComplementedSubspace.AmbientProjection",
+    "ComplementedSubspace.AmbientSchauder",
+    "ComplementedSubspace.AmbientSeparable",
+    "ComplementedSubspace.AmbientUniformConvex",
+    "ComplementedSubspace.BasisBounds",
+    "ComplementedSubspace.BasisRestriction",
+    "ComplementedSubspace.BasisTransport",
+    "ComplementedSubspace.ComplexAmbient",
+    "ComplementedSubspace.ComplexAmbientSchauder",
+    "ComplementedSubspace.ComplexCorollary",
+    "ComplementedSubspace.ComplexCorollaryAssembly",
+    "ComplementedSubspace.ComplexFrameCoefficient",
+    "ComplementedSubspace.ComplexFrameCoefficientRange",
+    "ComplementedSubspace.ComplexFrameProjection",
+    "ComplementedSubspace.ComplexFrameRealification",
+    "ComplementedSubspace.ComplexProjectionEnergy",
+    "ComplementedSubspace.ComplexProjectionRealEquiv",
+    "ComplementedSubspace.ComplexRealDPR",
+    "ComplementedSubspace.ComplexRecursiveProjection",
+    "ComplementedSubspace.ComplexReindexedFrameProjection",
+    "ComplementedSubspace.ComplexTensorProjection",
+    "ComplementedSubspace.CorollaryStatement",
+    "ComplementedSubspace.DPRIsomorphism",
+    "ComplementedSubspace.DPRObstruction",
+    "ComplementedSubspace.DPRPredicates",
+    "ComplementedSubspace.DPRtoGL",
+    "ComplementedSubspace.DenseContractions",
+    "ComplementedSubspace.DenseContractionsScalar",
+    "ComplementedSubspace.DiagonalFrameProduct",
+    "ComplementedSubspace.DiagonalFrameSummand",
+    "ComplementedSubspace.FiniteApproximation",
+    "ComplementedSubspace.FiniteBasisTraceBound",
+    "ComplementedSubspace.FiniteBidual",
+    "ComplementedSubspace.FiniteBidualDPRLower",
+    "ComplementedSubspace.FiniteBlockDPRLower",
+    "ComplementedSubspace.FiniteBlockObstruction",
+    "ComplementedSubspace.FiniteCoordinateSelection",
+    "ComplementedSubspace.FiniteCorrection",
+    "ComplementedSubspace.FiniteCubeBound",
+    "ComplementedSubspace.FiniteDualBasis",
+    "ComplementedSubspace.FiniteDualDPRLower",
+    "ComplementedSubspace.FiniteDualSuperspace",
+    "ComplementedSubspace.FiniteFrame",
+    "ComplementedSubspace.FiniteHeadHilbert",
+    "ComplementedSubspace.FiniteHilbertAverage",
+    "ComplementedSubspace.FiniteLpGeometry",
+    "ComplementedSubspace.FiniteOverlapBasisColumns",
+    "ComplementedSubspace.FiniteOverlapBound",
+    "ComplementedSubspace.FiniteOverlapConclusion",
+    "ComplementedSubspace.FiniteOverlapDualScale",
+    "ComplementedSubspace.FiniteOverlapGoodSecond",
+    "ComplementedSubspace.FiniteOverlapLp",
+    "ComplementedSubspace.FiniteOverlapMatrixNorms",
+    "ComplementedSubspace.FiniteOverlapMoments",
+    "ComplementedSubspace.FiniteOverlapObstruction",
+    "ComplementedSubspace.FiniteOverlapRandomization",
+    "ComplementedSubspace.FiniteOverlapScale",
+    "ComplementedSubspace.FiniteOverlapUpper",
+    "ComplementedSubspace.FiniteParameterBounds",
+    "ComplementedSubspace.FiniteParameterGap",
+    "ComplementedSubspace.FiniteProductObstruction",
+    "ComplementedSubspace.FiniteProjectionTrace",
+    "ComplementedSubspace.FiniteSelectedHilbertModel",
+    "ComplementedSubspace.FiniteSelectionCoordinates",
+    "ComplementedSubspace.FiniteSigns",
+    "ComplementedSubspace.FiniteSignsComplex",
+    "ComplementedSubspace.FiniteSignsInterpolation",
+    "ComplementedSubspace.FiniteSuperspaceSplitting",
+    "ComplementedSubspace.FiniteTraceOverlap",
+    "ComplementedSubspace.FiniteTraceSelection",
+    "ComplementedSubspace.FrameCoefficient",
+    "ComplementedSubspace.FrameCoefficientHilbert",
+    "ComplementedSubspace.FrameCoefficientNorm",
+    "ComplementedSubspace.FrameCoefficientRange",
+    "ComplementedSubspace.FrameCoefficientReindexedRange",
+    "ComplementedSubspace.FrameProjectionNorm",
+    "ComplementedSubspace.FrameProjectionRange",
+    "ComplementedSubspace.GLDualRetraction",
+    "ComplementedSubspace.GLRetraction",
+    "ComplementedSubspace.HilbertComplement",
+    "ComplementedSubspace.HilbertOverlap",
+    "ComplementedSubspace.HilbertTraceTransfer",
+    "ComplementedSubspace.InfiniteFrameObstruction",
+    "ComplementedSubspace.IsometricProductDPRLower",
+    "ComplementedSubspace.IsometricProductSplitting",
+    "ComplementedSubspace.LatticeApproximation",
+    "ComplementedSubspace.LatticeBasis",
+    "ComplementedSubspace.LatticeNonisomorphism",
+    "ComplementedSubspace.LatticeSpectral",
+    "ComplementedSubspace.LocalHilbert",
+    "ComplementedSubspace.LocalHilbertCompactness",
+    "ComplementedSubspace.LocalHilbertCoordinates",
+    "ComplementedSubspace.LocalHilbertDual",
+    "ComplementedSubspace.LocalHilbertDualTop",
+    "ComplementedSubspace.LocalHilbertEmbeddedRenorm",
+    "ComplementedSubspace.LocalHilbertFactorization",
+    "ComplementedSubspace.LocalHilbertHeadRenorm",
+    "ComplementedSubspace.LocalHilbertProjection",
+    "ComplementedSubspace.LocalHilbertProperty",
+    "ComplementedSubspace.LocalHilbertQuotient",
+    "ComplementedSubspace.LocalHilbertRecursiveKernelDual",
+    "ComplementedSubspace.LocalHilbertSum",
+    "ComplementedSubspace.LocalHilbertSumDual",
+    "ComplementedSubspace.LocalHilbertTransport",
+    "ComplementedSubspace.LocalUnconditional",
+    "ComplementedSubspace.LpHeadTail",
+    "ComplementedSubspace.LpSubmodule",
+    "ComplementedSubspace.LpSubmoduleScalar",
+    "ComplementedSubspace.LpTwoParallelogram",
+    "ComplementedSubspace.LpTwoUniformConvex",
+    "ComplementedSubspace.LpUniformEquiv",
+    "ComplementedSubspace.NormSqSplitting",
+    "ComplementedSubspace.NormalizedHilbertSynthesis",
+    "ComplementedSubspace.Parameters",
+    "ComplementedSubspace.ProductFrame",
+    "ComplementedSubspace.ProductFrameIndex",
+    "ComplementedSubspace.ProductFrameLp",
+    "ComplementedSubspace.ProductFrameMoments",
+    "ComplementedSubspace.ProductFrameRowWitness",
+    "ComplementedSubspace.ProductFrameSignContraction",
+    "ComplementedSubspace.ProductFrameSignSample",
+    "ComplementedSubspace.ProductFrameSymmetry",
+    "ComplementedSubspace.ProductFrameTrace",
+    "ComplementedSubspace.ProductFrameTraceBound",
+    "ComplementedSubspace.ProductFrameWitness",
+    "ComplementedSubspace.ProjectionCorollaries",
+    "ComplementedSubspace.ProjectionOverlapLower",
+    "ComplementedSubspace.ProjectionPerturbation",
+    "ComplementedSubspace.PureFrameDPR",
+    "ComplementedSubspace.RealMainConsequences",
+    "ComplementedSubspace.RealMainTheorem",
+    "ComplementedSubspace.RecursiveDiagonalBidualDPR",
+    "ComplementedSubspace.RecursiveDiagonalDPR",
+    "ComplementedSubspace.RecursiveDiagonalDualDPR",
+    "ComplementedSubspace.RecursiveHeadHilbert",
+    "ComplementedSubspace.RecursiveKernelHilbert",
+    "ComplementedSubspace.RecursiveParameters",
+    "ComplementedSubspace.RecursiveProjection",
+    "ComplementedSubspace.RecursiveTailHilbert",
+    "ComplementedSubspace.ReindexedFrameProjection",
+    "ComplementedSubspace.SchauderDPR",
+    "ComplementedSubspace.SelectedCoefficientHilbert",
+    "ComplementedSubspace.SelectedHilbertReplacement",
+    "ComplementedSubspace.SelectedProjectionSetup",
+    "ComplementedSubspace.TensorMoment",
+    "ComplementedSubspace.TensorProjection",
+    "ComplementedSubspace.TheoremStatement",
+    "ComplementedSubspace.UnconditionalHilbertSynthesis"
+  ],
+  "additional_modules_reported_built": [
+    "ComplementedSubspace.ComplexCorollaryAudit",
+    "ComplementedSubspace.ComplexRealDPRAudit",
+    "ComplementedSubspace.FiniteHilbertWitnessAudit",
+    "ComplementedSubspace.FiniteOverlapScaleAudit",
+    "ComplementedSubspace.FiniteParameterAudit",
+    "ComplementedSubspace.LocalHilbertAudit",
+    "ComplementedSubspace.LocalHilbertDualTopAudit",
+    "ComplementedSubspace.LocalHilbertQuotientAudit",
+    "ComplementedSubspace.LocalHilbertRecursiveQuotient",
+    "ComplementedSubspace.ProductFrameTranspose",
+    "ComplementedSubspace.ProjectionAssemblyAudit",
+    "ComplementedSubspace.PureFrameDPRAudit",
+    "ComplementedSubspace.RealMainAudit",
+    "ComplementedSubspace.RealMainConsequencesAudit",
+    "ComplementedSubspace.RecursiveParametersAudit",
+    "ComplementedSubspace.SelectedFrameBasis"
+  ],
+  "audit_formatter_correction": [
+    {
+      "file": "MainIdentity.lean",
+      "preserved_file": "MainIdentity.before_formatter_fix.txt",
+      "original_sha256": "71ccccc7a5ae37a5de129c200e32fa623b9762fc920e0e1d46a9a95a6cb70e63",
+      "current_sha256": "452913370a3c789e349e21525a7258879da254d35ea69c4f42dd7332fc2663c3",
+      "exact_single_display_option_removal": true
+    },
+    {
+      "file": "PrintDefinitions.lean",
+      "preserved_file": "PrintDefinitions.before_formatter_fix.txt",
+      "original_sha256": "92958b4afdd205d8b0e9d6baa1ff083caca30d169b6081c787f51353d7c362ed",
+      "current_sha256": "795406e7f826673476d956b56fc6ac72707479ac5a0825a94076b466c8a91965",
+      "exact_single_display_option_removal": true
+    }
+  ],
+  "audit_dependency_io_correction": {
+    "file": "TraceDependencies.lean",
+    "preserved_file": "TraceDependencies.before_io_fix.txt",
+    "original_sha256": "da03c7b74ce33f55dd3a689a252903c11e106f7052fc6c12fafbeaa56f725c01",
+    "current_sha256": "da19376e92f4136f1f3b37e784f227286350137c242edfb0a6c4f91b04499e00",
+    "replacement_count": 10,
+    "exact_ten_io_lift_replacements": true
+  },
+  "compiler_calls_performed_by_generator": 0
+}

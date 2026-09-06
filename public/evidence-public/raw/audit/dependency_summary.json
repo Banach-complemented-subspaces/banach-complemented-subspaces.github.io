@@ -1,0 +1,137 @@
+[
+  {
+    "name": "plausible",
+    "manifest_rev": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "actual_head": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "LeanSearchClient",
+    "manifest_rev": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "actual_head": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "importGraph",
+    "manifest_rev": "1681d78dd6e65e38b143f9740d829c826673807c",
+    "actual_head": "1681d78dd6e65e38b143f9740d829c826673807c",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "proofwidgets",
+    "manifest_rev": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "actual_head": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "aesop",
+    "manifest_rev": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "actual_head": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "Qq",
+    "manifest_rev": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "actual_head": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "batteries",
+    "manifest_rev": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+    "actual_head": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "Cli",
+    "manifest_rev": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+    "actual_head": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "mathlib",
+    "manifest_rev": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+    "actual_head": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  }
+]

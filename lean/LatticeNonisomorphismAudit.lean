@@ -1,0 +1,6 @@
+import ComplementedSubspace.LatticeNonisomorphism
+
+#print axioms ComplementedSubspace.chiDPR_le_transport_of_lt
+#print axioms ComplementedSubspace.hasDPR_iff_of_continuousLinearEquiv
+#print axioms ComplementedSubspace.not_isomorphic_to_realBanachLattice_of_dual_DPR_top
+#print axioms ComplementedSubspace.not_isomorphic_to_realBanachLattice_primal_and_dual

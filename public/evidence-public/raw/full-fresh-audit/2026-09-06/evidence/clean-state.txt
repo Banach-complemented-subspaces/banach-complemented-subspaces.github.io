@@ -1,0 +1,12 @@
+{
+  "checked": "2026-09-06T10:39:24.747022+00:00",
+  "reproduction": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\reproduction",
+  "root_build_exists": false,
+  "dependency_builds": [],
+  "preexisting_compiled_lean_or_native_artifacts": [],
+  "lean_source_files": 9956,
+  "symlinks_or_junctions": [],
+  "copy_method": "byte copies; no hardlinks or shared git objects",
+  "retained_nonlean_inputs": "Pinned tracked ProofWidgets JavaScript and its source-tree lake.trace inputs; no Lean compiled artifacts retained.",
+  "retained_toolchain": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows"
+}

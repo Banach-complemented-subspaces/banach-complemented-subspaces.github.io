@@ -1,0 +1,7 @@
+import ComplementedSubspace.RecursiveParameters
+
+#print axioms ComplementedSubspace.exists_recursiveFrameSelection
+#print axioms ComplementedSubspace.RecursiveFrameSelection.overlap_tendsto
+#print axioms ComplementedSubspace.RecursiveFrameSelection.toBlockParameters
+#print axioms ComplementedSubspace.recursiveLocalHilbertThreshold_spec
+#print axioms ComplementedSubspace.recursiveFrameSelection_later_parallelogram
