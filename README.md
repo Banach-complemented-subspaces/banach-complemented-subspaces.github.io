@@ -10,7 +10,7 @@ On the author's laptop, double-click `OPEN_WEBSITE.cmd`, or visit <http://127.0.
 
 On another computer, use Node.js 22.13 or later and restore the dependencies with `pnpm install --frozen-lockfile`. Run `node scripts/build.mjs`, then `node scripts/serve.mjs`. The server binds only to the local computer. The static website is written to `dist/client/`.
 
-The author's final manuscript has 26 pages. Its PDF is `public/paper/manuscript.pdf`; the matching LaTeX snapshot is `paper/main.tex`. Both files are copied without alteration from the final versions. The paper includes the companion address `https://banach-complemented-subspaces.github.io/`. The preceding manuscript snapshot remains in Git history.
+The author's updated final manuscript has 26 pages. Its PDF is `public/paper/manuscript.pdf`, copied without alteration. The retained LaTeX snapshot, `paper/main.tex`, precedes the two latest PDF corrections: “emphasized” becomes “emphasised”, and the Benyamini–Flinn–Lewis reference begins on page 145 rather than 143. No revised LaTeX file accompanied this PDF update. The main statements and pagination are unchanged. The paper includes the companion address `https://banach-complemented-subspaces.github.io/`. Earlier manuscript snapshots remain in Git history.
 
 ## Mathematical scope and architecture
 
