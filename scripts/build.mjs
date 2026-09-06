@@ -65,4 +65,12 @@ fs.writeFileSync(
 );
 if (missing.length)
   throw new Error('Static routes missing: ' + missing.join(', '));
+// The pinned Vinext exporter skips redirected routes with trailingSlash: true.
+// Retain its flat exports and supply directory indexes for static GitHub Pages.
+for (const route of routes.filter((route) => route !== '/')) {
+  const directory = path.join('dist/client', route.slice(1));
+  fs.mkdirSync(directory, { recursive: true });
+  fs.copyFileSync(directory + '.html', path.join(directory, 'index.html'));
+}
+fs.writeFileSync('dist/client/.nojekyll', '');
 console.log('All four companion pages exported. Open OPEN_WEBSITE.cmd.');

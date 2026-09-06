@@ -56,4 +56,8 @@ Use British English and direct mathematical prose. Avoid “supplied”, “asse
 
 Do not alter Lean excerpts to make them match a changed manuscript. A change to a mathematical statement requires corresponding verified source and evidence. The latest main statements are unchanged; older detailed comparison notes retain their explicitly recorded earlier-paper context.
 
-The repository is intended to be private with Pages disabled. Before a later public release, confirm the final manuscript and companion address, configure the GitHub project-site path and recheck its links, add available publication links, and obtain the author's explicit release instruction. Do not turn on Pages or create a public preview as part of private preparation.
+The repository is [Banach-complemented-subspaces/banach-complemented-subspaces.github.io](https://github.com/Banach-complemented-subspaces/banach-complemented-subspaces.github.io). It is private with GitHub Pages disabled. The organisation is owned by the author's `ahacua` account.
+
+The intended website address is [https://banach-complemented-subspaces.github.io/](https://banach-complemented-subspaces.github.io/). This is the organisation's own homepage, separate from the author's personal website. It is not yet published. The site uses paths relative to the domain root, so no project-name prefix is required. The build provides directory indexes for `/paper/`, `/definitions/` and `/verification/`, and a `.nojekyll` file for static hosting.
+
+Before a later public release, confirm the final manuscript and companion address, recheck the published links, add available publication links, and obtain the author's explicit release instruction. Do not turn on Pages or create a public preview as part of private preparation.

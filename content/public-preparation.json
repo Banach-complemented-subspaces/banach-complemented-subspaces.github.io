@@ -1,6 +1,9 @@
 {
-  "status": "Prepared for a private repository; GitHub Pages must remain disabled.",
+  "status": "Uploaded to a private repository; GitHub Pages remains disabled.",
   "date": "2026-09-06",
+  "repository": "https://github.com/Banach-complemented-subspaces/banach-complemented-subspaces.github.io",
+  "futureWebsite": "https://banach-complemented-subspaces.github.io/",
+  "pagesEnabled": false,
   "publicEvidenceRoot": "/evidence-public/",
   "originalEvidencePreserved": true,
   "originalSourceFilesUnchanged": 233,
