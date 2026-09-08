@@ -1,13 +1,14 @@
 {
-  "status": "Uploaded to a private repository; GitHub Pages remains disabled.",
+  "status": "Public release authorised by the author on 8 September 2026.",
   "date": "2026-09-06",
   "repository": "https://github.com/Banach-complemented-subspaces/banach-complemented-subspaces.github.io",
-  "futureWebsite": "https://banach-complemented-subspaces.github.io/",
-  "pagesEnabled": false,
   "publicEvidenceRoot": "/evidence-public/",
   "originalEvidencePreserved": true,
   "originalSourceFilesUnchanged": 233,
   "newLeanAudit": false,
   "publicFileManifest": "/evidence-public/PUBLIC_COPY_SHA256.json",
-  "publicArchiveManifest": "/evidence-public/PUBLIC_ARCHIVE_MEMBERS_SHA256.json"
+  "publicArchiveManifest": "/evidence-public/PUBLIC_ARCHIVE_MEMBERS_SHA256.json",
+  "releaseAuthorisedDate": "2026-09-08",
+  "website": "https://banach-complemented-subspaces.github.io/",
+  "publishingBranch": "codex/pages"
 }

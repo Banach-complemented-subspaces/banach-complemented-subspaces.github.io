@@ -231,7 +231,7 @@ for every finitely supported family $(\theta_i)_{i\in I}$ in $\mathbb K$ satisfy
 
 For a finite-dimensional Banach space $E$, we denote by $u(E)$ the infimum of the unconditional basis constants over all bases of $E$. We shall use without further mention that rescaling the basis vectors by nonzero scalars leaves the unconditional basis constant unchanged.
 
-\subsection{Hilbert norms and factorisation}
+\subsection{Hilbert norms and factorisation}\label{sec:hilbert-norms}
 In addition to their $L_p$ norms, the tensor spaces of \Cref{sec:tensors} carry the Euclidean norm of their coefficient vectors; we call this the \emph{coefficient Hilbert norm} and denote it by $|\cdot|_2$. Hilbert tensor products are denoted by $\otimes_2$. Whenever we discuss adjoints, orthogonality or Hilbert--Schmidt norms on these spaces, we refer to their coefficient Hilbert structures. In particular, orthogonal projections need not be contractive for the Banach norm.
 
 Our inner products are linear in the first variable. We write $A^{\mathsf T}$ for the transpose of a real matrix and $A^*$ for a Hilbert adjoint. For Hilbert spaces $H$ and $K$ with $\dim H=d<\infty$, we set
@@ -359,11 +359,10 @@ If $x$ is a tensor product of $n$ unit vectors, then
  \norm{\langle\,\cdot\,,x\rangle}_{E^*}\leq\alpha_{p'}^n.
 \end{equation*}
 \item\label{it:packet-gaussian}
-For the normalised Gaussian vector $\zeta$,
+For the normalised Gaussian vector $\zeta$ and every contraction $A\colon\mathcal H_n\to\mathcal H_n$,
 \begin{equation*}
  \mathbb E_\zeta[\norm \zeta_E^p]=\gamma_p^p,\qquad
- \mathbb E_\zeta[\norm{A\zeta}_E^2]\leq\gamma_p^2
- \quad\text{if }\norm A_{2\to2}\leq1.
+ \mathbb E_\zeta[\norm{A\zeta}_E^2]\leq\gamma_p^2.
 \end{equation*}
 \end{resultparts}
 \end{lemma}
@@ -521,7 +520,7 @@ Since $x$ and $t$ are independent, the expectation of each summand in $S^2$ is t
 For the fourth-moment bound, let $R_i=b_ib_i^*$ for $i=1,\ldots,k$. For any matrix $A$,
 \begin{equation*}
  \sum_{i=1}^k|\langle R_i,A\rangle_{\mathrm{HS}}|^2
- =\norm{\diag(B^*AB)}_2^2
+ =\sum_{i=1}^k|(B^*AB)_{ii}|^2
  \leq\norm B^4\norm A_{\mathrm{HS}}^2.
 \end{equation*}
 Applying this inequality with $A=\mathcal D_n(R_j)$, summing over $j=1,\ldots,k$, and using \Cref{lem:rank-one-moment}, we obtain
@@ -581,7 +580,7 @@ We may assume $k=\dim F>0$. We first compare the given basis with the coefficien
 \end{equation*}
 Since each sign multiplier is its own inverse, the preceding bound applied in both directions yields
 \begin{equation}\label{eq:synthesis-bounds}
- \norm B\leq C\alpha_p^n,\qquad \norm{B^{-1}}\leq C\alpha_p^n.
+ \norm B_{2\to2}\leq C\alpha_p^n,\qquad \norm{B^{-1}}_{2\to2}\leq C\alpha_p^n.
 \end{equation}
 The corresponding operator for $(g_i)_{i=1}^k$ is $(B^{-1})^*$ and therefore satisfies the same bound.
 
@@ -795,7 +794,7 @@ where $\zeta$ is the normalised Gaussian vector in $E$. If $\eta=aDC^2\leq1/8$, 
 \end{samepage}
 
 \begin{proof}
-Let $(z_i,z_i^*)_{i\in I}$ be the basis and its coordinate functionals, where $I=\mathbb N=\{1,2,\ldots\}$ in the infinite-dimensional case and $I=\{1,\ldots,m\}$ if $\dim Y=m<\infty$. Denote the inclusion and projection associated with $Y=E\oplus_2W$ by $\iota_E\colon E\to Y$ and $P_E\colon Y\to E$, respectively, and put
+Let $(z_i,z_i^*)_{i\in I}$ be the basis and its coordinate functionals, where $I=\mathbb N=\{1,2,\ldots\}$ in the infinite-dimensional case and $I=\{1,\ldots,m\}$ if $\dim Y=m<\infty$. Let $\iota_E\colon E\to Y$ be the canonical inclusion, and let $P_E\colon Y\to E$ and $P_W\colon Y\to W$ be the coordinate projections associated with $Y=E\oplus_2W$. Put
 \begin{equation*}
     Q_i=z_i\otimes z_i^*,\qquad
     A_i=P_EQ_i\iota_E,\qquad t_i=\tr A_i\quad(i\in I).
@@ -884,15 +883,15 @@ Set
     \qquad W_j=\left(\bigoplus_{\substack{i=1\\i\ne j}}^{\infty}E_i\right)_2
     \quad(j\geq1).
 \end{equation}
-Every subspace $V\subseteq W_j$ of dimension at most $3q_j$ is $D_j$-Hilbertian. Indeed, its projection onto the later summands is $2$-Hilbertian by \Cref{lem:local-hilbert} and \eqref{eq:recursive-separation}. The earlier sum satisfies
+Every subspace $V\subseteq W_j$ of dimension at most $3q_j$ is $D_j$-Hilbertian. Indeed, its projection onto the later summands is $2$-Hilbertian by \Cref{lem:local-hilbert} and \eqref{eq:recursive-separation}. For $v\in V$, write $v=v_-+v_+$, where $v_-$ and $v_+$ are its coordinate projections onto $(\bigoplus_{i=1}^{j-1}E_i)_2$ and $(\bigoplus_{i=j+1}^{\infty}E_i)_2$, respectively. Writing $v_-=(v_i)_{i=1}^{j-1}$, we use the coefficient Hilbert norms of \Cref{sec:hilbert-norms} to define $|v_-|_2^2=\sum_{i=1}^{j-1}|v_i|_2^2$. By \Cref{lem:packet-estimates},
 \begin{equation*}
-    |v_-|_2\leq\norm{v_-}\leq D_j|v_-|_2
+    |v_-|_2\leq\norm{v_-}\leq D_j|v_-|_2.
 \end{equation*}
-by \Cref{lem:packet-estimates}. Combining this Hilbert norm with a Hilbert norm $|\cdot|_+$ on the later projection gives, on $V$,
+Choose a Hilbert norm $|\cdot|_+$ on the later projection of $V$ such that $|v_+|_+\leq\norm{v_+}\leq2|v_+|_+$, and define a Hilbert norm on $V$ by
 \begin{equation*}
-    |v|_H^2=|v_-|_2^2+|v_+|_+^2,
-    \qquad |v|_H\leq\norm v\leq D_j|v|_H.
+    |v|_H^2=|v_-|_2^2+|v_+|_+^2.
 \end{equation*}
+Since $D_j\geq2$, this norm satisfies $|v|_H\leq\norm v\leq D_j|v|_H$ for every $v\in V$.
 
 The next theorem compares the lower overlap bound from \Cref{lem:finite-selection}\ref{it:selection-overlap} with the upper bound in \Cref{prop:finite-obstruction}\ref{it:finite-overlap}. The recursive choice of summands forces unconditional basis constants to grow with $j$ in every closed subspace of $Y$ containing $E_j$, thereby ruling out both DPR-lust and an unconditional basis of $Y$.
 
@@ -1081,7 +1080,7 @@ The lower bound follows because every inclusion of a nonzero subspace has norm o
 Combining \Cref{lem:complemented-gl} with \Cref{thm:separated} gives the GL/DPR separation for $Z=P(X)$. We also record the geometric properties that follow from its $\ell_2$-sum structure.
 
 \begin{corollary}\label{cor:range-not-lattice}\label{cor:local-structure}
-Let $P$ be the projection constructed in \Cref{sec:embedding}, and give $Z=P(X)$ its inherited norm. Then:
+Let $P$ be the projection constructed in \Cref{sec:embedding}, and set $Z=P(X)$. Then:
 \begin{resultparts}
 \item\label{it:local-lust}
 The local unconditional constants satisfy
@@ -1118,7 +1117,7 @@ Its coordinate decomposition is contractive and unconditional, so $Z$ has the me
 
 \subsection{Duality}
 
-We next show that $Y^*$ also fails DPR-lust. The proof uses the local Hilbert estimate for quotients in \Cref{lem:local-hilbert}, which allows us to work with the same sequence of summands as before.
+We next show that $Y^*$ also fails DPR-lust. The proof uses the local Hilbert estimate for quotients in \Cref{lem:local-hilbert}, which allows us to work with the same sequence of summands as before. We use the canonical isometric identification $Y^*=E_j^*\oplus_2W_j^*$ for $j\geq1$.
 
 \Needspace{7\baselineskip}
 \begin{proposition}\label{prop:dual-obstruction}
@@ -1314,7 +1313,7 @@ Both this set and its complement are invariant under negation. Applying \Cref{le
 \end{equation}
 For these choices of $M$ and $p_n$, bases with constants tending to one can also be obtained from the Lebesgue-constant estimates of Blahota, Persson and Tephnadze \cite[Theorem~1]{BlahotaPerssonTephnadze2018}, using the same pairing argument and interpolation between $L_2$ and $L_\infty$.
 
-An analogous ordering is available for the complex sphere spaces of \Cref{sec:tensors}. Consider the orthonormal monomials
+An analogous ordering is available for the complex sphere spaces of \Cref{sec:tensors}. For $t=(t_s)_{s=1}^n\in\Omega^n$, write $w_{s,k}(t)=w_k(t_s)$ for $1\leq s\leq n$ and $k\in\{1,2\}$. Consider the orthonormal monomials
 \begin{equation*}
  h_\iota=\prod_{s=1}^n\overline{w_{s,\iota_s}},
  \qquad \iota\in\{1,2\}^n.

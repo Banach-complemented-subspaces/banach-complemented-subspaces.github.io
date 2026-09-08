@@ -75,9 +75,9 @@
     "original_path": "paper/manuscript.pdf",
     "public_path": "paper/manuscript.pdf",
     "original_sha256": "04d0d221f12ac54d2cccfe875a3e869b516704cff0f57864ea8ec25dddadbdf7",
-    "public_sha256": "fb90482d82d3b359835e3dda8facb79606e13e9b03cfa217b4a976764fc73c94",
+    "public_sha256": "a78ef57936a5f9b47f5da923703a17c1e280cd397335dfcf9a55fa21b5a31cb9",
     "original_bytes": 560501,
-    "public_bytes": 607180,
+    "public_bytes": 608381,
     "changed": true,
     "change_kind": "author-approved final manuscript replacement"
   },

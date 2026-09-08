@@ -1,7 +1,7 @@
 [
   {
     "path": "asset-manifest.json",
-    "sha256": "c74060b9a40fb39791b496d442024e311a3496c72ea87b9bc18e7abb8fe85748",
+    "sha256": "ed5e370d57f50842e71e189d37a3b7f7b228ea6988684eeb8d682f86e0a26f6a",
     "bytes": 23284
   },
   {
@@ -36,7 +36,7 @@
   },
   {
     "path": "evidence-public/PUBLIC_COPY_SHA256.json",
-    "sha256": "1a80c7597165ea0d38629aade89e4105c380240334916a7fe56ed5a4b5292fbe",
+    "sha256": "eb7f52b71b2df88d6c33b6d91b4fc6779f2da5363e45da3baa5e178934554246",
     "bytes": 188286
   },
   {
@@ -2021,7 +2021,7 @@
   },
   {
     "path": "paper/manuscript.pdf",
-    "sha256": "fb90482d82d3b359835e3dda8facb79606e13e9b03cfa217b4a976764fc73c94",
-    "bytes": 607180
+    "sha256": "a78ef57936a5f9b47f5da923703a17c1e280cd397335dfcf9a55fa21b5a31cb9",
+    "bytes": 608381
   }
 ]

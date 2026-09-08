@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: paper.manuscript.title,
   description:
     'The mathematics, exact Lean statements, and verification evidence.',
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   referrer: 'no-referrer',
   icons: { icon: '/favicon.svg' },
 };
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <body>
         <a className="skip" href="#main">
           Skip to content
@@ -33,7 +33,6 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <footer>
           <span>Antonio Acuaviva · September 2026</span>
-          <span>Local review copy · Nothing published</span>
           <a href="/verification/#methodology">Formalisation & attribution</a>
         </footer>
       </body>

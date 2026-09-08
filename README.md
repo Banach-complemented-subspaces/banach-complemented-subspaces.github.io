@@ -2,7 +2,7 @@
 
 Mathematical companion to Antonio Acuaviva's *A negative solution to the complemented subspace problem for Banach spaces with unconditional bases*.
 
-This is a private preparation for publication. GitHub Pages must remain disabled until the author authorises public release. There is no automatic deployment workflow. The paper must be publicly available before the companion website is published.
+Public companion at [banach-complemented-subspaces.github.io](https://banach-complemented-subspaces.github.io/), released with the author's permission on 8 September 2026. The Paper page provides the final manuscript. The source branch and the generated website branch are kept separately, so ordinary source commits do not publish unfinished changes.
 
 ## Read the website locally
 
@@ -50,14 +50,16 @@ Hashes embedded in historical certificates, validation reports and original mani
 
 For an independent check, run `python scripts/check-public-evidence.py`. The normal website build checks exact Lean excerpts, 233 frozen source/configuration hashes and the recorded public file hashes. The original audits' mathematical scope and limitations remain documented on the Verification page.
 
-## Editing and eventual publication
+## Editing and publication
 
 Use British English and direct mathematical prose. Avoid “supplied”, “asserted” and “threshold”, and computing terms such as “data”, “input”, “output” and “endpoint” in mathematical explanations. Keep quoted Lean identifiers, source excerpts and archived mathematical statements verbatim.
 
 Do not alter Lean excerpts to make them match a changed manuscript. A change to a mathematical statement requires corresponding verified source and evidence. The final statements of Theorem A, Theorem B and Corollary C are identical to the preceding LaTeX snapshot. The final abstract removes “complete” before “Lean 4 formalisation”. The website follows that wording and the final paper's numbering for its visible corollary references. Older detailed comparison notes retain both the numbering and page references of the earlier paper identified in `content/paper.json`; they are historical records. Updating the manuscript is not a new Lean audit.
 
-The repository is [Banach-complemented-subspaces/banach-complemented-subspaces.github.io](https://github.com/Banach-complemented-subspaces/banach-complemented-subspaces.github.io). It is private with GitHub Pages disabled. The organisation is owned by the author's `ahacua` account.
+The public repository is [Banach-complemented-subspaces/banach-complemented-subspaces.github.io](https://github.com/Banach-complemented-subspaces/banach-complemented-subspaces.github.io). The organisation is owned by the author's `ahacua` account.
 
-The intended website address is [https://banach-complemented-subspaces.github.io/](https://banach-complemented-subspaces.github.io/). This is the organisation's own homepage, separate from the author's personal website. It is not yet published. The site uses paths relative to the domain root, so no project-name prefix is required. The build provides directory indexes for `/paper/`, `/definitions/` and `/verification/`, and a `.nojekyll` file for static hosting.
+The website address is [https://banach-complemented-subspaces.github.io/](https://banach-complemented-subspaces.github.io/). This is the organisation's own homepage, separate from the author's personal website. The site uses paths relative to the domain root, so no project-name prefix is required. The build provides directory indexes for `/paper/`, `/definitions/` and `/verification/`, and a `.nojekyll` file for static hosting.
 
-Before a later public release, confirm the final manuscript and companion address, recheck the published links, add available publication links, and obtain the author's explicit release instruction. Do not turn on Pages or create a public preview as part of private preparation.
+GitHub Pages publishes the root of `codex/pages`, which contains only the checked contents of `dist/client/`. Source remains on `codex/private-preparation`; that historical branch name does not describe repository visibility. There is no custom build workflow: GitHub deploys the prepared static files, with `.nojekyll` preventing a Jekyll conversion.
+
+For an authorised update, rebuild and check the source, then update `codex/pages` with exactly the resulting static files, removing obsolete generated files. Preserve the branch history and do not include the source checkout, private evidence or local QA. Check the resulting Pages deployment and live download hashes before reporting the update as published. Add arXiv or journal links only when their real addresses are available and approved.
