@@ -1,0 +1,12 @@
+{
+  "completed": "2026-09-06T11:00:39.396710+00:00",
+  "status": "PASS",
+  "dependency_source_count": 10056,
+  "dependency_source_archive": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\source\\dependency-sources.zip",
+  "dependency_source_archive_bytes": 35368730,
+  "dependency_source_archive_sha256": "041d0a95702d3e42bfc048d93b39758e959ea39b3b9daa50221a78d640918e35",
+  "all_dependency_members_crc_and_sha256_checked": true,
+  "project_source_archive_sha256": "daa9c0e87333f915cb206932a36e1277656b88f43ab5e77544431b886440b56c",
+  "project_archive_matches_checkpoint": true,
+  "contents": "Pinned tracked source files, including tracked ProofWidgets JS inputs; no Git metadata or precompiled Lean artifacts."
+}

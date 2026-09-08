@@ -1,0 +1,7 @@
+WORKING DIRECTORY: LEAN_PROJECT
+START UTC: 2026-09-05T23:21:32.3816422Z
+COMMAND: & 'WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'verification/independent-audit-2026-09-05/TraceDependencies.lean'
+TERMINAL OUTPUT:
+Dependency audit: 40291 constants; 1946 project constants; 1332580 edges. Complete=true; stock axiom cross-check=true; local suspicious=0.
+EXIT CODE: 0
+END UTC: 2026-09-05T23:22:16.8966330Z

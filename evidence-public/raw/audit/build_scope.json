@@ -1,0 +1,364 @@
+{
+  "root_module": "ComplementedSubspace",
+  "root_import_closure_count": 177,
+  "root_import_closure": [
+    "BanLat.Basic",
+    "BanLat.Disjoint",
+    "BanLat.Dual",
+    "BanLat.LLexpr",
+    "BanLat.Normed",
+    "BanLat.Operators.Hom",
+    "BanLat.Operators.OrderBounded",
+    "BanLat.Operators.Positive",
+    "BanLat.Operators.Regular",
+    "BanLat.Operators.RieszKantorovich",
+    "BanLat.OrderComplete",
+    "BanLat.OrderUnit",
+    "BanLat.RieszDec",
+    "BanLat.Substructures.Band.Basic",
+    "BanLat.Substructures.Band.DisjointComplement",
+    "BanLat.Substructures.Band.Generated",
+    "BanLat.Substructures.Band.Lattice",
+    "BanLat.Substructures.Band.PPP",
+    "BanLat.Substructures.Band.Projection",
+    "BanLat.Substructures.Ideal",
+    "BanLat.Substructures.Sublattice",
+    "ComplementedSubspace",
+    "ComplementedSubspace.ActualProjectionBidualDPR",
+    "ComplementedSubspace.ActualProjectionDPR",
+    "ComplementedSubspace.ActualProjectionDualDPR",
+    "ComplementedSubspace.Ambient",
+    "ComplementedSubspace.AmbientBasis",
+    "ComplementedSubspace.AmbientFiniteApproximation",
+    "ComplementedSubspace.AmbientLattice",
+    "ComplementedSubspace.AmbientProjection",
+    "ComplementedSubspace.AmbientSchauder",
+    "ComplementedSubspace.AmbientSeparable",
+    "ComplementedSubspace.AmbientUniformConvex",
+    "ComplementedSubspace.BasisBounds",
+    "ComplementedSubspace.BasisRestriction",
+    "ComplementedSubspace.BasisTransport",
+    "ComplementedSubspace.ComplexAmbient",
+    "ComplementedSubspace.ComplexAmbientSchauder",
+    "ComplementedSubspace.ComplexCorollary",
+    "ComplementedSubspace.ComplexCorollaryAssembly",
+    "ComplementedSubspace.ComplexFrameCoefficient",
+    "ComplementedSubspace.ComplexFrameCoefficientRange",
+    "ComplementedSubspace.ComplexFrameProjection",
+    "ComplementedSubspace.ComplexFrameRealification",
+    "ComplementedSubspace.ComplexProjectionEnergy",
+    "ComplementedSubspace.ComplexProjectionRealEquiv",
+    "ComplementedSubspace.ComplexRealDPR",
+    "ComplementedSubspace.ComplexRecursiveProjection",
+    "ComplementedSubspace.ComplexReindexedFrameProjection",
+    "ComplementedSubspace.ComplexTensorProjection",
+    "ComplementedSubspace.CorollaryStatement",
+    "ComplementedSubspace.DenseContractions",
+    "ComplementedSubspace.DenseContractionsScalar",
+    "ComplementedSubspace.DiagonalFrameProduct",
+    "ComplementedSubspace.DiagonalFrameSummand",
+    "ComplementedSubspace.DPRIsomorphism",
+    "ComplementedSubspace.DPRObstruction",
+    "ComplementedSubspace.DPRPredicates",
+    "ComplementedSubspace.DPRtoGL",
+    "ComplementedSubspace.FiniteApproximation",
+    "ComplementedSubspace.FiniteBasisTraceBound",
+    "ComplementedSubspace.FiniteBidual",
+    "ComplementedSubspace.FiniteBidualDPRLower",
+    "ComplementedSubspace.FiniteBlockDPRLower",
+    "ComplementedSubspace.FiniteBlockObstruction",
+    "ComplementedSubspace.FiniteCoordinateSelection",
+    "ComplementedSubspace.FiniteCorrection",
+    "ComplementedSubspace.FiniteCubeBound",
+    "ComplementedSubspace.FiniteDualBasis",
+    "ComplementedSubspace.FiniteDualDPRLower",
+    "ComplementedSubspace.FiniteDualSuperspace",
+    "ComplementedSubspace.FiniteFrame",
+    "ComplementedSubspace.FiniteHeadHilbert",
+    "ComplementedSubspace.FiniteHilbertAverage",
+    "ComplementedSubspace.FiniteLpGeometry",
+    "ComplementedSubspace.FiniteOverlapBasisColumns",
+    "ComplementedSubspace.FiniteOverlapBound",
+    "ComplementedSubspace.FiniteOverlapConclusion",
+    "ComplementedSubspace.FiniteOverlapDualScale",
+    "ComplementedSubspace.FiniteOverlapGoodSecond",
+    "ComplementedSubspace.FiniteOverlapLp",
+    "ComplementedSubspace.FiniteOverlapMatrixNorms",
+    "ComplementedSubspace.FiniteOverlapMoments",
+    "ComplementedSubspace.FiniteOverlapObstruction",
+    "ComplementedSubspace.FiniteOverlapRandomization",
+    "ComplementedSubspace.FiniteOverlapScale",
+    "ComplementedSubspace.FiniteOverlapUpper",
+    "ComplementedSubspace.FiniteParameterBounds",
+    "ComplementedSubspace.FiniteParameterGap",
+    "ComplementedSubspace.FiniteProductObstruction",
+    "ComplementedSubspace.FiniteProjectionTrace",
+    "ComplementedSubspace.FiniteSelectedHilbertModel",
+    "ComplementedSubspace.FiniteSelectionCoordinates",
+    "ComplementedSubspace.FiniteSigns",
+    "ComplementedSubspace.FiniteSignsComplex",
+    "ComplementedSubspace.FiniteSignsInterpolation",
+    "ComplementedSubspace.FiniteSuperspaceSplitting",
+    "ComplementedSubspace.FiniteTraceOverlap",
+    "ComplementedSubspace.FiniteTraceSelection",
+    "ComplementedSubspace.FrameCoefficient",
+    "ComplementedSubspace.FrameCoefficientHilbert",
+    "ComplementedSubspace.FrameCoefficientNorm",
+    "ComplementedSubspace.FrameCoefficientRange",
+    "ComplementedSubspace.FrameCoefficientReindexedRange",
+    "ComplementedSubspace.FrameProjectionNorm",
+    "ComplementedSubspace.FrameProjectionRange",
+    "ComplementedSubspace.GLDualRetraction",
+    "ComplementedSubspace.GLRetraction",
+    "ComplementedSubspace.HilbertComplement",
+    "ComplementedSubspace.HilbertOverlap",
+    "ComplementedSubspace.HilbertTraceTransfer",
+    "ComplementedSubspace.InfiniteFrameObstruction",
+    "ComplementedSubspace.IsometricProductDPRLower",
+    "ComplementedSubspace.IsometricProductSplitting",
+    "ComplementedSubspace.LatticeApproximation",
+    "ComplementedSubspace.LatticeBasis",
+    "ComplementedSubspace.LatticeNonisomorphism",
+    "ComplementedSubspace.LatticeSpectral",
+    "ComplementedSubspace.LocalHilbert",
+    "ComplementedSubspace.LocalHilbertCompactness",
+    "ComplementedSubspace.LocalHilbertCoordinates",
+    "ComplementedSubspace.LocalHilbertDual",
+    "ComplementedSubspace.LocalHilbertDualTop",
+    "ComplementedSubspace.LocalHilbertEmbeddedRenorm",
+    "ComplementedSubspace.LocalHilbertFactorization",
+    "ComplementedSubspace.LocalHilbertHeadRenorm",
+    "ComplementedSubspace.LocalHilbertProjection",
+    "ComplementedSubspace.LocalHilbertProperty",
+    "ComplementedSubspace.LocalHilbertQuotient",
+    "ComplementedSubspace.LocalHilbertRecursiveKernelDual",
+    "ComplementedSubspace.LocalHilbertSum",
+    "ComplementedSubspace.LocalHilbertSumDual",
+    "ComplementedSubspace.LocalHilbertTransport",
+    "ComplementedSubspace.LocalUnconditional",
+    "ComplementedSubspace.LpHeadTail",
+    "ComplementedSubspace.LpSubmodule",
+    "ComplementedSubspace.LpSubmoduleScalar",
+    "ComplementedSubspace.LpTwoParallelogram",
+    "ComplementedSubspace.LpTwoUniformConvex",
+    "ComplementedSubspace.LpUniformEquiv",
+    "ComplementedSubspace.NormalizedHilbertSynthesis",
+    "ComplementedSubspace.NormSqSplitting",
+    "ComplementedSubspace.Parameters",
+    "ComplementedSubspace.ProductFrame",
+    "ComplementedSubspace.ProductFrameIndex",
+    "ComplementedSubspace.ProductFrameLp",
+    "ComplementedSubspace.ProductFrameMoments",
+    "ComplementedSubspace.ProductFrameRowWitness",
+    "ComplementedSubspace.ProductFrameSignContraction",
+    "ComplementedSubspace.ProductFrameSignSample",
+    "ComplementedSubspace.ProductFrameSymmetry",
+    "ComplementedSubspace.ProductFrameTrace",
+    "ComplementedSubspace.ProductFrameTraceBound",
+    "ComplementedSubspace.ProductFrameWitness",
+    "ComplementedSubspace.ProjectionCorollaries",
+    "ComplementedSubspace.ProjectionOverlapLower",
+    "ComplementedSubspace.ProjectionPerturbation",
+    "ComplementedSubspace.PureFrameDPR",
+    "ComplementedSubspace.RealMainConsequences",
+    "ComplementedSubspace.RealMainTheorem",
+    "ComplementedSubspace.RecursiveDiagonalBidualDPR",
+    "ComplementedSubspace.RecursiveDiagonalDPR",
+    "ComplementedSubspace.RecursiveDiagonalDualDPR",
+    "ComplementedSubspace.RecursiveHeadHilbert",
+    "ComplementedSubspace.RecursiveKernelHilbert",
+    "ComplementedSubspace.RecursiveParameters",
+    "ComplementedSubspace.RecursiveProjection",
+    "ComplementedSubspace.RecursiveTailHilbert",
+    "ComplementedSubspace.ReindexedFrameProjection",
+    "ComplementedSubspace.SchauderDPR",
+    "ComplementedSubspace.SelectedCoefficientHilbert",
+    "ComplementedSubspace.SelectedHilbertReplacement",
+    "ComplementedSubspace.SelectedProjectionSetup",
+    "ComplementedSubspace.TensorMoment",
+    "ComplementedSubspace.TensorProjection",
+    "ComplementedSubspace.TheoremStatement",
+    "ComplementedSubspace.UnconditionalHilbertSynthesis"
+  ],
+  "all_library_module_count": 193,
+  "all_library_source_groups": [
+    {
+      "Name": "ComplementedSubspace",
+      "Count": 171
+    },
+    {
+      "Name": "root sources (including scratch/audits)",
+      "Count": 1
+    },
+    {
+      "Name": "vendored BanLat",
+      "Count": 21
+    }
+  ],
+  "omitted_library_module_count": 16,
+  "omitted_library_modules": [
+    {
+      "file": "ComplementedSubspace/ComplexCorollaryAudit.lean",
+      "module": "ComplementedSubspace.ComplexCorollaryAudit",
+      "imports": [
+        "ComplementedSubspace.ComplexCorollary"
+      ],
+      "sha256": "cb874e7ffb81312e608354f9a480da630c9b6a6925d489713825b6545459f046"
+    },
+    {
+      "file": "ComplementedSubspace/ComplexRealDPRAudit.lean",
+      "module": "ComplementedSubspace.ComplexRealDPRAudit",
+      "imports": [
+        "ComplementedSubspace.ComplexRealDPR"
+      ],
+      "sha256": "752c8a1edcd070d8d476016317f634469cb517910806bbd631950a96df4549dd"
+    },
+    {
+      "file": "ComplementedSubspace/FiniteHilbertWitnessAudit.lean",
+      "module": "ComplementedSubspace.FiniteHilbertWitnessAudit",
+      "imports": [
+        "ComplementedSubspace.FiniteHilbertAverage",
+        "ComplementedSubspace.ProductFrameWitness",
+        "ComplementedSubspace.ProductFrameSignSample",
+        "ComplementedSubspace.ProductFrameRowWitness"
+      ],
+      "sha256": "f0fd206cbc042906351617c036d6a20a8120426f1d01341ec0a543d1308cfd9c"
+    },
+    {
+      "file": "ComplementedSubspace/FiniteOverlapScaleAudit.lean",
+      "module": "ComplementedSubspace.FiniteOverlapScaleAudit",
+      "imports": [
+        "ComplementedSubspace.FiniteOverlapScale"
+      ],
+      "sha256": "75a3de594a5cad76aeed7978a857e51b2d84c6ed4dc7f75b8a3aebb7c5c864d3"
+    },
+    {
+      "file": "ComplementedSubspace/FiniteParameterAudit.lean",
+      "module": "ComplementedSubspace.FiniteParameterAudit",
+      "imports": [
+        "ComplementedSubspace.FiniteParameterBounds"
+      ],
+      "sha256": "5b90bd768ea730909132ac9ea0916409ec5346fcf012290f7e36e771a724ed49"
+    },
+    {
+      "file": "ComplementedSubspace/LocalHilbertAudit.lean",
+      "module": "ComplementedSubspace.LocalHilbertAudit",
+      "imports": [
+        "ComplementedSubspace.LocalHilbertProjection",
+        "ComplementedSubspace.LocalHilbertDual",
+        "ComplementedSubspace.LocalHilbertFactorization",
+        "ComplementedSubspace.LocalHilbertSum",
+        "ComplementedSubspace.LocalHilbertSumDual"
+      ],
+      "sha256": "dfc5b6f3f27c5119af3ccc435d5c24f6827d16c123fcb81c56d868a6eeb45bc5"
+    },
+    {
+      "file": "ComplementedSubspace/LocalHilbertDualTopAudit.lean",
+      "module": "ComplementedSubspace.LocalHilbertDualTopAudit",
+      "imports": [
+        "ComplementedSubspace.LocalHilbertDualTop"
+      ],
+      "sha256": "402cae0847716b8d13345a237d0c989d5f683c6e432d16f0b313544f9a4719e7"
+    },
+    {
+      "file": "ComplementedSubspace/LocalHilbertQuotientAudit.lean",
+      "module": "ComplementedSubspace.LocalHilbertQuotientAudit",
+      "imports": [
+        "ComplementedSubspace.LocalHilbertHeadRenorm",
+        "ComplementedSubspace.LocalHilbertRecursiveQuotient",
+        "ComplementedSubspace.LocalHilbertRecursiveKernelDual"
+      ],
+      "sha256": "8eed3ef6c2e8ac32a20ba118ec19bf3ac0c9600a833899f317171089cfef47b2"
+    },
+    {
+      "file": "ComplementedSubspace/LocalHilbertRecursiveQuotient.lean",
+      "module": "ComplementedSubspace.LocalHilbertRecursiveQuotient",
+      "imports": [
+        "ComplementedSubspace.LocalHilbertHeadRenorm",
+        "ComplementedSubspace.RecursiveParameters"
+      ],
+      "sha256": "d9a711e14c57f5f51e8ab0d59e8565e96dbcb6e9ef3d978bb3c7946740e883a9"
+    },
+    {
+      "file": "ComplementedSubspace/ProductFrameTranspose.lean",
+      "module": "ComplementedSubspace.ProductFrameTranspose",
+      "imports": [
+        "ComplementedSubspace.ProductFrameMoments"
+      ],
+      "sha256": "8cbdf48735c7d0286e1e689903193b1ea23d13fe8f018c2db98bfd10ab16bcfa"
+    },
+    {
+      "file": "ComplementedSubspace/ProjectionAssemblyAudit.lean",
+      "module": "ComplementedSubspace.ProjectionAssemblyAudit",
+      "imports": [
+        "ComplementedSubspace.AmbientUniformConvex",
+        "ComplementedSubspace.LpTwoParallelogram",
+        "ComplementedSubspace.LpSubmodule",
+        "ComplementedSubspace.FrameCoefficientReindexedRange",
+        "ComplementedSubspace.LpHeadTail",
+        "ComplementedSubspace.DiagonalFrameSummand"
+      ],
+      "sha256": "5a67cd437a813c7410514d01ecd8857355df557c14aff2214f1aedfefab92e24"
+    },
+    {
+      "file": "ComplementedSubspace/PureFrameDPRAudit.lean",
+      "module": "ComplementedSubspace.PureFrameDPRAudit",
+      "imports": [
+        "ComplementedSubspace.PureFrameDPR"
+      ],
+      "sha256": "2c6e25d798adfba8ea576b5a781c5e2384c0cf7b8fd5481f5907e05a83f52c80"
+    },
+    {
+      "file": "ComplementedSubspace/RealMainAudit.lean",
+      "module": "ComplementedSubspace.RealMainAudit",
+      "imports": [
+        "ComplementedSubspace.RealMainTheorem"
+      ],
+      "sha256": "ee81e17bfedc7726d9d0ad586d882c6affabd1cab63bde3fa71023c1c1a718dd"
+    },
+    {
+      "file": "ComplementedSubspace/RealMainConsequencesAudit.lean",
+      "module": "ComplementedSubspace.RealMainConsequencesAudit",
+      "imports": [
+        "ComplementedSubspace.RealMainConsequences"
+      ],
+      "sha256": "f9609adc151a23fdb9fb0f0bfc59e135ed5f9341d591b5e9e10aa21f8955128e"
+    },
+    {
+      "file": "ComplementedSubspace/RecursiveParametersAudit.lean",
+      "module": "ComplementedSubspace.RecursiveParametersAudit",
+      "imports": [
+        "ComplementedSubspace.RecursiveParameters"
+      ],
+      "sha256": "2d25a94879b7289a7546b0031aedee168a66965ce932a39e6ef619f8083eca4c"
+    },
+    {
+      "file": "ComplementedSubspace/SelectedFrameBasis.lean",
+      "module": "ComplementedSubspace.SelectedFrameBasis",
+      "imports": [
+        "ComplementedSubspace.SelectedProjectionSetup",
+        "ComplementedSubspace.FiniteOverlapMatrixNorms"
+      ],
+      "sha256": "1a7a9e86f799d387003baba65a544da78386af02ceef0e04180a4700d37f7d04"
+    }
+  ],
+  "extra_olean_targets": [
+    "+ComplementedSubspace.ComplexCorollaryAudit:olean",
+    "+ComplementedSubspace.ComplexRealDPRAudit:olean",
+    "+ComplementedSubspace.FiniteHilbertWitnessAudit:olean",
+    "+ComplementedSubspace.FiniteOverlapScaleAudit:olean",
+    "+ComplementedSubspace.FiniteParameterAudit:olean",
+    "+ComplementedSubspace.LocalHilbertAudit:olean",
+    "+ComplementedSubspace.LocalHilbertDualTopAudit:olean",
+    "+ComplementedSubspace.LocalHilbertQuotientAudit:olean",
+    "+ComplementedSubspace.LocalHilbertRecursiveQuotient:olean",
+    "+ComplementedSubspace.ProductFrameTranspose:olean",
+    "+ComplementedSubspace.ProjectionAssemblyAudit:olean",
+    "+ComplementedSubspace.PureFrameDPRAudit:olean",
+    "+ComplementedSubspace.RealMainAudit:olean",
+    "+ComplementedSubspace.RealMainConsequencesAudit:olean",
+    "+ComplementedSubspace.RecursiveParametersAudit:olean",
+    "+ComplementedSubspace.SelectedFrameBasis:olean"
+  ],
+  "banlat_root_file_present": false
+}

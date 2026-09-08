@@ -1,0 +1,25 @@
+import ComplementedSubspace.RealMainTheorem
+import Lean
+
+set_option pp.proofs true
+set_option pp.width 110
+
+#check ComplementedSubspace.realMainTheorem
+#check (ComplementedSubspace.realMainTheorem : ComplementedSubspace.RealMainTheoremStatement)
+#print ComplementedSubspace.realMainTheorem
+#print axioms ComplementedSubspace.realMainTheorem
+
+example : ComplementedSubspace.RealMainTheoremStatement :=
+  ComplementedSubspace.realMainTheorem
+
+open Lean Elab Command in
+run_cmd do
+  let env ← getEnv
+  match env.checked.get.find? `ComplementedSubspace.realMainTheorem with
+  | some (.thmInfo info) =>
+      unless info.type == mkConst `ComplementedSubspace.RealMainTheoremStatement do
+        throwError "The theorem's stored type is not exactly the requested statement constant."
+      unless info.levelParams.isEmpty do
+        throwError "Unexpected universe parameters in the closed main theorem."
+      logInfo "KERNEL DECLARATION CHECK: theorem; exact stored type ComplementedSubspace.RealMainTheoremStatement; no parameters."
+  | _ => throwError "The requested main declaration is missing or is not a theorem."

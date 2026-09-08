@@ -1,0 +1,1 @@
+PASS: all 233 original local Lean/configuration files are unchanged by SHA256.

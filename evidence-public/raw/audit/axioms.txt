@@ -1,0 +1,10 @@
+WORKING DIRECTORY: LEAN_PROJECT
+START UTC: 2026-09-05T23:15:29.7442669Z
+COMMAND: & 'WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'verification/independent-audit-2026-09-05/PrintAxioms.lean'
+TERMINAL OUTPUT:
+'ComplementedSubspace.realMainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+axiom propext : ∀ {a b : Prop}, (a ↔ b) → a = b
+axiom Classical.choice.{u} : {α : Sort u} → Nonempty α → α
+axiom Quot.sound.{u} : ∀ {α : Sort u} {r : α → α → Prop} {a b : α}, r a b → Quot.mk r a = Quot.mk r b
+EXIT CODE: 0
+END UTC: 2026-09-05T23:15:55.8644073Z

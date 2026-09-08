@@ -1,0 +1,2 @@
+PASS: five proof-at-type checks; five statement and twenty project definitions printed; existing formulation review exit 0; 82 exact source/context captures match.
+See endpoint-types-and-axioms.log, printed-mathematical-definitions.log, review-formulation-identity.log, identity-source-and-scan.json.

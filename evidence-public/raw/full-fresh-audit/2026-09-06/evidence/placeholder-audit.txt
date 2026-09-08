@@ -1,0 +1,2 @@
+PASS for imported-project lexical gate; zero gate hits. 2,831 files scanned. External placeholder-generating tooling is present and documented.
+See source-scan-review.md and identity-lexical-occurrences.jsonl. The five endpoint and 2,573 project-namespace transitive axiom checks passed independently.

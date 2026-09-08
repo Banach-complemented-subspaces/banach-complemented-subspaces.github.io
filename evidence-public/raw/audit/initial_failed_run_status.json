@@ -1,0 +1,66 @@
+{
+  "commands": [
+    {
+      "step": "clean",
+      "command": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'clean' 'complemented_subspace_trial'",
+      "arguments": [
+        "--no-cache",
+        "clean",
+        "complemented_subspace_trial"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-09-05T22:40:09.1896145Z",
+      "finishedUtc": "2026-09-05T22:40:11.6873016Z",
+      "log": "clean.log"
+    },
+    {
+      "step": "build",
+      "command": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'build' '+ComplementedSubspace:olean'",
+      "arguments": [
+        "--no-cache",
+        "build",
+        "+ComplementedSubspace:olean"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-09-05T22:40:11.7222835Z",
+      "finishedUtc": "2026-09-05T23:08:14.5354564Z",
+      "log": "build.log"
+    },
+    {
+      "step": "direct main source check",
+      "command": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'ComplementedSubspace/RealMainTheorem.lean'",
+      "arguments": [
+        "--no-cache",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "ComplementedSubspace/RealMainTheorem.lean"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-09-05T23:08:14.5578763Z",
+      "finishedUtc": "2026-09-05T23:08:44.5780120Z",
+      "log": "main_source_check.log"
+    },
+    {
+      "step": "theorem identity",
+      "command": "& 'WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'verification/independent-audit-2026-09-05/MainIdentity.lean'",
+      "arguments": [
+        "--no-cache",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "verification/independent-audit-2026-09-05/MainIdentity.lean"
+      ],
+      "exitCode": 1,
+      "startedUtc": "2026-09-05T23:08:44.5985896Z",
+      "finishedUtc": "2026-09-05T23:09:50.9892365Z",
+      "log": "theorem_check.txt"
+    }
+  ],
+  "status": "failed",
+  "processId": 7848,
+  "updatedUtc": "2026-09-05T23:09:51.0404599Z",
+  "step": "theorem identity"
+}

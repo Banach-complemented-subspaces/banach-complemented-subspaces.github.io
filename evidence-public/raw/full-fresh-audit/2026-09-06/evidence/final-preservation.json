@@ -1,0 +1,127 @@
+{
+  "started": "2026-09-06T12:55:37.254690+00:00",
+  "ended": "2026-09-06T12:59:06.386273+00:00",
+  "status": "PASS",
+  "hashed_files": [
+    {
+      "path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\checkpoint\\frozen-project-source.zip",
+      "expected": "daa9c0e87333f915cb206932a36e1277656b88f43ab5e77544431b886440b56c",
+      "actual": "daa9c0e87333f915cb206932a36e1277656b88f43ab5e77544431b886440b56c"
+    },
+    {
+      "path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\checkpoint\\previous-audit.zip",
+      "expected": "10347a385b723fe41be5231b39561e6ff27a3d814a751d6d19a9cda08c34374c",
+      "actual": "10347a385b723fe41be5231b39561e6ff27a3d814a751d6d19a9cda08c34374c"
+    },
+    {
+      "path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\checkpoint\\website.zip",
+      "expected": "35cfb3cff8f2e51f6350fc90f2db221ceab2753609c7c90b723a8d2aa6144482",
+      "actual": "35cfb3cff8f2e51f6350fc90f2db221ceab2753609c7c90b723a8d2aa6144482"
+    },
+    {
+      "path": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\checkpoint\\website-qa.zip",
+      "expected": "a61074ff8516d7570e124a403191922515c2633c44fba8cc1998ac1f3c1a9822",
+      "actual": "a61074ff8516d7570e124a403191922515c2633c44fba8cc1998ac1f3c1a9822"
+    },
+    {
+      "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lean.exe",
+      "expected": "37dfe799f69b990251f3b6bcff8a1c10c1afe2adcdecc5c580cc6726ffb63433",
+      "actual": "37dfe799f69b990251f3b6bcff8a1c10c1afe2adcdecc5c580cc6726ffb63433"
+    },
+    {
+      "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\lake.exe",
+      "expected": "5afaf2ad866c1aa6c1eda7bdb84ebd99e1de8be3a95a219094654dfa00b47c0a",
+      "actual": "5afaf2ad866c1aa6c1eda7bdb84ebd99e1de8be3a95a219094654dfa00b47c0a"
+    },
+    {
+      "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\leanchecker.exe",
+      "expected": "b7c503a7a984f32f04c1badb79e53e350ddb72aed530da12699e4b06357ce149",
+      "actual": "b7c503a7a984f32f04c1badb79e53e350ddb72aed530da12699e4b06357ce149"
+    },
+    {
+      "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\libleanshared.dll",
+      "expected": "d38c48733fdf206d563e0ed4ad5ee9f2b8902170448dc1610af696a818ce1428",
+      "actual": "d38c48733fdf206d563e0ed4ad5ee9f2b8902170448dc1610af696a818ce1428"
+    },
+    {
+      "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\libleanshared_1.dll",
+      "expected": "c2fdcf27b5bbb5f5d7d8494ac7d8a300b8420ad59aad4e454813ed0276031106",
+      "actual": "c2fdcf27b5bbb5f5d7d8494ac7d8a300b8420ad59aad4e454813ed0276031106"
+    },
+    {
+      "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\libleanshared_2.dll",
+      "expected": "287296a726cb8ffbd88c4d3ed666636af5cd0ce21f83a6dc70fb442989cbbd47",
+      "actual": "287296a726cb8ffbd88c4d3ed666636af5cd0ce21f83a6dc70fb442989cbbd47"
+    },
+    {
+      "path": "LEAN_PROJECT\\.lake\\build\\lib\\lean\\ComplementedSubspace.olean",
+      "expected": "b0874218a920926d711a7949ba0ba48f1d3a0014da86c399e3dfb1eedbb15ee7",
+      "actual": "b0874218a920926d711a7949ba0ba48f1d3a0014da86c399e3dfb1eedbb15ee7"
+    },
+    {
+      "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\src\\lean\\LeanChecker.lean",
+      "expected": "2d18ec111d73c536b0bdee2533556bb9548c349f386797d3d3837b1f84d55dae",
+      "actual": "2d18ec111d73c536b0bdee2533556bb9548c349f386797d3d3837b1f84d55dae"
+    },
+    {
+      "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\src\\lean\\Lean\\Replay.lean",
+      "expected": "c434b5b2bc5047ca58d4a095fcf1d9935d413c788ae98a4f21948e6a95ca3fb0",
+      "actual": "c434b5b2bc5047ca58d4a095fcf1d9935d413c788ae98a4f21948e6a95ca3fb0"
+    },
+    {
+      "path": "LEAN_PROJECT\\BanLat\\LICENSE",
+      "expected": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "actual": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "LEAN_PROJECT\\BanLat\\PORTING.md",
+      "expected": "f6595bab0897b486542f09eb20a4ed553e1578ad64fff6480512a4fff645f78e",
+      "actual": "f6595bab0897b486542f09eb20a4ed553e1578ad64fff6480512a4fff645f78e"
+    }
+  ],
+  "archive_comparisons": [
+    {
+      "archive": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\checkpoint\\previous-audit.zip",
+      "original_root": "LEAN_PROJECT\\verification\\independent-audit-2026-09-05",
+      "files": 72,
+      "mismatches": [],
+      "status": "PASS"
+    },
+    {
+      "archive": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\checkpoint\\frozen-project-source.zip",
+      "original_root": "LEAN_PROJECT",
+      "files": 235,
+      "mismatches": [],
+      "status": "PASS"
+    }
+  ],
+  "final_source_manifest_identity": true,
+  "fresh_end_of_run_source_hashes": [
+    {
+      "tree": "original-project",
+      "files": 233,
+      "status": "PASS",
+      "mismatches": []
+    },
+    {
+      "tree": "reproduced-project",
+      "files": 233,
+      "status": "PASS",
+      "mismatches": []
+    },
+    {
+      "tree": "original-dependencies",
+      "files": 10056,
+      "status": "PASS",
+      "mismatches": []
+    },
+    {
+      "tree": "reproduced-dependencies",
+      "files": 10056,
+      "status": "PASS",
+      "mismatches": []
+    }
+  ],
+  "identity_evidence": "identity-source-and-scan.json",
+  "site_checkpoint": "checkpoint/website.zip and checkpoint/website-qa.zip retain the complete earlier local site and QA before its authorized supplementary entry."
+}

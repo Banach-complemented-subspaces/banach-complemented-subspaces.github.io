@@ -1,0 +1,129 @@
+param([switch]$ResumeDependencyWalker)
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = 'Stop'
+$auditEvidence = (Resolve-Path -LiteralPath $PSScriptRoot).Path
+$auditProject = (Resolve-Path -LiteralPath (Join-Path $auditEvidence '../..')).Path
+$auditRuntime = (Resolve-Path -LiteralPath (Join-Path $auditProject '../../tmp/lean_library_definition_audit_2026-09-05/lean-4.34.0-rc2-windows/bin')).Path
+$auditLake = Join-Path $auditRuntime 'lake.exe'
+$auditOldPath = $env:Path
+$auditOldThreads = $env:LEAN_NUM_THREADS
+$auditOldCache = $env:MATHLIB_CACHE_DIR
+$auditMutex = [Threading.Mutex]::new($false, 'Local\Codex_ComplementedSubspace_Lean_20260905')
+$auditMutexHeld = $false
+$auditExit = 1
+$auditCommandRecords = [Collections.Generic.List[object]]::new()
+$auditStatePath = Join-Path $auditEvidence 'run_status.json'
+$auditStep = 'validating preserved successful build and audit-only formatter correction'
+
+function Save-AuditState([string]$Status) {
+    @{
+        status = $Status; step = $auditStep; processId = $PID
+        updatedUtc = [DateTime]::UtcNow.ToString('o')
+        resumedFrom = 'initial_failed_run_status.json'
+        dependencyResumedFrom = $(if ($ResumeDependencyWalker) { 'second_failed_run_status.json' } else { $null })
+        commands = @($auditCommandRecords.ToArray())
+    } | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $auditStatePath -Encoding utf8
+}
+
+function Get-MathematicalSourceSnapshot {
+    $auditSourcePaths = @(& rg --files --hidden --no-ignore -g '*.lean' -g '!.lake/**' -g '!.cache/**' -g '!verification/independent-audit-2026-09-05/**')
+    if ($LASTEXITCODE -ne 0) { throw 'Could not enumerate the original local Lean tree.' }
+    $auditSourcePaths += @('lakefile.toml', 'lake-manifest.json', 'lean-toolchain')
+    foreach ($auditRelative in ($auditSourcePaths | Sort-Object -Unique)) {
+        $auditSourcePath = Join-Path $auditProject $auditRelative
+        [pscustomobject]@{
+            path = $auditRelative.Replace('\', '/')
+            sha256 = (Get-FileHash -LiteralPath $auditSourcePath -Algorithm SHA256).Hash.ToLowerInvariant()
+            bytes = (Get-Item -LiteralPath $auditSourcePath).Length
+        }
+    }
+}
+
+function Invoke-AuditLake {
+    param([string]$Step, [string]$LogFile, [string[]]$LakeArguments)
+    $script:auditStep = $Step
+    Save-AuditState 'running'
+    $auditLog = Join-Path $auditEvidence $LogFile
+    $auditDisplayArguments = @($LakeArguments | ForEach-Object { "'" + $_.Replace("'", "''") + "'" })
+    $auditCommand = "& '" + $auditLake.Replace("'", "''") + "' " + ($auditDisplayArguments -join ' ')
+    $auditStarted = [DateTime]::UtcNow.ToString('o')
+    @("WORKING DIRECTORY: $auditProject", "START UTC: $auditStarted", "COMMAND: $auditCommand", 'TERMINAL OUTPUT:') |
+        Set-Content -LiteralPath $auditLog -Encoding utf8
+    Write-Output "$Step`: $auditCommand"
+    & $auditLake @LakeArguments 2>&1 | Tee-Object -FilePath $auditLog -Append
+    $auditCommandExit = $LASTEXITCODE
+    $auditFinished = [DateTime]::UtcNow.ToString('o')
+    @("EXIT CODE: $auditCommandExit", "END UTC: $auditFinished") | Tee-Object -FilePath $auditLog -Append
+    $auditCommandRecords.Add([pscustomobject]@{
+        step = $Step; command = $auditCommand; arguments = $LakeArguments
+        exitCode = $auditCommandExit; startedUtc = $auditStarted; finishedUtc = $auditFinished; log = $LogFile
+    })
+    Save-AuditState 'running'
+    if ($auditCommandExit -ne 0) { throw "Audit command '$Step' failed with exit code $auditCommandExit. Mathematical source has not been altered." }
+}
+
+try {
+    $auditPriorState = if ($ResumeDependencyWalker) { 'second_failed_run_status.json' } else { 'initial_failed_run_status.json' }
+    $auditInitial = Get-Content -LiteralPath (Join-Path $auditEvidence $auditPriorState) -Raw | ConvertFrom-Json
+    $auditPriorFailedStep = if ($ResumeDependencyWalker) { 'kernel dependency traversal' } else { 'theorem identity' }
+    $auditPriorStepCount = if ($ResumeDependencyWalker) { 8 } else { 4 }
+    if ($auditInitial.status -ne 'failed' -or $auditInitial.step -ne $auditPriorFailedStep -or $auditInitial.commands.Count -ne $auditPriorStepCount) { throw 'Unexpected preserved failed run.' }
+    $auditExpectedSteps = @('clean', 'build', 'direct main source check')
+    if ($ResumeDependencyWalker) { $auditExpectedSteps += @('theorem identity', 'exact definitions', 'axioms', 'whole imported project axiom audit') }
+    for ($auditIndex = 0; $auditIndex -lt $auditExpectedSteps.Count; $auditIndex++) {
+        $auditEntry = $auditInitial.commands[$auditIndex]
+        if ($auditEntry.step -ne $auditExpectedSteps[$auditIndex] -or $auditEntry.exitCode -ne 0) { throw 'Original clean/build/source check did not pass.' }
+        $auditCommandRecords.Add($auditEntry)
+    }
+    $auditInitialLog = Get-Content -LiteralPath (Join-Path $auditEvidence 'initial_failed_theorem_check.txt') -Raw
+    if (-not $auditInitialLog.Contains('error: Unknown option `pp.width`')) { throw 'Expected formatter-only failure is not preserved.' }
+    if ($ResumeDependencyWalker) {
+        $auditPriorDependencyLog = Get-Content -LiteralPath (Join-Path $auditEvidence 'initial_failed_dependency_trace.txt') -Raw
+        if (-not $auditPriorDependencyLog.Contains('error: Type mismatch') -or -not $auditPriorDependencyLog.Contains('CommandElabM') -or $auditInitial.commands[7].exitCode -ne 1) { throw 'Expected dependency-walker IO failure is not preserved.' }
+    } elseif ($auditInitial.commands[3].exitCode -ne 1) { throw 'Expected initial formatter exit code is not preserved.' }
+    foreach ($auditHelper in @('MainIdentity', 'PrintDefinitions')) {
+        $auditOldHelper = Get-Content -LiteralPath (Join-Path $auditEvidence ($auditHelper + '.before_formatter_fix.txt')) -Raw
+        $auditNewHelper = Get-Content -LiteralPath (Join-Path $auditEvidence ($auditHelper + '.lean')) -Raw
+        $auditExpectedHelper = $auditOldHelper.Replace("set_option pp.width 110`r`n", '').Replace("set_option pp.width 110`n", '')
+        if ($auditExpectedHelper.Replace("`r`n", "`n") -ne $auditNewHelper.Replace("`r`n", "`n")) { throw 'Audit helper changed beyond removal of the unsupported display option.' }
+    }
+    try { $auditMutexHeld = $auditMutex.WaitOne() }
+    catch [Threading.AbandonedMutexException] { $auditMutexHeld = $true }
+    $env:Path = $auditRuntime + ';' + $env:Path
+    $env:LEAN_NUM_THREADS = '2'
+    $env:MATHLIB_CACHE_DIR = Join-Path $auditProject '.cache/mathlib'
+    Push-Location -LiteralPath $auditProject
+    try {
+        $auditSnapshotBefore = @(Get-Content -LiteralPath (Join-Path $auditEvidence 'source_hashes_before.json') -Raw | ConvertFrom-Json)
+        $auditSnapshotCurrent = @(Get-MathematicalSourceSnapshot)
+        if (@(Compare-Object $auditSnapshotBefore $auditSnapshotCurrent -Property path,sha256,bytes).Count -ne 0) { throw 'Original sources changed since the initial clean build.' }
+        Save-AuditState 'running'
+        if (-not $ResumeDependencyWalker) {
+            Invoke-AuditLake -Step 'theorem identity' -LogFile 'theorem_check.txt' -LakeArguments @('--no-cache', 'env', 'lean', '-j1', '-M8192', 'verification/independent-audit-2026-09-05/MainIdentity.lean')
+            Invoke-AuditLake -Step 'exact definitions' -LogFile 'definitions.txt' -LakeArguments @('--no-cache', 'env', 'lean', '-j1', '-M8192', 'verification/independent-audit-2026-09-05/PrintDefinitions.lean')
+            Invoke-AuditLake -Step 'axioms' -LogFile 'axioms.txt' -LakeArguments @('--no-cache', 'env', 'lean', '-j1', '-M8192', 'verification/independent-audit-2026-09-05/PrintAxioms.lean')
+            Invoke-AuditLake -Step 'whole imported project axiom audit' -LogFile 'whole_project_axioms.txt' -LakeArguments @('--no-cache', 'env', 'lean', '-j1', '-M8192', 'WholeProjectAudit.lean')
+        }
+        Invoke-AuditLake -Step 'kernel dependency traversal' -LogFile 'dependency_trace_run.txt' -LakeArguments @('--no-cache', 'env', 'lean', '-j1', '-M8192', 'verification/independent-audit-2026-09-05/TraceDependencies.lean')
+        $auditSnapshotAfter = @(Get-MathematicalSourceSnapshot)
+        $auditSnapshotAfter | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $auditEvidence 'source_hashes_after.json') -Encoding utf8
+        if (@(Compare-Object $auditSnapshotBefore $auditSnapshotAfter -Property path,sha256,bytes).Count -ne 0) { throw 'Original mathematical source or pinned configuration changed during the audit.' }
+        "PASS: all $($auditSnapshotBefore.Count) original local Lean/configuration files are unchanged by SHA256." |
+            Set-Content -LiteralPath (Join-Path $auditEvidence 'source_unchanged.txt') -Encoding utf8
+        $auditStep = 'all compiler checks and source immutability passed'
+        Save-AuditState 'passed'
+        Write-Output 'RESUMED INDEPENDENT COMPILER AUDIT PASSED. Original failed formatter attempt is preserved.'
+        $auditExit = 0
+    } finally { Pop-Location }
+} catch {
+    Save-AuditState 'failed'
+    "RESUMED AUDIT FAILURE at $auditStep`: $($_.Exception.Message)" | Tee-Object -FilePath (Join-Path $auditEvidence 'resumed_audit_failure.txt')
+} finally {
+    $env:Path = $auditOldPath
+    $env:LEAN_NUM_THREADS = $auditOldThreads
+    $env:MATHLIB_CACHE_DIR = $auditOldCache
+    if ($auditMutexHeld) { $auditMutex.ReleaseMutex() }
+    $auditMutex.Dispose()
+}
+exit $auditExit

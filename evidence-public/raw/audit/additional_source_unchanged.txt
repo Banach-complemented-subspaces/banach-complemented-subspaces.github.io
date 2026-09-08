@@ -1,0 +1,1 @@
+PASS: all 233 original local Lean/configuration files still match the initial SHA256 snapshot; no mathematical source was altered.

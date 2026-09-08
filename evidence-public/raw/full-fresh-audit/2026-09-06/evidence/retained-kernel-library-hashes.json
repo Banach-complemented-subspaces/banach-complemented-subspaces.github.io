@@ -1,0 +1,17 @@
+[
+  {
+    "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\libleanshared.dll",
+    "bytes": 70409216,
+    "sha256": "d38c48733fdf206d563e0ed4ad5ee9f2b8902170448dc1610af696a818ce1428"
+  },
+  {
+    "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\libleanshared_1.dll",
+    "bytes": 52663296,
+    "sha256": "c2fdcf27b5bbb5f5d7d8494ac7d8a300b8420ad59aad4e454813ed0276031106"
+  },
+  {
+    "path": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin\\libleanshared_2.dll",
+    "bytes": 59419648,
+    "sha256": "287296a726cb8ffbd88c4d3ed666636af5cd0ce21f83a6dc70fb442989cbbd47"
+  }
+]

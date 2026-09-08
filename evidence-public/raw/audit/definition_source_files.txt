@@ -1,0 +1,592 @@
+Direct source capture; complete files, unchanged, with SHA256 and numbered source lines.
+
+SOURCE FILE: ComplementedSubspace/RealMainTheorem.lean
+SHA256: c08eb5568448a4908d5f90afd8da3ee5fdac8ee0e34e01824dc03ac6a3221917
+COMMAND: Get-Content -LiteralPath 'ComplementedSubspace/RealMainTheorem.lean'
+    1: import ComplementedSubspace.ActualProjectionDPR
+    2: import ComplementedSubspace.ActualProjectionDualDPR
+    3: import ComplementedSubspace.AmbientUniformConvex
+    4: import ComplementedSubspace.AmbientFiniteApproximation
+    5: import ComplementedSubspace.ProjectionCorollaries
+    6: 
+    7: /-! Assembly of the real main theorem from the actual recursive construction. -/
+    8: 
+    9: noncomputable section
+   10: open scoped ENNReal
+   11: set_option backward.isDefEq.respectTransparency false
+   12: 
+   13: namespace ComplementedSubspace
+   14: 
+   15: theorem realMainTheorem : RealMainTheoremStatement := by
+   16:   intro ρ hρ
+   17:   obtain ⟨η, hη, P, hPP, hP1, hP, hPc1, hPc, hcoords⟩ :=
+   18:     exists_recursive_alternatingProjection_near_one (B := 1 + ρ) (by linarith)
+   19:   let s := recursiveFrameSelection hη
+   20:   refine ⟨s.toBlockParameters, inferInstance, inferInstance,
+   21:     ambient_hasRealBanachLatticeOrder s.toBlockParameters, P, hPP, hP, hPc, ?_, ?_⟩
+   22:   · exact hasSeparatedRange_of_DPR_obstructions P hPP
+   23:       (ambient_chiGL_le_one s.toBlockParameters) (ambientDual_chiGL_le_one s.toBlockParameters)
+   24:       (actualProjection_range_chiDPR_eq_top s P hcoords)
+   25:       (actualProjection_range_dual_chiDPR_eq_top s P hcoords)
+   26:   · exact hasSeparatedRange_of_DPR_obstructions
+   27:       (ContinuousLinearMap.id ℝ (Ambient s.toBlockParameters) - P) (complement_idempotent P hPP)
+   28:       (ambient_chiGL_le_one s.toBlockParameters) (ambientDual_chiGL_le_one s.toBlockParameters)
+   29:       (actualProjection_complement_range_chiDPR_eq_top s P hcoords)
+   30:       (actualProjection_complement_range_dual_chiDPR_eq_top s P hcoords)
+   31: 
+   32: end ComplementedSubspace
+
+SOURCE FILE: ComplementedSubspace/TheoremStatement.lean
+SHA256: 8bae1822f09c36532811144dfad0faefd1724ac184c0167745fae48f0af4cd97
+COMMAND: Get-Content -LiteralPath 'ComplementedSubspace/TheoremStatement.lean'
+    1: import ComplementedSubspace.AmbientSeparable
+    2: import ComplementedSubspace.LocalUnconditional
+    3: import Mathlib.Analysis.Convex.Uniform
+    4: import Mathlib.Analysis.Normed.Order.Lattice
+    5: import Mathlib.Algebra.Order.Module.Defs
+    6: 
+    7: /-!
+    8: # The precise real main-theorem statement
+    9: 
+   10: `RealMainTheoremStatement` is a proposition, not a theorem declaration or an
+   11: axiom. Its proof is `realMainTheorem` in `RealMainTheorem.lean`.
+   12: Its parameters and four range/dual conclusions are those of the main
+   13: theorem in `1-Introduction.tex` of the supplied manuscript.
+   14: 
+   15: The target asks for uniform convexity in the inherited ambient norm, a stronger
+   16: property proved in the manuscript's construction. The analytic implication to
+   17: superreflexivity has not been formalized here, and no such implication is
+   18: assumed. In particular, this file does not confuse Banach-space reflexivity
+   19: with the algebraic notion of module reflexivity.
+   20: 
+   21: The lattice-order predicate below has its actual mathematical definition. It
+   22: preserves the existing normed real vector space and its complete metric; only
+   23: the compatible lattice order is existentially quantified.
+   24: -/
+   25: 
+   26: noncomputable section
+   27: 
+   28: open scoped NNReal ENNReal Topology
+   29: 
+   30: namespace ComplementedSubspace
+   31: 
+   32: /-- A compatible real Banach lattice order on an existing real Banach space.
+   33: The norm and scalar multiplication remain the inherited ones. -/
+   34: def HasRealBanachLatticeOrder (X : Type*) [NormedAddCommGroup X]
+   35:     [NormedSpace ℝ X] [CompleteSpace X] : Prop :=
+   36:   ∃ latticeOrder : Lattice X,
+   37:     letI : Lattice X := latticeOrder
+   38:     IsOrderedAddMonoid X ∧ PosSMulMono ℝ X ∧ HasSolidNorm X
+   39: 
+   40: /-- The two quantitative local-structure assertions for a projection range
+   41: and its continuous dual, with their inherited and operator norms. -/
+   42: def HasSeparatedRange {X : Type*} [NormedAddCommGroup X] [NormedSpace ℝ X]
+   43:     (P : X →L[ℝ] X) : Prop :=
+   44:   chiGL ↥P.range ≤ ‖P‖ₑ ∧
+   45:   chiDPR ↥P.range = ⊤ ∧
+   46:   chiGL (↥P.range →L[ℝ] ℝ) ≤ ‖P‖ₑ ∧
+   47:   chiDPR (↥P.range →L[ℝ] ℝ) = ⊤
+   48: 
+   49: /-- The real main-theorem target, with the stronger uniform-convexity property
+   50: of the constructed ambient space. Proved in `RealMainTheorem.lean`.
+   51: 
+   52: `BlockParameters` records positive dimensions, exponents in `(2,3]`, monotone
+   53: decrease, and convergence to two. `Ambient` is the actual dependent counting-
+   54: norm `ℓ²` sum of those finite `ℓᵖ` blocks. -/
+   55: def RealMainTheoremStatement : Prop :=
+   56:   ∀ ρ : ℝ, 0 < ρ →
+   57:     ∃ a : BlockParameters,
+   58:       TopologicalSpace.SeparableSpace (Ambient a) ∧
+   59:       UniformConvexSpace (Ambient a) ∧
+   60:       HasRealBanachLatticeOrder (Ambient a) ∧
+   61:       ∃ P : Ambient a →L[ℝ] Ambient a,
+   62:         P.comp P = P ∧
+   63:         ‖P‖ < 1 + ρ ∧
+   64:         ‖ContinuousLinearMap.id ℝ (Ambient a) - P‖ < 1 + ρ ∧
+   65:         HasSeparatedRange P ∧
+   66:         HasSeparatedRange (ContinuousLinearMap.id ℝ (Ambient a) - P)
+   67: 
+   68: end ComplementedSubspace
+
+SOURCE FILE: ComplementedSubspace/Ambient.lean
+SHA256: cf65a5aa2da2262f84695696283cda9f3b918215ce12fd777b2e0e70c355f347
+COMMAND: Get-Content -LiteralPath 'ComplementedSubspace/Ambient.lean'
+    1: import Mathlib.Analysis.Normed.Lp.PiLp
+    2: import Mathlib.Analysis.Normed.Lp.lpSpace
+    3: import Mathlib.Analysis.Normed.Operator.NormedSpace
+    4: import Mathlib.Data.PNat.Defs
+    5: import Mathlib.Tactic.NormNum
+    6: 
+    7: /-!
+    8: # The ambient countable sum
+    9: 
+   10: The finite blocks use the counting-measure `ℓᵖ` norm. The outer space is the
+   11: dependent `ℓ²` sum of these blocks. This file constructs the actual normed and
+   12: complete spaces and their coordinate projections; it does not claim the
+   13: Banach lattice or uniform convexity instances have been proved.
+   14: -/
+   15: 
+   16: noncomputable section
+   17: 
+   18: open scoped ENNReal Topology
+   19: 
+   20: namespace ComplementedSubspace
+   21: 
+   22: /-- The parameters required by the real main theorem. -/
+   23: structure BlockParameters where
+   24:   dimension : ℕ → ℕ+
+   25:   exponent : ℕ → ℝ
+   26:   two_lt_exponent : ∀ j, 2 < exponent j
+   27:   exponent_le_three : ∀ j, exponent j ≤ 3
+   28:   exponent_antitone : Antitone exponent
+   29:   exponent_tendsto : Filter.Tendsto exponent Filter.atTop (𝓝 2)
+   30: 
+   31: instance (a : BlockParameters) (j : ℕ) :
+   32:     Fact (1 ≤ ENNReal.ofReal (a.exponent j)) := by
+   33:   constructor
+   34:   have h : (1 : ℝ) ≤ a.exponent j :=
+   35:     (by norm_num : (1 : ℝ) ≤ 2).trans (a.two_lt_exponent j).le
+   36:   simpa using ENNReal.ofReal_le_ofReal h
+   37: 
+   38: /-- A finite real block with its genuine `ℓᵖ` norm. -/
+   39: abbrev Block (a : BlockParameters) (j : ℕ) :=
+   40:   PiLp (ENNReal.ofReal (a.exponent j)) (fun _ : Fin (a.dimension j) => ℝ)
+   41: 
+   42: /-- The actual ambient space `(⨁ j, ℓ^(p j)^(N j))₂`. -/
+   43: abbrev Ambient (a : BlockParameters) := lp (Block a) 2
+   44: 
+   45: example (a : BlockParameters) (j : ℕ) : CompleteSpace (Block a j) := inferInstance
+   46: example (a : BlockParameters) : NormedSpace ℝ (Ambient a) := inferInstance
+   47: example (a : BlockParameters) : CompleteSpace (Ambient a) := inferInstance
+   48: 
+   49: /-- Isometric inclusion of one block into the ambient space. -/
+   50: def blockInclusion (a : BlockParameters) (j : ℕ) : Block a j →L[ℝ] Ambient a :=
+   51:   lp.singleContinuousLinearMap ℝ (Block a) 2 j
+   52: 
+   53: /-- Evaluation at one block. -/
+   54: def blockEvaluation (a : BlockParameters) (j : ℕ) : Ambient a →L[ℝ] Block a j :=
+   55:   lp.evalCLM ℝ (Block a) 2 j
+   56: 
+   57: /-- Projection onto the chosen block, as an endomorphism of the ambient space. -/
+   58: def blockProjection (a : BlockParameters) (j : ℕ) : Ambient a →L[ℝ] Ambient a :=
+   59:   (blockInclusion a j).comp (blockEvaluation a j)
+   60: 
+   61: @[simp]
+   62: theorem blockEvaluation_blockInclusion (a : BlockParameters) (j : ℕ) (x : Block a j) :
+   63:     blockEvaluation a j (blockInclusion a j x) = x := by
+   64:   change (lp.single 2 j x) j = x
+   65:   simp
+   66: 
+   67: @[simp]
+   68: theorem norm_blockInclusion (a : BlockParameters) (j : ℕ) (x : Block a j) :
+   69:     ‖blockInclusion a j x‖ = ‖x‖ := by
+   70:   exact lp.norm_single (by norm_num : (0 : ℝ≥0∞) < 2) j x
+   71: 
+   72: theorem blockProjection_idempotent (a : BlockParameters) (j : ℕ) :
+   73:     (blockProjection a j).comp (blockProjection a j) = blockProjection a j := by
+   74:   ext x
+   75:   simp [blockProjection]
+   76: 
+   77: theorem norm_blockProjection_apply_le (a : BlockParameters) (j : ℕ) (x : Ambient a) :
+   78:     ‖blockProjection a j x‖ ≤ ‖x‖ := by
+   79:   change ‖blockInclusion a j (blockEvaluation a j x)‖ ≤ ‖x‖
+   80:   rw [norm_blockInclusion]
+   81:   exact lp.norm_apply_le_norm (by norm_num : (2 : ℝ≥0∞) ≠ 0) x j
+   82: 
+   83: theorem norm_blockProjection_le_one (a : BlockParameters) (j : ℕ) :
+   84:     ‖blockProjection a j‖ ≤ 1 := by
+   85:   apply ContinuousLinearMap.opNorm_le_bound _ zero_le_one
+   86:   intro x
+   87:   simpa using norm_blockProjection_apply_le a j x
+   88: 
+   89: /-- Every vector is the unconditionally convergent sum of its block components. -/
+   90: theorem hasSum_blockProjection (a : BlockParameters) (x : Ambient a) :
+   91:     HasSum (fun j => blockProjection a j x) x := by
+   92:   exact lp.hasSum_single (by norm_num : (2 : ℝ≥0∞) ≠ ⊤) x
+   93: 
+   94: end ComplementedSubspace
+
+SOURCE FILE: ComplementedSubspace/LocalUnconditional.lean
+SHA256: 3ca23f64e18fcc14e9ee4a2a535acb40305acd9edc2862b6101f897f7bb14857
+COMMAND: Get-Content -LiteralPath 'ComplementedSubspace/LocalUnconditional.lean'
+    1: import Mathlib.Analysis.Normed.Operator.NormedSpace
+    2: import Mathlib.Analysis.Normed.Module.Seminorm.Basic
+    3: import Mathlib.LinearAlgebra.StdBasis
+    4: import Mathlib.Topology.Algebra.Module.FiniteDimension
+    5: 
+    6: /-!
+    7: # Real local unconditional structure
+    8: 
+    9: Definitions from `1a-Preliminaries.tex` of the supplied manuscript.
+   10: 
+   11: The unconditional basis constant uses all real coordinate multipliers of
+   12: modulus at most one, not merely coordinate projections. All infima and suprema
+   13: take values in `ℝ≥0∞`; consequently an empty infimum is infinity and no
+   14: attainment of an infimum is asserted. We use the harmless convention `u(0) = 1`
+   15: when defining the unconditional constant of the zero dimensional space.
+   16: 
+   17: For the Gordon--Lewis constant we represent the auxiliary finite dimensional
+   18: space on `Fin n → ℝ`, with an arbitrary positive-definite real seminorm as its
+   19: norm. A factorisation includes certified bounds for its two maps; the infimum
+   20: runs over all these bounds. This is the coordinate version of the manuscript's
+   21: definition with arbitrary finite dimensional Banach spaces and operator norms:
+   22: one transports a chosen 1-unconditional basis to coordinates and pulls back
+   23: the norm. `GLFactorization.ofUnconditionalBasis` implements this direction and
+   24: preserves the exact product of operator norms. Conversely the norm axioms below
+   25: give the actual finite dimensional Banach space `GLFactorization.Aux`.
+   26: `auxBasis_unconditional`, `auxA`, `auxB`, `aux_factorizes`, and
+   27: `aux_cost_le` implement the converse with no increase of the factorisation
+   28: cost. Thus the coordinate presentation has transport maps in both directions;
+   29: no quantification over a proper class of all normed spaces is needed. No main
+   30: theorem is assumed as an axiom.
+   31: 
+   32: The zero subspace is excluded from both outer suprema, exactly as in the
+   33: manuscript. The definitions also make sense for a normed space without a
+   34: completeness hypothesis; applications concern Banach spaces.
+   35: -/
+   36: 
+   37: noncomputable section
+   38: 
+   39: open scoped ENNReal NNReal
+   40: 
+   41: namespace ComplementedSubspace
+   42: 
+   43: section BasisConstants
+   44: 
+   45: variable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]
+   46: 
+   47: /-- The coordinate multiplier of a finite real basis. Its value on `b i` is
+   48: `θ i • b i`; `constrL` supplies its continuity from finite dimensionality. -/
+   49: def basisMultiplier {n : ℕ} (b : Module.Basis (Fin n) ℝ E)
+   50:     (θ : Fin n → ℝ) : E →L[ℝ] E :=
+   51:   b.constrL (fun i => θ i • b i)
+   52: 
+   53: @[simp]
+   54: theorem basisMultiplier_apply_basis {n : ℕ}
+   55:     (b : Module.Basis (Fin n) ℝ E) (θ : Fin n → ℝ) (i : Fin n) :
+   56:     basisMultiplier b θ (b i) = θ i • b i := by
+   57:   change b.constr ℝ (fun j => θ j • b j) (b i) = _
+   58:   exact b.constr_basis ℝ _ i
+   59: 
+   60: /-- The unconditional constant of a specified finite real basis. The maximum
+   61: with one incorporates the manuscript's convention that constants are ≥ 1. -/
+   62: def unconditionalBasisConstant {n : ℕ} (b : Module.Basis (Fin n) ℝ E) : ℝ≥0∞ :=
+   63:   max 1 (⨆ (θ : Fin n → ℝ) (_ : ∀ i, ‖θ i‖ ≤ 1), ‖basisMultiplier b θ‖ₑ)
+   64: 
+   65: theorem one_le_unconditionalBasisConstant {n : ℕ}
+   66:     (b : Module.Basis (Fin n) ℝ E) :
+   67:     1 ≤ unconditionalBasisConstant b :=
+   68:   le_max_left _ _
+   69: 
+   70: /-- The definition controls each admissible multiplier individually. -/
+   71: theorem enorm_basisMultiplier_le {n : ℕ}
+   72:     (b : Module.Basis (Fin n) ℝ E) (θ : Fin n → ℝ)
+   73:     (hθ : ∀ i, ‖θ i‖ ≤ 1) :
+   74:     ‖basisMultiplier b θ‖ₑ ≤ unconditionalBasisConstant b := by
+   75:   apply le_trans _ (le_max_right _ _)
+   76:   exact le_iSup_of_le θ (le_iSup_of_le hθ le_rfl)
+   77: 
+   78: /-- A basis with unconditional constant at most one gives contractions for
+   79: every admissible multiplier. -/
+   80: theorem norm_basisMultiplier_apply_le {n : ℕ}
+   81:     (b : Module.Basis (Fin n) ℝ E)
+   82:     (hb : unconditionalBasisConstant b ≤ 1) (θ : Fin n → ℝ)
+   83:     (hθ : ∀ i, ‖θ i‖ ≤ 1) (x : E) :
+   84:     ‖basisMultiplier b θ x‖ ≤ ‖x‖ := by
+   85:   have he : ‖basisMultiplier b θ‖ₑ ≤ 1 := (enorm_basisMultiplier_le b θ hθ).trans hb
+   86:   have hn : ‖basisMultiplier b θ‖₊ ≤ (1 : ℝ≥0) :=
+   87:     enorm_le_coe.mp (by simpa only [ENNReal.coe_one] using he)
+   88:   have hr : ‖basisMultiplier b θ‖ ≤ (1 : ℝ) := by
+   89:     exact NNReal.coe_le_coe.mpr hn
+   90:   calc
+   91:     ‖basisMultiplier b θ x‖ ≤ ‖basisMultiplier b θ‖ * ‖x‖ :=
+   92:       (basisMultiplier b θ).le_opNorm x
+   93:     _ ≤ 1 * ‖x‖ := mul_le_mul_of_nonneg_right hr (norm_nonneg x)
+   94:     _ = ‖x‖ := one_mul _
+   95: 
+   96: /-- Coordinate reconstruction commutes with the corresponding basis
+   97: multiplier. This is the identity used in transporting auxiliary GL norms. -/
+   98: theorem basisMultiplier_equivFun_symm {n : ℕ}
+   99:     (b : Module.Basis (Fin n) ℝ E) (θ x : Fin n → ℝ) :
+  100:     basisMultiplier b θ (b.equivFun.symm x) =
+  101:       b.equivFun.symm (fun i => θ i * x i) := by
+  102:   change b.constr ℝ (fun i => θ i • b i) (b.equivFun.symm x) = _
+  103:   rw [Module.Basis.constr_apply_fintype, b.equivFun.apply_symm_apply,
+  104:     b.equivFun_symm_apply]
+  105:   simp only [smul_smul, mul_comm]
+  106: 
+  107: /-- `u(E)`: infimum of unconditional basis constants over all finite bases.
+  108: It is infinity when no finite basis exists. -/
+  109: def unconditionalConstant (E : Type*) [NormedAddCommGroup E]
+  110:     [NormedSpace ℝ E] : ℝ≥0∞ :=
+  111:   ⨅ (n : ℕ) (b : Module.Basis (Fin n) ℝ E), unconditionalBasisConstant b
+  112: 
+  113: theorem one_le_unconditionalConstant (E : Type*) [NormedAddCommGroup E]
+  114:     [NormedSpace ℝ E] : 1 ≤ unconditionalConstant E := by
+  115:   exact le_iInf fun n => le_iInf fun b => one_le_unconditionalBasisConstant b
+  116: 
+  117: end BasisConstants
+  118: 
+  119: section DPR
+  120: 
+  121: variable (Z : Type*) [NormedAddCommGroup Z] [NormedSpace ℝ Z]
+  122: 
+  123: /-- Local DPR constant at `V`: infimum of `u(F)` over finite dimensional
+  124: subspaces of the SAME ambient space containing `V`. -/
+  125: def lambdaDPR (V : Submodule ℝ Z) : ℝ≥0∞ :=
+  126:   ⨅ (F : Submodule ℝ Z) (_ : V ≤ F) (_ : FiniteDimensional ℝ ↥F),
+  127:     unconditionalConstant ↥F
+  128: 
+  129: /-- Dubinsky--Pełczyński--Rosenthal local unconditional structure constant. -/
+  130: def chiDPR : ℝ≥0∞ :=
+  131:   ⨆ (V : Submodule ℝ Z) (_ : FiniteDimensional ℝ ↥V) (_ : V ≠ ⊥),
+  132:     lambdaDPR Z V
+  133: 
+  134: theorem lambdaDPR_le_of_le {V F : Submodule ℝ Z}
+  135:     (hVF : V ≤ F) (hF : FiniteDimensional ℝ ↥F) :
+  136:     lambdaDPR Z V ≤ unconditionalConstant ↥F := by
+  137:   exact iInf_le_of_le F (iInf_le_of_le hVF (iInf_le_of_le hF le_rfl))
+  138: 
+  139: theorem one_le_lambdaDPR (V : Submodule ℝ Z) : 1 ≤ lambdaDPR Z V := by
+  140:   exact le_iInf fun F => le_iInf fun _ => le_iInf fun _ =>
+  141:     one_le_unconditionalConstant ↥F
+  142: 
+  143: /-- Finiteness, rather than the existence of an optimal witness, defines
+  144: the DPR local unconditional structure property. -/
+  145: def HasDPRLocalUnconditionalStructure : Prop := chiDPR Z < ⊤
+  146: 
+  147: end DPR
+  148: 
+  149: section GordonLewis
+  150: 
+  151: variable {Z : Type*} [NormedAddCommGroup Z] [NormedSpace ℝ Z]
+  152: 
+  153: /-- A genuine finite dimensional Gordon--Lewis factorisation, presented on
+  154: coordinates with an arbitrary norm. `b` is NOT required to be injective.
+  155: 
+  156: The norm is a positive-definite `Seminorm`, so its triangle inequality,
+  157: homogeneity and nonnegativity are already supplied by mathlib. The coordinate
+  158: basis is 1-unconditional by the displayed contraction condition. -/
+  159: structure GLFactorization (V : Submodule ℝ Z) where
+  160:   dimension : ℕ
+  161:   auxNorm : Seminorm ℝ (Fin dimension → ℝ)
+  162:   positive_definite : ∀ x, auxNorm x = 0 → x = 0
+  163:   unconditional : ∀ (θ x : Fin dimension → ℝ),
+  164:     (∀ i, ‖θ i‖ ≤ 1) → auxNorm (fun i => θ i * x i) ≤ auxNorm x
+  165:   a : ↥V →ₗ[ℝ] (Fin dimension → ℝ)
+  166:   b : (Fin dimension → ℝ) →ₗ[ℝ] Z
+  167:   factorizes : b.comp a = V.subtype
+  168:   aBound : ℝ≥0
+  169:   bBound : ℝ≥0
+  170:   bound_a : ∀ x : ↥V, auxNorm (a x) ≤ (aBound : ℝ) * ‖x‖
+  171:   bound_b : ∀ x : Fin dimension → ℝ, ‖b x‖ ≤ (bBound : ℝ) * auxNorm x
+  172: 
+  173: /-- The product of certified operator bounds of a GL factorisation. -/
+  174: def GLFactorization.cost {V : Submodule ℝ Z} (F : GLFactorization V) : ℝ≥0∞ :=
+  175:   (F.aBound : ℝ≥0∞) * (F.bBound : ℝ≥0∞)
+  176: 
+  177: @[simp]
+  178: theorem GLFactorization.factorizes_apply {V : Submodule ℝ Z}
+  179:     (F : GLFactorization V) (x : ↥V) : F.b (F.a x) = (x : Z) :=
+  180:   congrArg (fun T : ↥V →ₗ[ℝ] Z => T x) F.factorizes
+  181: 
+  182: /-- Injectivity of the first map is a consequence of factorisation, not an
+  183: additional condition on the auxiliary space. -/
+  184: theorem GLFactorization.a_injective {V : Submodule ℝ Z}
+  185:     (F : GLFactorization V) : Function.Injective F.a := by
+  186:   intro x y h
+  187:   apply Subtype.ext
+  188:   calc
+  189:     (x : Z) = F.b (F.a x) := (F.factorizes_apply x).symm
+  190:     _ = F.b (F.a y) := congrArg F.b h
+  191:     _ = (y : Z) := F.factorizes_apply y
+  192: 
+  193: /-- The two certified bounds control their composite, which is the inclusion. -/
+  194: theorem GLFactorization.norm_le_bound_mul {V : Submodule ℝ Z}
+  195:     (F : GLFactorization V) (x : ↥V) :
+  196:     ‖x‖ ≤ ((F.bBound : ℝ) * (F.aBound : ℝ)) * ‖x‖ := by
+  197:   calc
+  198:     ‖x‖ = ‖F.b (F.a x)‖ := by rw [F.factorizes_apply]; rfl
+  199:     _ ≤ (F.bBound : ℝ) * F.auxNorm (F.a x) := F.bound_b (F.a x)
+  200:     _ ≤ (F.bBound : ℝ) * ((F.aBound : ℝ) * ‖x‖) :=
+  201:       mul_le_mul_of_nonneg_left (F.bound_a x) F.bBound.2
+  202:     _ = ((F.bBound : ℝ) * (F.aBound : ℝ)) * ‖x‖ := (mul_assoc _ _ _).symm
+  203: 
+  204: /-- A factorisation of a nonzero inclusion cannot have cost below one. -/
+  205: theorem GLFactorization.one_le_cost {V : Submodule ℝ Z} [Nontrivial ↥V]
+  206:     (F : GLFactorization V) : 1 ≤ F.cost := by
+  207:   obtain ⟨x, hx⟩ := exists_ne (0 : ↥V)
+  208:   have hreal : (1 : ℝ) ≤ (F.bBound : ℝ) * (F.aBound : ℝ) :=
+  209:     le_of_mul_le_mul_right (by simpa only [one_mul] using F.norm_le_bound_mul x)
+  210:       (norm_pos_iff.mpr hx)
+  211:   have hnn : (1 : ℝ≥0) ≤ F.aBound * F.bBound := by
+  212:     apply NNReal.coe_le_coe.mp
+  213:     simpa only [NNReal.coe_one, NNReal.coe_mul, mul_comm] using hreal
+  214:   simpa only [GLFactorization.cost, ENNReal.coe_one, ENNReal.coe_mul] using
+  215:     (ENNReal.coe_le_coe.mpr hnn)
+  216: 
+  217: /-- Transport an actual factorisation through an arbitrary finite dimensional
+  218: normed space with a 1-unconditional basis to the coordinate presentation.
+  219: The stored bounds are EXACTLY the operator norms of its two maps. -/
+  220: def GLFactorization.ofUnconditionalBasis {V : Submodule ℝ Z}
+  221:     {U : Type*} [NormedAddCommGroup U] [NormedSpace ℝ U]
+  222:     {n : ℕ} (e : Module.Basis (Fin n) ℝ U)
+  223:     (he : unconditionalBasisConstant e ≤ 1)
+  224:     (a : ↥V →L[ℝ] U) (b : U →L[ℝ] Z)
+  225:     (h : b.comp a = V.subtypeL) : GLFactorization V where
+  226:   dimension := n
+  227:   auxNorm := (normSeminorm ℝ U).comp e.equivFun.symm.toLinearMap
+  228:   positive_definite := by
+  229:     intro x hx
+  230:     change ‖e.equivFun.symm x‖ = 0 at hx
+  231:     apply e.equivFun.symm.injective
+  232:     simpa only [map_zero] using norm_eq_zero.mp hx
+  233:   unconditional := by
+  234:     intro θ x hθ
+  235:     change ‖e.equivFun.symm (fun i => θ i * x i)‖ ≤ ‖e.equivFun.symm x‖
+  236:     rw [← basisMultiplier_equivFun_symm]
+  237:     exact norm_basisMultiplier_apply_le e he θ hθ _
+  238:   a := e.equivFun.toLinearMap.comp a.toLinearMap
+  239:   b := b.toLinearMap.comp e.equivFun.symm.toLinearMap
+  240:   factorizes := by
+  241:     ext x
+  242:     change b (e.equivFun.symm (e.equivFun (a x))) = (x : Z)
+  243:     rw [e.equivFun.symm_apply_apply]
+  244:     exact congrArg (fun T : ↥V →L[ℝ] Z => T x) h
+  245:   aBound := ‖a‖₊
+  246:   bBound := ‖b‖₊
+  247:   bound_a := by
+  248:     intro x
+  249:     change ‖e.equivFun.symm (e.equivFun (a x))‖ ≤ ‖a‖ * ‖x‖
+  250:     rw [e.equivFun.symm_apply_apply]
+  251:     exact a.le_opNorm x
+  252:   bound_b := by
+  253:     intro x
+  254:     exact b.le_opNorm (e.equivFun.symm x)
+  255: 
+  256: @[simp]
+  257: theorem GLFactorization.ofUnconditionalBasis_cost {V : Submodule ℝ Z}
+  258:     {U : Type*} [NormedAddCommGroup U] [NormedSpace ℝ U]
+  259:     {n : ℕ} (e : Module.Basis (Fin n) ℝ U)
+  260:     (he : unconditionalBasisConstant e ≤ 1)
+  261:     (a : ↥V →L[ℝ] U) (b : U →L[ℝ] Z)
+  262:     (h : b.comp a = V.subtypeL) :
+  263:     (GLFactorization.ofUnconditionalBasis e he a b h).cost =
+  264:       (‖a‖₊ : ℝ≥0∞) * (‖b‖₊ : ℝ≥0∞) := rfl
+  265: 
+  266: namespace GLFactorization
+  267: 
+  268: variable {V : Submodule ℝ Z} (F : GLFactorization V)
+  269: 
+  270: /-- A fresh type synonym carries the particular auxiliary norm of `F`, rather
+  271: than the default supremum norm on finite coordinate vectors. -/
+  272: def Aux := Fin F.dimension → ℝ
+  273: 
+  274: instance auxAddCommGroup : AddCommGroup F.Aux :=
+  275:   inferInstanceAs (AddCommGroup (Fin F.dimension → ℝ))
+  276: 
+  277: instance auxModule : Module ℝ F.Aux :=
+  278:   inferInstanceAs (Module ℝ (Fin F.dimension → ℝ))
+  279: 
+  280: /-- Positive definiteness upgrades the stored seminorm to an additive norm. -/
+  281: def auxAddGroupNorm : AddGroupNorm F.Aux where
+  282:   toAddGroupSeminorm := F.auxNorm.toAddGroupSeminorm
+  283:   eq_zero_of_map_eq_zero' := F.positive_definite
+  284: 
+  285: instance auxNormedAddCommGroup : NormedAddCommGroup F.Aux :=
+  286:   F.auxAddGroupNorm.toNormedAddCommGroup
+  287: 
+  288: instance auxNormedSpace : NormedSpace ℝ F.Aux where
+  289:   norm_smul_le c x := (F.auxNorm.smul' c x).le
+  290: 
+  291: instance auxFiniteDimensional : FiniteDimensional ℝ F.Aux :=
+  292:   inferInstanceAs (FiniteDimensional ℝ (Fin F.dimension → ℝ))
+  293: 
+  294: instance auxCompleteSpace : CompleteSpace F.Aux :=
+  295:   FiniteDimensional.complete ℝ F.Aux
+  296: 
+  297: @[simp]
+  298: theorem aux_norm (x : F.Aux) : ‖x‖ = F.auxNorm x := rfl
+  299: 
+  300: /-- The coordinate basis of the actual auxiliary Banach space. -/
+  301: def auxBasis : Module.Basis (Fin F.dimension) ℝ F.Aux :=
+  302:   Pi.basisFun ℝ (Fin F.dimension)
+  303: 
+  304: theorem auxBasis_multiplier_apply (θ : Fin F.dimension → ℝ) (x : F.Aux) :
+  305:     basisMultiplier F.auxBasis θ x = fun i => θ i * x i := by
+  306:   have h := basisMultiplier_equivFun_symm F.auxBasis θ x
+  307:   have he : F.auxBasis.equivFun = LinearEquiv.refl ℝ F.Aux :=
+  308:     Pi.basisFun_equivFun ℝ (Fin F.dimension)
+  309:   rw [he] at h
+  310:   exact h
+  311: 
+  312: /-- The canonical coordinate basis really has unconditional constant at most
+  313: one in the actual auxiliary normed space. -/
+  314: theorem auxBasis_unconditional : unconditionalBasisConstant F.auxBasis ≤ 1 := by
+  315:   apply max_le le_rfl
+  316:   refine iSup_le fun θ => iSup_le fun hθ => ?_
+  317:   have hn : ‖basisMultiplier F.auxBasis θ‖ ≤ (1 : ℝ) := by
+  318:     apply ContinuousLinearMap.opNorm_le_bound _ zero_le_one
+  319:     intro x
+  320:     rw [F.auxBasis_multiplier_apply, one_mul]
+  321:     exact F.unconditional θ x hθ
+  322:   have hn' : ‖basisMultiplier F.auxBasis θ‖₊ ≤ (1 : ℝ≥0) :=
+  323:     NNReal.coe_le_coe.mp hn
+  324:   exact enorm_le_coe.mpr hn'
+  325: 
+  326: /-- The first map is continuous for the actual auxiliary norm. -/
+  327: def auxA : ↥V →L[ℝ] F.Aux :=
+  328:   (show ↥V →ₗ[ℝ] F.Aux from F.a).mkContinuous (F.aBound : ℝ) F.bound_a
+  329: 
+  330: /-- The second map is continuous for the actual auxiliary norm. -/
+  331: def auxB : F.Aux →L[ℝ] Z :=
+  332:   (show F.Aux →ₗ[ℝ] Z from F.b).mkContinuous (F.bBound : ℝ) F.bound_b
+  333: 
+  334: theorem aux_factorizes : F.auxB.comp F.auxA = V.subtypeL := by
+  335:   ext x
+  336:   exact F.factorizes_apply x
+  337: 
+  338: theorem norm_auxA_le : ‖F.auxA‖ ≤ (F.aBound : ℝ) :=
+  339:   F.auxA.opNorm_le_bound F.aBound.2 F.bound_a
+  340: 
+  341: theorem norm_auxB_le : ‖F.auxB‖ ≤ (F.bBound : ℝ) :=
+  342:   F.auxB.opNorm_le_bound F.bBound.2 F.bound_b
+  343: 
+  344: /-- Realizing a coordinate witness as actual bounded operators does not
+  345: increase its cost. Together with `ofUnconditionalBasis_cost` this justifies
+  346: using certified bounds in the infimum. -/
+  347: theorem aux_cost_le :
+  348:     (‖F.auxA‖₊ : ℝ≥0∞) * (‖F.auxB‖₊ : ℝ≥0∞) ≤ F.cost := by
+  349:   have ha : ‖F.auxA‖₊ ≤ F.aBound := NNReal.coe_le_coe.mp F.norm_auxA_le
+  350:   have hb : ‖F.auxB‖₊ ≤ F.bBound := NNReal.coe_le_coe.mp F.norm_auxB_le
+  351:   exact mul_le_mul' (ENNReal.coe_le_coe.mpr ha) (ENNReal.coe_le_coe.mpr hb)
+  352: 
+  353: end GLFactorization
+  354: 
+  355: variable (Z)
+  356: 
+  357: /-- Local Gordon--Lewis constant in the coordinate presentation documented
+  358: above. Every admissible factorisation and every admissible bound is included. -/
+  359: def lambdaGL (V : Submodule ℝ Z) : ℝ≥0∞ :=
+  360:   ⨅ F : GLFactorization V, F.cost
+  361: 
+  362: /-- Gordon--Lewis local unconditional structure constant, using arbitrary
+  363: finite dimensional auxiliary norms and excluding the zero initial subspace. -/
+  364: def chiGL : ℝ≥0∞ :=
+  365:   ⨆ (V : Submodule ℝ Z) (_ : FiniteDimensional ℝ ↥V) (_ : V ≠ ⊥),
+  366:     lambdaGL Z V
+  367: 
+  368: theorem lambdaGL_le_cost {V : Submodule ℝ Z} (F : GLFactorization V) :
+  369:     lambdaGL Z V ≤ F.cost :=
+  370:   iInf_le _ F
+  371: 
+  372: theorem one_le_lambdaGL (V : Submodule ℝ Z) [Nontrivial ↥V] :
+  373:     1 ≤ lambdaGL Z V :=
+  374:   le_iInf fun F => F.one_le_cost
+  375: 
+  376: /-- Finiteness of the Gordon--Lewis local unconditional structure constant. -/
+  377: def HasGLLocalUnconditionalStructure : Prop := chiGL Z < ⊤
+  378: 
+  379: end GordonLewis
+  380: 
+  381: end ComplementedSubspace

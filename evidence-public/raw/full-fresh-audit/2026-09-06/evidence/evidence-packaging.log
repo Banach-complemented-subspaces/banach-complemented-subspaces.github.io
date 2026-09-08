@@ -1,0 +1,45 @@
+{
+  "label": "evidence-packaging",
+  "cwd": "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854",
+  "executable": "USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "arguments": [
+    "-B",
+    "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\evidence\\package_evidence.py"
+  ],
+  "windows_command_line": "\"USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -B \"WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\evidence\\package_evidence.py\"",
+  "started": "2026-09-06T13:06:30.799048+00:00",
+  "environment": {
+    "PATH": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin;USER_HOME\\.codex\\tmp\\arg0\\codex-arg0rksJmG;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;USER_HOME\\AppData\\Local\\Microsoft\\WindowsApps;USER_HOME\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\;USER_HOME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\80b8e5c230e43848;USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\27d6a192e9c98618",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "stdout": "evidence-packaging.stdout.log",
+  "stderr": "evidence-packaging.stderr.log",
+  "timeout_seconds": 443.20095133781433,
+  "pid": 8104,
+  "exit_code": 0,
+  "timed_out": false,
+  "status": "PASS",
+  "ended": "2026-09-06T13:07:03.908157+00:00",
+  "elapsed_seconds": 33.10900000001129
+}
+
+STDOUT (verbatim)
+{
+  "status": "PASS",
+  "started": "2026-09-06T13:06:30.936249+00:00",
+  "completed": "2026-09-06T13:07:03.739703+00:00",
+  "archive": "full-fresh-audit-evidence.zip",
+  "archive_bytes": 91734840,
+  "archive_sha256": "a3ec86982d133dcc694c4fdea8065785c3826fd0c587d37d22443ff47ef5ab24",
+  "checked_content_files": 296,
+  "internal_manifest": "CONTENTS.sha256",
+  "internal_manifest_sha256": "a8ee8b35b6a722630a5f353ff55b71edcd8337020307a21b1af05c76669ef845",
+  "exact_member_set_checked": true,
+  "all_members_crc_checked": true,
+  "all_members_sha256_checked": true,
+  "full_audit_elapsed_seconds": 9489.880512475967,
+  "exclusion_note": "The manifest excludes itself. This detached receipt and the final packaging process record are outside the archive to avoid self-reference; all Lean run records and raw streams are included.",
+  "privacy_note": "Unredacted local evidence includes Windows personal paths and username. Review/redact a separately labelled copy before public release. No project material was uploaded or published."
+}
+
+STDERR (verbatim)

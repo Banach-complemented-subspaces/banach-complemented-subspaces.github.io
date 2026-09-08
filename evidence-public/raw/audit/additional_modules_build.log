@@ -1,0 +1,1589 @@
+WORKING DIRECTORY: LEAN_PROJECT
+START UTC: 2026-09-05T23:23:37.2559236Z
+COMMAND: & 'WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe' '--no-cache' 'build' '+ComplementedSubspace.ComplexCorollaryAudit:olean' '+ComplementedSubspace.ComplexRealDPRAudit:olean' '+ComplementedSubspace.FiniteHilbertWitnessAudit:olean' '+ComplementedSubspace.FiniteOverlapScaleAudit:olean' '+ComplementedSubspace.FiniteParameterAudit:olean' '+ComplementedSubspace.LocalHilbertAudit:olean' '+ComplementedSubspace.LocalHilbertDualTopAudit:olean' '+ComplementedSubspace.LocalHilbertQuotientAudit:olean' '+ComplementedSubspace.LocalHilbertRecursiveQuotient:olean' '+ComplementedSubspace.ProductFrameTranspose:olean' '+ComplementedSubspace.ProjectionAssemblyAudit:olean' '+ComplementedSubspace.PureFrameDPRAudit:olean' '+ComplementedSubspace.RealMainAudit:olean' '+ComplementedSubspace.RealMainConsequencesAudit:olean' '+ComplementedSubspace.RecursiveParametersAudit:olean' '+ComplementedSubspace.SelectedFrameBasis:olean'
+TERMINAL OUTPUT:
+⚠ [2284/2290] Replayed ComplementedSubspace.ProjectionPerturbation
+warning: ComplementedSubspace/ProjectionPerturbation.lean:46:10: This simp argument is unused:
+  powerEnergyDifference
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProjectionPerturbation.lean:45:74: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2558/2580] Replayed ComplementedSubspace.HilbertOverlap
+warning: ComplementedSubspace/HilbertOverlap.lean:27:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.hsSq_nonneg`:
+  [DecidableEq m]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq m] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/HilbertOverlap.lean:31:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.hsSq_transpose`:
+  [DecidableEq m]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq m] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/HilbertOverlap.lean:40:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.sum_sq_mulVec_le`:
+  [DecidableEq m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/HilbertOverlap.lean:48:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.hsSq_mul_le`:
+  [DecidableEq k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/HilbertOverlap.lean:72:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.diagonal_sq_le_hsSq`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/HilbertOverlap.lean:98:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.hsSq_rankOne`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/HilbertOverlap.lean:103:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.hsInner_rankOne_eq_diagonal`:
+  [Fintype k]
+  [DecidableEq n]
+  [DecidableEq k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype k] [DecidableEq n] [DecidableEq k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/HilbertOverlap.lean:213:4: This simp argument is unused:
+  Matrix.transpose_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hsSq, circleMomentMap, rankOne, Matrix.vecMulVec_apply, Matrix.trace, Matrix.diag, Fin.sum_univ_two,
+    Matrix.one_apply, Matrix.smul_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2559/2580] Replayed ComplementedSubspace.TensorMoment
+warning: ComplementedSubspace/TensorMoment.lean:50:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.hsVector_norm_sq`:
+  [DecidableEq m]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq m] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/TensorMoment.lean:51:55: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hsVector, EuclideanSpace.real_norm_sq_eq, Fintype.sum_prod_type, hsSq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/TensorMoment.lean:59:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.hsInner_sq_le`:
+  [DecidableEq m]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq m] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/TensorMoment.lean:66:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.rankOne_mixed_hsSq_bound`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/TensorMoment.lean:107:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.tensor_hsSq_smul`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/TensorMoment.lean:110:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.tensor_hsSq_add`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/TensorMoment.lean:116:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.tensor_hsInner_smul_left`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/TensorMoment.lean:120:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.tensor_hsInner_smul_right`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/TensorMoment.lean:125:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.tensor_hsSq_fromBlocks`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2563/2584] Replayed ComplementedSubspace.FrameProjectionNorm
+warning: ComplementedSubspace/FrameProjectionNorm.lean:19:24: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2564/2584] Replayed ComplementedSubspace.FiniteSigns
+warning: ComplementedSubspace/FiniteSigns.lean:56:23: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteAverage]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2565/2584] Replayed ComplementedSubspace.ProductFrame
+warning: ComplementedSubspace/ProductFrame.lean:50:56: This simp argument is unused:
+  Fintype.card_unit
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [realProductFrame, finiteAverage, MomentIndex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrame.lean:74:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2568/2584] Replayed ComplementedSubspace.ProductFrameLp
+warning: ComplementedSubspace/ProductFrameLp.lean:27:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2569/2584] Replayed ComplementedSubspace.ComplexProjectionEnergy
+warning: ComplementedSubspace/ComplexProjectionEnergy.lean:45:24: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2573/2588] Replayed ComplementedSubspace.FrameCoefficient
+warning: ComplementedSubspace/FrameCoefficient.lean:17:30: Variable name `p` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _p
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2576/2588] Replayed ComplementedSubspace.FiniteSignsInterpolation
+warning: ComplementedSubspace/FiniteSignsInterpolation.lean:65:13: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteSignsInterpolation.lean:89:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2577/2588] Replayed ComplementedSubspace.FrameCoefficientNorm
+warning: ComplementedSubspace/FrameCoefficientNorm.lean:23:18: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hp', Real.norm_eq_abs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2579/2588] Replayed ComplementedSubspace.ProductFrameSignSample
+warning: ComplementedSubspace/ProductFrameSignSample.lean:136:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/ProductFrameSignSample.lean:136:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ComplementedSubspace/ProductFrameSignSample.lean:127:13: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2583/2590] Replayed ComplementedSubspace.ComplexFrameCoefficient
+warning: ComplementedSubspace/ComplexFrameCoefficient.lean:35:37: Variable name `p` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _p
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ComplementedSubspace/ComplexFrameCoefficient.lean:123:18: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hp']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2588/2596] Replayed ComplementedSubspace.LocalHilbertCompactness
+warning: ComplementedSubspace/LocalHilbertCompactness.lean:107:13: `Set.setOf_and` has been deprecated: Use `Set.ofPred_and` instead
+warning: ComplementedSubspace/LocalHilbertCompactness.lean:107:24: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+warning: ComplementedSubspace/LocalHilbertCompactness.lean:133:34: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+warning: ComplementedSubspace/LocalHilbertCompactness.lean:140:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.ApproxParallelogram.mono`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/LocalHilbertCompactness.lean:214:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2594/2605] Replayed ComplementedSubspace.FiniteParameterGap
+warning: ComplementedSubspace/FiniteParameterGap.lean:74:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:77:66: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:78:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:82:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:103:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:106:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:149:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:149:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:158:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:158:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:240:2: Unused tactic linter: `congr 1` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/FiniteParameterGap.lean:256:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2596/2605] Replayed ComplementedSubspace.FiniteParameterBounds
+warning: ComplementedSubspace/FiniteParameterBounds.lean:79:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/FiniteParameterBounds.lean:79:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [2599/2606] Replayed ComplementedSubspace.LocalHilbertProjection
+warning: ComplementedSubspace/LocalHilbertProjection.lean:84:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2639/2651] Replayed ComplementedSubspace.FiniteProjectionTrace
+warning: ComplementedSubspace/FiniteProjectionTrace.lean:47:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.compressedBasisMap_eq_smulRight`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/FiniteProjectionTrace.lean:81:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.sum_compressedBasisMap`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/FiniteProjectionTrace.lean:98:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.compressedBasisMap_complement_defect`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/FiniteProjectionTrace.lean:120:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.basisComplementCompression_expansion`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/FiniteProjectionTrace.lean:132:38: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2641/2651] Replayed ComplementedSubspace.ProductFrameSymmetry
+warning: ComplementedSubspace/ProductFrameSymmetry.lean:160:65: This simp argument is unused:
+  Fintype.card_unit
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [frameSymmetry, finiteAverage, MomentIndex, FrameIndex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameSymmetry.lean:173:30: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/ProductFrameSymmetry.lean:178:30: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/ProductFrameSymmetry.lean:173:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ComplementedSubspace/ProductFrameSymmetry.lean:178:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ComplementedSubspace/ProductFrameSymmetry.lean:170:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/ProductFrameSymmetry.lean:182:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2644/2653] Replayed ComplementedSubspace.FiniteSelectionCoordinates
+warning: ComplementedSubspace/FiniteSelectionCoordinates.lean:81:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.basisSubsetProjection_compressed_trace`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2645/2653] Replayed ComplementedSubspace.ProductFrameTrace
+warning: ComplementedSubspace/ProductFrameTrace.lean:62:12: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hki]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameTrace.lean:87:27: This simp argument is unused:
+  LinearMap.toMatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.trace]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameTrace.lean:88:11: This simp argument is unused:
+  Pi.basisFun_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [b, LinearMap.toMatrix'_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameTrace.lean:129:51: This simp argument is unused:
+  Finset.sum_ite_eq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_ite, mul_zero, Finset.sum_ite_eq, Finset.mem_univ, ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2647/2653] Replayed ComplementedSubspace.FiniteCoordinateSelection
+warning: ComplementedSubspace/FiniteCoordinateSelection.lean:42:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteCoordinateSelection.lean:47:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2650/2664] Replayed ComplementedSubspace.FiniteSelectedHilbertModel
+warning: ComplementedSubspace/FiniteSelectedHilbertModel.lean:46:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/FiniteSelectedHilbertModel.lean:29:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.selected_coordinates_have_hilbert_factorization`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2651/2664] Replayed ComplementedSubspace.ProductFrameSignContraction
+warning: ComplementedSubspace/ProductFrameSignContraction.lean:115:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/ProductFrameSignContraction.lean:115:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ComplementedSubspace/ProductFrameSignContraction.lean:105:13: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2653/2664] Replayed ComplementedSubspace.ProductFrameMoments
+warning: ComplementedSubspace/ProductFrameMoments.lean:91:60: This simp argument is unused:
+  Fintype.card_unit
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [productFrameMoment, productFrameFourth, realProductFrame, finiteAverage, tensorMoment, MomentIndex,
+    FrameIndex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:105:19: This simp argument is unused:
+  productFrameMoment
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, Finset.sum_add_distrib, ← sideIndex_false, ← sideIndex_true,
+    productFrameFourth_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:107:59: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, Bool.true_eq_false, and_self, and_true, and_false, ↓reduceIte, zero_add,
+    add_zero, zero_mul, one_mul, Finset.sum_const_zero, circleBlock, Matrix.smul_apply, Matrix.fromBlocks_apply₁₁,
+    Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂, Matrix.add_apply,
+    Matrix.submatrix_apply, Pi.add_apply, Pi.smul_apply, smul_eq_mul, sideIndex, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:109:10: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, Bool.true_eq_false, not_false_eq_true, and_self, and_true, and_false,
+    ↓reduceIte, zero_add, add_zero, one_mul, Finset.sum_const_zero, circleBlock, Matrix.smul_apply,
+    Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
+    Matrix.add_apply, Matrix.submatrix_apply, Pi.add_apply, Pi.smul_apply, smul_eq_mul, sideIndex, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:109:20: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, Bool.true_eq_false, not_false_eq_true, and_self, and_true, and_false,
+    ↓reduceIte, zero_add, add_zero, zero_mul, Finset.sum_const_zero, circleBlock, Matrix.smul_apply,
+    Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
+    Matrix.add_apply, Matrix.submatrix_apply, Pi.add_apply, Pi.smul_apply, smul_eq_mul, sideIndex, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:109:29: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, Bool.true_eq_false, not_false_eq_true, and_self, and_true, and_false,
+    ↓reduceIte, zero_add, add_zero, zero_mul, one_mul, circleBlock, Matrix.smul_apply, Matrix.fromBlocks_apply₁₁,
+    Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂, Matrix.add_apply,
+    Matrix.submatrix_apply, Pi.add_apply, Pi.smul_apply, smul_eq_mul, sideIndex, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:112:10: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, Bool.true_eq_false, not_false_eq_true, and_self, and_true, and_false,
+    ↓reduceIte, zero_add, add_zero, zero_mul, one_mul, Finset.sum_const_zero, circleBlock, Matrix.smul_apply,
+    Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
+    Matrix.add_apply, Pi.add_apply, Pi.smul_apply, smul_eq_mul, sideIndex, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:112:34: This simp argument is unused:
+  Pi.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, Bool.true_eq_false, not_false_eq_true, and_self, and_true, and_false,
+    ↓reduceIte, zero_add, add_zero, zero_mul, one_mul, Finset.sum_const_zero, circleBlock, Matrix.smul_apply,
+    Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
+    Matrix.add_apply, Matrix.submatrix_apply, Pi.smul_apply, smul_eq_mul, sideIndex, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:112:48: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, Bool.true_eq_false, not_false_eq_true, and_self, and_true, and_false,
+    ↓reduceIte, zero_add, add_zero, zero_mul, one_mul, Finset.sum_const_zero, circleBlock, Matrix.smul_apply,
+    Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
+    Matrix.add_apply, Matrix.submatrix_apply, Pi.add_apply, smul_eq_mul, sideIndex, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:114:10: This simp argument is unused:
+  Matrix.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [productFrameMoment, Matrix.submatrix_apply, Pi.add_apply, mul_add, Finset.sum_add_distrib,
+    Finset.sum_const_zero, zero_add, add_zero, ← Finset.mul_sum, ← Finset.sum_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:115:10: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [productFrameMoment, Matrix.submatrix_apply, Pi.add_apply, Matrix.add_apply, mul_add,
+    Finset.sum_add_distrib, zero_add, add_zero, ← Finset.mul_sum, ← Finset.sum_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:115:33: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [productFrameMoment, Matrix.submatrix_apply, Pi.add_apply, Matrix.add_apply, mul_add,
+    Finset.sum_add_distrib, Finset.sum_const_zero, add_zero, ← Finset.mul_sum, ← Finset.sum_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:115:43: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [productFrameMoment, Matrix.submatrix_apply, Pi.add_apply, Matrix.add_apply, mul_add,
+    Finset.sum_add_distrib, Finset.sum_const_zero, zero_add, ← Finset.mul_sum, ← Finset.sum_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:115:53: This simp argument is unused:
+  ← Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [productFrameMoment, Matrix.submatrix_apply, Pi.add_apply, Matrix.add_apply, mul_add,
+    Finset.sum_add_distrib, Finset.sum_const_zero, zero_add, add_zero, ← Finset.sum_mul]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:116:10: This simp argument is unused:
+  ← Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [productFrameMoment, Matrix.submatrix_apply, Pi.add_apply, Matrix.add_apply, mul_add,
+    Finset.sum_add_distrib, Finset.sum_const_zero, zero_add, add_zero, ← Finset.mul_sum]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:118:48: This simp argument is unused:
+  ← Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_assoc, ← Finset.mul_sum, Finset.sum_const_zero, zero_add, add_zero]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:119:10: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_assoc, ← Finset.mul_sum, ← Finset.sum_mul, zero_add, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:119:33: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_assoc, ← Finset.mul_sum, ← Finset.sum_mul, Finset.sum_const_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ProductFrameMoments.lean:119:43: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_assoc, ← Finset.mul_sum, ← Finset.sum_mul, Finset.sum_const_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2655/2665] Replayed ComplementedSubspace.FiniteOverlapBasisColumns
+warning: ComplementedSubspace/FiniteOverlapBasisColumns.lean:15:42: This simp argument is unused:
+  Finset.sum_ite_eq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Real.norm_eq_abs, sq_abs, normalizedFrameSign_covariance, ite_div, zero_div, mul_ite, mul_zero,
+    Finset.sum_ite_eq, Finset.mem_univ, ite_true, real_inner_self_eq_norm_sq] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/FiniteOverlapBasisColumns.lean:17:13: This simp argument is unused:
+  Real.norm_eq_abs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sq_abs, one_div, ← Finset.sum_mul] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/FiniteOverlapBasisColumns.lean:17:31: This simp argument is unused:
+  sq_abs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Real.norm_eq_abs, one_div, ← Finset.sum_mul] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2656/2665] Replayed ComplementedSubspace.FiniteOverlapLp
+warning: ComplementedSubspace/FiniteOverlapLp.lean:56:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteOverlapLp.lean:63:13: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteOverlapLp.lean:106:41: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/FiniteOverlapLp.lean:106:41: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ComplementedSubspace/FiniteOverlapLp.lean:84:13: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2657/2665] Replayed ComplementedSubspace.UnconditionalHilbertSynthesis
+warning: ComplementedSubspace/UnconditionalHilbertSynthesis.lean:51:13: Variable name `hD` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2658/2665] Replayed ComplementedSubspace.FiniteOverlapScale
+warning: ComplementedSubspace/FiniteOverlapScale.lean:35:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteOverlapScale.lean:57:61: Variable name `hp₃` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp₃
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: ComplementedSubspace/FiniteOverlapScale.lean:140:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: ComplementedSubspace/FiniteOverlapScale.lean:138:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/FiniteOverlapScale.lean:171:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2659/2670] Replayed ComplementedSubspace.FiniteOverlapRandomization
+warning: ComplementedSubspace/FiniteOverlapRandomization.lean:114:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ComplementedSubspace/FiniteOverlapRandomization.lean:114:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [2670/2681] Replayed ComplementedSubspace.SelectedProjectionSetup
+warning: ComplementedSubspace/SelectedProjectionSetup.lean:64:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.selectedCoefficientHilbertEquiv_norm_le_one`:
+  [FiniteDimensional ℝ ↥F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ ↥F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/SelectedProjectionSetup.lean:164:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.selectedCoefficient_coordinate_sq_le`:
+  [FiniteDimensional ℝ ↥F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ ↥F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/SelectedProjectionSetup.lean:180:66: `ContinuousLinearMap.zero_apply` has been deprecated: Use `zero_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.zero_apply` to `zero_apply x`).
+warning: ComplementedSubspace/SelectedProjectionSetup.lean:174:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.selectedCoefficientHilbert_first_pairing`:
+  [FiniteDimensional ℝ ↥F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ ↥F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/SelectedProjectionSetup.lean:185:40: This simp argument is unused:
+  WithLp.ofLp_toLp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [PiLp.inner_apply, RCLike.inner_apply, conj_trivial, frameCoefficientHilbertEquiv_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2674/2687] Replayed ComplementedSubspace.FiniteBlockObstruction
+warning: ComplementedSubspace/FiniteBlockObstruction.lean:50:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2675/2687] Replayed ComplementedSubspace.LocalHilbertDual
+warning: ComplementedSubspace/LocalHilbertDual.lean:62:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ComplementedSubspace/LocalHilbertDual.lean:96:15: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+warning: ComplementedSubspace/LocalHilbertDual.lean:96:46: `ContinuousLinearMap.sub_apply` has been deprecated: Use `sub_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `sub_apply x`).
+warning: ComplementedSubspace/LocalHilbertDual.lean:107:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.ApproxParallelogram.nonneg_of_nontrivial`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/LocalHilbertDual.lean:129:6: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hf, hg, add_zero, sub_self, norm_zero, zero_pow (by decide : 2 ≠ 0), mul_zero, le_refl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2676/2687] Replayed ComplementedSubspace.DPRObstruction
+warning: ComplementedSubspace/DPRObstruction.lean:40:8: Variable name `hVdim` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hVdim
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2677/2688] Replayed ComplementedSubspace.LocalHilbertSum
+warning: ComplementedSubspace/LocalHilbertSum.lean:140:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2683/2691] Replayed ComplementedSubspace.RecursiveHeadHilbert
+warning: ComplementedSubspace/RecursiveHeadHilbert.lean:28:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2684/2691] Replayed ComplementedSubspace.LocalHilbertSumDual
+warning: ComplementedSubspace/LocalHilbertSumDual.lean:52:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2685/2692] Replayed ComplementedSubspace.FiniteBlockDPRLower
+warning: ComplementedSubspace/FiniteBlockDPRLower.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2687/2692] Replayed ComplementedSubspace.LpSubmodule
+warning: ComplementedSubspace/LpSubmodule.lean:62:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.lp_two_coordinate_norm_sq`:
+  [(i : ι) → NormedSpace ℝ (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : ι) → NormedSpace ℝ (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/LpSubmodule.lean:102:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.lpDiagonalRangeEval_norm_le`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2691/2700] Replayed ComplementedSubspace.RecursiveProjection
+warning: ComplementedSubspace/RecursiveProjection.lean:98:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: ComplementedSubspace/RecursiveProjection.lean:115:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2693/2703] Replayed ComplementedSubspace.FrameCoefficientReindexedRange
+warning: ComplementedSubspace/FrameCoefficientReindexedRange.lean:44:36: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: ComplementedSubspace/FrameCoefficientReindexedRange.lean:50:36: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2697/2703] Replayed ComplementedSubspace.DiagonalFrameSummand
+warning: ComplementedSubspace/DiagonalFrameSummand.lean:58:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.diagonalSummand_RJ`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/DiagonalFrameSummand.lean:83:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.diagonalSummand_J_norm`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2700/2703] Replayed ComplementedSubspace.GLRetraction
+warning: ComplementedSubspace/GLRetraction.lean:151:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2701/2703] Replayed ComplementedSubspace.GLDualRetraction
+warning: ComplementedSubspace/GLDualRetraction.lean:58:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/GLDualRetraction.lean:61:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2707/2718] Replayed ComplementedSubspace.LocalHilbertQuotient
+warning: ComplementedSubspace/LocalHilbertQuotient.lean:91:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2710/2721] Replayed ComplementedSubspace.LocalHilbertHeadRenorm
+warning: ComplementedSubspace/LocalHilbertHeadRenorm.lean:22:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.ApproxParallelogram.prodL2`:
+  [NormedSpace ℝ E]
+  [NormedSpace ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] [NormedSpace ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2716/2724] Replayed ComplementedSubspace.DPRIsomorphism
+warning: ComplementedSubspace/DPRIsomorphism.lean:24:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/DPRIsomorphism.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/DPRIsomorphism.lean:48:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2718/2724] Replayed ComplementedSubspace.FiniteDualDPRLower
+warning: ComplementedSubspace/FiniteDualDPRLower.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/FiniteDualDPRLower.lean:43:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/FiniteDualDPRLower.lean:44:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2725/2738] Replayed ComplementedSubspace.FiniteCorrection
+warning: ComplementedSubspace/FiniteCorrection.lean:32:8: automatically included section variable(s) unused in theorem `ComplementedSubspace.finiteRankCorrection_apply`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/FiniteCorrection.lean:37:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.norm_finiteRankCorrection_le`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComplementedSubspace/FiniteCorrection.lean:52:0: automatically included section variable(s) unused in theorem `ComplementedSubspace.exists_extended_basis_coordinates`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2728/2741] Replayed ComplementedSubspace.FiniteApproximation
+warning: ComplementedSubspace/FiniteApproximation.lean:52:10: This simp argument is unused:
+  Module.Basis.equivFun_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/FiniteApproximation.lean:104:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/FiniteApproximation.lean:118:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+ℹ [2731/2742] Built ComplementedSubspace.FiniteOverlapScaleAudit (42s)
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:3:0: 'ComplementedSubspace.realFrameOverlapPenalty_compensation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:4:0: 'ComplementedSubspace.finite_overlap_scale_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:5:0: 'ComplementedSubspace.finite_overlap_separation_lt_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:6:0: 'ComplementedSubspace.finite_overlap_selection_contradiction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:7:0: 'ComplementedSubspace.finite_overlap_weighted_separation_lt_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:8:0: 'ComplementedSubspace.finite_overlap_weighted_selection_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:9:0: 'ComplementedSubspace.realFrameSignConstant_sq_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:10:0: 'ComplementedSubspace.finite_overlap_trace_separation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:11:0: 'ComplementedSubspace.finite_selection_smallness' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteOverlapScaleAudit.lean:12:0: 'ComplementedSubspace.finite_frame_selection_scalar_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2732/2742] Replayed ComplementedSubspace.ComplexAmbientSchauder
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:56:45: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:59:18: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:103:10: This simp argument is unused:
+  PiLp.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PiLp.single_apply, Pi.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:103:27: This simp argument is unused:
+  PiLp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PiLp.smul_apply, Pi.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:130:45: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:145:51: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:166:46: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:179:35: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hij, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:179:57: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Pi.single_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:200:27: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Pi.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/ComplexAmbientSchauder.lean:212:47: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+ℹ [2734/2742] Built ComplementedSubspace.FiniteHilbertWitnessAudit (42s)
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:6:0: 'ComplementedSubspace.finiteAverage_linearMap_norm_sq_eq_of_covariance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:7:0: 'ComplementedSubspace.frameWitness_euclidean_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:8:0: 'ComplementedSubspace.frameWitness_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:9:0: 'ComplementedSubspace.frameCoefficientWitness_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:10:0: 'ComplementedSubspace.normalizedFrameSign_covariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:11:0: 'ComplementedSubspace.normalizedFrameSign_length_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:12:0: 'ComplementedSubspace.frameCoefficientSignSample_norm_moment_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:13:0: 'ComplementedSubspace.frameCoefficientSignSample_norm_sq_average_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:14:0: 'ComplementedSubspace.normalizedProductFrameRow_length_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:15:0: 'ComplementedSubspace.normalizedProductFrameRow_covariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:16:0: 'ComplementedSubspace.normalizedProductFrameRow_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:17:0: 'ComplementedSubspace.frameCoefficientRow_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:18:0: 'ComplementedSubspace.frameCoefficientRow_pairing_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteHilbertWitnessAudit.lean:19:0: 'ComplementedSubspace.frameRowFunctional_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2735/2744] Built ComplementedSubspace.FiniteParameterAudit (11s)
+info: ComplementedSubspace/FiniteParameterAudit.lean:3:0: 'ComplementedSubspace.hasDerivAt_realFrameLogOverlap_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteParameterAudit.lean:4:0: 'ComplementedSubspace.finiteParameter_overlap_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteParameterAudit.lean:5:0: 'ComplementedSubspace.exists_finiteFrame_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteParameterAudit.lean:6:0: 'ComplementedSubspace.realFrameOverlapScale_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteParameterAudit.lean:7:0: 'ComplementedSubspace.realFrameAlpha_mul_conjugate_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/FiniteParameterAudit.lean:8:0: 'ComplementedSubspace.realFrame_scales_ordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2738/2746] Replayed ComplementedSubspace.ComplexCorollaryAssembly
+warning: ComplementedSubspace/ComplexCorollaryAssembly.lean:32:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+ℹ [2739/2747] Built ComplementedSubspace.LocalHilbertAudit (12s)
+info: ComplementedSubspace/LocalHilbertAudit.lean:7:0: 'ComplementedSubspace.exists_bounded_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:8:0: 'ComplementedSubspace.exists_normalized_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:9:0: 'ComplementedSubspace.normalizedNorm_local_hilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:10:0: 'ComplementedSubspace.exists_localHilbert_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:11:0: 'ComplementedSubspace.exists_localHilbert_subspace_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:12:0: 'ComplementedSubspace.exists_parallelogram_complement_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:13:0: 'ComplementedSubspace.dual_pair_norm_sq_le_of_eval_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:14:0: 'ComplementedSubspace.ApproxParallelogram.dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:15:0: 'ComplementedSubspace.exists_hilbertFactorization_of_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:16:0: 'ComplementedSubspace.exists_hilbertFactorization_norm_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:17:0: 'ComplementedSubspace.localHilbert_prodL2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:18:0: 'ComplementedSubspace.HasHilbertNormWithin.dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:19:0: 'ComplementedSubspace.HasHilbertNormWithin.bidual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:20:0: 'ComplementedSubspace.exists_localHilbert_prodL2_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:21:0: 'ComplementedSubspace.prodL2Dual_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:22:0: 'ComplementedSubspace.localHilbert_prodL2_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:23:0: 'ComplementedSubspace.prodL2DualEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:24:0: 'ComplementedSubspace.realDualIsometryEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:25:0: 'ComplementedSubspace.prodL2BidualEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertAudit.lean:26:0: 'ComplementedSubspace.localHilbert_prodL2_bidual' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2741/2747] Built ComplementedSubspace.ComplexRealDPRAudit (12s)
+info: ComplementedSubspace/ComplexRealDPRAudit.lean:3:0: 'ComplementedSubspace.norm_complex_sum_smul_le_of_subsum_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/ComplexRealDPRAudit.lean:4:0: 'ComplementedSubspace.summable_complex_smul_of_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ComplexRealDPRAudit.lean:5:0: 'ComplementedSubspace.realifiedUnconditionalSchauderBasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ComplexRealDPRAudit.lean:6:0: 'ComplementedSubspace.hasRealDPR_of_complexUnconditionalSchauderBasis' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/ComplexRealDPRAudit.lean:7:0: 'ComplementedSubspace.not_hasComplexUnconditionalSchauderBasis_of_real_equiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/ComplexRealDPRAudit.lean:8:0: 'ComplementedSubspace.complexDualRealIsometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ComplexRealDPRAudit.lean:9:0: 'ComplementedSubspace.not_hasComplexUnconditionalSchauderBasis_dual_of_real_equiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [2742/2748] Built ComplementedSubspace.LocalHilbertDualTopAudit (12s)
+info: ComplementedSubspace/LocalHilbertDualTopAudit.lean:3:0: 'ComplementedSubspace.DualSubspacesLocallyHilbertWithin.dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertDualTopAudit.lean:4:0: 'ComplementedSubspace.locallyHilbert_bidual_of_dualSubspaces' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2743/2748] Built ComplementedSubspace.ProductFrameTranspose (13s)
+✔ [2744/2749] Built ComplementedSubspace.LocalHilbertRecursiveQuotient (13s)
+ℹ [2745/2749] Built ComplementedSubspace.ProjectionAssemblyAudit (12s)
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:8:0: 'ComplementedSubspace.finitePiLp_uniformConvexSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:9:0: 'ComplementedSubspace.ambientUniformConvexSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:10:0: 'ComplementedSubspace.ambientTailSubmodule_approxParallelogram' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:11:0: 'ComplementedSubspace.exists_recursive_alternatingProjection_near_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:12:0: 'ComplementedSubspace.lpDiagonalRangeEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:13:0: 'ComplementedSubspace.lpDiagonalRangeEval_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:14:0: 'ComplementedSubspace.lpDiagonalRange_coordinate_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:15:0: 'ComplementedSubspace.RecursiveFrameSelection.frameCoefficientEvenRangeEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:16:0: 'ComplementedSubspace.RecursiveFrameSelection.frameCoefficientOddComplementRangeEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:17:0: 'ComplementedSubspace.lpDiagonalRangeKernelHeadTailIsometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:18:0: 'ComplementedSubspace.diagonalSummand_JS' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:19:0: 'ComplementedSubspace.diagonalSummand_SJ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:20:0: 'ComplementedSubspace.diagonalSummand_RJ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/ProjectionAssemblyAudit.lean:21:0: 'ComplementedSubspace.diagonalSummand_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2746/2749] Built ComplementedSubspace.ComplexCorollaryAudit (13s)
+info: ComplementedSubspace/ComplexCorollaryAudit.lean:3:0: 'ComplementedSubspace.complexCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2747/2751] Built ComplementedSubspace.LocalHilbertQuotientAudit (12s)
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:5:0: 'ComplementedSubspace.HasHilbertNormWithin.pullback_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:6:0: 'ComplementedSubspace.DualSubspacesLocallyHilbertWithin.pullback' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:7:0: 'ComplementedSubspace.renorm_dual_subspace_dual_localHilbert' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:8:0: 'ComplementedSubspace.exists_renorm_dual_subspace_dual_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:9:0: 'ComplementedSubspace.headTailRenormLinear_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:10:0: 'ComplementedSubspace.headTail_dual_subspace_dual_localHilbert' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:11:0: 'ComplementedSubspace.exists_headTail_dual_subspace_dual_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:12:0: 'ComplementedSubspace.recursive_headTail_dual_subspace_dual_localHilbert' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:13:0: 'ComplementedSubspace.recursiveProfile_embedding_dual_subspaces' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:14:0: 'ComplementedSubspace.recursiveProfile_kernel_dual_subspaces' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/LocalHilbertQuotientAudit.lean:15:0: 'ComplementedSubspace.recursiveDiagonalRange_kernel_dual_subspaces' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [2748/2754] Built ComplementedSubspace.PureFrameDPRAudit (12s)
+info: ComplementedSubspace/PureFrameDPRAudit.lean:3:0: 'ComplementedSubspace.lpUniformIsometryEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/PureFrameDPRAudit.lean:4:0: 'ComplementedSubspace.chiDPR_eq_top_of_continuousLinearEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/PureFrameDPRAudit.lean:5:0: 'ComplementedSubspace.RecursiveFrameSelection.pureFrameProjection_idempotent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/PureFrameDPRAudit.lean:6:0: 'ComplementedSubspace.RecursiveFrameSelection.pureFrameProjection_range_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/PureFrameDPRAudit.lean:7:0: 'ComplementedSubspace.RecursiveFrameSelection.pureFrameProjection_range_dual_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/PureFrameDPRAudit.lean:8:0: 'ComplementedSubspace.RecursiveFrameSelection.pureFrameCoefficientRangeEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/PureFrameDPRAudit.lean:9:0: 'ComplementedSubspace.RecursiveFrameSelection.pureFrameCoefficientProfile_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/PureFrameDPRAudit.lean:10:0: 'ComplementedSubspace.RecursiveFrameSelection.pureFrameCoefficientProfile_dual_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [2753/2762] Replayed ComplementedSubspace.AmbientBasis
+warning: ComplementedSubspace/AmbientBasis.lean:61:38: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+warning: ComplementedSubspace/AmbientBasis.lean:64:18: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/AmbientBasis.lean:96:10: This simp argument is unused:
+  PiLp.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PiLp.single_apply, Pi.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/AmbientBasis.lean:96:27: This simp argument is unused:
+  PiLp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PiLp.smul_apply, Pi.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/AmbientBasis.lean:123:38: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+warning: ComplementedSubspace/AmbientBasis.lean:138:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: ComplementedSubspace/AmbientBasis.lean:159:39: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+warning: ComplementedSubspace/AmbientBasis.lean:172:35: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hij, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/AmbientBasis.lean:172:57: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Pi.single_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2754/2762] Replayed BanLat.Basic
+warning: BanLat/Basic.lean:537:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2755/2762] Replayed BanLat.LLexpr
+warning: BanLat/LLexpr.lean:103:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2758/2769] Replayed BanLat.OrderComplete
+warning: BanLat/OrderComplete.lean:84:28: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/OrderComplete.lean:88:28: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/OrderComplete.lean:96:28: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/OrderComplete.lean:105:28: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/OrderComplete.lean:126:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/OrderComplete.lean:127:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/OrderComplete.lean:131:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/OrderComplete.lean:244:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/OrderComplete.lean:250:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/OrderComplete.lean:258:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/OrderComplete.lean:269:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+⚠ [2760/2778] Replayed BanLat.Normed
+warning: BanLat/Normed.lean:150:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2763/2781] Replayed BanLat.Substructures.Sublattice
+warning: BanLat/Substructures/Sublattice.lean:332:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Substructures/Sublattice.lean:352:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Substructures/Sublattice.lean:390:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Substructures/Sublattice.lean:397:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Substructures/Sublattice.lean:410:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Substructures/Sublattice.lean:785:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Substructures/Sublattice.lean:805:4: `Set.countable_setOf_finite_subset` has been deprecated: Use `Set.countable_ofPred_finite_subset` instead
+warning: BanLat/Substructures/Sublattice.lean:824:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/Substructures/Sublattice.lean:838:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+⚠ [2765/2781] Replayed BanLat.Substructures.Ideal
+warning: BanLat/Substructures/Ideal.lean:212:55: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BanLat/Substructures/Ideal.lean:214:36: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BanLat/Substructures/Ideal.lean:219:55: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BanLat/Substructures/Ideal.lean:221:36: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2775/2792] Replayed BanLat.Substructures.Band.Generated
+warning: BanLat/Substructures/Band/Generated.lean:69:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2779/2792] Replayed BanLat.Substructures.Band.PPP
+warning: BanLat/Substructures/Band/PPP.lean:60:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Substructures/Band/PPP.lean:74:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2780/2792] Replayed BanLat.Operators.RieszKantorovich
+warning: BanLat/Operators/RieszKantorovich.lean:56:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BanLat/Operators/RieszKantorovich.lean:121:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Operators/RieszKantorovich.lean:127:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Operators/RieszKantorovich.lean:773:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Operators/RieszKantorovich.lean:779:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Operators/RieszKantorovich.lean:1181:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BanLat/Operators/RieszKantorovich.lean:1195:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BanLat/Operators/RieszKantorovich.lean:1338:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+⚠ [2785/2801] Replayed BanLat.Dual
+warning: BanLat/Dual.lean:106:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+⚠ [2786/2801] Replayed ComplementedSubspace.IsometricProductDPRLower
+warning: ComplementedSubspace/IsometricProductDPRLower.lean:28:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2792/2802] Replayed ComplementedSubspace.AmbientSchauder
+warning: ComplementedSubspace/AmbientSchauder.lean:29:27: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Pi.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ComplementedSubspace/AmbientSchauder.lean:41:40: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+⚠ [2793/2802] Replayed ComplementedSubspace.LatticeNonisomorphism
+warning: ComplementedSubspace/LatticeNonisomorphism.lean:23:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/LatticeNonisomorphism.lean:24:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/LatticeNonisomorphism.lean:25:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/LatticeNonisomorphism.lean:26:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/LatticeNonisomorphism.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/LatticeNonisomorphism.lean:28:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/LatticeNonisomorphism.lean:29:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+ℹ [2794/2802] Built ComplementedSubspace.RecursiveParametersAudit (12s)
+info: ComplementedSubspace/RecursiveParametersAudit.lean:3:0: 'ComplementedSubspace.exists_recursiveFrameSelection' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/RecursiveParametersAudit.lean:4:0: 'ComplementedSubspace.RecursiveFrameSelection.overlap_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/RecursiveParametersAudit.lean:5:0: 'ComplementedSubspace.RecursiveFrameSelection.toBlockParameters' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/RecursiveParametersAudit.lean:6:0: 'ComplementedSubspace.recursiveLocalHilbertThreshold_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/RecursiveParametersAudit.lean:7:0: 'ComplementedSubspace.recursiveFrameSelection_later_parallelogram' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [2795/2802] Replayed ComplementedSubspace.AmbientFiniteApproximation
+warning: ComplementedSubspace/AmbientFiniteApproximation.lean:81:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/AmbientFiniteApproximation.lean:82:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/AmbientFiniteApproximation.lean:98:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/AmbientFiniteApproximation.lean:99:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/AmbientFiniteApproximation.lean:100:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/AmbientFiniteApproximation.lean:105:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/AmbientFiniteApproximation.lean:106:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/AmbientFiniteApproximation.lean:107:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2796/2802] Replayed ComplementedSubspace.ProjectionCorollaries
+warning: ComplementedSubspace/ProjectionCorollaries.lean:21:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ComplementedSubspace/ProjectionCorollaries.lean:24:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2799/2802] Replayed ComplementedSubspace.RealMainConsequences
+warning: ComplementedSubspace/RealMainConsequences.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [2800/2802] Built ComplementedSubspace.SelectedFrameBasis (16s)
+ℹ [2801/2802] Built ComplementedSubspace.RealMainAudit (13s)
+info: ComplementedSubspace/RealMainAudit.lean:3:0: 'ComplementedSubspace.actualProjection_range_chiDPR_eq_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/RealMainAudit.lean:4:0: 'ComplementedSubspace.actualProjection_complement_range_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/RealMainAudit.lean:5:0: 'ComplementedSubspace.actualProjection_range_dual_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/RealMainAudit.lean:6:0: 'ComplementedSubspace.actualProjection_complement_range_dual_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/RealMainAudit.lean:7:0: 'ComplementedSubspace.realMainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2802/2802] Built ComplementedSubspace.RealMainConsequencesAudit (12s)
+info: ComplementedSubspace/RealMainConsequencesAudit.lean:3:0: 'ComplementedSubspace.actualProjection_range_bidual_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/RealMainConsequencesAudit.lean:4:0: 'ComplementedSubspace.actualProjection_complement_range_bidual_chiDPR_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ComplementedSubspace/RealMainConsequencesAudit.lean:5:0: 'ComplementedSubspace.realMainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/RealMainConsequencesAudit.lean:6:0: 'ComplementedSubspace.realCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/RealMainConsequencesAudit.lean:7:0: 'ComplementedSubspace.realUnconditionalCorollary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ComplementedSubspace/RealMainConsequencesAudit.lean:8:0: 'ComplementedSubspace.realSeparableNonprimarity' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2802 jobs).
+EXIT CODE: 0
+END UTC: 2026-09-05T23:27:47.3964378Z

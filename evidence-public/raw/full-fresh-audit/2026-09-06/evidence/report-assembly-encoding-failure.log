@@ -1,0 +1,42 @@
+{
+  "label": "report-assembly-encoding-failure",
+  "cwd": "WORKSPACE",
+  "executable": "USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "arguments": [
+    "-B",
+    "WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\evidence\\prepare_final_report.py"
+  ],
+  "windows_command_line": "\"USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -B \"WORKSPACE\\output\\full_fresh_audit_2026-09-06_102854\\evidence\\prepare_final_report.py\"",
+  "started": "2026-09-06T13:02:42.403569+00:00",
+  "environment": {
+    "PATH": "WORKSPACE\\tmp\\lean_library_definition_audit_2026-09-05\\lean-4.34.0-rc2-windows\\bin;USER_HOME\\.codex\\tmp\\arg0\\codex-arg0rksJmG;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;USER_HOME\\AppData\\Local\\Microsoft\\WindowsApps;USER_HOME\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\;USER_HOME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\80b8e5c230e43848;USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\27d6a192e9c98618",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "stdout": "report-assembly-encoding-failure.stdout.log",
+  "stderr": "report-assembly-encoding-failure.stderr.log",
+  "timeout_seconds": 120,
+  "pid": 26352,
+  "exit_code": 1,
+  "timed_out": false,
+  "status": "FAILED CHECK",
+  "ended": "2026-09-06T13:02:42.505637+00:00",
+  "elapsed_seconds": 0.11000000000058208
+}
+
+STDOUT (verbatim)
+
+STDERR (verbatim)
+Traceback (most recent call last):
+  File "WORKSPACE\output\full_fresh_audit_2026-09-06_102854\evidence\prepare_final_report.py", line 114, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "WORKSPACE\output\full_fresh_audit_2026-09-06_102854\evidence\prepare_final_report.py", line 29, in main
+    report=(EVIDENCE/'report-core-draft.md').read_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1028, in read_text
+    return f.read()
+           ^^^^^^^^
+  File "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 8106: character maps to <undefined>

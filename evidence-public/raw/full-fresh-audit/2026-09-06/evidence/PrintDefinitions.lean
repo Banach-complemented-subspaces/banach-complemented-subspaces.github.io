@@ -1,0 +1,30 @@
+import ComplementedSubspace
+
+set_option pp.universes true
+set_option pp.fullNames true
+
+#print ComplementedSubspace.RealMainTheoremStatement
+#print ComplementedSubspace.RealCorollaryStatement
+#print ComplementedSubspace.UnconditionalCorollaryStatement
+#print ComplementedSubspace.ComplexCorollaryStatement
+#print ComplementedSubspace.SeparableNonprimarityStatement
+#print ComplementedSubspace.basisMultiplier
+#print ComplementedSubspace.unconditionalBasisConstant
+#print ComplementedSubspace.unconditionalConstant
+#print ComplementedSubspace.lambdaDPR
+#print ComplementedSubspace.chiDPR
+#print ComplementedSubspace.GLFactorization
+#print ComplementedSubspace.GLFactorization.cost
+#print ComplementedSubspace.lambdaGL
+#print ComplementedSubspace.chiGL
+#print ComplementedSubspace.BlockParameters
+#print ComplementedSubspace.Block
+#print ComplementedSubspace.Ambient
+#print ComplementedSubspace.HasRealBanachLatticeOrder
+#print ComplementedSubspace.HasSeparatedRange
+#print ComplementedSubspace.BanachModel
+#print ComplementedSubspace.HasUnconditionalSchauderBasis
+#print ComplementedSubspace.IsOneUnconditional
+#print ComplementedSubspace.HasOneUnconditionalSchauderBasis
+#print ComplementedSubspace.IsSuperreflexiveByRenorming
+#print ComplementedSubspace.IsIsomorphicToRealBanachLattice

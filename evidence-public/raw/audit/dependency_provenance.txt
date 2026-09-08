@@ -1,0 +1,3318 @@
+INDEPENDENT ENVIRONMENT/SOURCE AUDIT
+UTC started: 2026-09-05T22:38:20.492961+00:00
+Collector: LEAN_PROJECT\verification\independent-audit-2026-09-05\collect_environment.py
+Collector SHA256: 79530984ceaf94ed10a06ce1e3a790704482497c55226a52939ca76fa4102a15
+No Lean compilation or build is performed by this collector.
+Dependency source provenance is inspected separately from reused dependency build caches. Git comparisons below compare source checkouts to their own recorded HEAD; no dependency cache was rebuilt or authenticated as part of this collector.
+
+DEPENDENCY: plausible
+MANIFEST URL: https://github.com/leanprover-community/plausible
+MANIFEST REV: d9598f07b1bc701f1e3aae163d2681c1fd978793
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\plausible" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\plausible", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/plausible
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\plausible" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\plausible", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+d9598f07b1bc701f1e3aae163d2681c1fd978793
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\plausible" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\plausible", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover-community/plausible
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\plausible" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\plausible", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\plausible" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\plausible", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\plausible" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\plausible", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\plausible" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\plausible", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\plausible" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\plausible", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "plausible",
+  "manifest_rev": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+  "actual_head": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+DEPENDENCY: LeanSearchClient
+MANIFEST URL: https://github.com/leanprover-community/LeanSearchClient
+MANIFEST REV: ba67e212be1197b84c1f1f6299488a10a3002713
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\LeanSearchClient" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/LeanSearchClient
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\LeanSearchClient" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+ba67e212be1197b84c1f1f6299488a10a3002713
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\LeanSearchClient" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover-community/LeanSearchClient
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\LeanSearchClient" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\LeanSearchClient" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\LeanSearchClient" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\LeanSearchClient" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\LeanSearchClient" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\LeanSearchClient", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "LeanSearchClient",
+  "manifest_rev": "ba67e212be1197b84c1f1f6299488a10a3002713",
+  "actual_head": "ba67e212be1197b84c1f1f6299488a10a3002713",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+DEPENDENCY: importGraph
+MANIFEST URL: https://github.com/leanprover-community/import-graph
+MANIFEST REV: 1681d78dd6e65e38b143f9740d829c826673807c
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\importGraph" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\importGraph", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/importGraph
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\importGraph" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\importGraph", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+1681d78dd6e65e38b143f9740d829c826673807c
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\importGraph" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\importGraph", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover-community/import-graph
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\importGraph" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\importGraph", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\importGraph" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\importGraph", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\importGraph" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\importGraph", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\importGraph" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\importGraph", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\importGraph" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\importGraph", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "importGraph",
+  "manifest_rev": "1681d78dd6e65e38b143f9740d829c826673807c",
+  "actual_head": "1681d78dd6e65e38b143f9740d829c826673807c",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+DEPENDENCY: proofwidgets
+MANIFEST URL: https://github.com/leanprover-community/ProofWidgets4
+MANIFEST REV: a8acbfd87375ff4abe14ce09db5b7664d383bc7f
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\proofwidgets" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\proofwidgets", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/proofwidgets
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\proofwidgets" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\proofwidgets", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+a8acbfd87375ff4abe14ce09db5b7664d383bc7f
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\proofwidgets" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\proofwidgets", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover-community/ProofWidgets4
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\proofwidgets" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\proofwidgets", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\proofwidgets" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\proofwidgets", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\proofwidgets" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\proofwidgets", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\proofwidgets" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\proofwidgets", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\proofwidgets" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\proofwidgets", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "proofwidgets",
+  "manifest_rev": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+  "actual_head": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+DEPENDENCY: aesop
+MANIFEST URL: https://github.com/leanprover-community/aesop
+MANIFEST REV: 18889deb9e83ea7420ef51c160d6f88552e744e3
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\aesop" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\aesop", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/aesop
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\aesop" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\aesop", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+18889deb9e83ea7420ef51c160d6f88552e744e3
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\aesop" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\aesop", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover-community/aesop
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\aesop" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\aesop", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\aesop" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\aesop", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\aesop" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\aesop", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\aesop" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\aesop", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\aesop" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\aesop", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "aesop",
+  "manifest_rev": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+  "actual_head": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+DEPENDENCY: Qq
+MANIFEST URL: https://github.com/leanprover-community/quote4
+MANIFEST REV: 507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Qq" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Qq", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/Qq
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Qq" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Qq", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Qq" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Qq", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover-community/quote4
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Qq" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Qq", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Qq" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Qq", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Qq" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Qq", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Qq" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Qq", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Qq" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Qq", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "Qq",
+  "manifest_rev": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+  "actual_head": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+DEPENDENCY: batteries
+MANIFEST URL: https://github.com/leanprover-community/batteries
+MANIFEST REV: 4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\batteries" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\batteries", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/batteries
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\batteries" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\batteries", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\batteries" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\batteries", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover-community/batteries
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\batteries" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\batteries", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\batteries" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\batteries", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\batteries" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\batteries", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\batteries" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\batteries", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\batteries" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\batteries", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "batteries",
+  "manifest_rev": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+  "actual_head": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+DEPENDENCY: Cli
+MANIFEST URL: https://github.com/leanprover/lean4-cli
+MANIFEST REV: ab3a82db9fea14cf0fd7f5a2de650f4b534640af
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Cli" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Cli", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/Cli
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Cli" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Cli", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+ab3a82db9fea14cf0fd7f5a2de650f4b534640af
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Cli" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Cli", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover/lean4-cli
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Cli" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Cli", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Cli" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Cli", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Cli" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Cli", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Cli" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Cli", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\Cli" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\Cli", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "Cli",
+  "manifest_rev": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+  "actual_head": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+DEPENDENCY: mathlib
+MANIFEST URL: https://github.com/leanprover-community/mathlib4.git
+MANIFEST REV: 4cbb42e75a050e830b7cf0f2ae748d7644f59cf7
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\mathlib" rev-parse --show-toplevel
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\mathlib", "rev-parse", "--show-toplevel"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+LEAN_PROJECT/.lake/packages/mathlib
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\mathlib" rev-parse --verify HEAD
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\mathlib", "rev-parse", "--verify", "HEAD"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+4cbb42e75a050e830b7cf0f2ae748d7644f59cf7
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\mathlib" remote get-url origin
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\mathlib", "remote", "get-url", "origin"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+https://github.com/leanprover-community/mathlib4.git
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\mathlib" status --porcelain=v1 --untracked-files=all
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\mathlib", "status", "--porcelain=v1", "--untracked-files=all"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\mathlib" diff --no-ext-diff --name-status HEAD --
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\mathlib", "diff", "--no-ext-diff", "--name-status", "HEAD", "--"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\mathlib" diff --no-ext-diff --name-only HEAD -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\mathlib", "diff", "--no-ext-diff", "--name-only", "HEAD", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\mathlib" ls-files --others --exclude-standard -- *.lean
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\mathlib", "ls-files", "--others", "--exclude-standard", "--", "*.lean"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+COMMAND (Windows command-line syntax): "C:\Program Files\Git\cmd\git.exe" -C "LEAN_PROJECT\.lake\packages\mathlib" diff --no-ext-diff HEAD -- lakefile.lean lakefile.toml lean-toolchain lake-manifest.json
+ARGUMENTS (JSON): ["C:\\Program Files\\Git\\cmd\\git.exe", "-C", "LEAN_PROJECT\\.lake\\packages\\mathlib", "diff", "--no-ext-diff", "HEAD", "--", "lakefile.lean", "lakefile.toml", "lean-toolchain", "lake-manifest.json"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0
+
+DEPENDENCY SUMMARY: {
+  "name": "mathlib",
+  "manifest_rev": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+  "actual_head": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+  "head_matches_pin": true,
+  "own_git_repository": true,
+  "status_nonempty": false,
+  "status_exit_code": 0,
+  "changed_tracked_lean_except_lakefile": [],
+  "untracked_lean_except_lakefile": [],
+  "source_check_exit_codes": [
+    0,
+    0
+  ]
+}
+
+ALL DEPENDENCY SUMMARIES:
+[
+  {
+    "name": "plausible",
+    "manifest_rev": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "actual_head": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "LeanSearchClient",
+    "manifest_rev": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "actual_head": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "importGraph",
+    "manifest_rev": "1681d78dd6e65e38b143f9740d829c826673807c",
+    "actual_head": "1681d78dd6e65e38b143f9740d829c826673807c",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "proofwidgets",
+    "manifest_rev": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "actual_head": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "aesop",
+    "manifest_rev": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "actual_head": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "Qq",
+    "manifest_rev": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "actual_head": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "batteries",
+    "manifest_rev": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+    "actual_head": "4cac2177c37f5530c4da76aa8e4307f3fc9e4dcb",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "Cli",
+    "manifest_rev": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+    "actual_head": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "mathlib",
+    "manifest_rev": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+    "actual_head": "4cbb42e75a050e830b7cf0f2ae748d7644f59cf7",
+    "head_matches_pin": true,
+    "own_git_repository": true,
+    "status_nonempty": false,
+    "status_exit_code": 0,
+    "changed_tracked_lean_except_lakefile": [],
+    "untracked_lean_except_lakefile": [],
+    "source_check_exit_codes": [
+      0,
+      0
+    ]
+  }
+]
+
+ARCHIVE COMPARISON (complete per-file SHA256 evidence follows):
+
+COMMAND (Windows command-line syntax): "USER_HOME\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" "LEAN_PROJECT\verification\independent-audit-2026-09-05\collect_environment.py" --archive-report
+ARGUMENTS (JSON): ["USER_HOME\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe", "LEAN_PROJECT\\verification\\independent-audit-2026-09-05\\collect_environment.py", "--archive-report"]
+WORKING DIRECTORY: LEAN_PROJECT
+STDOUT BEGIN
+{
+  "archive": "WORKSPACE\\output\\Complemented_Subspace_Lean_Verified.zip",
+  "archive_bytes": 598251,
+  "archive_sha256_before": "5fc920bc7bb22592c2170ac72447af563d17ef261e7f39dfd6123ba04b074148",
+  "archive_sha256_after": "5fc920bc7bb22592c2170ac72447af563d17ef261e7f39dfd6123ba04b074148",
+  "archive_unchanged_during_comparison": true,
+  "zip_crc_bad_entry": null,
+  "duplicate_archive_entries": [],
+  "comparison_method": "SHA256 of complete decompressed ZIP entry bytes versus complete workspace file bytes; no normalization",
+  "archive_file_count": 262,
+  "source_or_config_count": 183,
+  "source_or_config_matches": 183,
+  "source_or_config_discrepancies": [],
+  "internal_manifest_entry_count": 261,
+  "internal_manifest_matches": 261,
+  "internal_manifest_discrepancies": [],
+  "archive_paths_not_covered_by_internal_manifest": [
+    "SOURCE-MANIFEST.sha256"
+  ],
+  "other_file_discrepancies": [
+    {
+      "relative_path": "SOURCE-MANIFEST.sha256",
+      "source_or_config": false,
+      "archived_bytes": 27838,
+      "archive_sha256": "c9311dda53584927098354931922a12d303fa9cceba4a218c270f868aad82828",
+      "workspace_sha256": null,
+      "status": "MISSING"
+    }
+  ],
+  "workspace_extra_source_or_config_files": [
+    "AmbientLatticeBoundsAudit.lean",
+    "BasisBoundsAudit.lean",
+    "BasisBoundsCheck.lean",
+    "ComplementedSubspace/ComplexCorollaryAudit.lean",
+    "ComplementedSubspace/ComplexRealDPRAudit.lean",
+    "ComplementedSubspace/FiniteHilbertWitnessAudit.lean",
+    "ComplementedSubspace/FiniteOverlapScaleAudit.lean",
+    "ComplementedSubspace/FiniteParameterAudit.lean",
+    "ComplementedSubspace/LocalHilbertAudit.lean",
+    "ComplementedSubspace/LocalHilbertDualTopAudit.lean",
+    "ComplementedSubspace/LocalHilbertQuotientAudit.lean",
+    "ComplementedSubspace/LocalHilbertRecursiveQuotient.lean",
+    "ComplementedSubspace/ProductFrameTranspose.lean",
+    "ComplementedSubspace/ProjectionAssemblyAudit.lean",
+    "ComplementedSubspace/PureFrameDPRAudit.lean",
+    "ComplementedSubspace/RealMainAudit.lean",
+    "ComplementedSubspace/RealMainConsequencesAudit.lean",
+    "ComplementedSubspace/RecursiveParametersAudit.lean",
+    "ComplementedSubspace/SelectedFrameBasis.lean",
+    "ComplexAmbientAudit.lean",
+    "ComplexFrameRealificationAudit.lean",
+    "ComplexProjectionAudit.lean",
+    "ComplexRecursiveProjectionAudit.lean",
+    "DPRtoGLAudit.lean",
+    "FiniteDualDPRLowerAudit.lean",
+    "FiniteHeadHilbertAudit.lean",
+    "FiniteObstructionAudit.lean",
+    "FiniteSelectedHilbertModelAudit.lean",
+    "GLRetractionAudit.lean",
+    "HilbertComplementAudit.lean",
+    "HilbertOverlapAudit.lean",
+    "LatticeApproximationAudit.lean",
+    "LatticeNonisomorphismAudit.lean",
+    "LocalHilbertEmbeddedRenormAudit.lean",
+    "LocalUnconditionalAudit.lean",
+    "LpUniformEquivAudit.lean",
+    "NormalizedHilbertSynthesisAudit.lean",
+    "ProjectionCorollariesAudit.lean",
+    "ProjectionPerturbationAudit.lean",
+    "RealConstructionAudit.lean",
+    "RecursiveKernelHilbertAudit.lean",
+    "SchauderDPRAudit.lean",
+    "SelectedCoefficientHilbertAudit.lean",
+    "SelectedFrameBasisAudit.lean",
+    "SelectedHilbertReplacementAudit.lean",
+    "SelectedProjectionSetupAudit.lean",
+    "TensorMomentAudit.lean",
+    "TrialAudit.lean",
+    "experiments/unverified/ProjectionPerturbationDraft.lean",
+    "experiments/unverified/ProjectionPerturbationDraftAudit.lean",
+    "verification/independent-audit-2026-09-05/MainIdentity.lean",
+    "verification/independent-audit-2026-09-05/PrintAxioms.lean",
+    "verification/independent-audit-2026-09-05/PrintDefinitions.lean",
+    "verification/independent-audit-2026-09-05/TraceDependencies.lean"
+  ],
+  "extra_scan_excluded_directories": [
+    ".lake",
+    ".cache",
+    ".git"
+  ],
+  "files": [
+    {
+      "relative_path": "BUILDING.md",
+      "source_or_config": false,
+      "archived_bytes": 4890,
+      "archive_sha256": "064a170f0b9e2c71f3390724173ef9ee900e23576681c9f733c6e22480295250",
+      "workspace_sha256": "064a170f0b9e2c71f3390724173ef9ee900e23576681c9f733c6e22480295250",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Basic.lean",
+      "source_or_config": true,
+      "archived_bytes": 24972,
+      "archive_sha256": "30d3f545bce051b3621a881ae7c374d9d98b37bb14d20ed2ae339668f49dbfed",
+      "workspace_sha256": "30d3f545bce051b3621a881ae7c374d9d98b37bb14d20ed2ae339668f49dbfed",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Disjoint.lean",
+      "source_or_config": true,
+      "archived_bytes": 28251,
+      "archive_sha256": "51e351f291a15a8d88d42f17f787dada806f5dccc6e39775173dbe3fde9d54dc",
+      "workspace_sha256": "51e351f291a15a8d88d42f17f787dada806f5dccc6e39775173dbe3fde9d54dc",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Dual.lean",
+      "source_or_config": true,
+      "archived_bytes": 22655,
+      "archive_sha256": "9d2254f8c8dab409a223ffa01e7a66cf044278039c82f995c286ad2e38f65cd3",
+      "workspace_sha256": "9d2254f8c8dab409a223ffa01e7a66cf044278039c82f995c286ad2e38f65cd3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/LICENSE",
+      "source_or_config": false,
+      "archived_bytes": 11357,
+      "archive_sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "workspace_sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/LLexpr.lean",
+      "source_or_config": true,
+      "archived_bytes": 21813,
+      "archive_sha256": "313cc63220e11d1b44a792d1cfa88990a63d90e000b82484bdc80165005d1a4d",
+      "workspace_sha256": "313cc63220e11d1b44a792d1cfa88990a63d90e000b82484bdc80165005d1a4d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Normed.lean",
+      "source_or_config": true,
+      "archived_bytes": 22142,
+      "archive_sha256": "50017cb69948b8e4059c65e502f1ec3f631ce7d92e5104343156e84f6aade33b",
+      "workspace_sha256": "50017cb69948b8e4059c65e502f1ec3f631ce7d92e5104343156e84f6aade33b",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Operators/Hom.lean",
+      "source_or_config": true,
+      "archived_bytes": 26230,
+      "archive_sha256": "1a38127619695e2862fb93408bc24272d19a02f72a09783daf32e81b922e2595",
+      "workspace_sha256": "1a38127619695e2862fb93408bc24272d19a02f72a09783daf32e81b922e2595",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Operators/OrderBounded.lean",
+      "source_or_config": true,
+      "archived_bytes": 8627,
+      "archive_sha256": "a563efcec03e343455826da46e359b819a39a0b0e53de85d17fb76a6579842d2",
+      "workspace_sha256": "a563efcec03e343455826da46e359b819a39a0b0e53de85d17fb76a6579842d2",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Operators/Positive.lean",
+      "source_or_config": true,
+      "archived_bytes": 14782,
+      "archive_sha256": "ff39c2e000bdd315c914a68708d2fd3854a74accbe0ed5ec3901c331347dfe7d",
+      "workspace_sha256": "ff39c2e000bdd315c914a68708d2fd3854a74accbe0ed5ec3901c331347dfe7d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Operators/Regular.lean",
+      "source_or_config": true,
+      "archived_bytes": 1044,
+      "archive_sha256": "67f3f9dff27a45c5c3b914051a69c45b5af8c23efa1154ac33e8609af74828fb",
+      "workspace_sha256": "67f3f9dff27a45c5c3b914051a69c45b5af8c23efa1154ac33e8609af74828fb",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Operators/RieszKantorovich.lean",
+      "source_or_config": true,
+      "archived_bytes": 58201,
+      "archive_sha256": "51846724ccfe2955e7ed2f584237c107e08356f2bdb2ec62ca5638090afab92b",
+      "workspace_sha256": "51846724ccfe2955e7ed2f584237c107e08356f2bdb2ec62ca5638090afab92b",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/OrderComplete.lean",
+      "source_or_config": true,
+      "archived_bytes": 16988,
+      "archive_sha256": "5e55e5876b0141ceeaa11d075b8048311eef9b5c2c314f8011e4c557f3696ff4",
+      "workspace_sha256": "5e55e5876b0141ceeaa11d075b8048311eef9b5c2c314f8011e4c557f3696ff4",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/OrderUnit.lean",
+      "source_or_config": true,
+      "archived_bytes": 2472,
+      "archive_sha256": "93ed97cca155d8bf0a69bed4cffe229e0cb9183a809d8088855f1ccf399fdd30",
+      "workspace_sha256": "93ed97cca155d8bf0a69bed4cffe229e0cb9183a809d8088855f1ccf399fdd30",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/PORTING.md",
+      "source_or_config": false,
+      "archived_bytes": 1681,
+      "archive_sha256": "f6595bab0897b486542f09eb20a4ed553e1578ad64fff6480512a4fff645f78e",
+      "workspace_sha256": "f6595bab0897b486542f09eb20a4ed553e1578ad64fff6480512a4fff645f78e",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/RieszDec.lean",
+      "source_or_config": true,
+      "archived_bytes": 12491,
+      "archive_sha256": "c6c50461b12c0243b9ebf8efef0a4ad8ffa44e85f0d99148e4257168921da5fa",
+      "workspace_sha256": "c6c50461b12c0243b9ebf8efef0a4ad8ffa44e85f0d99148e4257168921da5fa",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Substructures/Band/Basic.lean",
+      "source_or_config": true,
+      "archived_bytes": 7784,
+      "archive_sha256": "d2b215633f9ab3b5327e8648fa0674a281f3598ad565260b2f5c02312f6b4231",
+      "workspace_sha256": "d2b215633f9ab3b5327e8648fa0674a281f3598ad565260b2f5c02312f6b4231",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Substructures/Band/DisjointComplement.lean",
+      "source_or_config": true,
+      "archived_bytes": 5600,
+      "archive_sha256": "fb0087e729830d65c7f668a28cb9273abf7d39d52b39c07122096843c46ae1c9",
+      "workspace_sha256": "fb0087e729830d65c7f668a28cb9273abf7d39d52b39c07122096843c46ae1c9",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Substructures/Band/Generated.lean",
+      "source_or_config": true,
+      "archived_bytes": 20560,
+      "archive_sha256": "6bad98d67759be2f88047dfaf9192864ce60bb7790e659eba1cd844ce152273d",
+      "workspace_sha256": "6bad98d67759be2f88047dfaf9192864ce60bb7790e659eba1cd844ce152273d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Substructures/Band/Lattice.lean",
+      "source_or_config": true,
+      "archived_bytes": 4123,
+      "archive_sha256": "8a9f48e31362404d21f04fc4a43ed10de79e08ec5f37cf890132ae7ac48d8290",
+      "workspace_sha256": "8a9f48e31362404d21f04fc4a43ed10de79e08ec5f37cf890132ae7ac48d8290",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Substructures/Band/PPP.lean",
+      "source_or_config": true,
+      "archived_bytes": 17832,
+      "archive_sha256": "d7d5fa1abe3602a7d56333de5818d4c2c1aa232047e95b4bc756e63b78328779",
+      "workspace_sha256": "d7d5fa1abe3602a7d56333de5818d4c2c1aa232047e95b4bc756e63b78328779",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Substructures/Band/Projection.lean",
+      "source_or_config": true,
+      "archived_bytes": 51891,
+      "archive_sha256": "5400e8d1efbbfda77ccc00e0f8a00e93030960f9325ac5541044686b58469127",
+      "workspace_sha256": "5400e8d1efbbfda77ccc00e0f8a00e93030960f9325ac5541044686b58469127",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Substructures/Ideal.lean",
+      "source_or_config": true,
+      "archived_bytes": 51545,
+      "archive_sha256": "a2c95d09b57d04eb5ac12b20ae852d5e31ca35ed6437aefcccbc5a90bcd72c33",
+      "workspace_sha256": "a2c95d09b57d04eb5ac12b20ae852d5e31ca35ed6437aefcccbc5a90bcd72c33",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "BanLat/Substructures/Sublattice.lean",
+      "source_or_config": true,
+      "archived_bytes": 42813,
+      "archive_sha256": "e2df596909a94e153be31e04957c4e218d2d763ceeb97a3fec016e18de8c3ea6",
+      "workspace_sha256": "e2df596909a94e153be31e04957c4e218d2d763ceeb97a3fec016e18de8c3ea6",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace.lean",
+      "source_or_config": true,
+      "archived_bytes": 3594,
+      "archive_sha256": "542170589de08b05402d4f9e2570cd70169c5378efe5748ba3565352714ab7e1",
+      "workspace_sha256": "542170589de08b05402d4f9e2570cd70169c5378efe5748ba3565352714ab7e1",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ActualProjectionBidualDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 2155,
+      "archive_sha256": "b131350879249514eb6eb47b46cdafdbc8ad1e465483f32047ebd86ef2e72c9c",
+      "workspace_sha256": "b131350879249514eb6eb47b46cdafdbc8ad1e465483f32047ebd86ef2e72c9c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ActualProjectionDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 2047,
+      "archive_sha256": "a3385b8565d37f4e49491bbd8cfdc1bff2cb42c3ad530690ca3ca7ea0e4cbd85",
+      "workspace_sha256": "a3385b8565d37f4e49491bbd8cfdc1bff2cb42c3ad530690ca3ca7ea0e4cbd85",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ActualProjectionDualDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 2151,
+      "archive_sha256": "9f7b62844c96bf17bc6cf7be1b3798aff60c52a3cd533995aa285a39ec50c1f8",
+      "workspace_sha256": "9f7b62844c96bf17bc6cf7be1b3798aff60c52a3cd533995aa285a39ec50c1f8",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/Ambient.lean",
+      "source_or_config": true,
+      "archived_bytes": 3741,
+      "archive_sha256": "cf65a5aa2da2262f84695696283cda9f3b918215ce12fd777b2e0e70c355f347",
+      "workspace_sha256": "cf65a5aa2da2262f84695696283cda9f3b918215ce12fd777b2e0e70c355f347",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/AmbientBasis.lean",
+      "source_or_config": true,
+      "archived_bytes": 7404,
+      "archive_sha256": "c43668cfe5263a64c711faef86de4372206b6b84f37a66515d3e9a38d865db1d",
+      "workspace_sha256": "c43668cfe5263a64c711faef86de4372206b6b84f37a66515d3e9a38d865db1d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/AmbientFiniteApproximation.lean",
+      "source_or_config": true,
+      "archived_bytes": 4822,
+      "archive_sha256": "5f674f8cb28d0d1d36b8e720c19a947868605c04521122567b677747b3e6f209",
+      "workspace_sha256": "5f674f8cb28d0d1d36b8e720c19a947868605c04521122567b677747b3e6f209",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/AmbientLattice.lean",
+      "source_or_config": true,
+      "archived_bytes": 4768,
+      "archive_sha256": "15a495e3b9e2d0cc724f267b8818d9e718119fbeb43ccb374c46975a533ba2ab",
+      "workspace_sha256": "15a495e3b9e2d0cc724f267b8818d9e718119fbeb43ccb374c46975a533ba2ab",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/AmbientProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 5257,
+      "archive_sha256": "30fecdacb0b7f245923efc245bf369e56211664b1cdebe2d458e1346f8d16155",
+      "workspace_sha256": "30fecdacb0b7f245923efc245bf369e56211664b1cdebe2d458e1346f8d16155",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/AmbientSchauder.lean",
+      "source_or_config": true,
+      "archived_bytes": 2139,
+      "archive_sha256": "3879a418f8a2f6f6fde013b939695d88f46656b297ad4260d573178c53a123c3",
+      "workspace_sha256": "3879a418f8a2f6f6fde013b939695d88f46656b297ad4260d573178c53a123c3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/AmbientSeparable.lean",
+      "source_or_config": true,
+      "archived_bytes": 1243,
+      "archive_sha256": "50191618fbda12052d9eed73e99850acc880bbf74423d89589e725dc0ea8bd82",
+      "workspace_sha256": "50191618fbda12052d9eed73e99850acc880bbf74423d89589e725dc0ea8bd82",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/AmbientUniformConvex.lean",
+      "source_or_config": true,
+      "archived_bytes": 1385,
+      "archive_sha256": "bcf3ad915f3defb4ff941c898b02ba9ce0395c1332fc40eae8db59013c58381a",
+      "workspace_sha256": "bcf3ad915f3defb4ff941c898b02ba9ce0395c1332fc40eae8db59013c58381a",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/BasisBounds.lean",
+      "source_or_config": true,
+      "archived_bytes": 5137,
+      "archive_sha256": "c047aa5f7c27973de4a07f8b3146bead52603dbb6cca9c6894828d9ddeebcbce",
+      "workspace_sha256": "c047aa5f7c27973de4a07f8b3146bead52603dbb6cca9c6894828d9ddeebcbce",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/BasisRestriction.lean",
+      "source_or_config": true,
+      "archived_bytes": 2658,
+      "archive_sha256": "c8521ad7ba31f01bf0c0a7634e9b4c5f5a9a65de600ae216374628b5f4c710ca",
+      "workspace_sha256": "c8521ad7ba31f01bf0c0a7634e9b4c5f5a9a65de600ae216374628b5f4c710ca",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/BasisTransport.lean",
+      "source_or_config": true,
+      "archived_bytes": 3202,
+      "archive_sha256": "8a28498807724e83e59b714bfad51c191f405e4cadbc76bba54844bc378565a7",
+      "workspace_sha256": "8a28498807724e83e59b714bfad51c191f405e4cadbc76bba54844bc378565a7",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexAmbient.lean",
+      "source_or_config": true,
+      "archived_bytes": 5379,
+      "archive_sha256": "b4d53b895cfabb37bd96cdcd90ce3c5796fd0e977a91513c6c7051877cb36af7",
+      "workspace_sha256": "b4d53b895cfabb37bd96cdcd90ce3c5796fd0e977a91513c6c7051877cb36af7",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexAmbientSchauder.lean",
+      "source_or_config": true,
+      "archived_bytes": 10939,
+      "archive_sha256": "bb39557df190b8f970dcfc7a6b3ed58ca80fdb7957fc1b0906bcb8182965fcbe",
+      "workspace_sha256": "bb39557df190b8f970dcfc7a6b3ed58ca80fdb7957fc1b0906bcb8182965fcbe",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexCorollary.lean",
+      "source_or_config": true,
+      "archived_bytes": 960,
+      "archive_sha256": "ba3689e116cced5d2c40ca0823bcd549f9693929a19f1300c7c23d1a5aa71e88",
+      "workspace_sha256": "ba3689e116cced5d2c40ca0823bcd549f9693929a19f1300c7c23d1a5aa71e88",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexCorollaryAssembly.lean",
+      "source_or_config": true,
+      "archived_bytes": 2312,
+      "archive_sha256": "621ef045c17dc3c26dda85c241e2dd5846233f87ab4c6a2d4282cf2abc8f6462",
+      "workspace_sha256": "621ef045c17dc3c26dda85c241e2dd5846233f87ab4c6a2d4282cf2abc8f6462",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexFrameCoefficient.lean",
+      "source_or_config": true,
+      "archived_bytes": 6937,
+      "archive_sha256": "17c6880f4a3b6dbf03428338354ac759b362a7c00d871c49d3bc36f27d7d7866",
+      "workspace_sha256": "17c6880f4a3b6dbf03428338354ac759b362a7c00d871c49d3bc36f27d7d7866",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexFrameCoefficientRange.lean",
+      "source_or_config": true,
+      "archived_bytes": 4660,
+      "archive_sha256": "d7625763107dc031fc00531d701110197245a971ef85ed4d3e5cd86a970f7e26",
+      "workspace_sha256": "d7625763107dc031fc00531d701110197245a971ef85ed4d3e5cd86a970f7e26",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexFrameProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 7225,
+      "archive_sha256": "25d9d67bbebe6e0707772e05d0eeda01e40fc851de9b7e85092c5382a333050c",
+      "workspace_sha256": "25d9d67bbebe6e0707772e05d0eeda01e40fc851de9b7e85092c5382a333050c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexFrameRealification.lean",
+      "source_or_config": true,
+      "archived_bytes": 7561,
+      "archive_sha256": "05bc816e8cd4090627918e60da48c497eb83511c03432f63320e21a7edbe973b",
+      "workspace_sha256": "05bc816e8cd4090627918e60da48c497eb83511c03432f63320e21a7edbe973b",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexProjectionEnergy.lean",
+      "source_or_config": true,
+      "archived_bytes": 5654,
+      "archive_sha256": "0580204035bc2ae8ede703d7988c58b485bc36e6fd635d97790bc0713e833ba3",
+      "workspace_sha256": "0580204035bc2ae8ede703d7988c58b485bc36e6fd635d97790bc0713e833ba3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexProjectionRealEquiv.lean",
+      "source_or_config": true,
+      "archived_bytes": 5175,
+      "archive_sha256": "16e855f4a09d8fd4efc8c52c412bcdf183468fc1d9d8b5312f41d4bc812b7948",
+      "workspace_sha256": "16e855f4a09d8fd4efc8c52c412bcdf183468fc1d9d8b5312f41d4bc812b7948",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexRealDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 8697,
+      "archive_sha256": "e7f51b27f5ad9812cc3fe10d01eebf85c6f1220529f7531b8256846bc649414e",
+      "workspace_sha256": "e7f51b27f5ad9812cc3fe10d01eebf85c6f1220529f7531b8256846bc649414e",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexRecursiveProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 5314,
+      "archive_sha256": "e0aa95ebd0f414be5c305d4930327c9460d10d75ec4e4d4b4ecff4f39b1a1e97",
+      "workspace_sha256": "e0aa95ebd0f414be5c305d4930327c9460d10d75ec4e4d4b4ecff4f39b1a1e97",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexReindexedFrameProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 3906,
+      "archive_sha256": "b4830bda1298b214d2bf817c40466ac6fd92cce1c53933e1623374d84b42699a",
+      "workspace_sha256": "b4830bda1298b214d2bf817c40466ac6fd92cce1c53933e1623374d84b42699a",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ComplexTensorProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 8573,
+      "archive_sha256": "50888e94422317ee745edb59b251a5268ab3bbb443eb8caf0b9c81c51388eeb6",
+      "workspace_sha256": "50888e94422317ee745edb59b251a5268ab3bbb443eb8caf0b9c81c51388eeb6",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/CorollaryStatement.lean",
+      "source_or_config": true,
+      "archived_bytes": 5279,
+      "archive_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "workspace_sha256": "b8dd0e1b53e1da5078218af1bc03093dc7c44d618cdc3f3bc068eaa02598bf2a",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/DPRIsomorphism.lean",
+      "source_or_config": true,
+      "archived_bytes": 3376,
+      "archive_sha256": "f2c1cd77e22f742ef21465dd646a440e3cc49ac2d52985d82e79d3f3e0f3df4d",
+      "workspace_sha256": "f2c1cd77e22f742ef21465dd646a440e3cc49ac2d52985d82e79d3f3e0f3df4d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/DPRObstruction.lean",
+      "source_or_config": true,
+      "archived_bytes": 2149,
+      "archive_sha256": "0bfd5269c89cf507ce09dec97a573d364b426c636dd2068d9f1494c84cf3e140",
+      "workspace_sha256": "0bfd5269c89cf507ce09dec97a573d364b426c636dd2068d9f1494c84cf3e140",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/DPRPredicates.lean",
+      "source_or_config": true,
+      "archived_bytes": 462,
+      "archive_sha256": "47d7940cc1fb78fff4cacdefe7faf2abe1b1af72566cf7f6aa57ddad4e7abdb1",
+      "workspace_sha256": "47d7940cc1fb78fff4cacdefe7faf2abe1b1af72566cf7f6aa57ddad4e7abdb1",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/DPRtoGL.lean",
+      "source_or_config": true,
+      "archived_bytes": 9304,
+      "archive_sha256": "fd61437d513847bfe98421764fe725bc8096d8cf0ca04a64c91d0dbb39b4305a",
+      "workspace_sha256": "fd61437d513847bfe98421764fe725bc8096d8cf0ca04a64c91d0dbb39b4305a",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/DenseContractions.lean",
+      "source_or_config": true,
+      "archived_bytes": 1211,
+      "archive_sha256": "6317ffc9b98877a90d9b3bf21a9adaeb82ca5d8827865d89ff43efb0632d10ed",
+      "workspace_sha256": "6317ffc9b98877a90d9b3bf21a9adaeb82ca5d8827865d89ff43efb0632d10ed",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/DenseContractionsScalar.lean",
+      "source_or_config": true,
+      "archived_bytes": 1266,
+      "archive_sha256": "44689723e948fb2a5cbfcd99f62e2b1c706388646104cdea81182353aefd6cb6",
+      "workspace_sha256": "44689723e948fb2a5cbfcd99f62e2b1c706388646104cdea81182353aefd6cb6",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/DiagonalFrameProduct.lean",
+      "source_or_config": true,
+      "archived_bytes": 2060,
+      "archive_sha256": "aeaccf496f84a3b414561604cbbb2982c296b97ae21d46d47aee2f4a60e808ea",
+      "workspace_sha256": "aeaccf496f84a3b414561604cbbb2982c296b97ae21d46d47aee2f4a60e808ea",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/DiagonalFrameSummand.lean",
+      "source_or_config": true,
+      "archived_bytes": 4293,
+      "archive_sha256": "8fc4567967139882a6fb87e30485765b3a93178a5d810a45615078b0e238ae0b",
+      "workspace_sha256": "8fc4567967139882a6fb87e30485765b3a93178a5d810a45615078b0e238ae0b",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteApproximation.lean",
+      "source_or_config": true,
+      "archived_bytes": 7342,
+      "archive_sha256": "6c8c0840aa83c40b24423d1f8b2ba0978cdf526d4b13196d00f7d710d36a81de",
+      "workspace_sha256": "6c8c0840aa83c40b24423d1f8b2ba0978cdf526d4b13196d00f7d710d36a81de",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteBasisTraceBound.lean",
+      "source_or_config": true,
+      "archived_bytes": 5104,
+      "archive_sha256": "2947c81b8f0d42034fbd75562c3c83cb0b771564ef098433ab7d39e556b3913c",
+      "workspace_sha256": "2947c81b8f0d42034fbd75562c3c83cb0b771564ef098433ab7d39e556b3913c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteBidual.lean",
+      "source_or_config": true,
+      "archived_bytes": 2205,
+      "archive_sha256": "4c748407a3541edd5c6b288ddac4ebd5f9f11b1953b811bb06bda183c00af45e",
+      "workspace_sha256": "4c748407a3541edd5c6b288ddac4ebd5f9f11b1953b811bb06bda183c00af45e",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteBidualDPRLower.lean",
+      "source_or_config": true,
+      "archived_bytes": 1577,
+      "archive_sha256": "bcb31f688538327f3782ef71ed2efebb1b852ffeed7ffbfefc2ffe71d041c022",
+      "workspace_sha256": "bcb31f688538327f3782ef71ed2efebb1b852ffeed7ffbfefc2ffe71d041c022",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteBlockDPRLower.lean",
+      "source_or_config": true,
+      "archived_bytes": 2958,
+      "archive_sha256": "c20708a337c386fb120a3a35a3190ccec5f5ecddaf17ad08e16f60aa966c76f1",
+      "workspace_sha256": "c20708a337c386fb120a3a35a3190ccec5f5ecddaf17ad08e16f60aa966c76f1",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteBlockObstruction.lean",
+      "source_or_config": true,
+      "archived_bytes": 5139,
+      "archive_sha256": "a8a14d7ee79cfcef0eef1e8b7dd090765b2c695e6a2c34ff257985ff24841abc",
+      "workspace_sha256": "a8a14d7ee79cfcef0eef1e8b7dd090765b2c695e6a2c34ff257985ff24841abc",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteCoordinateSelection.lean",
+      "source_or_config": true,
+      "archived_bytes": 4395,
+      "archive_sha256": "58ddbd8fd95a378b40badde0fd4ceb1dab4a6be8fea7265f5137f35188eb4378",
+      "workspace_sha256": "58ddbd8fd95a378b40badde0fd4ceb1dab4a6be8fea7265f5137f35188eb4378",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteCorrection.lean",
+      "source_or_config": true,
+      "archived_bytes": 5540,
+      "archive_sha256": "94742aea3304bd769f6b552e1ca0416d3328cdd6ee6e274031722159aec2f813",
+      "workspace_sha256": "94742aea3304bd769f6b552e1ca0416d3328cdd6ee6e274031722159aec2f813",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteCubeBound.lean",
+      "source_or_config": true,
+      "archived_bytes": 2347,
+      "archive_sha256": "5c2f69a2ec8729c8cc571d1a94a3a0f626cb06c0e6fb9d413158eadb5463c8a6",
+      "workspace_sha256": "5c2f69a2ec8729c8cc571d1a94a3a0f626cb06c0e6fb9d413158eadb5463c8a6",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteDualBasis.lean",
+      "source_or_config": true,
+      "archived_bytes": 2385,
+      "archive_sha256": "eb484185924f9d14a10afef2d70862873585ddc14b28a1b5456a9f95dc320398",
+      "workspace_sha256": "eb484185924f9d14a10afef2d70862873585ddc14b28a1b5456a9f95dc320398",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteDualDPRLower.lean",
+      "source_or_config": true,
+      "archived_bytes": 3343,
+      "archive_sha256": "6e4f469b111c39ae14b273169e93510c2dc9a67da34ec4a5932234ccf533bfe6",
+      "workspace_sha256": "6e4f469b111c39ae14b273169e93510c2dc9a67da34ec4a5932234ccf533bfe6",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteDualSuperspace.lean",
+      "source_or_config": true,
+      "archived_bytes": 2366,
+      "archive_sha256": "7e7a9c409ffe5d6d71a3159626dfce2368b08a1061ba7c6ade5b2edd11845467",
+      "workspace_sha256": "7e7a9c409ffe5d6d71a3159626dfce2368b08a1061ba7c6ade5b2edd11845467",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteFrame.lean",
+      "source_or_config": true,
+      "archived_bytes": 2504,
+      "archive_sha256": "379b3135d2ab8675e3b9240a3fd1cb6c8de424f4f67ac7d0c301ea55d5b93725",
+      "workspace_sha256": "379b3135d2ab8675e3b9240a3fd1cb6c8de424f4f67ac7d0c301ea55d5b93725",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteHeadHilbert.lean",
+      "source_or_config": true,
+      "archived_bytes": 5895,
+      "archive_sha256": "32bff88599b6fc6671342176eb0c2ab1e5adb33a8762e1e49a97d9c0bc0a9cfb",
+      "workspace_sha256": "32bff88599b6fc6671342176eb0c2ab1e5adb33a8762e1e49a97d9c0bc0a9cfb",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteHilbertAverage.lean",
+      "source_or_config": true,
+      "archived_bytes": 2986,
+      "archive_sha256": "6fc8cfe97b6aeedeb36e64a835ab3040fc2b1430ea8be166169edbe9147ef531",
+      "workspace_sha256": "6fc8cfe97b6aeedeb36e64a835ab3040fc2b1430ea8be166169edbe9147ef531",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteLpGeometry.lean",
+      "source_or_config": true,
+      "archived_bytes": 10468,
+      "archive_sha256": "d3504078f5ad9966735841a01a97e509566673abc9b8842606ede7e763a6a309",
+      "workspace_sha256": "d3504078f5ad9966735841a01a97e509566673abc9b8842606ede7e763a6a309",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapBasisColumns.lean",
+      "source_or_config": true,
+      "archived_bytes": 5180,
+      "archive_sha256": "23b4e1a891e849f4b178b0fb07b43adf75c3fb9f24a7792fb85db4c48ab89fd8",
+      "workspace_sha256": "23b4e1a891e849f4b178b0fb07b43adf75c3fb9f24a7792fb85db4c48ab89fd8",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapBound.lean",
+      "source_or_config": true,
+      "archived_bytes": 4152,
+      "archive_sha256": "0f11567d750cb9c3f5d2802bc6a29b72ceb85611d13a1340689aebe55477027a",
+      "workspace_sha256": "0f11567d750cb9c3f5d2802bc6a29b72ceb85611d13a1340689aebe55477027a",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapConclusion.lean",
+      "source_or_config": true,
+      "archived_bytes": 2154,
+      "archive_sha256": "98236aa39ec4de97587f365a4eaa857c9cef06f0857625189de8885406c33a40",
+      "workspace_sha256": "98236aa39ec4de97587f365a4eaa857c9cef06f0857625189de8885406c33a40",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapDualScale.lean",
+      "source_or_config": true,
+      "archived_bytes": 1574,
+      "archive_sha256": "879da90d3515e12c823da4647517bab6542316b316dde4daacf0edde27f8e380",
+      "workspace_sha256": "879da90d3515e12c823da4647517bab6542316b316dde4daacf0edde27f8e380",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapGoodSecond.lean",
+      "source_or_config": true,
+      "archived_bytes": 6484,
+      "archive_sha256": "f9cfd7b0d164e73f5e1de02ce03003087054b9b70c62238cbd7b69eff22df402",
+      "workspace_sha256": "f9cfd7b0d164e73f5e1de02ce03003087054b9b70c62238cbd7b69eff22df402",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapLp.lean",
+      "source_or_config": true,
+      "archived_bytes": 5524,
+      "archive_sha256": "a816942918033a1d448fa102dd168c65a0dab68fc7645cd4d83899a438638af4",
+      "workspace_sha256": "a816942918033a1d448fa102dd168c65a0dab68fc7645cd4d83899a438638af4",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapMatrixNorms.lean",
+      "source_or_config": true,
+      "archived_bytes": 4181,
+      "archive_sha256": "6d6bafa7eb67b68309f4817542bf625334bb6c22667dba964c0350dd5bc0fed0",
+      "workspace_sha256": "6d6bafa7eb67b68309f4817542bf625334bb6c22667dba964c0350dd5bc0fed0",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapMoments.lean",
+      "source_or_config": true,
+      "archived_bytes": 3682,
+      "archive_sha256": "b153ccc3a4e51b5f8689b02aaeeb9828fba6ac59f29a30f27936b4fd621f5b26",
+      "workspace_sha256": "b153ccc3a4e51b5f8689b02aaeeb9828fba6ac59f29a30f27936b4fd621f5b26",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapObstruction.lean",
+      "source_or_config": true,
+      "archived_bytes": 7976,
+      "archive_sha256": "5c1c86fc03e56139cbaf6f5cafa764b07bf1c534938153ad8bb7241c19d96c07",
+      "workspace_sha256": "5c1c86fc03e56139cbaf6f5cafa764b07bf1c534938153ad8bb7241c19d96c07",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapRandomization.lean",
+      "source_or_config": true,
+      "archived_bytes": 5861,
+      "archive_sha256": "2b19be87a99d4b1ac528c80cf9beb8a40072cdf116d647d406cd4b5d9126409f",
+      "workspace_sha256": "2b19be87a99d4b1ac528c80cf9beb8a40072cdf116d647d406cd4b5d9126409f",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapScale.lean",
+      "source_or_config": true,
+      "archived_bytes": 12773,
+      "archive_sha256": "a60c1c2c544051b57cdc3a55652f26b0b38f1fc213cf859708408b32b6c78769",
+      "workspace_sha256": "a60c1c2c544051b57cdc3a55652f26b0b38f1fc213cf859708408b32b6c78769",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteOverlapUpper.lean",
+      "source_or_config": true,
+      "archived_bytes": 9043,
+      "archive_sha256": "6f51f4cbf868e4e3bf26a13fb8a0557086fbdbe92baa692e850fd75dd75ec3e7",
+      "workspace_sha256": "6f51f4cbf868e4e3bf26a13fb8a0557086fbdbe92baa692e850fd75dd75ec3e7",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteParameterBounds.lean",
+      "source_or_config": true,
+      "archived_bytes": 5383,
+      "archive_sha256": "c28ac1eead96655022591993083ffa1a55e8b3ae8ecc5331afeb83ba265e5692",
+      "workspace_sha256": "c28ac1eead96655022591993083ffa1a55e8b3ae8ecc5331afeb83ba265e5692",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteParameterGap.lean",
+      "source_or_config": true,
+      "archived_bytes": 11369,
+      "archive_sha256": "3eb14759310d2d9d44a5fc3cad4f3c34ad1defc50deb787d7a397bf4eabb8dc1",
+      "workspace_sha256": "3eb14759310d2d9d44a5fc3cad4f3c34ad1defc50deb787d7a397bf4eabb8dc1",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteProductObstruction.lean",
+      "source_or_config": true,
+      "archived_bytes": 1842,
+      "archive_sha256": "efe6e44207e493b4a4f96256d8ba6b649acb308acf839d56dbf958bc4f209276",
+      "workspace_sha256": "efe6e44207e493b4a4f96256d8ba6b649acb308acf839d56dbf958bc4f209276",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteProjectionTrace.lean",
+      "source_or_config": true,
+      "archived_bytes": 9057,
+      "archive_sha256": "2809bca2d08a5a4497b447116651a83fc894eff2c8d365d5ffa7b4f686d1ac4f",
+      "workspace_sha256": "2809bca2d08a5a4497b447116651a83fc894eff2c8d365d5ffa7b4f686d1ac4f",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteSelectedHilbertModel.lean",
+      "source_or_config": true,
+      "archived_bytes": 5423,
+      "archive_sha256": "bf66a07267b955e5f27e7044957b9a2f7e7271a0acd1d783c545618a2466f9c3",
+      "workspace_sha256": "bf66a07267b955e5f27e7044957b9a2f7e7271a0acd1d783c545618a2466f9c3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteSelectionCoordinates.lean",
+      "source_or_config": true,
+      "archived_bytes": 4137,
+      "archive_sha256": "5e92e926e345daec8931dab8ac21c8ed37ab8d1ba50cd6034b0f3042fbd57245",
+      "workspace_sha256": "5e92e926e345daec8931dab8ac21c8ed37ab8d1ba50cd6034b0f3042fbd57245",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteSigns.lean",
+      "source_or_config": true,
+      "archived_bytes": 10082,
+      "archive_sha256": "5e5d5c44960df9c65ef60d3b8575cc62cd9b3a984473e0579cd23512862b515d",
+      "workspace_sha256": "5e5d5c44960df9c65ef60d3b8575cc62cd9b3a984473e0579cd23512862b515d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteSignsComplex.lean",
+      "source_or_config": true,
+      "archived_bytes": 2418,
+      "archive_sha256": "a921891bdb41b6dd57c95947b4e53886ca57a0ab4b9ba2c3798fec8b59baf7b2",
+      "workspace_sha256": "a921891bdb41b6dd57c95947b4e53886ca57a0ab4b9ba2c3798fec8b59baf7b2",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteSignsInterpolation.lean",
+      "source_or_config": true,
+      "archived_bytes": 5593,
+      "archive_sha256": "11629847ce860774366c41c37883126d52c02e4a0e2668a2ed26a5cd464598d0",
+      "workspace_sha256": "11629847ce860774366c41c37883126d52c02e4a0e2668a2ed26a5cd464598d0",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteSuperspaceSplitting.lean",
+      "source_or_config": true,
+      "archived_bytes": 3008,
+      "archive_sha256": "4156ce51dbb60a5270821b30de9c66aab560fb026105fa99e796d9d20112f340",
+      "workspace_sha256": "4156ce51dbb60a5270821b30de9c66aab560fb026105fa99e796d9d20112f340",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteTraceOverlap.lean",
+      "source_or_config": true,
+      "archived_bytes": 6291,
+      "archive_sha256": "157741f05ccc26cb8733884edfe8f7a027225bd126c1a5df93a8fa2514647c15",
+      "workspace_sha256": "157741f05ccc26cb8733884edfe8f7a027225bd126c1a5df93a8fa2514647c15",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FiniteTraceSelection.lean",
+      "source_or_config": true,
+      "archived_bytes": 3126,
+      "archive_sha256": "8654e1c06f1e452acdceaf2dfc57a6711156515bd73d548b2dfa1e185ddb5e70",
+      "workspace_sha256": "8654e1c06f1e452acdceaf2dfc57a6711156515bd73d548b2dfa1e185ddb5e70",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FrameCoefficient.lean",
+      "source_or_config": true,
+      "archived_bytes": 4085,
+      "archive_sha256": "70ca3d68efc108d054db4f2bba99a3d53f9184cf8bb0b57abacc7b8046163d46",
+      "workspace_sha256": "70ca3d68efc108d054db4f2bba99a3d53f9184cf8bb0b57abacc7b8046163d46",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FrameCoefficientHilbert.lean",
+      "source_or_config": true,
+      "archived_bytes": 4152,
+      "archive_sha256": "25beaa201d06a38d2ee2f36a2ea9232e3f6843a9146589f356cdb78cb387a330",
+      "workspace_sha256": "25beaa201d06a38d2ee2f36a2ea9232e3f6843a9146589f356cdb78cb387a330",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FrameCoefficientNorm.lean",
+      "source_or_config": true,
+      "archived_bytes": 2357,
+      "archive_sha256": "25f6b0cd76a139583221fc2110a08dff83ecb137d640fb1b086ddb3d840d7b39",
+      "workspace_sha256": "25f6b0cd76a139583221fc2110a08dff83ecb137d640fb1b086ddb3d840d7b39",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FrameCoefficientRange.lean",
+      "source_or_config": true,
+      "archived_bytes": 2042,
+      "archive_sha256": "a0b417aa6b29cd50ece756e906c750305221ff100c37a4ca84cb5059926b38c4",
+      "workspace_sha256": "a0b417aa6b29cd50ece756e906c750305221ff100c37a4ca84cb5059926b38c4",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FrameCoefficientReindexedRange.lean",
+      "source_or_config": true,
+      "archived_bytes": 2538,
+      "archive_sha256": "66aa1ab2eeda8cb80adce4cc9999432780b1382be1c9217da3608c419a3dc87d",
+      "workspace_sha256": "66aa1ab2eeda8cb80adce4cc9999432780b1382be1c9217da3608c419a3dc87d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FrameProjectionNorm.lean",
+      "source_or_config": true,
+      "archived_bytes": 9891,
+      "archive_sha256": "c99edfd191546d4bc79d93f38a69df1db9abbb5abc0c145c044fc60a977a4450",
+      "workspace_sha256": "c99edfd191546d4bc79d93f38a69df1db9abbb5abc0c145c044fc60a977a4450",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/FrameProjectionRange.lean",
+      "source_or_config": true,
+      "archived_bytes": 4681,
+      "archive_sha256": "328058fd2da0542b217b62d7f993ab32596eda6db83b7f56d04dda601d919c03",
+      "workspace_sha256": "328058fd2da0542b217b62d7f993ab32596eda6db83b7f56d04dda601d919c03",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/GLDualRetraction.lean",
+      "source_or_config": true,
+      "archived_bytes": 4323,
+      "archive_sha256": "1b86a0368a10ba5859e478280e5535063ddcbf2a0ea7fdc276fe9d16e209f83d",
+      "workspace_sha256": "1b86a0368a10ba5859e478280e5535063ddcbf2a0ea7fdc276fe9d16e209f83d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/GLRetraction.lean",
+      "source_or_config": true,
+      "archived_bytes": 9551,
+      "archive_sha256": "73b7e706f0223634c3aac87d8c9d8bd4127206fde355d047f58490b537bb36d3",
+      "workspace_sha256": "73b7e706f0223634c3aac87d8c9d8bd4127206fde355d047f58490b537bb36d3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/HilbertComplement.lean",
+      "source_or_config": true,
+      "archived_bytes": 4882,
+      "archive_sha256": "cd6dae85d346023abee70c67bd72b30bc1226d227433f2e01d307d1724f10dc5",
+      "workspace_sha256": "cd6dae85d346023abee70c67bd72b30bc1226d227433f2e01d307d1724f10dc5",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/HilbertOverlap.lean",
+      "source_or_config": true,
+      "archived_bytes": 11058,
+      "archive_sha256": "25f47937d625f6b360dbbf0ff9eb6a33372aa39a56caae8cc4ef261fbf162bf1",
+      "workspace_sha256": "25f47937d625f6b360dbbf0ff9eb6a33372aa39a56caae8cc4ef261fbf162bf1",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/HilbertTraceTransfer.lean",
+      "source_or_config": true,
+      "archived_bytes": 1569,
+      "archive_sha256": "e5f209811f9eff3ee3f3ecacccb0e77abed6dc30ff31c2411a5bea15d16b2423",
+      "workspace_sha256": "e5f209811f9eff3ee3f3ecacccb0e77abed6dc30ff31c2411a5bea15d16b2423",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/InfiniteFrameObstruction.lean",
+      "source_or_config": true,
+      "archived_bytes": 1945,
+      "archive_sha256": "0acddd6eb16a34d8346a5f0cacb9df65da66481c1d5a5e7e0511f289a1b7a9bd",
+      "workspace_sha256": "0acddd6eb16a34d8346a5f0cacb9df65da66481c1d5a5e7e0511f289a1b7a9bd",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/IsometricProductDPRLower.lean",
+      "source_or_config": true,
+      "archived_bytes": 3320,
+      "archive_sha256": "0488f204843bfdca70793d677b2dcc4884ffe41a60339ee637d0d000449db6f9",
+      "workspace_sha256": "0488f204843bfdca70793d677b2dcc4884ffe41a60339ee637d0d000449db6f9",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/IsometricProductSplitting.lean",
+      "source_or_config": true,
+      "archived_bytes": 3332,
+      "archive_sha256": "f2572af0e42e05ec5e9cc86ea70adffe937b050e09f50a7a17572d64c9b6c1b6",
+      "workspace_sha256": "f2572af0e42e05ec5e9cc86ea70adffe937b050e09f50a7a17572d64c9b6c1b6",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LatticeApproximation.lean",
+      "source_or_config": true,
+      "archived_bytes": 2261,
+      "archive_sha256": "ac38f607840630954fca0dcaac3301940bffaf4f6285e1a0bc03aacf7b0ea336",
+      "workspace_sha256": "ac38f607840630954fca0dcaac3301940bffaf4f6285e1a0bc03aacf7b0ea336",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LatticeBasis.lean",
+      "source_or_config": true,
+      "archived_bytes": 3908,
+      "archive_sha256": "37e06710226e0d05f30d653bc265042f639aa45218fc603f316196a2482307c6",
+      "workspace_sha256": "37e06710226e0d05f30d653bc265042f639aa45218fc603f316196a2482307c6",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LatticeNonisomorphism.lean",
+      "source_or_config": true,
+      "archived_bytes": 1860,
+      "archive_sha256": "81762cd605274f44c248531445c850c7f27e7b78e1c88e5e9f073674ddd84731",
+      "workspace_sha256": "81762cd605274f44c248531445c850c7f27e7b78e1c88e5e9f073674ddd84731",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LatticeSpectral.lean",
+      "source_or_config": true,
+      "archived_bytes": 18057,
+      "archive_sha256": "55ec903b3a24186808f817d0e32d920cff93c24bb85e046e3a225195c2be64cd",
+      "workspace_sha256": "55ec903b3a24186808f817d0e32d920cff93c24bb85e046e3a225195c2be64cd",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbert.lean",
+      "source_or_config": true,
+      "archived_bytes": 9259,
+      "archive_sha256": "16c8f562a11de1e24c58690321777ecb91429a9a9073c154ee1ea653a98da085",
+      "workspace_sha256": "16c8f562a11de1e24c58690321777ecb91429a9a9073c154ee1ea653a98da085",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertCompactness.lean",
+      "source_or_config": true,
+      "archived_bytes": 12650,
+      "archive_sha256": "64f421fe7ef04fd95dece8ad2c9b3f63b723f22bd7e60c11891c5e8b7d20fc3e",
+      "workspace_sha256": "64f421fe7ef04fd95dece8ad2c9b3f63b723f22bd7e60c11891c5e8b7d20fc3e",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertCoordinates.lean",
+      "source_or_config": true,
+      "archived_bytes": 5735,
+      "archive_sha256": "cb6da170830cb2c51267d2d0ae29f6bbf43893b66e82950a16918a374f0bdd1e",
+      "workspace_sha256": "cb6da170830cb2c51267d2d0ae29f6bbf43893b66e82950a16918a374f0bdd1e",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertDual.lean",
+      "source_or_config": true,
+      "archived_bytes": 6424,
+      "archive_sha256": "be507a3181bc331ee337e22b69ed0a5166a0dd78b528cf22ffd4b852238f941f",
+      "workspace_sha256": "be507a3181bc331ee337e22b69ed0a5166a0dd78b528cf22ffd4b852238f941f",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertDualTop.lean",
+      "source_or_config": true,
+      "archived_bytes": 1098,
+      "archive_sha256": "fce82710e2ec9c4ff98b920aee9194156ff35878f378ba0ac55546e6ac452dc0",
+      "workspace_sha256": "fce82710e2ec9c4ff98b920aee9194156ff35878f378ba0ac55546e6ac452dc0",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertEmbeddedRenorm.lean",
+      "source_or_config": true,
+      "archived_bytes": 3466,
+      "archive_sha256": "873d9a7c348c34ccee16fe66300f55eeb76c0dafaa6a57e017186e649f639188",
+      "workspace_sha256": "873d9a7c348c34ccee16fe66300f55eeb76c0dafaa6a57e017186e649f639188",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertFactorization.lean",
+      "source_or_config": true,
+      "archived_bytes": 4662,
+      "archive_sha256": "006bbe89c5d7df3fda5b2385bf04806665aa2ec47ef5e372acfa2d9a59afeda3",
+      "workspace_sha256": "006bbe89c5d7df3fda5b2385bf04806665aa2ec47ef5e372acfa2d9a59afeda3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertHeadRenorm.lean",
+      "source_or_config": true,
+      "archived_bytes": 6264,
+      "archive_sha256": "833de74e88964c3d46da39d56487db4a15409f4f59db50a0d5708613b3724363",
+      "workspace_sha256": "833de74e88964c3d46da39d56487db4a15409f4f59db50a0d5708613b3724363",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 6489,
+      "archive_sha256": "5a19771c61d2c83bc171c19c24d36128b40a9c50b1792e00162de9f2cf7d6425",
+      "workspace_sha256": "5a19771c61d2c83bc171c19c24d36128b40a9c50b1792e00162de9f2cf7d6425",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertProperty.lean",
+      "source_or_config": true,
+      "archived_bytes": 1158,
+      "archive_sha256": "b228acf4ebc9580be43a0a87a1cc1e27fc05431c5218fa7f39be2cb9207c8925",
+      "workspace_sha256": "b228acf4ebc9580be43a0a87a1cc1e27fc05431c5218fa7f39be2cb9207c8925",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertQuotient.lean",
+      "source_or_config": true,
+      "archived_bytes": 8115,
+      "archive_sha256": "98ed8ff7cd6228438d765be36d58b0a4d368a4e3f8819adc39f288682d4ea482",
+      "workspace_sha256": "98ed8ff7cd6228438d765be36d58b0a4d368a4e3f8819adc39f288682d4ea482",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertRecursiveKernelDual.lean",
+      "source_or_config": true,
+      "archived_bytes": 3698,
+      "archive_sha256": "f1d73206e02676f82e59f1c0c2607a19e44717b2c35176720f0274edf3809146",
+      "workspace_sha256": "f1d73206e02676f82e59f1c0c2607a19e44717b2c35176720f0274edf3809146",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertSum.lean",
+      "source_or_config": true,
+      "archived_bytes": 9350,
+      "archive_sha256": "33f2c71af9bef3545221e68053477588799f922de43ea930f75971e1e5e5644d",
+      "workspace_sha256": "33f2c71af9bef3545221e68053477588799f922de43ea930f75971e1e5e5644d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertSumDual.lean",
+      "source_or_config": true,
+      "archived_bytes": 13593,
+      "archive_sha256": "b8b9d994b5981c951b5e3bbd3b70694df36e50ec0eafefa826243ecc29ac49c4",
+      "workspace_sha256": "b8b9d994b5981c951b5e3bbd3b70694df36e50ec0eafefa826243ecc29ac49c4",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalHilbertTransport.lean",
+      "source_or_config": true,
+      "archived_bytes": 2029,
+      "archive_sha256": "35c6df1f513e10dabd05d102af49c089ec34445648d65d8142f9d26a7828e592",
+      "workspace_sha256": "35c6df1f513e10dabd05d102af49c089ec34445648d65d8142f9d26a7828e592",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LocalUnconditional.lean",
+      "source_or_config": true,
+      "archived_bytes": 16438,
+      "archive_sha256": "3ca23f64e18fcc14e9ee4a2a535acb40305acd9edc2862b6101f897f7bb14857",
+      "workspace_sha256": "3ca23f64e18fcc14e9ee4a2a535acb40305acd9edc2862b6101f897f7bb14857",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LpHeadTail.lean",
+      "source_or_config": true,
+      "archived_bytes": 6528,
+      "archive_sha256": "1845df35a6a98c0611213c4c6e8dc3ec5c09061a7123556ff25e9b2e0edcaa44",
+      "workspace_sha256": "1845df35a6a98c0611213c4c6e8dc3ec5c09061a7123556ff25e9b2e0edcaa44",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LpSubmodule.lean",
+      "source_or_config": true,
+      "archived_bytes": 6988,
+      "archive_sha256": "a776dfab72af942512150da9c0db55db30ac05c9ed6e940d21f98660ddbe1b34",
+      "workspace_sha256": "a776dfab72af942512150da9c0db55db30ac05c9ed6e940d21f98660ddbe1b34",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LpSubmoduleScalar.lean",
+      "source_or_config": true,
+      "archived_bytes": 2546,
+      "archive_sha256": "a5ad7b44fa3d31b2caf86cfe1df7980799e2428e3dcb13696412e3a0e9d431a5",
+      "workspace_sha256": "a5ad7b44fa3d31b2caf86cfe1df7980799e2428e3dcb13696412e3a0e9d431a5",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LpTwoParallelogram.lean",
+      "source_or_config": true,
+      "archived_bytes": 3610,
+      "archive_sha256": "3e4804fee62e5dd9a4628f3e322b3b40a946f721fa83951b587ae713eaba937c",
+      "workspace_sha256": "3e4804fee62e5dd9a4628f3e322b3b40a946f721fa83951b587ae713eaba937c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LpTwoUniformConvex.lean",
+      "source_or_config": true,
+      "archived_bytes": 8910,
+      "archive_sha256": "5da989db4b1fff92a3526515308d09e7f9aacff96ef5842a558e3db6d9327d64",
+      "workspace_sha256": "5da989db4b1fff92a3526515308d09e7f9aacff96ef5842a558e3db6d9327d64",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/LpUniformEquiv.lean",
+      "source_or_config": true,
+      "archived_bytes": 3750,
+      "archive_sha256": "f219d389f0edfbb905126735b2bd90fd8083a5cf7ed17aa785ad53308a5cb465",
+      "workspace_sha256": "f219d389f0edfbb905126735b2bd90fd8083a5cf7ed17aa785ad53308a5cb465",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/NormSqSplitting.lean",
+      "source_or_config": true,
+      "archived_bytes": 3143,
+      "archive_sha256": "aea063fb3a4feac48ca51eb9f2e5234221032d21a2a67f459f495a96233211f3",
+      "workspace_sha256": "aea063fb3a4feac48ca51eb9f2e5234221032d21a2a67f459f495a96233211f3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/NormalizedHilbertSynthesis.lean",
+      "source_or_config": true,
+      "archived_bytes": 7864,
+      "archive_sha256": "f0f5be10a561733c77c8a4c54f2f2954fdd154f10d0ab31b51c1688efbca0116",
+      "workspace_sha256": "f0f5be10a561733c77c8a4c54f2f2954fdd154f10d0ab31b51c1688efbca0116",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/Parameters.lean",
+      "source_or_config": true,
+      "archived_bytes": 2633,
+      "archive_sha256": "378a293532f31438920433805add44964399da5d0b8237cf562237ea3044d8d9",
+      "workspace_sha256": "378a293532f31438920433805add44964399da5d0b8237cf562237ea3044d8d9",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrame.lean",
+      "source_or_config": true,
+      "archived_bytes": 5379,
+      "archive_sha256": "883201e285b25218140363d24a6d5ae057908ae197f127cf686dc980b7a10734",
+      "workspace_sha256": "883201e285b25218140363d24a6d5ae057908ae197f127cf686dc980b7a10734",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameIndex.lean",
+      "source_or_config": true,
+      "archived_bytes": 1184,
+      "archive_sha256": "7a6a8a1988ef3d9bfaad74acaeb8b135eafb2219f631c0531167fc2ffb7caad3",
+      "workspace_sha256": "7a6a8a1988ef3d9bfaad74acaeb8b135eafb2219f631c0531167fc2ffb7caad3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameLp.lean",
+      "source_or_config": true,
+      "archived_bytes": 2748,
+      "archive_sha256": "230f65d3c7b8fb56e9a7aefc97667b21073d35aae94c89740736cd02d253772f",
+      "workspace_sha256": "230f65d3c7b8fb56e9a7aefc97667b21073d35aae94c89740736cd02d253772f",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameMoments.lean",
+      "source_or_config": true,
+      "archived_bytes": 8570,
+      "archive_sha256": "cbf741b32f8185450e96af0bd516f9cc7aee6c2c671126fbb9c677e2d226ecd1",
+      "workspace_sha256": "cbf741b32f8185450e96af0bd516f9cc7aee6c2c671126fbb9c677e2d226ecd1",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameRowWitness.lean",
+      "source_or_config": true,
+      "archived_bytes": 10494,
+      "archive_sha256": "daa22a2952060f29e2be1bc4a5801d0dfd643a89b4baf00649367c9e8f1cbf14",
+      "workspace_sha256": "daa22a2952060f29e2be1bc4a5801d0dfd643a89b4baf00649367c9e8f1cbf14",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameSignContraction.lean",
+      "source_or_config": true,
+      "archived_bytes": 5679,
+      "archive_sha256": "28e17de55f8094bddf6b06286c09ec49a54db675ec01c7b5ab9c569a4da02009",
+      "workspace_sha256": "28e17de55f8094bddf6b06286c09ec49a54db675ec01c7b5ab9c569a4da02009",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameSignSample.lean",
+      "source_or_config": true,
+      "archived_bytes": 6405,
+      "archive_sha256": "63a21e262596c7cdc6b0832de2f7b56bedb784177f0084fb1df8dba9f349a5ce",
+      "workspace_sha256": "63a21e262596c7cdc6b0832de2f7b56bedb784177f0084fb1df8dba9f349a5ce",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameSymmetry.lean",
+      "source_or_config": true,
+      "archived_bytes": 7798,
+      "archive_sha256": "3a22dee4034e1f35e3cc2b199dc557fcd675c7b2414a39e1514ede3b05eb20be",
+      "workspace_sha256": "3a22dee4034e1f35e3cc2b199dc557fcd675c7b2414a39e1514ede3b05eb20be",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameTrace.lean",
+      "source_or_config": true,
+      "archived_bytes": 6426,
+      "archive_sha256": "ceb640e3af666b3912844befa09a6e6f9fa61e07e2ac852e099cf0220aeff377",
+      "workspace_sha256": "ceb640e3af666b3912844befa09a6e6f9fa61e07e2ac852e099cf0220aeff377",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameTraceBound.lean",
+      "source_or_config": true,
+      "archived_bytes": 7886,
+      "archive_sha256": "dac30fd7fe2c091cdd7620c50a8725bd8f07b219743f3aff0f83f38d2212d026",
+      "workspace_sha256": "dac30fd7fe2c091cdd7620c50a8725bd8f07b219743f3aff0f83f38d2212d026",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProductFrameWitness.lean",
+      "source_or_config": true,
+      "archived_bytes": 3481,
+      "archive_sha256": "da712d68eb3a96c1dfc1e3cccea0c6ffbda604c35462ee91efdbd4f75121bd36",
+      "workspace_sha256": "da712d68eb3a96c1dfc1e3cccea0c6ffbda604c35462ee91efdbd4f75121bd36",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProjectionCorollaries.lean",
+      "source_or_config": true,
+      "archived_bytes": 2316,
+      "archive_sha256": "360a3c53aaa91561097a4d9f52003c9ea1f8a1977f5887b97b855e65f007fdb8",
+      "workspace_sha256": "360a3c53aaa91561097a4d9f52003c9ea1f8a1977f5887b97b855e65f007fdb8",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProjectionOverlapLower.lean",
+      "source_or_config": true,
+      "archived_bytes": 4265,
+      "archive_sha256": "6e44903deac25ba95e259440c849e51717ec603f8535424d610a75c88a645ca2",
+      "workspace_sha256": "6e44903deac25ba95e259440c849e51717ec603f8535424d610a75c88a645ca2",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ProjectionPerturbation.lean",
+      "source_or_config": true,
+      "archived_bytes": 4456,
+      "archive_sha256": "5b57cfefd0652d7f9a9e9c9d3fc91fbcbe9ff19b6726d68adf6ac6eece240009",
+      "workspace_sha256": "5b57cfefd0652d7f9a9e9c9d3fc91fbcbe9ff19b6726d68adf6ac6eece240009",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/PureFrameDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 4594,
+      "archive_sha256": "fd347d414686f23890eea36e21a286dd7077c0eaa85ee36c9baee6f1dac78af5",
+      "workspace_sha256": "fd347d414686f23890eea36e21a286dd7077c0eaa85ee36c9baee6f1dac78af5",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RealMainConsequences.lean",
+      "source_or_config": true,
+      "archived_bytes": 2518,
+      "archive_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "workspace_sha256": "095527a9d9f356f483ddc28b96c59fabbd781d2042f696d43ec0be1dc91759ee",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RealMainTheorem.lean",
+      "source_or_config": true,
+      "archived_bytes": 1550,
+      "archive_sha256": "c08eb5568448a4908d5f90afd8da3ee5fdac8ee0e34e01824dc03ac6a3221917",
+      "workspace_sha256": "c08eb5568448a4908d5f90afd8da3ee5fdac8ee0e34e01824dc03ac6a3221917",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RecursiveDiagonalBidualDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 2556,
+      "archive_sha256": "e4e786bac003a667d8edb34d9eefd89f90709c3be3373527470bcd3e52823d78",
+      "workspace_sha256": "e4e786bac003a667d8edb34d9eefd89f90709c3be3373527470bcd3e52823d78",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RecursiveDiagonalDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 3472,
+      "archive_sha256": "f1c6dfb5e0ea4bf97af0c5ae66ea99e74059ccd5ef1b2584f2d144229cafdbd5",
+      "workspace_sha256": "f1c6dfb5e0ea4bf97af0c5ae66ea99e74059ccd5ef1b2584f2d144229cafdbd5",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RecursiveDiagonalDualDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 2507,
+      "archive_sha256": "ba91acf6624716006ed51206585e29cd5a3e56d9709293830d87b565ea996956",
+      "workspace_sha256": "ba91acf6624716006ed51206585e29cd5a3e56d9709293830d87b565ea996956",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RecursiveHeadHilbert.lean",
+      "source_or_config": true,
+      "archived_bytes": 3562,
+      "archive_sha256": "daa62e75b85090c6cc1716ca8e24cc47710aac7cbe9931d4f8f9c9e926da1cd7",
+      "workspace_sha256": "daa62e75b85090c6cc1716ca8e24cc47710aac7cbe9931d4f8f9c9e926da1cd7",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RecursiveKernelHilbert.lean",
+      "source_or_config": true,
+      "archived_bytes": 2843,
+      "archive_sha256": "b1eaa41d636df5c947a4802e817f0a0f21374008d3f4c1a4d8570bd4f1293942",
+      "workspace_sha256": "b1eaa41d636df5c947a4802e817f0a0f21374008d3f4c1a4d8570bd4f1293942",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RecursiveParameters.lean",
+      "source_or_config": true,
+      "archived_bytes": 13500,
+      "archive_sha256": "f8853a154ff22c5719c782f68031bafe8d5c84fd8724b53db5945fa9d35f7b5c",
+      "workspace_sha256": "f8853a154ff22c5719c782f68031bafe8d5c84fd8724b53db5945fa9d35f7b5c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RecursiveProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 9767,
+      "archive_sha256": "a6bd8d6ac7310f8083ac2e63472a330dd8ca4ae953506866b73cf465c554b516",
+      "workspace_sha256": "a6bd8d6ac7310f8083ac2e63472a330dd8ca4ae953506866b73cf465c554b516",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/RecursiveTailHilbert.lean",
+      "source_or_config": true,
+      "archived_bytes": 2176,
+      "archive_sha256": "028c16f70a05efcb6db95137d0a1d2014523880f980cc88d51c3d333c5002901",
+      "workspace_sha256": "028c16f70a05efcb6db95137d0a1d2014523880f980cc88d51c3d333c5002901",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/ReindexedFrameProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 7919,
+      "archive_sha256": "500e79de37d725f26f55bae55b59a545bee1886614fb6ad1363721dbc97fcaa3",
+      "workspace_sha256": "500e79de37d725f26f55bae55b59a545bee1886614fb6ad1363721dbc97fcaa3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/SchauderDPR.lean",
+      "source_or_config": true,
+      "archived_bytes": 5645,
+      "archive_sha256": "e8bc5f58a504b0360dac97e49cf7dc56fa08ea74ffd3699a3c1ac4ba7aa9cadf",
+      "workspace_sha256": "e8bc5f58a504b0360dac97e49cf7dc56fa08ea74ffd3699a3c1ac4ba7aa9cadf",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/SelectedCoefficientHilbert.lean",
+      "source_or_config": true,
+      "archived_bytes": 5955,
+      "archive_sha256": "e196841bc3ac504cd6e80acd6c23471f129e3941add191b55127e04569186b4f",
+      "workspace_sha256": "e196841bc3ac504cd6e80acd6c23471f129e3941add191b55127e04569186b4f",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/SelectedHilbertReplacement.lean",
+      "source_or_config": true,
+      "archived_bytes": 10879,
+      "archive_sha256": "8548ed455ac4675872d9aa5acc4b771a6ef5c61f911f15d13fe7ec6b76dd37c3",
+      "workspace_sha256": "8548ed455ac4675872d9aa5acc4b771a6ef5c61f911f15d13fe7ec6b76dd37c3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/SelectedProjectionSetup.lean",
+      "source_or_config": true,
+      "archived_bytes": 9590,
+      "archive_sha256": "138b176c395ca17fc9c440ce8d8df655269fc2d7ac9037285f7ace5fedeaca53",
+      "workspace_sha256": "138b176c395ca17fc9c440ce8d8df655269fc2d7ac9037285f7ace5fedeaca53",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/TensorMoment.lean",
+      "source_or_config": true,
+      "archived_bytes": 10985,
+      "archive_sha256": "8eeb17225fd0da439e2530f8fa503d596e8bbe8b25024ef78400593dc87f6648",
+      "workspace_sha256": "8eeb17225fd0da439e2530f8fa503d596e8bbe8b25024ef78400593dc87f6648",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/TensorProjection.lean",
+      "source_or_config": true,
+      "archived_bytes": 9174,
+      "archive_sha256": "e5f33e5a9bb60bdd5ec99cc09d719ee62c29e9f5ef3dc1dceec496b9f4faa5a7",
+      "workspace_sha256": "e5f33e5a9bb60bdd5ec99cc09d719ee62c29e9f5ef3dc1dceec496b9f4faa5a7",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/TheoremStatement.lean",
+      "source_or_config": true,
+      "archived_bytes": 2912,
+      "archive_sha256": "8bae1822f09c36532811144dfad0faefd1724ac184c0167745fae48f0af4cd97",
+      "workspace_sha256": "8bae1822f09c36532811144dfad0faefd1724ac184c0167745fae48f0af4cd97",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "ComplementedSubspace/UnconditionalHilbertSynthesis.lean",
+      "source_or_config": true,
+      "archived_bytes": 5811,
+      "archive_sha256": "af4c40800fe8c7aeefcc1f0da019743694ad886b5462bf542958d6d2415358cd",
+      "workspace_sha256": "af4c40800fe8c7aeefcc1f0da019743694ad886b5462bf542958d6d2415358cd",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "MainRealTheoremDefinitions.lean",
+      "source_or_config": true,
+      "archived_bytes": 4923,
+      "archive_sha256": "4819a6b830d5d35c955a1ff237387a68c7edaa14e93b21710c198113287a552c",
+      "workspace_sha256": "4819a6b830d5d35c955a1ff237387a68c7edaa14e93b21710c198113287a552c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "MainTheoremReview.lean",
+      "source_or_config": true,
+      "archived_bytes": 4991,
+      "archive_sha256": "28d39562ae38377baecfcce15bc7162f44abafc8bea2fb3350b0442ad3c91feb",
+      "workspace_sha256": "28d39562ae38377baecfcce15bc7162f44abafc8bea2fb3350b0442ad3c91feb",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "README.md",
+      "source_or_config": false,
+      "archived_bytes": 40109,
+      "archive_sha256": "9f8dd7574c9d4c66e19d3e58f2bd7faf786c31b10fa7cca8ac27e86134ab9fc8",
+      "workspace_sha256": "9f8dd7574c9d4c66e19d3e58f2bd7faf786c31b10fa7cca8ac27e86134ab9fc8",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "WholeProjectAudit.lean",
+      "source_or_config": true,
+      "archived_bytes": 973,
+      "archive_sha256": "25fd7072add542713a48f5ea3c2185b059820ea930adb285a770fa7971f45f43",
+      "workspace_sha256": "25fd7072add542713a48f5ea3c2185b059820ea930adb285a770fa7971f45f43",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "acceleration-assessment.md",
+      "source_or_config": false,
+      "archived_bytes": 3544,
+      "archive_sha256": "9d4d6429665a1b53b5b898dc1e26c417a465c821ccbb7822a71c7c24da5df735",
+      "workspace_sha256": "9d4d6429665a1b53b5b898dc1e26c417a465c821ccbb7822a71c7c24da5df735",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "check-lattice-dependencies.ps1",
+      "source_or_config": false,
+      "archived_bytes": 1594,
+      "archive_sha256": "bb78f149bdbe37969a3fea98323b5fc07796e1d0152d7211aa1f787ba68f4b8b",
+      "workspace_sha256": "bb78f149bdbe37969a3fea98323b5fc07796e1d0152d7211aa1f787ba68f4b8b",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "check-lean-direct.ps1",
+      "source_or_config": false,
+      "archived_bytes": 2244,
+      "archive_sha256": "ef667d86a327eb9b6e9ad127d46e6429d8b94b4fed77bf43f42baf19179d8ffb",
+      "workspace_sha256": "ef667d86a327eb9b6e9ad127d46e6429d8b94b4fed77bf43f42baf19179d8ffb",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "complex-realification-shortcut.md",
+      "source_or_config": false,
+      "archived_bytes": 6172,
+      "archive_sha256": "58b03da37388b6d3e0462464380dd10d9e2c1697e985ed52c6f1ca115cf95e93",
+      "workspace_sha256": "58b03da37388b6d3e0462464380dd10d9e2c1697e985ed52c6f1ca115cf95e93",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "complex-semantic-review.md",
+      "source_or_config": false,
+      "archived_bytes": 4897,
+      "archive_sha256": "e5be536aade60afd6cbc7435f7f00e4827b1f63d721c6ba27c73251a72eefde3",
+      "workspace_sha256": "e5be536aade60afd6cbc7435f7f00e4827b1f63d721c6ba27c73251a72eefde3",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "corollary-scope-assessment.md",
+      "source_or_config": false,
+      "archived_bytes": 19305,
+      "archive_sha256": "536b36e3db0978f77a77ab2724b9854afcb8c48de8c1c51a5136519beaa35efd",
+      "workspace_sha256": "536b36e3db0978f77a77ab2724b9854afcb8c48de8c1c51a5136519beaa35efd",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "finite-analytic-shortcuts.md",
+      "source_or_config": false,
+      "archived_bytes": 10337,
+      "archive_sha256": "322fd5168da0f4e5e38f0c6726ba0b18b930d65f04428ace4bfd31a76696c0ed",
+      "workspace_sha256": "322fd5168da0f4e5e38f0c6726ba0b18b930d65f04428ace4bfd31a76696c0ed",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "finite-correction-progress.md",
+      "source_or_config": false,
+      "archived_bytes": 3447,
+      "archive_sha256": "c9121a33fbe398e2d500c883456bafb2304c31e499be8deb66ccbe490834a112",
+      "workspace_sha256": "c9121a33fbe398e2d500c883456bafb2304c31e499be8deb66ccbe490834a112",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "finite-obstruction-progress.md",
+      "source_or_config": false,
+      "archived_bytes": 14953,
+      "archive_sha256": "d2a0d5929535b5e8459cf6d6cdee80b0a5f1b7c2b4f9319317b9a3d4a41f1163",
+      "workspace_sha256": "d2a0d5929535b5e8459cf6d6cdee80b0a5f1b7c2b4f9319317b9a3d4a41f1163",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "finite-parameter-progress.md",
+      "source_or_config": false,
+      "archived_bytes": 7360,
+      "archive_sha256": "836fd2027e9374375c0a86f1cb4bd07ef06d3b0be8e9adb8ce503d0d9b5b799f",
+      "workspace_sha256": "836fd2027e9374375c0a86f1cb4bd07ef06d3b0be8e9adb8ce503d0d9b5b799f",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "geometry-shortcut-assessment.md",
+      "source_or_config": false,
+      "archived_bytes": 9338,
+      "archive_sha256": "dfea3748abecb27995244d3bfba9118ebfcf0471d69047a10b1e3e52ad323ebb",
+      "workspace_sha256": "dfea3748abecb27995244d3bfba9118ebfcf0471d69047a10b1e3e52ad323ebb",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "get-mathlib-cache.ps1",
+      "source_or_config": false,
+      "archived_bytes": 743,
+      "archive_sha256": "26f674aa8f0de91940f008809d767a5939a433d2eeaa3c03f04a20eb6bb77a3d",
+      "workspace_sha256": "26f674aa8f0de91940f008809d767a5939a433d2eeaa3c03f04a20eb6bb77a3d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "lake-manifest.json",
+      "source_or_config": true,
+      "archived_bytes": 3681,
+      "archive_sha256": "5a1a4b9a38d977d11c668216238f135a975d4ee757f2b4c25bfd9e0f588324e8",
+      "workspace_sha256": "5a1a4b9a38d977d11c668216238f135a975d4ee757f2b4c25bfd9e0f588324e8",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "lakefile.toml",
+      "source_or_config": true,
+      "archived_bytes": 377,
+      "archive_sha256": "2d6217379e267956a128d7bf9026e3a84fb6d699e5a941172901c4c37f0d1863",
+      "workspace_sha256": "2d6217379e267956a128d7bf9026e3a84fb6d699e5a941172901c4c37f0d1863",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "lattice-progress.md",
+      "source_or_config": false,
+      "archived_bytes": 17097,
+      "archive_sha256": "412dd82afe2d4a863e88442e59ca30e22afedf6f52a349faf631a42333f89a56",
+      "workspace_sha256": "412dd82afe2d4a863e88442e59ca30e22afedf6f52a349faf631a42333f89a56",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "lean-toolchain",
+      "source_or_config": true,
+      "archived_bytes": 30,
+      "archive_sha256": "3a3b72fe5a9f28230ef800828bfd48d585b2f493a3f66c86a2913f87e7ff0ccc",
+      "workspace_sha256": "3a3b72fe5a9f28230ef800828bfd48d585b2f493a3f66c86a2913f87e7ff0ccc",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "local-hilbert-progress.md",
+      "source_or_config": false,
+      "archived_bytes": 14415,
+      "archive_sha256": "d4b7ace1d638efdcd61a01fe2d3363007e77a029a34af2375c9104708e338198",
+      "workspace_sha256": "d4b7ace1d638efdcd61a01fe2d3363007e77a029a34af2375c9104708e338198",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/1-Introduction.tex",
+      "source_or_config": false,
+      "archived_bytes": 12093,
+      "archive_sha256": "5a6e6b5bd26e9e0154be5f8b35f1b493e91c8f0410bfa707084edf5f2be152d9",
+      "workspace_sha256": "5a6e6b5bd26e9e0154be5f8b35f1b493e91c8f0410bfa707084edf5f2be152d9",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/1a-Preliminaries.tex",
+      "source_or_config": false,
+      "archived_bytes": 10299,
+      "archive_sha256": "0c11065e4802725ac75ec6cd0631f62a4f71a8be7277da9450c35b734d5c5895",
+      "workspace_sha256": "0c11065e4802725ac75ec6cd0631f62a4f71a8be7277da9450c35b734d5c5895",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/2-Circle-tensors.tex",
+      "source_or_config": false,
+      "archived_bytes": 6027,
+      "archive_sha256": "46f1b3d53b3789c3c7e967d8ed8f3f50baf3980084b443153abd164bf2ffa197",
+      "workspace_sha256": "46f1b3d53b3789c3c7e967d8ed8f3f50baf3980084b443153abd164bf2ffa197",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/2-Construction.tex",
+      "source_or_config": false,
+      "archived_bytes": 605,
+      "archive_sha256": "43910666f6e385963ae921c4caaa6f0ddf94bd875dda0d33693b7a5a4356c847",
+      "workspace_sha256": "43910666f6e385963ae921c4caaa6f0ddf94bd875dda0d33693b7a5a4356c847",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/3-Fourth-moments.tex",
+      "source_or_config": false,
+      "archived_bytes": 4922,
+      "archive_sha256": "0ede59904c9317f4d3fbb0658860da7f9573c74bb5e50b326109e00197af9886",
+      "workspace_sha256": "0ede59904c9317f4d3fbb0658860da7f9573c74bb5e50b326109e00197af9886",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/4-Overlap.tex",
+      "source_or_config": false,
+      "archived_bytes": 5342,
+      "archive_sha256": "4f9373b4cc06bf595355daeaa55ecee13e545d8200761ce7bad090b0add0b9ec",
+      "workspace_sha256": "4f9373b4cc06bf595355daeaa55ecee13e545d8200761ce7bad090b0add0b9ec",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/5-Parameters.tex",
+      "source_or_config": false,
+      "archived_bytes": 3558,
+      "archive_sha256": "a4fb95577e3a5d1889e5cb8e5d5240d670c2e8ac7c2957976afa2c9c7a2b64aa",
+      "workspace_sha256": "a4fb95577e3a5d1889e5cb8e5d5240d670c2e8ac7c2957976afa2c9c7a2b64aa",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/6-Infinite-sum.tex",
+      "source_or_config": false,
+      "archived_bytes": 12748,
+      "archive_sha256": "7d95d2b380fdbf3fc84e63afa1f27904f877dee68a328f3a4d67f1eb7340f90f",
+      "workspace_sha256": "7d95d2b380fdbf3fc84e63afa1f27904f877dee68a328f3a4d67f1eb7340f90f",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/7-Explicit-embedding.tex",
+      "source_or_config": false,
+      "archived_bytes": 6159,
+      "archive_sha256": "3f16818e4480e6f717d7b49bd81c43fe5fd6712dbd11f1c63dcec966ed3bfe03",
+      "workspace_sha256": "3f16818e4480e6f717d7b49bd81c43fe5fd6712dbd11f1c63dcec966ed3bfe03",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/7a-Banach-lattices.tex",
+      "source_or_config": false,
+      "archived_bytes": 15052,
+      "archive_sha256": "6d103dcace388aa4e4cf46e83ef38d65d70de2ef7ff8540082eeb421ebfeef57",
+      "workspace_sha256": "6d103dcace388aa4e4cf46e83ef38d65d70de2ef7ff8540082eeb421ebfeef57",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/9-Geometry.tex",
+      "source_or_config": false,
+      "archived_bytes": 242,
+      "archive_sha256": "a5ff4d86107a6385a307a13402ee73967ac5c871481a4f8cd906f85701c4e87d",
+      "workspace_sha256": "a5ff4d86107a6385a307a13402ee73967ac5c871481a4f8cd906f85701c4e87d",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/9a-Schauder-bases.tex",
+      "source_or_config": false,
+      "archived_bytes": 7330,
+      "archive_sha256": "07ab8283bc43bd0c88edf18c5953f0ca1bdbd333f5f4759a06f269a0f2dd925c",
+      "workspace_sha256": "07ab8283bc43bd0c88edf18c5953f0ca1bdbd333f5f4759a06f269a0f2dd925c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/9b-Geometric-remark.tex",
+      "source_or_config": false,
+      "archived_bytes": 606,
+      "archive_sha256": "b61a6c84131aff94a217cc26618a496ac8b5620ae6f4b7bbbde5de448c2be7b5",
+      "workspace_sha256": "b61a6c84131aff94a217cc26618a496ac8b5620ae6f4b7bbbde5de448c2be7b5",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/README.md",
+      "source_or_config": false,
+      "archived_bytes": 815,
+      "archive_sha256": "34f191867cfb4885f4171c1c7fb985a1591b632e1762603c70f450e57e32a615",
+      "workspace_sha256": "34f191867cfb4885f4171c1c7fb985a1591b632e1762603c70f450e57e32a615",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/bibliography.tex",
+      "source_or_config": false,
+      "archived_bytes": 6021,
+      "archive_sha256": "c6f5955ce9d1f3d4eb54a8c23afb49e724d6fdaf263d86928769ee802f817aee",
+      "workspace_sha256": "c6f5955ce9d1f3d4eb54a8c23afb49e724d6fdaf263d86928769ee802f817aee",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "manuscript/main.tex",
+      "source_or_config": false,
+      "archived_bytes": 4803,
+      "archive_sha256": "82b3c7f240dccc379d831c6d6c2904a44bdf28a16c7d1c529d819fdcbaa68375",
+      "workspace_sha256": "82b3c7f240dccc379d831c6d6c2904a44bdf28a16c7d1c529d819fdcbaa68375",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "package-verified.ps1",
+      "source_or_config": false,
+      "archived_bytes": 12426,
+      "archive_sha256": "f3963da6edfbf5690b5ed55c8b4438168e9fc1bb5a7c9250efc3241610ab11c7",
+      "workspace_sha256": "f3963da6edfbf5690b5ed55c8b4438168e9fc1bb5a7c9250efc3241610ab11c7",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "projection-progress.md",
+      "source_or_config": false,
+      "archived_bytes": 11113,
+      "archive_sha256": "fbfc6c5fef40c20ebf201cd5b1c832c2f1a0fd4b62e67ad2fa6039391ec0ce83",
+      "workspace_sha256": "fbfc6c5fef40c20ebf201cd5b1c832c2f1a0fd4b62e67ad2fa6039391ec0ce83",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "real-main-semantic-review.md",
+      "source_or_config": false,
+      "archived_bytes": 4406,
+      "archive_sha256": "f17ff0023890bb6bfbe22d1fa4db322d973a07b975da42b43fe77dc210944be9",
+      "workspace_sha256": "f17ff0023890bb6bfbe22d1fa4db322d973a07b975da42b43fe77dc210944be9",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "rebuild-verified.ps1",
+      "source_or_config": false,
+      "archived_bytes": 5571,
+      "archive_sha256": "3ef05bacd6a284da2eb00622b7c7e37239a9f8d04a6c91fceea3dcb35640665e",
+      "workspace_sha256": "3ef05bacd6a284da2eb00622b7c7e37239a9f8d04a6c91fceea3dcb35640665e",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "recursive-parameter-progress.md",
+      "source_or_config": false,
+      "archived_bytes": 2690,
+      "archive_sha256": "4886b80d37cbefabb6089707bd109b77e4d3618f3b1b1f63c5fc43a846fb1acc",
+      "workspace_sha256": "4886b80d37cbefabb6089707bd109b77e4d3618f3b1b1f63c5fc43a846fb1acc",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "run-lean.ps1",
+      "source_or_config": false,
+      "archived_bytes": 521,
+      "archive_sha256": "829e31726c7fe28107c8a2b9437f40efdd27d81caac5c73b4e59aca12c256cff",
+      "workspace_sha256": "829e31726c7fe28107c8a2b9437f40efdd27d81caac5c73b4e59aca12c256cff",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "shortcut-plan.md",
+      "source_or_config": false,
+      "archived_bytes": 12035,
+      "archive_sha256": "ffc36bb25e122a5b4bee023325da276c35870245f06402441634d04babf2a781",
+      "workspace_sha256": "ffc36bb25e122a5b4bee023325da276c35870245f06402441634d04babf2a781",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "statement-review.md",
+      "source_or_config": false,
+      "archived_bytes": 12311,
+      "archive_sha256": "e06b2c082222eaa13b0635e62c0d087726858a40bcdadc978babad484bea3df7",
+      "workspace_sha256": "e06b2c082222eaa13b0635e62c0d087726858a40bcdadc978babad484bea3df7",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/ambient-lattice-bounds-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 803,
+      "archive_sha256": "cb75046a20d40d1cb3406b84085bb4873076fb010eab46c4028fffcbd491e5f4",
+      "workspace_sha256": "cb75046a20d40d1cb3406b84085bb4873076fb010eab46c4028fffcbd491e5f4",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 1835,
+      "archive_sha256": "2cbe3be82744c6e8fc4c305934f748eb9224772687d090e9e585ea7de98f1e2c",
+      "workspace_sha256": "2cbe3be82744c6e8fc4c305934f748eb9224772687d090e9e585ea7de98f1e2c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/build.log",
+      "source_or_config": false,
+      "archived_bytes": 4058,
+      "archive_sha256": "72a8e260d052541568dba40eed6a82548e6efdf385da139a1e26a0ba31c5e650",
+      "workspace_sha256": "72a8e260d052541568dba40eed6a82548e6efdf385da139a1e26a0ba31c5e650",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/complex-ambient-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 602,
+      "archive_sha256": "d108dcb4c46dbe088564457f0c5bf8c78dd2ca24ccf417ca290eb53266f7270a",
+      "workspace_sha256": "d108dcb4c46dbe088564457f0c5bf8c78dd2ca24ccf417ca290eb53266f7270a",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/complex-corollary-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 100,
+      "archive_sha256": "28fb90b054f63d8472f51f14a89b7704231be558f3519b40f493ec4b58bfa4b8",
+      "workspace_sha256": "28fb90b054f63d8472f51f14a89b7704231be558f3519b40f493ec4b58bfa4b8",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/complex-projection-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 858,
+      "archive_sha256": "24e77e84841462cf13324af550ed43148783b4eddc6ffd4d0138755cf53460ba",
+      "workspace_sha256": "24e77e84841462cf13324af550ed43148783b4eddc6ffd4d0138755cf53460ba",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/complex-recursive-projection-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 1367,
+      "archive_sha256": "05456ac1ef780d0a62d7475289e5314fbb2531c9697cec05fd081b708e0115ef",
+      "workspace_sha256": "05456ac1ef780d0a62d7475289e5314fbb2531c9697cec05fd081b708e0115ef",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/final-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 732,
+      "archive_sha256": "414ce4a65cb4a27fffd4e2a8a719d58826ca8eab9009b70a7f2f148fd6421dc4",
+      "workspace_sha256": "414ce4a65cb4a27fffd4e2a8a719d58826ca8eab9009b70a7f2f148fd6421dc4",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/finite-dual-dpr-lower-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 241,
+      "archive_sha256": "98f397dfae84514e8cb7639db7b026a1f491509e4fc45de8be61ad60b25f5c56",
+      "workspace_sha256": "98f397dfae84514e8cb7639db7b026a1f491509e4fc45de8be61ad60b25f5c56",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/finite-head-hilbert-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 1128,
+      "archive_sha256": "1c870370d1b90b7fbd9024c6e36b6318c5528145e683355274a8e010030beb8e",
+      "workspace_sha256": "1c870370d1b90b7fbd9024c6e36b6318c5528145e683355274a8e010030beb8e",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/finite-selected-hilbert-model-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 264,
+      "archive_sha256": "62cca4dac83f2c4dee48d3ccc5746f153e95baf0cb534fec52fcf36d8e25a862",
+      "workspace_sha256": "62cca4dac83f2c4dee48d3ccc5746f153e95baf0cb534fec52fcf36d8e25a862",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/fresh-root-build-before-finite-basis-fix.log",
+      "source_or_config": false,
+      "archived_bytes": 19240,
+      "archive_sha256": "7a8f7f22bbc0650f7cb781f09fc5227b40f1f5862e95e910b9fc1a1f6526efca",
+      "workspace_sha256": "7a8f7f22bbc0650f7cb781f09fc5227b40f1f5862e95e910b9fc1a1f6526efca",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/fresh-root-build.log",
+      "source_or_config": false,
+      "archived_bytes": 168941,
+      "archive_sha256": "cee1b3f4042562d4bd1f674280e83f3d0bbeaa9eded783d660165602dd149cb2",
+      "workspace_sha256": "cee1b3f4042562d4bd1f674280e83f3d0bbeaa9eded783d660165602dd149cb2",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/implementation-checkpoint-1.log",
+      "source_or_config": false,
+      "archived_bytes": 988,
+      "archive_sha256": "ffb26d10a1f9d5c6bccaf9c2e4f8632ddd807be1189bf8698c89581b6946effa",
+      "workspace_sha256": "ffb26d10a1f9d5c6bccaf9c2e4f8632ddd807be1189bf8698c89581b6946effa",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/implementation-checkpoint-2.log",
+      "source_or_config": false,
+      "archived_bytes": 969,
+      "archive_sha256": "5a9d8c28eed45066e5dce5a8c0ea999f99a4bb2438afdb5178af21d81ed654e9",
+      "workspace_sha256": "5a9d8c28eed45066e5dce5a8c0ea999f99a4bb2438afdb5178af21d81ed654e9",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/implementation-checkpoint-3.log",
+      "source_or_config": false,
+      "archived_bytes": 135,
+      "archive_sha256": "d56782d8238136789d0d4dbea7c9caff7c7ab01e2ed7cae5e8fc3cfcbcf022fb",
+      "workspace_sha256": "d56782d8238136789d0d4dbea7c9caff7c7ab01e2ed7cae5e8fc3cfcbcf022fb",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/lattice-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 627,
+      "archive_sha256": "5839d22d9d8ec3a289f0ddc7ec99c47d748f97bcbe49515a5341f851de375b80",
+      "workspace_sha256": "5839d22d9d8ec3a289f0ddc7ec99c47d748f97bcbe49515a5341f851de375b80",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/lattice-isomorphism-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 506,
+      "archive_sha256": "a1d64e4595cfcec7b68566a6258d859a726b7bcf1bbdade31c6a6272c46018a9",
+      "workspace_sha256": "a1d64e4595cfcec7b68566a6258d859a726b7bcf1bbdade31c6a6272c46018a9",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/local-hilbert-embedded-renorm-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 489,
+      "archive_sha256": "8ae4fdcf869a20e900b8d1e5fdb8d3074df13197ec15661ea406b23960d45eb6",
+      "workspace_sha256": "8ae4fdcf869a20e900b8d1e5fdb8d3074df13197ec15661ea406b23960d45eb6",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/lp-uniform-equiv-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 638,
+      "archive_sha256": "04509f9e2266a61b0e549680db927624c61776a7c84f2391b46f73f9d7f8bec8",
+      "workspace_sha256": "04509f9e2266a61b0e549680db927624c61776a7c84f2391b46f73f9d7f8bec8",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/normalized-hilbert-synthesis-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 600,
+      "archive_sha256": "b844bd2734d897b2850a8895cf3aef74647ebffd1c79801918397ad7924fee47",
+      "workspace_sha256": "b844bd2734d897b2850a8895cf3aef74647ebffd1c79801918397ad7924fee47",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/projection-corollaries-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 362,
+      "archive_sha256": "cf62169ed9e5fccf4aa1d57a8dfc6ba4030e1a8727bc441e5f6eee5645e61251",
+      "workspace_sha256": "cf62169ed9e5fccf4aa1d57a8dfc6ba4030e1a8727bc441e5f6eee5645e61251",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/pure-frame-dpr-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 1130,
+      "archive_sha256": "22a92a01c764abd9d7874ca1c7a5a1a96540adfe64666879eef34e8d4cf560be",
+      "workspace_sha256": "22a92a01c764abd9d7874ca1c7a5a1a96540adfe64666879eef34e8d4cf560be",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/real-construction-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 680,
+      "archive_sha256": "272d380e56f19e95c01f0f164a449313d4c1654c39eee5fd6c733fa81b925e1a",
+      "workspace_sha256": "272d380e56f19e95c01f0f164a449313d4c1654c39eee5fd6c733fa81b925e1a",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/real-main-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 613,
+      "archive_sha256": "b7014967fa884fb4f5ab4dea148046b67543ac1f54171b68d166063a4fcdd5a5",
+      "workspace_sha256": "b7014967fa884fb4f5ab4dea148046b67543ac1f54171b68d166063a4fcdd5a5",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/real-main-consequences-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 679,
+      "archive_sha256": "e4efbb48935a0e9aedd60ce63d0c82c9e044ac1cd45bdb386dc9cb41103db787",
+      "workspace_sha256": "e4efbb48935a0e9aedd60ce63d0c82c9e044ac1cd45bdb386dc9cb41103db787",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/recursive-kernel-hilbert-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 632,
+      "archive_sha256": "a8919fb3d9641cd9a4f9be37d1abf14ae9118233eb02157a8d5fe5c5e7f06e15",
+      "workspace_sha256": "a8919fb3d9641cd9a4f9be37d1abf14ae9118233eb02157a8d5fe5c5e7f06e15",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/root-local-source-files.txt",
+      "source_or_config": false,
+      "archived_bytes": 8033,
+      "archive_sha256": "b9bbcfc2e06165a18063c479261ad6a55d5cd72687dad695af5b17ce10762c15",
+      "workspace_sha256": "b9bbcfc2e06165a18063c479261ad6a55d5cd72687dad695af5b17ce10762c15",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/schauder-dpr-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 632,
+      "archive_sha256": "9a0ae0a17cdd0af6d2ead9ca5033e0cf71f7cb76a6058099c0821b3a289bbe09",
+      "workspace_sha256": "9a0ae0a17cdd0af6d2ead9ca5033e0cf71f7cb76a6058099c0821b3a289bbe09",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/selected-coefficient-hilbert-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 643,
+      "archive_sha256": "4ffe89814588ad268eec0a49e505542b0d7ba763063747a9972b0f7a6841d6d1",
+      "workspace_sha256": "4ffe89814588ad268eec0a49e505542b0d7ba763063747a9972b0f7a6841d6d1",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/selected-frame-basis-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 359,
+      "archive_sha256": "1c2301f3bb63f1d569e865c2d5abe32e20358b891d232a4acb71eb0b42165a5b",
+      "workspace_sha256": "1c2301f3bb63f1d569e865c2d5abe32e20358b891d232a4acb71eb0b42165a5b",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/selected-hilbert-replacement-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 690,
+      "archive_sha256": "e62ab1af44cedc412cfeb29a69fa4c829943306d840ce2a29f839be5c4271f90",
+      "workspace_sha256": "e62ab1af44cedc412cfeb29a69fa4c829943306d840ce2a29f839be5c4271f90",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/selected-projection-setup-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 987,
+      "archive_sha256": "3ad424d83053c769e2322ac3e85392057ef857aa8522367c0728bfc6dfefbddd",
+      "workspace_sha256": "3ad424d83053c769e2322ac3e85392057ef857aa8522367c0728bfc6dfefbddd",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/shortcut-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 134,
+      "archive_sha256": "9499cbc437490898873c8945f907291a4be034ef9ad6da3c1fc0a22136e21a17",
+      "workspace_sha256": "9499cbc437490898873c8945f907291a4be034ef9ad6da3c1fc0a22136e21a17",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/shortcut-build.log",
+      "source_or_config": false,
+      "archived_bytes": 8436,
+      "archive_sha256": "fa3eab89216c8f038746eaee6a96ee39c044d1a8dd7e16898dcb0d2e8f44a54c",
+      "workspace_sha256": "fa3eab89216c8f038746eaee6a96ee39c044d1a8dd7e16898dcb0d2e8f44a54c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "verification/whole-project-axioms.log",
+      "source_or_config": false,
+      "archived_bytes": 134,
+      "archive_sha256": "c8acfda60e99a503e44bc910ac390ca44786c1de777f93c2fb7778b2b061e22c",
+      "workspace_sha256": "c8acfda60e99a503e44bc910ac390ca44786c1de777f93c2fb7778b2b061e22c",
+      "status": "MATCH"
+    },
+    {
+      "relative_path": "SOURCE-MANIFEST.sha256",
+      "source_or_config": false,
+      "archived_bytes": 27838,
+      "archive_sha256": "c9311dda53584927098354931922a12d303fa9cceba4a218c270f868aad82828",
+      "workspace_sha256": null,
+      "status": "MISSING"
+    }
+  ]
+}
+STDOUT END
+STDERR BEGIN
+
+STDERR END
+EXIT CODE: 0

@@ -1,0 +1,103 @@
+WORKING DIRECTORY: LEAN_PROJECT
+START UTC: 2026-09-05T23:13:51.2241901Z
+COMMAND: & 'WORKSPACE\tmp\lean_library_definition_audit_2026-09-05\lean-4.34.0-rc2-windows\bin\lake.exe' '--no-cache' 'env' 'lean' '-j1' '-M8192' 'verification/independent-audit-2026-09-05/MainIdentity.lean'
+TERMINAL OUTPUT:
+ComplementedSubspace.realMainTheorem : ComplementedSubspace.RealMainTheoremStatement
+ComplementedSubspace.realMainTheorem : ComplementedSubspace.RealMainTheoremStatement
+theorem ComplementedSubspace.realMainTheorem : ComplementedSubspace.RealMainTheoremStatement :=
+fun ρ hρ =>
+  Exists.casesOn
+    (ComplementedSubspace.exists_recursive_alternatingProjection_near_one
+      (lt_of_not_ge fun a =>
+        Mathlib.Tactic.Linarith.lt_irrefl
+          (Eq.mp
+            (congrArg (fun _a => _a < 0)
+              (Mathlib.Tactic.Ring.of_eq
+                (Mathlib.Tactic.Ring.Common.add_congr
+                  (Mathlib.Tactic.Ring.Common.sub_congr
+                    (Mathlib.Tactic.Ring.cast_zero (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero))
+                    (Mathlib.Tactic.Ring.Common.atom_pf ρ rfl
+                      (Eq.mpr
+                        (id
+                          (congrArg (fun _a => ρ ^ Nat.rawCast 1 * Nat.rawCast 1 = ρ ^ Nat.rawCast 1 * _a)
+                            (Eq.symm rfl)))
+                        (Eq.refl (ρ ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                    (Mathlib.Tactic.Ring.Common.sub_pf
+                      (Mathlib.Tactic.Ring.Common.neg_add
+                        (Mathlib.Tactic.Ring.Common.neg_mul ρ (Nat.rawCast 1)
+                          (Mathlib.Meta.NormNum.IsInt.to_raw_eq
+                            (Mathlib.Meta.NormNum.isInt_neg (Eq.refl Neg.neg)
+                              (Mathlib.Meta.NormNum.IsNat.to_isInt (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1))
+                              (Eq.refl (Int.negOfNat 1)))))
+                        Mathlib.Tactic.Ring.Common.neg_zero)
+                      (Mathlib.Tactic.Ring.Common.add_pf_zero_add (ρ ^ Nat.rawCast 1 * (Int.negOfNat 1).rawCast + 0))))
+                  (Mathlib.Tactic.Ring.Common.sub_congr
+                    (Mathlib.Tactic.Ring.Common.add_congr
+                      (Mathlib.Tactic.Ring.cast_pos (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_one))
+                      (Mathlib.Tactic.Ring.Common.atom_pf ρ rfl
+                        (Eq.mpr
+                          (id
+                            (congrArg (fun _a => ρ ^ Nat.rawCast 1 * Nat.rawCast 1 = ρ ^ Nat.rawCast 1 * _a)
+                              (Eq.symm rfl)))
+                          (Eq.refl (ρ ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                      (Mathlib.Tactic.Ring.Common.add_pf_add_lt (Nat.rawCast 1)
+                        (Mathlib.Tactic.Ring.Common.add_pf_zero_add (ρ ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))))
+                    (Mathlib.Tactic.Ring.cast_pos (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_one))
+                    (Mathlib.Tactic.Ring.Common.sub_pf
+                      (Mathlib.Tactic.Ring.Common.neg_add
+                        (Mathlib.Meta.NormNum.IsInt.to_raw_eq
+                          (Mathlib.Meta.NormNum.isInt_neg (Eq.refl Neg.neg)
+                            (Mathlib.Meta.NormNum.IsNat.to_isInt (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1))
+                            (Eq.refl (Int.negOfNat 1))))
+                        Mathlib.Tactic.Ring.Common.neg_zero)
+                      (Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero
+                        (Mathlib.Meta.NormNum.IsInt.to_isNat
+                          (Mathlib.Meta.NormNum.isInt_add (Eq.refl HAdd.hAdd)
+                            (Mathlib.Meta.NormNum.IsNat.to_isInt (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1))
+                            (Mathlib.Meta.NormNum.IsInt.of_raw ℝ (Int.negOfNat 1)) (Eq.refl (Int.ofNat 0))))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero (ρ ^ Nat.rawCast 1 * Nat.rawCast 1 + 0)))))
+                  (Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero
+                    (Mathlib.Tactic.Ring.Common.add_overlap_pf_zero ρ (Nat.rawCast 1)
+                      (Mathlib.Meta.NormNum.IsInt.to_isNat
+                        (Mathlib.Meta.NormNum.isInt_add (Eq.refl HAdd.hAdd)
+                          (Mathlib.Meta.NormNum.IsInt.of_raw ℝ (Int.negOfNat 1))
+                          (Mathlib.Meta.NormNum.IsNat.to_isInt (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1))
+                          (Eq.refl (Int.ofNat 0)))))
+                    (Mathlib.Tactic.Ring.Common.add_pf_zero_add 0)))
+                (Mathlib.Tactic.Ring.cast_zero (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero))))
+            (Mathlib.Tactic.Linarith.add_lt_of_neg_of_le (Mathlib.Tactic.Linarith.sub_neg_of_lt hρ)
+              (Mathlib.Tactic.Linarith.sub_nonpos_of_le a)))))
+    fun η h =>
+    Exists.casesOn h fun hη h =>
+      Exists.casesOn h fun P h =>
+        And.casesOn h fun hPP right =>
+          And.casesOn right fun hP1 right =>
+            And.casesOn right fun hP right =>
+              And.casesOn right fun hPc1 right =>
+                And.casesOn right fun hPc hcoords =>
+                  let s := ComplementedSubspace.recursiveFrameSelection hη;
+                  Exists.intro s.toBlockParameters
+                    ⟨inferInstance,
+                      ⟨inferInstance,
+                        ⟨ComplementedSubspace.ambient_hasRealBanachLatticeOrder s.toBlockParameters,
+                          Exists.intro P
+                            ⟨hPP,
+                              ⟨hP,
+                                ⟨hPc,
+                                  ⟨ComplementedSubspace.hasSeparatedRange_of_DPR_obstructions P hPP
+                                      (ComplementedSubspace.ambient_chiGL_le_one s.toBlockParameters)
+                                      (ComplementedSubspace.ambientDual_chiGL_le_one s.toBlockParameters)
+                                      (ComplementedSubspace.actualProjection_range_chiDPR_eq_top s P hcoords)
+                                      (ComplementedSubspace.actualProjection_range_dual_chiDPR_eq_top s P hcoords),
+                                    ComplementedSubspace.hasSeparatedRange_of_DPR_obstructions
+                                      (ContinuousLinearMap.id ℝ ↥(ComplementedSubspace.Ambient s.toBlockParameters) - P)
+                                      (ComplementedSubspace.complement_idempotent P hPP)
+                                      (ComplementedSubspace.ambient_chiGL_le_one s.toBlockParameters)
+                                      (ComplementedSubspace.ambientDual_chiGL_le_one s.toBlockParameters)
+                                      (ComplementedSubspace.actualProjection_complement_range_chiDPR_eq_top s P hcoords)
+                                      (ComplementedSubspace.actualProjection_complement_range_dual_chiDPR_eq_top s P
+                                        hcoords)⟩⟩⟩⟩⟩⟩⟩
+'ComplementedSubspace.realMainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+KERNEL DECLARATION CHECK: theorem; exact stored type ComplementedSubspace.RealMainTheoremStatement; no parameters.
+EXIT CODE: 0
+END UTC: 2026-09-05T23:14:50.8299027Z
